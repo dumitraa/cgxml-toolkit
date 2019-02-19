@@ -238,6 +238,7 @@ namespace UtilitatiCGXML
                     t.AddAttribute(futureFieldName, lr.CADGENNO);
                     t.AddAttribute(futureFieldAreaCG, lr.MEASUREDAREA);
                     //Geometry 
+                    myCoord = myCoord.Where(c => c != null).ToArray();
                     gr[intr] = geomFactory.CreatePolygon(myCoord);
                     futuresList.Add(new Feature(gr[intr], t));
                     intr++;
