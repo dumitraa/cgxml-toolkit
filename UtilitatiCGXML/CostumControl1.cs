@@ -191,6 +191,7 @@ namespace UtilitatiCGXML
 
             string imobileFile = string.Concat(CostumFolderBrowserDialogPath, "\\", "Imobile");
             string futureFieldName = "ID";
+            string futureFieldAreaCG = "Suprafata";
             int nrCGXML = 0;
             int intr = 0;
             for (int i = 0; i < (int)files.Length; i++)
@@ -235,6 +236,7 @@ namespace UtilitatiCGXML
                     //create the default table with fields - alternately use DBaseField classes
                     AttributesTable t = new AttributesTable();
                     t.AddAttribute(futureFieldName, lr.CADGENNO);
+                    t.AddAttribute(futureFieldAreaCG, lr.MEASUREDAREA);
                     //Geometry 
                     gr[intr] = geomFactory.CreatePolygon(myCoord);
                     futuresList.Add(new Feature(gr[intr], t));
