@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="UtilitatiCGXML.exe" version="0.2.3.1" publicKeyToken="269502ec72a38518" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="Neural.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="UtilitatiCGXML" version="0.0.3.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="UtilitatiCGXML.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+             If you want to change the Windows User Account Control level replace the 
+             requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel element will disable file and registry virtualization. 
+            Remove this element if your application requires this virtualization for backwards
+            compatibility.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ICSharpCode.SharpZipLib.dll" size="200704">
+      <assemblyIdentity name="ICSharpCode.SharpZipLib" version="0.86.0.518" publicKeyToken="1B03E6ACF1164F73" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>ep35wl1JaQtqPEUWB9MRqGaxMfQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NPOI.dll" size="1679360">
+      <assemblyIdentity name="NPOI" version="2.4.0.0" publicKeyToken="0DF73EC7942B34E1" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>nWf0DiNM/t6RNeLbHARc0KDR38w=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NPOI.OOXML.dll" size="544768">
+      <assemblyIdentity name="NPOI.OOXML" version="2.4.0.0" publicKeyToken="0DF73EC7942B34E1" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>70FIy0Axo/UXRhB6JQ9l76YXoq0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NPOI.OpenXml4Net.dll" size="91648">
+      <assemblyIdentity name="NPOI.OpenXml4Net" version="2.4.0.0" publicKeyToken="0DF73EC7942B34E1" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>i88vPlZRzaXrM4ParrTq3XFoKoQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NPOI.OpenXmlFormats.dll" size="2128384">
+      <assemblyIdentity name="NPOI.OpenXmlFormats" version="2.4.0.0" publicKeyToken="0DF73EC7942B34E1" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>IYINRmDQhzHLHFuiS0wAp4iP0MM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="UtilitatiCGXML.exe" size="697736">
+      <assemblyIdentity name="UtilitatiCGXML" version="0.0.3.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>l4vnXX2sp2xnepiVmE7zdoEfaAM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Extras\libiconv2.dll" size="978432">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>5wJASIKwMBSr6yrerTip6HrZAEY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Extras\pdftk.exe" size="5875200">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>6jnFIH4Vy+GQxcDMFFKr2CNSSbU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Extras\pdftk_gpl_license.txt" size="492">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nqgRSxI9fllDNh+DpnjAPB7faoY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Neural.ico" size="118854">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>PvybgMHX5lfCU5QpVG39y1w+iLc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ProgramData\Admin.xml" size="603523" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>OMz3ZyhJZY7OxgZcpKQD750tS0A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ProgramData\Dictionary.xml" size="85828" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>zyswdioPMN5CjnCCErMs3xey2KY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ProgramData\Locality.xml" size="3430452" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>sbRNXDcLnYMuGDgbaTdgcfxRSgM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of the Windows versions that this application has been tested on
+           and is designed to work with. Uncomment the appropriate elements
+           and Windows will automatically select the most compatible environment. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=MH0CD20\Alex" issuerKeyHash="00f22e9cc292b8f74515dda622e3041b9cca7fd8" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>De4848zcwxOT4fMifhw/ZTmIvp4=</DigestValue></Reference></SignedInfo><SignatureValue>C7mLUN35ikh4dALfJBGEI+5/FZZCdH9C27eKXhvn2C5wcEBd+TNtoxmn9BppZtUrlOTmyCWRMaWyBPtda23iSSjzEHbK/aJDCUxrjKM3778THPziCYq1n6P4gKF7OtSPhllZwZAEMV6Wae482ZkgtTBvm6z8DAIlWioZfsJI7Bs=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>03vXWG26Yfa4hPJuhFkxFYabLU2mxnWJnbCmEtRx4sMWWqPJ16EXEveXZLDxCdYtik2KYvVtLZU47viHnqYzv7FqWMyT4RxQh3fuyib0cBBxq/oe7BOhzWC5WFl496I4y3/EbxA0TdD1bTJlaZOaT8igBrrndHszlQj3GdIsAek=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="9ebe8839653f1c7e22f3e19313c3dccce33cee0d" Description="" Url=""><as:assemblyIdentity name="UtilitatiCGXML.exe" version="0.2.3.1" publicKeyToken="269502ec72a38518" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=MH0CD20\Alex</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>j8SQPS+8EsWqUoRkRg/gKkgpzJI=</DigestValue></Reference></SignedInfo><SignatureValue>PIV9ehLGXPocvI+0VyDf4p/D3hkvb+X7oLsEMXIX4ic6P+PtW/r+Qhg6UxSssaOaDA7zhhaGmA11BxdqfIpAopZF/iwubVWbcG9iOc9WAT6t4k4KfNzHb61x4vbkE+8tfXqrYSf2ElByurotVs6XKY/innYJescKzwbOje0f65U=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>03vXWG26Yfa4hPJuhFkxFYabLU2mxnWJnbCmEtRx4sMWWqPJ16EXEveXZLDxCdYtik2KYvVtLZU47viHnqYzv7FqWMyT4RxQh3fuyib0cBBxq/oe7BOhzWC5WFl496I4y3/EbxA0TdD1bTJlaZOaT8igBrrndHszlQj3GdIsAek=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIByTCCATKgAwIBAgIQFudsoxst64pNw1+zRLYarDANBgkqhkiG9w0BAQUFADAjMSEwHwYDVQQDHhgATQBIADAAQwBEADIAMABcAEEAbABlAHgwHhcNMTgxMjAzMDkyNzM5WhcNMTkxMjAzMTUyNzM5WjAjMSEwHwYDVQQDHhgATQBIADAAQwBEADIAMABcAEEAbABlAHgwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBANN711htumH2uITyboRZMRWGmy1NpsZ1iZ2wphLUceLDFlqjydehFxL3l2Sw8QnWLYpNimL1bS2VOO74h56mM7+xaljMk+EcUId37som9HAQcav6HuwToc1guVhZePeiOMt/xG8QNE3Q9W0yZWmTmk/IoAa653R7M5UI9xnSLAHpAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEALEXkO9dC6Jfx6wCaU34sqiCDa+UIOPfNfr8YY4SuIpDB8Mp72rj9JLlukm/CX5qYiUuhveBZ1YVNOSmyOYsXlDLncqFJ3tM6yQxbeo/pT0KmQ547b5FkGuGzeOgUg9EpEauMgoarYqK0mwmuCQEV5QG2ItdbJdhWj46sqs5eG2I=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
