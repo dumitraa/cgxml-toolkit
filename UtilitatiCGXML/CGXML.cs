@@ -12720,7 +12720,7 @@ public partial class CGXML : global::System.Data.DataSet
                 }
                 catch (global::System.InvalidCastException e)
                 {
-                    throw new global::System.Data.StrongTypingException("The value for column \'IMMOVABLEID\' in table \'Points\' is DBNull.", e);
+                    return ((int)(9898989));
                 }
             }
             set
