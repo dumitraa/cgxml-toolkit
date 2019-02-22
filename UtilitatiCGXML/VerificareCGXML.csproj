@@ -22,7 +22,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>0.2.3.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -70,19 +70,31 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GeoAPI, Version=1.7.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GeoAPI.1.7.2\lib\net40-client\GeoAPI.dll</HintPath>
+    <Reference Include="GeoAPI, Version=1.7.5.0, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
+      <HintPath>..\packages\GeoAPI.Core.1.7.5\lib\net40-client\GeoAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="GeoAPI.CoordinateSystems, Version=1.7.5.0, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
+      <HintPath>..\packages\GeoAPI.CoordinateSystems.1.7.5\lib\net40-client\GeoAPI.CoordinateSystems.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="NetTopologySuite, Version=1.13.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NetTopologySuite.1.13.2\lib\net40-client\NetTopologySuite.dll</HintPath>
+    <Reference Include="NetTopologySuite, Version=1.15.0.0, Culture=neutral, PublicKeyToken=f580a05016ebada1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetTopologySuite.Core.1.15.0\lib\net40-client\NetTopologySuite.dll</HintPath>
     </Reference>
-    <Reference Include="NetTopologySuite.IO.GeoTools, Version=1.13.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NetTopologySuite.IO.GeoTools.1.13.2\lib\net40-client\NetTopologySuite.IO.GeoTools.dll</HintPath>
+    <Reference Include="NetTopologySuite.Features, Version=1.15.0.0, Culture=neutral, PublicKeyToken=f580a05016ebada1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetTopologySuite.Features.1.15.0\lib\net40\NetTopologySuite.Features.dll</HintPath>
+    </Reference>
+    <Reference Include="NetTopologySuite.IO.GeoTools, Version=1.15.0.0, Culture=neutral, PublicKeyToken=f580a05016ebada1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetTopologySuite.IO.ShapeFile.1.15.2\lib\net40-client\NetTopologySuite.IO.GeoTools.dll</HintPath>
+    </Reference>
+    <Reference Include="NetTopologySuite.IO.ShapeFile, Version=1.15.0.0, Culture=neutral, PublicKeyToken=f580a05016ebada1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetTopologySuite.IO.ShapeFile.1.15.2\lib\net40-client\NetTopologySuite.IO.ShapeFile.dll</HintPath>
+    </Reference>
+    <Reference Include="NetTopologySuite.IO.ShapeFile.Extended, Version=1.15.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetTopologySuite.IO.ShapeFile.1.15.2\lib\net40-client\NetTopologySuite.IO.ShapeFile.Extended.dll</HintPath>
     </Reference>
     <Reference Include="NPOI, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <HintPath>..\packages\NPOI.2.4.1\lib\net40\NPOI.dll</HintPath>
@@ -223,6 +235,7 @@
     <Content Include="Extras\Done.txt" />
     <Content Include="Neural.ico" />
     <Content Include="Extras\pdftk_gpl_license.txt" />
+    <Content Include="pdftk_gpl_license.txt" />
     <Content Include="ProgramData\Admin.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

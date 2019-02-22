@@ -23,6 +23,7 @@ using NPOI.HPSF;
 using NPOI.SS.UserModel;
 using NPOI.POIFS.FileSystem;
 using NPOI.SS.Util;
+using nc;
 
 namespace UtilitatiCGXML
 {
@@ -176,7 +177,7 @@ namespace UtilitatiCGXML
             {
                 this.listBox1.Visible = true;
             }
-
+            string sector = "";
             //browse
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
             string Titlu = "Alege Dosarul cu CGXML'uri";
@@ -187,22 +188,24 @@ namespace UtilitatiCGXML
             {
                 CostumFolderBrowserDialogPath = CostumFolderBrowserDialog.SelectedPath;
             }
-            FileInfo[] files = (new DirectoryInfo(CostumFolderBrowserDialogPath)).GetFiles("*.cgxml", SearchOption.AllDirectories);
-
-            string imobileFile = string.Concat(CostumFolderBrowserDialogPath, "\\", "Imobile");
+            string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath.ToString(), "*.cgxml", SearchOption.AllDirectories);
+            NumericComparer ns = new NumericComparer();
+            System.Array.Sort(filez, ns);
+            var files = filez.Select(x => new FileInfo(x)).ToArray();
+            //initial vars
             string futureFieldName = "ID";
-            string futureFieldAreaCG = "Suprafata";
+            string futureFieldAreaCG = "Sup Mas";
+            string futureFieldLegalCG = "Sup Acte";
+            string futurePerson = "Persoana";
             int nrCGXML = 0;
             int intr = 0;
             for (int i = 0; i < (int)files.Length; i++)
             {
                 nrCGXML++;
             }
-            //create geometry factory
-            IGeometryFactory geomFactory = NtsGeometryServices.Instance.CreateGeometryFactory();
-            IGeometry[] gr = new IGeometry[nrCGXML];
+            //Create a future list
             IList<Feature> futuresList = new List<Feature>();
-            //loop trough the XML files
+            //loop trough cgxml
             for (int i = 0; i < (int)files.Length; i++)
             {
                 FileInfo fo = files[i];
@@ -216,12 +219,18 @@ namespace UtilitatiCGXML
                     Exception ex = exception;
                     MessageBox.Show(string.Concat(new string[] { "Eroare ", ex.GetType().ToString(), "\n", ex.Message, fo.FullName }));
                 }
+
+                //create geometry factory
+                IGeometryFactory geomFactory = NtsGeometryServices.Instance.CreateGeometryFactory();
+                IGeometry[] gr = new IGeometry[nrCGXML];
                 foreach (CGXML.LandRow lr in fisier.Land)
                 {
-
-                    int r = 0;
-                    int coordNr = fisier.Points.Count;
-                    Coordinate[] myCoord = new Coordinate[coordNr + 1];
+                    var r = 0;
+                    string Person = "";
+                    var q = 0;
+                    Coordinate[] myCoord = new Coordinate[fisier.Points.Count+1];
+                    string[] personArr = new string[fisier.Person.Count];
+                    sector = lr.CADSECTOR.ToString();
                     foreach (CGXML.PointsRow pr in fisier.Points)
                     {
                         if (pr.IMMOVABLEID != 9898989)
@@ -233,10 +242,17 @@ namespace UtilitatiCGXML
                     {
                         myCoord[r] = myCoord[0];
                     }
+                    
+                        foreach (CGXML.PersonRow pp in fisier.Person)
+                    {
+                            personArr[q++] = string.Concat(pp.FIRSTNAME, " ", pp.LASTNAME);
+                    }
                     //create the default table with fields - alternately use DBaseField classes
                     AttributesTable t = new AttributesTable();
                     t.AddAttribute(futureFieldName, lr.CADGENNO);
                     t.AddAttribute(futureFieldAreaCG, lr.MEASUREDAREA);
+                    t.AddAttribute(futureFieldLegalCG, lr.PARCELLEGALAREA);
+                    t.AddAttribute(futurePerson, personArr[0]);
                     //Geometry 
                     myCoord = myCoord.Where(c => c != null).ToArray();
                     gr[intr] = geomFactory.CreatePolygon(myCoord);
@@ -245,9 +261,10 @@ namespace UtilitatiCGXML
                 }
             }
             //Feature list
-            ShapefileDataWriter writer = new ShapefileDataWriter(imobileFile) { Header = ShapefileDataWriter.GetHeader(futuresList[0], futuresList.Count) };
-            System.Collections.IList featList = (System.Collections.IList)futuresList;
-            writer.Write(featList);
+            IList<Feature> features = futuresList.OfType<Feature>().ToList();
+            string shapefile = string.Concat(CostumFolderBrowserDialogPath, "\\", "Imobile ", sector);
+            ShapefileDataWriter writer = new ShapefileDataWriter(shapefile) { Header = ShapefileDataWriter.GetHeader(features[0], features.Count) };
+            writer.Write(features);
 
             System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
         }
