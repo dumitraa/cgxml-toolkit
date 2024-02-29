@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -8,7 +7,9 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>VerificareCGXML</RootNamespace>
     <AssemblyName>VerificareCGXML</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -35,8 +36,6 @@
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,32 +43,19 @@
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Test.ico</ApplicationIcon>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestCertificateThumbprint>9FA363CBA3027D40F2E824DB53B0E8ECFAEEA358</ManifestCertificateThumbprint>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestKeyFile>UtilitatiCGXML_TemporaryKey.pfx</ManifestKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
-  </PropertyGroup>
-  <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="System.Resources.Extensions" Version="4.7.1" />
     <Reference Include="GeoAPI, Version=1.7.5.0, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
       <HintPath>..\packages\GeoAPI.Core.1.7.5\lib\net40-client\GeoAPI.dll</HintPath>
     </Reference>
@@ -123,78 +109,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CGXML.cs" />
-    <Compile Include="CostumControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CostumControl1.Designer.cs">
-      <DependentUpon>CostumControl1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FolderBrowserDialogEx.cs" />
-    <Compile Include="DoneMsgBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DoneMsgBox.Designer.cs">
-      <DependentUpon>DoneMsgBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CConfigMng.cs" />
-    <Compile Include="NumericComparer.cs" />
-    <Compile Include="StringLogicalComparer.cs" />
-    <Compile Include="UserControlPDF1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlPDF1.Designer.cs">
-      <DependentUpon>UserControlPDF1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControlPDF2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlPDF2.Designer.cs">
-      <DependentUpon>UserControlPDF2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Win32.cs" />
-    <Compile Include="CostumControl0.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CostumControl0.Designer.cs">
-      <DependentUpon>CostumControl0.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VerificareCGXML.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VerificareCGXML.Designer.cs">
-      <DependentUpon>VerificareCGXML.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CostumControl0.resx">
-      <DependentUpon>CostumControl0.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CostumControl1.resx">
-      <DependentUpon>CostumControl1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DoneMsgBox.resx">
-      <DependentUpon>DoneMsgBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControlPDF1.resx">
-      <DependentUpon>UserControlPDF1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControlPDF2.resx">
-      <DependentUpon>UserControlPDF2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VerificareCGXML.resx">
-      <DependentUpon>VerificareCGXML.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest">
@@ -204,11 +118,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -246,11 +155,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ProgramData\County.xml" />
-    <Content Include="Extras\todos.txt" />
     <None Include="Resources\fileR2.png" />
     <None Include="Resources\FolderR.2png.png" />
     <Content Include="Test.ico" />
   </ItemGroup>
   <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

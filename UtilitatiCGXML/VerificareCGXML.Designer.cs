@@ -85,7 +85,7 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(105, 55);
             this.button10.TabIndex = 11;
-            this.button10.Text = "Unelte\r\nPNCCF";
+            this.button10.Text = "Altele";
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -101,7 +101,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(94, 55);
             this.button9.TabIndex = 9;
-            this.button9.Text = "Raporte\r\nCGXML";
+            this.button9.Text = "Rapoarte\r\nCGXML";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 

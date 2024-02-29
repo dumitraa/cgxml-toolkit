@@ -24,6 +24,8 @@ using NPOI.SS.UserModel;
 using NPOI.POIFS.FileSystem;
 using NPOI.SS.Util;
 using nc;
+using NPOI.SS.Formula.Eval;
+using NPOI.SS.Formula.Functions;
 
 namespace UtilitatiCGXML
 {
@@ -177,7 +179,16 @@ namespace UtilitatiCGXML
             {
                 this.listBox1.Visible = true;
             }
-            string sector = "";
+            string sectorVal = "";
+            string ie = "";
+            string imprej = "";
+            string noteImobil = "";
+            string id = "";
+            string person = "";
+            string areaCG = "";
+            string actAreaCG = "";
+            string fullName = "";
+
             //browse
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
             string Titlu = "Alege Dosarul cu CGXML'uri";
@@ -194,9 +205,19 @@ namespace UtilitatiCGXML
             var files = filez.Select(x => new FileInfo(x)).ToArray();
             //initial vars
             string futureFieldName = "ID";
+            string futureFieldSector = "Sector";
+            string futureFieldIE = "IE";
+            string futurePerson = "Proprietari";
             string futureFieldAreaCG = "Sup Mas";
-            string futureFieldLegalCG = "Sup Acte";
-            string futurePerson = "Persoana";
+            string futureFieldImprej = "Imprejmuit?";
+            string futureFieldTipTeren = "Tip Teren";
+            string futureFieldNoteImobil = "Note Imobil";
+            string futureFieldTarla = "Nr. Tarla";
+            string futureFieldParcela = "Nr. Parcele";
+            string futureFieldCategFol = "Categ Fol";
+            string futureFieldNrTitlu = "Nr Titlu";
+            string futureFieldLegalAreaCG = "Supr Acte";
+
             int nrCGXML = 0;
             int intr = 0;
             for (int i = 0; i < (int)files.Length; i++)
@@ -225,34 +246,86 @@ namespace UtilitatiCGXML
                 IGeometry[] gr = new IGeometry[nrCGXML];
                 foreach (CGXML.LandRow lr in fisier.Land)
                 {
+                    HashSet<string> uniqueTarla = new HashSet<string>();
+                    HashSet<string> uniqueParcela = new HashSet<string>();
+                    HashSet<string> uniqueCategFol = new HashSet<string>();
+                    HashSet<string> uniqueNrTitlu = new HashSet<string>();
+                    HashSet<string> uniqueTipTeren = new HashSet<string>();
+                    HashSet<string> uniquePerson = new HashSet<string>();
+
                     var r = 0;
-                    string Person = "";
                     var q = 0;
                     Coordinate[] myCoord = new Coordinate[fisier.Points.Count+1];
                     string[] personArr = new string[fisier.Person.Count];
-                    sector = lr.CADSECTOR.ToString();
                     foreach (CGXML.PointsRow pr in fisier.Points)
                     {
                         if (pr.IMMOVABLEID != 9898989)
                         {
-                            myCoord[r++] = new Coordinate(pr.X, pr.Y);
+                            if (r < myCoord.Length - 1)
+                            {
+                                myCoord[r++] = new Coordinate(pr.X, pr.Y);
+                            }
                         }
                     }
-                    if (myCoord[r - 1] != myCoord[0])
-                    {
-                        myCoord[r] = myCoord[0];
-                    }
+                    if (r > 0 && myCoord[r - 1] != myCoord[0] && r < myCoord.Length)
+                        {
+                            myCoord[r] = myCoord[0]; // Safely add closing point
+                        }
+                        else if (r >= myCoord.Length)
+                        {
+                            Console.WriteLine("Error: The coordinates array is full, and the polygon cannot be properly closed.");
+                        }
                     
                         foreach (CGXML.PersonRow pp in fisier.Person)
                     {
-                            personArr[q++] = string.Concat(pp.FIRSTNAME, " ", pp.LASTNAME);
+                        fullName = string.Concat(pp.LASTNAME, " ", pp.FIRSTNAME);
+                        person = fullName;
+                        uniquePerson.Add(fullName);
                     }
                     //create the default table with fields - alternately use DBaseField classes
+
+
+                    // console the whole table
                     AttributesTable t = new AttributesTable();
-                    t.AddAttribute(futureFieldName, lr.CADGENNO);
-                    t.AddAttribute(futureFieldAreaCG, lr.MEASUREDAREA);
-                    t.AddAttribute(futureFieldLegalCG, lr.PARCELLEGALAREA);
-                    t.AddAttribute(futurePerson, personArr[0]);
+
+                    sectorVal = lr.CADSECTOR;
+                    ie = lr.E2IDENTIFIER;
+                    imprej = lr.ENCLOSED ? "Da" : "Nu";
+                    noteImobil = lr.NOTES;
+                    id = lr.CADGENNO;
+                    areaCG = lr.MEASUREDAREA.ToString();
+                    actAreaCG = lr.PARCELLEGALAREA.ToString();
+
+                    foreach(CGXML.ParcelRow pr in fisier.Parcel)
+                    {
+                        uniqueTarla.Add(pr.LANDPLOTNO);
+                        uniqueParcela.Add(pr.PARCELNO);
+                        uniqueCategFol.Add(pr.USECATEGORY);
+                        uniqueNrTitlu.Add(pr.TITLENO.ToString());
+                        uniqueTipTeren.Add(pr.INTRAVILAN ? "Intravilan" : "Extravilan");
+
+                    }
+                        string aggregatedTarla = string.Join("; ", uniqueTarla);
+                        string aggregatedParcela = string.Join("; ", uniqueParcela);
+                        string aggregatedCategFol = string.Join("; ", uniqueCategFol);
+                        string aggregatedNrTitlu = string.Join("; ", uniqueNrTitlu);
+                        string aggregatedTipTeren = string.Join("; ", uniqueTipTeren);
+                        string aggregatedOwners = string.Join("; ", uniquePerson);
+
+                    t.Add(futureFieldName, id);
+                    t.Add(futureFieldSector, sectorVal);
+                    t.Add(futureFieldIE, ie);
+                    t.Add(futureFieldTipTeren, uniqueTipTeren.Count > 0 ? aggregatedTipTeren : null);
+                    t.Add(futureFieldTarla, uniqueTarla.Count > 0 ? aggregatedTarla : null);
+                    t.Add(futureFieldParcela, uniqueParcela.Count > 0 ? aggregatedParcela : null);
+                    t.Add(futureFieldCategFol, uniqueCategFol.Count > 0 ? aggregatedCategFol : null);
+                    t.Add(futureFieldImprej, imprej);
+                    t.Add(futureFieldAreaCG, areaCG);
+                    t.Add(futureFieldLegalAreaCG, actAreaCG);
+                    t.Add(futurePerson, uniquePerson.Count > 0 ? aggregatedOwners : null);
+                    t.Add(futureFieldNrTitlu, uniqueNrTitlu.Count > 0 ? aggregatedNrTitlu : null);
+                    t.Add(futureFieldNoteImobil, noteImobil);
+
                     //Geometry 
                     myCoord = myCoord.Where(c => c != null).ToArray();
                     gr[intr] = geomFactory.CreatePolygon(myCoord);
@@ -261,14 +334,16 @@ namespace UtilitatiCGXML
                 }
             }
             //Feature list
+            string sector = sectorVal == "Fara Sector" ? "" : sectorVal + " ";
             IList<Feature> features = futuresList.OfType<Feature>().ToList();
-            string shapefile = string.Concat(CostumFolderBrowserDialogPath, "\\", "Imobile ", sector);
+            DateTime now = DateTime.Now;
+            string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
+            string shapefile = string.Concat(CostumFolderBrowserDialogPath, "\\", "Imobile ", sector, formattedDate);
             ShapefileDataWriter writer = new ShapefileDataWriter(shapefile) { Header = ShapefileDataWriter.GetHeader(features[0], features.Count) };
             writer.Write(features);
 
             System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
         }
-
         private void button3_MouseHover(object sender, EventArgs e)
         {
 
@@ -428,27 +503,29 @@ namespace UtilitatiCGXML
                 sheet.CreateRow(9).CreateCell(0).SetCellValue(end7);
                 sheet.CreateRow(9).CreateCell(1).SetCellValue(DXFFolder);
 
-
-
-
                 //Write the stream data of workbook to the root directory
+            DateTime now = DateTime.Now;
+            string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
+            FileStream file = new FileStream(Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}_{formattedDate}.xls"), FileMode.Create);
+            hssfworkbook.Write(file);
+            file.Close();
+            //MessageBox
+            DoneMsgBox msg = new DoneMsgBox();
+            msg.ShowDialog();
 
-                FileStream file = new FileStream(string.Concat(CostumFolderBrowserDialog.SelectedPath, "\\", raportname, ".xls"), FileMode.Create);
-                hssfworkbook.Write(file);
-                file.Close();
-                //MessageBox
-                DoneMsgBox msg = new DoneMsgBox();
-                msg.ShowDialog();
+            string filePath = Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}_{formattedDate}.xls");
 
-                if (msg.DialogResult == DialogResult.No)
-                {
-                    System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialog.SelectedPath);
-                }
-                else if (msg.DialogResult == DialogResult.Yes)
-                {
+            if (msg.DialogResult == DialogResult.No)
+            {
+                // Open folder
+                System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
+            }
+            else if (msg.DialogResult == DialogResult.Yes)
+            {
+                // Open file
+                System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
+            }
 
-                    System.Diagnostics.Process.Start(CostumFolderBrowserDialog.SelectedPath + "/" + raportname + ".xls");
-                }
             }
         }
 
@@ -961,7 +1038,6 @@ namespace UtilitatiCGXML
                 }
                     foreach (var filez in filenames)
                     {
-                        string extension = ".pdf";
                         string fo2 = filez;
                         const string pdfkPath = "Extras\\pdftk.exe";
 

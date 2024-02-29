@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CConfigDO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <JudetIndex>0</JudetIndex>
+  <StartPos>
+    <X>482</X>
+    <Y>180</Y>
+  </StartPos>
+  <StartSize>
+    <Width>1009</Width>
+    <Height>560</Height>
+  </StartSize>
+</CConfigDO>

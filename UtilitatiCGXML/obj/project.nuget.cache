@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "5F8wxzwsXxVOdXTdqc2hk0456/m8SPA27y5ivkagvYvOzH0hHnv8YbdPgx4Vv4iNMNG4LLU48hYwolI5txqt+A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\USER\\Documents\\scripts\\cgxml-toolkit\\UtilitatiCGXML\\VerificareCGXML.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\system.resources.extensions\\4.7.1\\system.resources.extensions.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}

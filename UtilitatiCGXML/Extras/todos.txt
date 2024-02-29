@@ -6,12 +6,11 @@
 *
 
 -----------------------------------------------------------------------------------------------------------------------------
-+Export coordonate geometrii in shp/mdb
 +Investigarea generarii persoanelor in cgxml si in UtilitatiCGXML pentru a ma asigura ca in raportul parcela persoana afisara sa fie neaparat proprietarul
 
 -----------------------------------------------------------------------------------------------------------------------------
--Adauga buton pentru generare comasata a rapoatelor intrun singur excel cu pagini multiple.
--Comasarea proprietarilor intr-o singura celula.
+- Adauga buton pentru generare comasata a rapoatelor intr-un singur excel cu pagini multiple.
+- Comasarea proprietarilor intr-o singura celula?
 
 -----------------------------------------------------------------------------------------------------------------------------
 #Investigarea diferentelor intre detalii drept/comentarii/note - eterra/cgxml

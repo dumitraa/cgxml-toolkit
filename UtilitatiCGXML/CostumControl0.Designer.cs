@@ -83,8 +83,8 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelConstructii = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelParcele = new System.Windows.Forms.TableLayoutPanel();
             this.label63 = new System.Windows.Forms.Label();
             this.Label16 = new System.Windows.Forms.Label();
             this.Label15 = new System.Windows.Forms.Label();
@@ -102,8 +102,8 @@
             this.panel1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.TableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanelConstructii.SuspendLayout();
+            this.tableLayoutPanelParcele.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -118,7 +118,7 @@
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(401, 25);
             this.label21.TabIndex = 72;
-            this.label21.Text = "Acest Raport Contine Informatii legate de:";
+            this.label21.Text = "Conținutul raportului:";
             this.label21.Visible = false;
             // 
             // label42
@@ -166,7 +166,7 @@
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(205, 13);
             this.label35.TabIndex = 55;
-            this.label35.Text = "          ●    Note Persoana";
+            this.label35.Text = "          ●    Note Proprietar";
             // 
             // label61
             // 
@@ -280,7 +280,7 @@
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(205, 13);
             this.label41.TabIndex = 54;
-            this.label41.Text = "          ●    Adresa Persoana";
+            this.label41.Text = "          ●    Adresă Proprietar";
             // 
             // label32
             // 
@@ -415,20 +415,20 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(91)))), ((int)(((byte)(90)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F);
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(0, 364);
-            this.button6.Margin = new System.Windows.Forms.Padding(0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(214, 40);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Raport 10%";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            this.button6.MouseHover += new System.EventHandler(this.button6_MouseHover);
+            // this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(91)))), ((int)(((byte)(90)))));
+            // this.button6.FlatAppearance.BorderSize = 0;
+            // this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            // this.button6.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F);
+            // this.button6.ForeColor = System.Drawing.Color.White;
+            // this.button6.Location = new System.Drawing.Point(0, 364);
+            // this.button6.Margin = new System.Windows.Forms.Padding(0);
+            // this.button6.Name = "button6";
+            // this.button6.Size = new System.Drawing.Size(214, 40);
+            // this.button6.TabIndex = 5;
+            // this.button6.Text = " "; // raport 10%
+            // this.button6.UseVisualStyleBackColor = false;
+            // this.button6.Click += new System.EventHandler(this.button6_Click);
+            // this.button6.MouseHover += new System.EventHandler(this.button6_MouseHover);
             // 
             // button5
             // 
@@ -442,7 +442,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(214, 40);
             this.button5.TabIndex = 2;
-            this.button5.Text = "Raport Persoana";
+            this.button5.Text = "Raport Proprietari";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             this.button5.MouseHover += new System.EventHandler(this.button5_MouseHover);
@@ -463,7 +463,7 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             this.button3.MouseHover += new System.EventHandler(this.button3_MouseHover);
-            // 
+            
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(91)))), ((int)(((byte)(90)))));
@@ -630,7 +630,7 @@
             this.Label11.Name = "Label11";
             this.Label11.Size = new System.Drawing.Size(151, 13);
             this.Label11.TabIndex = 59;
-            this.Label11.Text = "          ●    Nr P";
+            this.Label11.Text = "          ●    Nr Parcelă";
             // 
             // Label10
             // 
@@ -642,7 +642,7 @@
             this.Label10.Name = "Label10";
             this.Label10.Size = new System.Drawing.Size(153, 13);
             this.Label10.TabIndex = 58;
-            this.Label10.Text = "          ●    Nr T";
+            this.Label10.Text = "          ●    Nr Tarla";
             // 
             // Label9
             // 
@@ -666,7 +666,7 @@
             this.Label8.Name = "Label8";
             this.Label8.Size = new System.Drawing.Size(151, 13);
             this.Label8.TabIndex = 56;
-            this.Label8.Text = "          ●    Dif Sup";
+            this.Label8.Text = "          ●    Dif Suprafațe";
             // 
             // tableLayoutPanel3
             // 
@@ -699,7 +699,7 @@
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(151, 13);
             this.Label7.TabIndex = 55;
-            this.Label7.Text = "          ●    Sup Acte";
+            this.Label7.Text = "          ●    Suprafața din Act";
             // 
             // label20
             // 
@@ -723,7 +723,7 @@
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(151, 13);
             this.label22.TabIndex = 55;
-            this.label22.Text = "          ●   Nr. Nivele";
+            this.label22.Text = "          ●   Nr. Etaje";
             // 
             // label23
             // 
@@ -735,7 +735,7 @@
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(151, 13);
             this.label23.TabIndex = 54;
-            this.label23.Text = "          ●   Suprafata Acte";
+            this.label23.Text = "          ●   Suprafata din Act";
             // 
             // label24
             // 
@@ -747,7 +747,7 @@
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(151, 13);
             this.label24.TabIndex = 53;
-            this.label24.Text = "          ●   Suprafata Masurata";
+            this.label24.Text = "          ●   Suprafața Masurată";
             // 
             // label25
             // 
@@ -759,7 +759,7 @@
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(153, 13);
             this.label25.TabIndex = 52;
-            this.label25.Text = "          ●    Cu Acte?";
+            this.label25.Text = "          ●    Are Acte?";
             // 
             // label26
             // 
@@ -773,74 +773,75 @@
             this.label26.TabIndex = 49;
             this.label26.Text = "          ●    ID";
             // 
-            // tableLayoutPanel2
+            // tableLayoutPanelConstructii
             // 
-            this.tableLayoutPanel2.AutoSize = true;
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Controls.Add(this.label20, 3, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label22, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label23, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label24, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label25, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label26, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label27, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label28, 2, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(218, 174);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(645, 150);
-            this.tableLayoutPanel2.TabIndex = 74;
-            this.tableLayoutPanel2.Visible = false;
+            this.tableLayoutPanelConstructii.AutoSize = true;
+            this.tableLayoutPanelConstructii.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanelConstructii.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
+            this.tableLayoutPanelConstructii.ColumnCount = 4;
+            this.tableLayoutPanelConstructii.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelConstructii.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelConstructii.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelConstructii.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelConstructii.Controls.Add(this.label20, 3, 1);
+            this.tableLayoutPanelConstructii.Controls.Add(this.label22, 2, 1);
+            this.tableLayoutPanelConstructii.Controls.Add(this.label23, 1, 1);
+            this.tableLayoutPanelConstructii.Controls.Add(this.label62, 1, 1);
+            this.tableLayoutPanelConstructii.Controls.Add(this.label24, 0, 1);
+            this.tableLayoutPanelConstructii.Controls.Add(this.label25, 3, 0);
+            this.tableLayoutPanelConstructii.Controls.Add(this.label26, 0, 0);
+            this.tableLayoutPanelConstructii.Controls.Add(this.label27, 1, 0);
+            this.tableLayoutPanelConstructii.Controls.Add(this.label28, 2, 0);
+            this.tableLayoutPanelConstructii.Location = new System.Drawing.Point(218, 174);
+            this.tableLayoutPanelConstructii.Name = "tableLayoutPanelConstructii";
+            this.tableLayoutPanelConstructii.RowCount = 2;
+            this.tableLayoutPanelConstructii.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelConstructii.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelConstructii.Size = new System.Drawing.Size(645, 150);
+            this.tableLayoutPanelConstructii.TabIndex = 74;
+            this.tableLayoutPanelConstructii.Visible = false;
             // 
-            // TableLayoutPanel1
+            // tableLayoutPanelParcele
             // 
-            this.TableLayoutPanel1.AutoSize = true;
-            this.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.TableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
-            this.TableLayoutPanel1.ColumnCount = 4;
-            this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TableLayoutPanel1.Controls.Add(this.label63, 3, 4);
-            this.TableLayoutPanel1.Controls.Add(this.label2, 0, 0);
-            this.TableLayoutPanel1.Controls.Add(this.label3, 1, 0);
-            this.TableLayoutPanel1.Controls.Add(this.label4, 2, 0);
-            this.TableLayoutPanel1.Controls.Add(this.Label16, 2, 4);
-            this.TableLayoutPanel1.Controls.Add(this.Label15, 1, 4);
-            this.TableLayoutPanel1.Controls.Add(this.Label14, 0, 4);
-            this.TableLayoutPanel1.Controls.Add(this.label19, 3, 3);
-            this.TableLayoutPanel1.Controls.Add(this.label13, 2, 3);
-            this.TableLayoutPanel1.Controls.Add(this.label18, 1, 3);
-            this.TableLayoutPanel1.Controls.Add(this.Label11, 0, 3);
-            this.TableLayoutPanel1.Controls.Add(this.Label10, 3, 2);
-            this.TableLayoutPanel1.Controls.Add(this.Label9, 2, 2);
-            this.TableLayoutPanel1.Controls.Add(this.Label8, 1, 2);
-            this.TableLayoutPanel1.Controls.Add(this.Label7, 0, 2);
-            this.TableLayoutPanel1.Controls.Add(this.label12, 3, 1);
-            this.TableLayoutPanel1.Controls.Add(this.label5, 3, 0);
-            this.TableLayoutPanel1.Controls.Add(this.label6, 0, 1);
-            this.TableLayoutPanel1.Controls.Add(this.label17, 1, 1);
-            this.TableLayoutPanel1.Controls.Add(this.label62, 2, 1);
-            this.TableLayoutPanel1.Location = new System.Drawing.Point(218, 48);
-            this.TableLayoutPanel1.Name = "TableLayoutPanel1";
-            this.TableLayoutPanel1.RowCount = 5;
-            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanel1.Size = new System.Drawing.Size(645, 375);
-            this.TableLayoutPanel1.TabIndex = 73;
-            this.TableLayoutPanel1.Visible = false;
+            this.tableLayoutPanelParcele.AutoSize = true;
+            this.tableLayoutPanelParcele.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanelParcele.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
+            this.tableLayoutPanelParcele.ColumnCount = 4;
+            this.tableLayoutPanelParcele.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelParcele.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelParcele.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelParcele.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelParcele.Controls.Add(this.label63, 3, 4);
+            this.tableLayoutPanelParcele.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanelParcele.Controls.Add(this.label3, 1, 0);
+            this.tableLayoutPanelParcele.Controls.Add(this.label4, 2, 0);
+            this.tableLayoutPanelParcele.Controls.Add(this.Label16, 2, 4);
+            this.tableLayoutPanelParcele.Controls.Add(this.Label15, 1, 4);
+            this.tableLayoutPanelParcele.Controls.Add(this.Label14, 0, 4);
+            this.tableLayoutPanelParcele.Controls.Add(this.label19, 3, 3);
+            this.tableLayoutPanelParcele.Controls.Add(this.label13, 2, 3);
+            this.tableLayoutPanelParcele.Controls.Add(this.label18, 1, 3);
+            this.tableLayoutPanelParcele.Controls.Add(this.Label11, 0, 3);
+            this.tableLayoutPanelParcele.Controls.Add(this.Label10, 3, 2);
+            this.tableLayoutPanelParcele.Controls.Add(this.Label9, 2, 2);
+            this.tableLayoutPanelParcele.Controls.Add(this.Label8, 1, 2);
+            this.tableLayoutPanelParcele.Controls.Add(this.Label7, 0, 2);
+            this.tableLayoutPanelParcele.Controls.Add(this.label12, 3, 1);
+            this.tableLayoutPanelParcele.Controls.Add(this.label5, 3, 0);
+            this.tableLayoutPanelParcele.Controls.Add(this.label6, 0, 1);
+            this.tableLayoutPanelParcele.Controls.Add(this.label17, 1, 1);
+            this.tableLayoutPanelParcele.Controls.Add(this.label62, 2, 1);
+            this.tableLayoutPanelParcele.Location = new System.Drawing.Point(218, 48);
+            this.tableLayoutPanelParcele.Name = "tableLayoutPanelParcele";
+            this.tableLayoutPanelParcele.RowCount = 5;
+            this.tableLayoutPanelParcele.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelParcele.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelParcele.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelParcele.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelParcele.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelParcele.Size = new System.Drawing.Size(645, 375);
+            this.tableLayoutPanelParcele.TabIndex = 73;
+            this.tableLayoutPanelParcele.Visible = false;
             // 
             // label63
             // 
@@ -864,7 +865,7 @@
             this.Label16.Name = "Label16";
             this.Label16.Size = new System.Drawing.Size(151, 13);
             this.Label16.TabIndex = 64;
-            this.Label16.Text = "          ●    Note P";
+            this.Label16.Text = "          ●    Note Parcelă";
             // 
             // Label15
             // 
@@ -876,7 +877,7 @@
             this.Label15.Name = "Label15";
             this.Label15.Size = new System.Drawing.Size(151, 13);
             this.Label15.TabIndex = 63;
-            this.Label15.Text = "          ●    Note I";
+            this.Label15.Text = "          ●    Note Imobil";
             // 
             // Label14
             // 
@@ -888,7 +889,7 @@
             this.Label14.Name = "Label14";
             this.Label14.Size = new System.Drawing.Size(151, 13);
             this.Label14.TabIndex = 62;
-            this.Label14.Text = "          ●    Intra?";
+            this.Label14.Text = "          ●    Tip Teren (E/I)";
             // 
             // label19
             // 
@@ -912,7 +913,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(151, 13);
             this.label13.TabIndex = 60;
-            this.label13.Text = "          ●    Cat";
+            this.label13.Text = "          ●    Categorie de folosință";
             // 
             // label18
             // 
@@ -924,7 +925,7 @@
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(151, 13);
             this.label18.TabIndex = 66;
-            this.label18.Text = "          ●    Sup P";
+            this.label18.Text = "          ●    Suprafata din Acte";
             // 
             // label12
             // 
@@ -936,7 +937,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(153, 13);
             this.label12.TabIndex = 54;
-            this.label12.Text = "          ●    Sup Mas";
+            this.label12.Text = "          ●    Suprafata  Masurata";
             // 
             // label17
             // 
@@ -960,7 +961,7 @@
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(151, 13);
             this.label62.TabIndex = 68;
-            this.label62.Text = "          ●   Persoana";
+            this.label62.Text = "          ●   Proprietar";
             // 
             // pictureBox1
             // 
@@ -984,6 +985,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel5.Controls.Add(this.label35, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.label36, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label44, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.label37, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.label38, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.label39, 0, 1);
@@ -1026,8 +1028,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel6);
             this.Controls.Add(this.tableLayoutPanel3);
-            this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.TableLayoutPanel1);
+            this.Controls.Add(this.tableLayoutPanelConstructii);
+            this.Controls.Add(this.tableLayoutPanelParcele);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.tableLayoutPanel4);
@@ -1039,10 +1041,10 @@
             this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.TableLayoutPanel1.ResumeLayout(false);
-            this.TableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanelConstructii.ResumeLayout(false);
+            this.tableLayoutPanelConstructii.PerformLayout();
+            this.tableLayoutPanelParcele.ResumeLayout(false);
+            this.tableLayoutPanelParcele.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
@@ -1104,8 +1106,8 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TableLayoutPanel TableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelConstructii;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelParcele;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label13;
