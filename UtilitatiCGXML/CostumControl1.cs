@@ -173,12 +173,8 @@ namespace UtilitatiCGXML
 
         }
         public string CostumFolderBrowserDialogPath = "";
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) // CGXML -> SHP BTN
         {
-            if (this.listBox1.Visible != true)
-            {
-                this.listBox1.Visible = true;
-            }
             string sectorVal = "";
             string ie = "";
             string imprej = "";
@@ -240,6 +236,19 @@ namespace UtilitatiCGXML
                     Exception ex = exception;
                     MessageBox.Show(string.Concat(new string[] { "Eroare ", ex.GetType().ToString(), "\n", ex.Message, fo.FullName }));
                 }
+
+                if (fisier.Points.Count == 0)
+                {
+                    continue; // Skip the rest of the loop if no Points are present
+                }
+
+                // // Process Buildings separately if present
+                // if (fisier.Building.Count > 0)
+                // {
+                //     // You would handle the Building processing here, potentially in a separate method.
+                //     // Make sure to check if the BUILDINGID matches between Buildings and Points.
+                //     ProcessBuildings(fisier);
+                // }
 
                 //create geometry factory
                 IGeometryFactory geomFactory = NtsGeometryServices.Instance.CreateGeometryFactory();
@@ -414,21 +423,21 @@ namespace UtilitatiCGXML
                 string end6 = "shp";
                 string end7 = "DXF";
 
-                //rootfolder
-                bool rootfolder;
-                if(Directory.Exists(CostumFolderBrowserDialog.SelectedPath))
-                { rootfolder = true; }
-                else { rootfolder = false; }
-                //cgxml
-                bool cgxmlfolder;
-                if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath))
-                { cgxmlfolder = true; }
-                else { cgxmlfolder = false; }
-                //sector cgxml
-                bool sectorcgxml;
-                if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath))
-                { sectorcgxml = true; }
-                else { sectorcgxml = false; }
+                // //rootfolder
+                // bool rootfolder;
+                // if(Directory.Exists(CostumFolderBrowserDialog.SelectedPath))
+                // { rootfolder = true; }
+                // else { rootfolder = false; }
+                // //cgxml
+                // bool cgxmlfolder;
+                // if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath))
+                // { cgxmlfolder = true; }
+                // else { cgxmlfolder = false; }
+                // //sector cgxml
+                // bool sectorcgxml;
+                // if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath))
+                // { sectorcgxml = true; }
+                // else { sectorcgxml = false; }
                 //Date Teren
                 bool DateTerenFolder;
                 if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end1))
@@ -445,10 +454,10 @@ namespace UtilitatiCGXML
                 { OpisFolder = true; }
                 else { OpisFolder = false; }
                 //Sector Opis
-                bool OpisSector;
-                if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end4 + "\\" + Sector_Letter+Sector_NR))
-                { OpisSector = true; }
-                else { OpisSector = false; }
+                // bool OpisSector;
+                // if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end4 + "\\" + Sector_Letter+Sector_NR))
+                // { OpisSector = true; }
+                // else { OpisSector = false; }
                 //Planuri Cadastrale
                 bool PlanCadFolder;
                 if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end5))
@@ -466,10 +475,10 @@ namespace UtilitatiCGXML
                 { DXFFolder = true; }
                 else { DXFFolder = false; }
                 //PDF
-                bool PDFFOLDER;
-                if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath))
-                { PDFFOLDER = true; }
-                else { PDFFOLDER = false; }
+                // bool PDFFOLDER;
+                // if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath))
+                // { PDFFOLDER = true; }
+                // else { PDFFOLDER = false; }
                 //Reg
                 bool RegistruFolder;
                 if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end3))

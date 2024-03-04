@@ -215,3 +215,4 @@ C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\UtilitatiCGXML\obj\
 C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\UtilitatiCGXML\obj\Debug\net8.0-windows\VerificareCGXML.pdb
 C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\UtilitatiCGXML\obj\Debug\net8.0-windows\VerificareCGXML.genruntimeconfig.cache
 C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\UtilitatiCGXML\obj\Debug\net8.0-windows\ref\VerificareCGXML.dll
+C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\obj\Debug\net8.0-windows\VerificareCGXML.sourcelink.json

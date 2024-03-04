@@ -179,20 +179,20 @@
             // 
             // button1
             // 
-            // this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(91)))), ((int)(((byte)(90)))));
-            // this.button1.FlatAppearance.BorderSize = 0;
-            // this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            // this.button1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F);
-            // this.button1.ForeColor = System.Drawing.Color.White;
-            // this.button1.Location = new System.Drawing.Point(0, 118);
-            // this.button1.Margin = new System.Windows.Forms.Padding(0);
-            // this.button1.Name = "button1";
-            // this.button1.Size = new System.Drawing.Size(214, 51);
-            // this.button1.TabIndex = 1;
-            // this.button1.Text = "Stergere Caractere";
-            // this.button1.UseVisualStyleBackColor = false;
-            // this.button1.Click += new System.EventHandler(this.button1_Click);
-            // this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(91)))), ((int)(((byte)(90)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 118);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(214, 51);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Copiere si arhivare CGXML (WIP)";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // button4
             // 

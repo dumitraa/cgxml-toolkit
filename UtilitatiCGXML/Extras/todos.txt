@@ -1,17 +1,18 @@
-﻿* = Absolut necesare
-+ = Importante
-- = Posibile imbunatatiri
+﻿* = Necessary
++ = Important
+- = Possible Enhancements
 
 -----------------------------------------------------------------------------------------------------------------------------
 *
 
 -----------------------------------------------------------------------------------------------------------------------------
-+Investigarea generarii persoanelor in cgxml si in UtilitatiCGXML pentru a ma asigura ca in raportul parcela persoana afisara sa fie neaparat proprietarul
++ 
 
 -----------------------------------------------------------------------------------------------------------------------------
-- Adauga buton pentru generare comasata a rapoatelor intr-un singur excel cu pagini multiple.
-- Comasarea proprietarilor intr-o singura celula?
+- Merge multiple raports (multiple sheets) into one Excel
+- CGXML -> SHP ~ Avoid CGXML data that doesn't have Points
+- CGXML -> SHP ~ Add a layer with buildings pints
 
 -----------------------------------------------------------------------------------------------------------------------------
-#Investigarea diferentelor intre detalii drept/comentarii/note - eterra/cgxml
-(notele in cgxml = detalii drept eterra, detalii drept cgxml = comentarii eterra)
+# Investigations differences detalii drept/comentarii/note - eterra/cgxml
+(note cgxml = detalii drept eterra, detalii drept cgxml = comentarii eterra)
