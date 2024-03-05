@@ -43,7 +43,6 @@ namespace UtilitatiCGXML
                     btn.ForeColor = System.Drawing.Color.Black;
                     btn.FlatStyle = FlatStyle.Flat;
                     btn.FlatAppearance.BorderSize = 0;
-                    btn.Font = new Font("Segoe UI", 10, FontStyle.Regular);
 
                     // Add hover effects
                     btn.MouseEnter += (sender, e) =>
@@ -153,7 +152,7 @@ namespace UtilitatiCGXML
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Gill Sans Nova", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(220, 2);
+            this.label21.Location = new System.Drawing.Point(250, 25);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(401, 25);
             this.label21.TabIndex = 72;
@@ -168,9 +167,11 @@ namespace UtilitatiCGXML
             this.label42.ForeColor = System.Drawing.Color.Black;
             this.label42.Location = new System.Drawing.Point(6, 31);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(151, 13);
             this.label42.TabIndex = 49;
-            this.label42.Text = "          ●    ID";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label42.Text = "● ID";
             // 
             // label33
             // 
@@ -180,9 +181,11 @@ namespace UtilitatiCGXML
             this.label33.ForeColor = System.Drawing.Color.Black;
             this.label33.Location = new System.Drawing.Point(220, 31);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(205, 13);
             this.label33.TabIndex = 50;
-            this.label33.Text = "          ●    Sector";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label33.Text = "● Sector";
             // 
             // label34
             // 
@@ -192,9 +195,11 @@ namespace UtilitatiCGXML
             this.label34.ForeColor = System.Drawing.Color.Black;
             this.label34.Location = new System.Drawing.Point(434, 31);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(205, 13);
             this.label34.TabIndex = 51;
-            this.label34.Text = "          ●    Tip Inscriere";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label34.Text = "● Tip Inscriere";
             // 
             // label35
             // 
@@ -203,9 +208,11 @@ namespace UtilitatiCGXML
             this.label35.BackColor = System.Drawing.Color.Transparent;
             this.label35.Location = new System.Drawing.Point(6, 180);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(205, 13);
             this.label35.TabIndex = 55;
-            this.label35.Text = "          ●    Note Proprietar";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label35.Text = "● Note Proprietar";
             // 
             // label61
             // 
@@ -215,9 +222,11 @@ namespace UtilitatiCGXML
             this.label61.ForeColor = System.Drawing.Color.Black;
             this.label61.Location = new System.Drawing.Point(220, 31);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(205, 13);
             this.label61.TabIndex = 54;
-            this.label61.Text = "          ●    IE";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label61.Text = "● IE";
             // 
             // label31
             // 
@@ -227,9 +236,11 @@ namespace UtilitatiCGXML
             this.label31.ForeColor = System.Drawing.Color.Black;
             this.label31.Location = new System.Drawing.Point(6, 104);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(205, 13);
             this.label31.TabIndex = 53;
-            this.label31.Text = "          ●    Sarcini?";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label31.Text = "● Sarcini?";
             // 
             // label30
             // 
@@ -239,9 +250,11 @@ namespace UtilitatiCGXML
             this.label30.ForeColor = System.Drawing.Color.Black;
             this.label30.Location = new System.Drawing.Point(434, 31);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(205, 13);
             this.label30.TabIndex = 52;
-            this.label30.Text = "          ●    Sector";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label30.Text = "● Sector";
             // 
             // label36
             // 
@@ -250,9 +263,11 @@ namespace UtilitatiCGXML
             this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Location = new System.Drawing.Point(6, 32);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(205, 13);
             this.label36.TabIndex = 49;
-            this.label36.Text = "          ●    ID";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label36.Text = "● ID";
             // 
             // label29
             // 
@@ -262,9 +277,11 @@ namespace UtilitatiCGXML
             this.label29.ForeColor = System.Drawing.Color.Black;
             this.label29.Location = new System.Drawing.Point(6, 31);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(205, 13);
             this.label29.TabIndex = 51;
-            this.label29.Text = "          ●    ID";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label29.Text = "● ID";
             // 
             // label37
             // 
@@ -273,9 +290,11 @@ namespace UtilitatiCGXML
             this.label37.BackColor = System.Drawing.Color.Transparent;
             this.label37.Location = new System.Drawing.Point(220, 32);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(205, 13);
             this.label37.TabIndex = 50;
-            this.label37.Text = "          ●    Sector";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label37.Text = "● Sector";
             // 
             // label38
             // 
@@ -284,9 +303,11 @@ namespace UtilitatiCGXML
             this.label38.BackColor = System.Drawing.Color.Transparent;
             this.label38.Location = new System.Drawing.Point(434, 32);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(205, 13);
             this.label38.TabIndex = 51;
-            this.label38.Text = "          ●    Tip Inscriere";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label38.Text = "● Tip Inscriere";
             // 
             // label39
             // 
@@ -295,9 +316,11 @@ namespace UtilitatiCGXML
             this.label39.BackColor = System.Drawing.Color.Transparent;
             this.label39.Location = new System.Drawing.Point(6, 106);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(205, 13);
             this.label39.TabIndex = 52;
-            this.label39.Text = "          ●    CNP";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label39.Text = "● CNP";
             // 
             // label40
             // 
@@ -306,9 +329,11 @@ namespace UtilitatiCGXML
             this.label40.BackColor = System.Drawing.Color.Transparent;
             this.label40.Location = new System.Drawing.Point(220, 106);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(205, 13);
             this.label40.TabIndex = 53;
-            this.label40.Text = "          ●    Defunct?";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label40.Text = "● Defunct?";
             // 
             // label41
             // 
@@ -317,9 +342,11 @@ namespace UtilitatiCGXML
             this.label41.BackColor = System.Drawing.Color.Transparent;
             this.label41.Location = new System.Drawing.Point(434, 106);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(205, 13);
             this.label41.TabIndex = 54;
-            this.label41.Text = "          ●    Adresă Proprietar";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label41.Text = "● Adresă Proprietar";
             // 
             // label32
             // 
@@ -329,9 +356,11 @@ namespace UtilitatiCGXML
             this.label32.ForeColor = System.Drawing.Color.Black;
             this.label32.Location = new System.Drawing.Point(6, 31);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(205, 13);
             this.label32.TabIndex = 49;
-            this.label32.Text = "          ●    ID";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label32.Text = "● ID";
             // 
             // label28
             // 
@@ -341,9 +370,11 @@ namespace UtilitatiCGXML
             this.label28.ForeColor = System.Drawing.Color.Black;
             this.label28.Location = new System.Drawing.Point(326, 31);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(151, 13);
             this.label28.TabIndex = 51;
-            this.label28.Text = "          ●    Nr C";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label28.Text = "● Nr C";
             // 
             // label43
             // 
@@ -353,9 +384,11 @@ namespace UtilitatiCGXML
             this.label43.ForeColor = System.Drawing.Color.Black;
             this.label43.Location = new System.Drawing.Point(166, 31);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(151, 13);
             this.label43.TabIndex = 50;
-            this.label43.Text = "          ●    Sector";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label43.Text = "● Sector";
             // 
             // label44
             // 
@@ -365,9 +398,11 @@ namespace UtilitatiCGXML
             this.label44.ForeColor = System.Drawing.Color.Black;
             this.label44.Location = new System.Drawing.Point(326, 31);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(151, 13);
             this.label44.TabIndex = 51;
-            this.label44.Text = "          ●    IE";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label44.Text = "● IE";
             // 
             // label45
             // 
@@ -377,9 +412,11 @@ namespace UtilitatiCGXML
             this.label45.ForeColor = System.Drawing.Color.Black;
             this.label45.Location = new System.Drawing.Point(486, 31);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(153, 13);
             this.label45.TabIndex = 52;
-            this.label45.Text = "          ●    Tip ID";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label45.Text = "● Tip ID";
             // 
             // panel1
             // 
@@ -562,9 +599,11 @@ namespace UtilitatiCGXML
             this.label27.ForeColor = System.Drawing.Color.Black;
             this.label27.Location = new System.Drawing.Point(166, 31);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(151, 13);
             this.label27.TabIndex = 50;
-            this.label27.Text = "          ●    Sector";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label27.Text = "● Sector";
             // 
             // label2
             // 
@@ -574,14 +613,21 @@ namespace UtilitatiCGXML
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(6, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 13);
             this.label2.TabIndex = 49;
-            this.label2.Text = "          ●    ID";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label2.Text = "● ID";
             // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel6.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
+            this.tableLayoutPanel6.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel6.Padding = new Padding(20);
+            foreach (Control c in this.tableLayoutPanel6.Controls)
+            {
+                c.Margin = new Padding(10);
+            }
             this.tableLayoutPanel6.ColumnCount = 4;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -607,9 +653,11 @@ namespace UtilitatiCGXML
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(166, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 13);
             this.label3.TabIndex = 50;
-            this.label3.Text = "          ●    Sector";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label3.Text = "● Sector";
             // 
             // label4
             // 
@@ -619,9 +667,11 @@ namespace UtilitatiCGXML
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(326, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 13);
             this.label4.TabIndex = 51;
-            this.label4.Text = "          ●    IE";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label4.Text = "● IE";
             // 
             // label5
             // 
@@ -631,9 +681,11 @@ namespace UtilitatiCGXML
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(486, 32);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(153, 13);
             this.label5.TabIndex = 52;
-            this.label5.Text = "          ●    Nr CAD";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label5.Text = "● Nr CAD";
             // 
             // label6
             // 
@@ -643,9 +695,11 @@ namespace UtilitatiCGXML
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(6, 106);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(151, 13);
             this.label6.TabIndex = 53;
-            this.label6.Text = "          ●    Nr CF";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label6.Text = "● Nr CF";
             // 
             // Label11
             // 
@@ -655,9 +709,11 @@ namespace UtilitatiCGXML
             this.Label11.ForeColor = System.Drawing.Color.Black;
             this.Label11.Location = new System.Drawing.Point(6, 254);
             this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(151, 13);
             this.Label11.TabIndex = 59;
-            this.Label11.Text = "          ●    Nr Parcelă";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.Label11.Text = "● Nr Parcelă";
             // 
             // Label10
             // 
@@ -667,9 +723,11 @@ namespace UtilitatiCGXML
             this.Label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Label10.Location = new System.Drawing.Point(486, 180);
             this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(153, 13);
             this.Label10.TabIndex = 58;
-            this.Label10.Text = "          ●    Nr Tarla";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.Label10.Text = "● Nr Tarla";
             // 
             // Label9
             // 
@@ -679,9 +737,11 @@ namespace UtilitatiCGXML
             this.Label9.ForeColor = System.Drawing.Color.Black;
             this.Label9.Location = new System.Drawing.Point(326, 180);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(151, 13);
             this.Label9.TabIndex = 57;
-            this.Label9.Text = "          ●    Nr Titlu";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.Label9.Text = "● Nr Titlu";
             // 
             // Label8
             // 
@@ -691,14 +751,21 @@ namespace UtilitatiCGXML
             this.Label8.ForeColor = System.Drawing.Color.Black;
             this.Label8.Location = new System.Drawing.Point(166, 180);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(151, 13);
             this.Label8.TabIndex = 56;
-            this.Label8.Text = "          ●    Dif Suprafațe";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.Label8.Text = "● Dif Suprafațe";
             // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
+            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel3.Padding = new Padding(20);
+            foreach (Control c in this.tableLayoutPanel3.Controls)
+            {
+                c.Margin = new Padding(10);
+            }
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -724,9 +791,11 @@ namespace UtilitatiCGXML
             this.Label7.ForeColor = System.Drawing.Color.Black;
             this.Label7.Location = new System.Drawing.Point(6, 180);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(151, 13);
             this.Label7.TabIndex = 55;
-            this.Label7.Text = "          ●    Suprafața din Act";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.Label7.Text = "● Suprafața din Act";
             // 
             // label20
             // 
@@ -736,9 +805,11 @@ namespace UtilitatiCGXML
             this.label20.ForeColor = System.Drawing.Color.Black;
             this.label20.Location = new System.Drawing.Point(486, 105);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(153, 13);
             this.label20.TabIndex = 56;
-            this.label20.Text = "          ●   Note C";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label20.Text = "● Note C";
             // 
             // label22
             // 
@@ -748,9 +819,11 @@ namespace UtilitatiCGXML
             this.label22.ForeColor = System.Drawing.Color.Black;
             this.label22.Location = new System.Drawing.Point(326, 105);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(151, 13);
             this.label22.TabIndex = 55;
-            this.label22.Text = "          ●   Nr. Etaje";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label22.Text = "● Nr. Etaje";
             // 
             // label23
             // 
@@ -760,9 +833,11 @@ namespace UtilitatiCGXML
             this.label23.ForeColor = System.Drawing.Color.Black;
             this.label23.Location = new System.Drawing.Point(166, 105);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(151, 13);
             this.label23.TabIndex = 54;
-            this.label23.Text = "          ●   Suprafata din Act";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label23.Text = "● Suprafata din Act";
             // 
             // label24
             // 
@@ -772,9 +847,11 @@ namespace UtilitatiCGXML
             this.label24.ForeColor = System.Drawing.Color.Black;
             this.label24.Location = new System.Drawing.Point(6, 105);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(151, 13);
             this.label24.TabIndex = 53;
-            this.label24.Text = "          ●   Suprafața Masurată";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label24.Text = "● Suprafața Masurată";
             // 
             // label25
             // 
@@ -784,9 +861,11 @@ namespace UtilitatiCGXML
             this.label25.ForeColor = System.Drawing.Color.Black;
             this.label25.Location = new System.Drawing.Point(486, 31);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(153, 13);
             this.label25.TabIndex = 52;
-            this.label25.Text = "          ●    Are Acte?";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label25.Text = "● Are Acte?";
             // 
             // label26
             // 
@@ -796,15 +875,22 @@ namespace UtilitatiCGXML
             this.label26.ForeColor = System.Drawing.Color.Black;
             this.label26.Location = new System.Drawing.Point(6, 31);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(151, 13);
             this.label26.TabIndex = 49;
-            this.label26.Text = "          ●    ID";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label26.Text = "● ID";
             // 
             // tableLayoutPanelConstructii
             // 
             this.tableLayoutPanelConstructii.AutoSize = true;
-            this.tableLayoutPanelConstructii.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanelConstructii.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
+            this.tableLayoutPanelConstructii.BackColor = System.Drawing.Color.Transparent; // Sets a white background
+            this.tableLayoutPanelConstructii.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanelConstructii.Padding = new Padding(20);
+            foreach (Control c in this.tableLayoutPanelConstructii.Controls)
+            {
+                c.Margin = new Padding(10);
+            }
             this.tableLayoutPanelConstructii.ColumnCount = 4;
             this.tableLayoutPanelConstructii.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelConstructii.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -826,13 +912,19 @@ namespace UtilitatiCGXML
             this.tableLayoutPanelConstructii.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelConstructii.Size = new System.Drawing.Size(645, 150);
             this.tableLayoutPanelConstructii.TabIndex = 74;
+        
             this.tableLayoutPanelConstructii.Visible = false;
             // 
             // tableLayoutPanelParcele
             // 
             this.tableLayoutPanelParcele.AutoSize = true;
             this.tableLayoutPanelParcele.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanelParcele.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
+            this.tableLayoutPanelParcele.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanelParcele.Padding = new Padding(20);
+            foreach (Control c in this.tableLayoutPanelParcele.Controls)
+            {
+                c.Margin = new Padding(10);
+            }
             this.tableLayoutPanelParcele.ColumnCount = 4;
             this.tableLayoutPanelParcele.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelParcele.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -878,9 +970,11 @@ namespace UtilitatiCGXML
             this.label63.ForeColor = System.Drawing.Color.Black;
             this.label63.Location = new System.Drawing.Point(486, 329);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(153, 13);
             this.label63.TabIndex = 69;
-            this.label63.Text = "          ●    Note Pers";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label63.Text = "● Note Pers";
             // 
             // Label16
             // 
@@ -890,9 +984,11 @@ namespace UtilitatiCGXML
             this.Label16.ForeColor = System.Drawing.Color.Black;
             this.Label16.Location = new System.Drawing.Point(326, 329);
             this.Label16.Name = "Label16";
-            this.Label16.Size = new System.Drawing.Size(151, 13);
             this.Label16.TabIndex = 64;
-            this.Label16.Text = "          ●    Note Parcelă";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.Label16.Text = "● Note Parcelă";
             // 
             // Label15
             // 
@@ -902,9 +998,11 @@ namespace UtilitatiCGXML
             this.Label15.ForeColor = System.Drawing.Color.Black;
             this.Label15.Location = new System.Drawing.Point(166, 329);
             this.Label15.Name = "Label15";
-            this.Label15.Size = new System.Drawing.Size(151, 13);
             this.Label15.TabIndex = 63;
-            this.Label15.Text = "          ●    Note Imobil";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.Label15.Text = "● Note Imobil";
             // 
             // Label14
             // 
@@ -914,9 +1012,11 @@ namespace UtilitatiCGXML
             this.Label14.ForeColor = System.Drawing.Color.Black;
             this.Label14.Location = new System.Drawing.Point(6, 329);
             this.Label14.Name = "Label14";
-            this.Label14.Size = new System.Drawing.Size(151, 13);
             this.Label14.TabIndex = 62;
-            this.Label14.Text = "          ●    Tip Teren (E/I)";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.Label14.Text = "● Tip Teren (E/I)";
             // 
             // label19
             // 
@@ -926,9 +1026,11 @@ namespace UtilitatiCGXML
             this.label19.ForeColor = System.Drawing.Color.Black;
             this.label19.Location = new System.Drawing.Point(486, 254);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(153, 13);
             this.label19.TabIndex = 67;
-            this.label19.Text = "          ●    Imprejmuit?";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label19.Text = "● Imprejmuit?";
             // 
             // label13
             // 
@@ -938,9 +1040,11 @@ namespace UtilitatiCGXML
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(326, 254);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(151, 13);
             this.label13.TabIndex = 60;
-            this.label13.Text = "          ●    Categorie de folosință";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label13.Text = "● Categorie de folosință";
             // 
             // label18
             // 
@@ -950,9 +1054,11 @@ namespace UtilitatiCGXML
             this.label18.ForeColor = System.Drawing.Color.Black;
             this.label18.Location = new System.Drawing.Point(166, 254);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(151, 13);
             this.label18.TabIndex = 66;
-            this.label18.Text = "          ●    Suprafata din Acte";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label18.Text = "● Suprafata din Acte";
             // 
             // label12
             // 
@@ -962,9 +1068,11 @@ namespace UtilitatiCGXML
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(486, 106);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(153, 13);
             this.label12.TabIndex = 54;
-            this.label12.Text = "          ●    Suprafata  Masurata";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label12.Text = "● Suprafata  Masurata";
             // 
             // label17
             // 
@@ -974,9 +1082,11 @@ namespace UtilitatiCGXML
             this.label17.ForeColor = System.Drawing.Color.Black;
             this.label17.Location = new System.Drawing.Point(166, 106);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(151, 13);
             this.label17.TabIndex = 65;
-            this.label17.Text = "          ●    Nr TOPO";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label17.Text = "● Nr TOPO";
             // 
             // label62
             // 
@@ -986,15 +1096,18 @@ namespace UtilitatiCGXML
             this.label62.ForeColor = System.Drawing.Color.Black;
             this.label62.Location = new System.Drawing.Point(326, 106);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(151, 13);
             this.label62.TabIndex = 68;
-            this.label62.Text = "          ●   Proprietar";
+            this.label26.TextAlign = ContentAlignment.MiddleLeft;
+            this.label26.AutoSize = true;
+            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.label62.Text = "● Proprietar";
+
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(379, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(378, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(400, 400);
@@ -1005,7 +1118,12 @@ namespace UtilitatiCGXML
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel5.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
+            this.tableLayoutPanel5.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel5.Padding = new Padding(20);
+            foreach (Control c in this.tableLayoutPanel5.Controls)
+            {
+                c.Margin = new Padding(10);
+            }
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -1031,7 +1149,12 @@ namespace UtilitatiCGXML
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel4.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
+            this.tableLayoutPanel4.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel4.Padding = new Padding(20);
+            foreach (Control c in this.tableLayoutPanel4.Controls)
+            {
+                c.Margin = new Padding(10);
+            }
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));

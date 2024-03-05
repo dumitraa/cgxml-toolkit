@@ -23,7 +23,6 @@ namespace UtilitatiCGXML
                 btn.ForeColor = System.Drawing.Color.Black;
                 btn.FlatStyle = FlatStyle.Flat;
                 btn.FlatAppearance.BorderSize = 0;
-                btn.Font = new Font("Segoe UI", 10, FontStyle.Regular);
 
                 // Add hover effects
                 btn.MouseEnter += (sender, e) =>
@@ -588,25 +587,53 @@ namespace UtilitatiCGXML
             // 
             // button25
             // 
-            this.button25.Location = new System.Drawing.Point(313, 133);
+            // Define button size and location parameters
+            int buttonWidth = 195;
+            int buttonHeight = 157;
+            int horizontalSpacing = 50; // Space between the buttons
+            int leftMargin = 300; // Centering the buttons horizontally in the form
+
+            this.button25.Location = new System.Drawing.Point(leftMargin, 133); // Adjusted for symmetry
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(195, 157);
+            this.button25.Size = new System.Drawing.Size(buttonWidth, buttonHeight);
             this.button25.TabIndex = 50;
             this.button25.Text = "Obtine un fisier";
-            this.button25.UseVisualStyleBackColor = true;
+            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button25.BackColor = System.Drawing.Color.FromArgb(225, 225, 225); // Light gray background
+            this.button25.Font = new System.Drawing.Font("Segoe UI", 10);
+            this.button25.ForeColor = System.Drawing.Color.Black;
+            this.button25.UseVisualStyleBackColor = false;
             this.button25.Visible = false;
             this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // button26
             // 
-            this.button26.Location = new System.Drawing.Point(547, 140);
+            this.button26.Location = new System.Drawing.Point(leftMargin + buttonWidth + horizontalSpacing, 133); // Positioned with spacing from button25
             this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(213, 144);
+            this.button26.Size = new System.Drawing.Size(buttonWidth, buttonHeight);
             this.button26.TabIndex = 51;
             this.button26.Text = "Obtine fisiere multiple";
-            this.button26.UseVisualStyleBackColor = true;
+            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button26.BackColor = System.Drawing.Color.FromArgb(225, 225, 225); // Light gray background
+            this.button26.Font = new System.Drawing.Font("Segoe UI", 10);
+            this.button26.ForeColor = System.Drawing.Color.Black;
+            this.button26.UseVisualStyleBackColor = false;
             this.button26.Visible = false;
             this.button26.Click += new System.EventHandler(this.button26_Click);
+
+            foreach (var btn in new[] { this.button25, this.button26 })
+                {
+                    btn.MouseEnter += (sender, e) => 
+                    {
+                        var button = (Button)sender;
+                        button.BackColor = System.Drawing.Color.FromArgb(195, 195, 195); // Darker color on hover
+                    };
+                    btn.MouseLeave += (sender, e) =>
+                    {
+                        var button = (Button)sender;
+                        button.BackColor = System.Drawing.Color.FromArgb(225, 225, 225); // Original color when not hovered
+                    };
+                }
             // 
             // textBox8
             // 
