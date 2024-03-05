@@ -2073,7 +2073,7 @@ public partial class CGXML : global::System.Data.DataSet
             this.columnNOTES.Caption = "Comentarii/Mentiuni constructie ";
             this.columnNOTES.MaxLength = 2000;
             this.columnISLEGAL.AllowDBNull = true;
-            this.columnISLEGAL.Caption = "Valoare booleana \'Are acte\'";
+            this.columnISLEGAL.Caption = "Valoare booleana 'Are acte'";
             this.columnISLEGAL.DefaultValue = ((bool)(true));
             this.columnLEGALAREA.Caption = "Suprafata din acte a constructiei ";
             this.columnE2IDENTIFIER.Caption = "Identificatorul electronic apartinand sistemului ETERRA";

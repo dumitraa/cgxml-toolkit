@@ -222,6 +222,7 @@ namespace UtilitatiCGXML
             }
             //Create a future list
             IList<Feature> futuresList = new List<Feature>();
+            IList<Feature> buildingFeaturesList = new List<Feature>();
             //loop trough cgxml
             for (int i = 0; i < (int)files.Length; i++)
             {
@@ -242,13 +243,59 @@ namespace UtilitatiCGXML
                     continue; // Skip the rest of the loop if no Points are present
                 }
 
-                // // Process Buildings separately if present
-                // if (fisier.Building.Count > 0)
-                // {
-                //     // You would handle the Building processing here, potentially in a separate method.
-                //     // Make sure to check if the BUILDINGID matches between Buildings and Points.
-                //     ProcessBuildings(fisier);
-                // }
+                if (fisier.Building.Count > 0)
+                {
+                IGeometryFactory geoFactory = NtsGeometryServices.Instance.CreateGeometryFactory();
+
+                    foreach (CGXML.BuildingRow buildingRow in fisier.Building)
+                    {
+                        List<Coordinate> buildingCoordList = new List<Coordinate>();
+                        
+                        foreach (CGXML.PointsRow pr in fisier.Points)
+                        {
+                            if (pr.BUILDINGID == buildingRow.BUILDINGID)
+                            {
+                                buildingCoordList.Add(new Coordinate(pr.X, pr.Y));
+                            }
+                        }
+                        
+                        // Ensure the polygon is properly closed
+                        if (buildingCoordList.Count >= 3)
+                                {
+                                    // Ensure the polygon is properly closed
+                                    if (!buildingCoordList.First().Equals(buildingCoordList.Last()))
+                                    {
+                                        buildingCoordList.Add(buildingCoordList.First()); // Close the polygon
+                                    }
+
+                                    Coordinate[] buildingCoords = buildingCoordList.ToArray();
+                                    var buildingPolygon = geoFactory.CreatePolygon(buildingCoords);
+
+                                    // Create attributes table for building
+                                    var buildingAttributes = new AttributesTable();
+                                    buildingAttributes.Add("ID", buildingRow.CADGENNO);
+                                    buildingAttributes.Add("Nr. Constr", buildingRow.BUILDNO);
+                                    buildingAttributes.Add("IE", buildingRow.E2IDENTIFIER);
+                                    buildingAttributes.Add("Destinatie", buildingRow. BUILDINGDESTINATION);
+                                    buildingAttributes.Add("Etaje", buildingRow.LEVELSNO);
+                                    buildingAttributes.Add("Supr Mas", buildingRow.MEASUREDAREA);
+                                    buildingAttributes.Add("Supr Totala", buildingRow.TOTALAREA);
+                                    buildingAttributes.Add("Are Acte?", buildingRow.ISLEGAL ? "Da" : "Nu");
+                                    buildingAttributes.Add("Note", buildingRow.NOTES);
+
+
+                                    var buildingFeature = new Feature(buildingPolygon, buildingAttributes);
+                                    buildingFeaturesList.Add(buildingFeature);
+                                }
+                        else
+                        {
+                            Console.WriteLine("Error: The coordinates array is empty or has less than 3 points.");
+                        }
+                    }
+                }
+
+
+
 
                 //create geometry factory
                 IGeometryFactory geomFactory = NtsGeometryServices.Instance.CreateGeometryFactory();
@@ -347,9 +394,22 @@ namespace UtilitatiCGXML
             IList<Feature> features = futuresList.OfType<Feature>().ToList();
             DateTime now = DateTime.Now;
             string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
+
+            // Existing shapefile for non-building features
             string shapefile = string.Concat(CostumFolderBrowserDialogPath, "\\", "Imobile ", sector, formattedDate);
             ShapefileDataWriter writer = new ShapefileDataWriter(shapefile) { Header = ShapefileDataWriter.GetHeader(features[0], features.Count) };
             writer.Write(features);
+
+            // Additional step: Creating a shapefile for building features
+            if (buildingFeaturesList.Any()) // Check if there are any building features to write
+            {
+                string buildingShapefile = string.Concat(CostumFolderBrowserDialogPath, "\\", "Constructii ", sector, formattedDate);
+                ShapefileDataWriter buildingWriter = new ShapefileDataWriter(buildingShapefile)
+                { 
+                    Header = ShapefileDataWriter.GetHeader(buildingFeaturesList[0], buildingFeaturesList.Count) 
+                };
+                buildingWriter.Write(buildingFeaturesList);
+            }
 
             System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
         }
