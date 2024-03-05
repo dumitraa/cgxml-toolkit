@@ -29,7 +29,7 @@ using NPOI.SS.Formula.Functions;
 
 namespace UtilitatiCGXML
 {
-    public partial class CostumControl1 : UserControl
+    public partial class CustomControl1 : UserControl
     {
         public string FilePath1 = "";
         public string FilePath2 = "";
@@ -98,9 +98,10 @@ namespace UtilitatiCGXML
             //checkBox
             checkBox1.Visible = state;
         }
-        public CostumControl1()
+        public CustomControl1()
         {
             InitializeComponent();
+            StylePanelAndButtons();
         }
 
         #region  Designer Components
@@ -243,7 +244,7 @@ namespace UtilitatiCGXML
                     continue; // Skip the rest of the loop if no Points are present
                 }
 
-                if (fisier.Building.Count > 0)
+                if (fisier.Building.Count > 0 && constrCheckbox.Checked)
                 {
                 IGeometryFactory geoFactory = NtsGeometryServices.Instance.CreateGeometryFactory();
 
@@ -414,7 +415,7 @@ namespace UtilitatiCGXML
             System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
         }
 
-        
+
         private void button3_MouseHover(object sender, EventArgs e)
         {
 
@@ -1261,6 +1262,18 @@ namespace UtilitatiCGXML
             }
             else
             { textBox8.Visible = true; }
+        }
+
+        private void constrCheckbox_Click(object sender, EventArgs e)
+        {
+            if (constrCheckbox.Checked == true)
+            {
+                constrCheckbox.ForeColor = System.Drawing.Color.FromArgb(0, 130, 237);
+            }
+            else
+            {
+                constrCheckbox.ForeColor = System.Drawing.Color.Black;
+            }
         }
 
         //listbox

@@ -45,9 +45,6 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Test.ico</ApplicationIcon>
-  </PropertyGroup>
-  <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <PropertyGroup />
@@ -142,7 +139,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Extras\Done.txt" />
-    <Content Include="Neural.ico" />
     <Content Include="Extras\pdftk_gpl_license.txt" />
     <Content Include="pdftk_gpl_license.txt" />
     <Content Include="ProgramData\Admin.xml">
@@ -156,8 +152,6 @@
     </Content>
     <Content Include="ProgramData\County.xml" />
     <None Include="Resources\fileR2.png" />
-    <None Include="Resources\FolderR.2png.png" />
-    <Content Include="Test.ico" />
   </ItemGroup>
   <ItemGroup />
 </Project>

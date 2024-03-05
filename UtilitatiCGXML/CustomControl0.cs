@@ -28,7 +28,7 @@ using nc;
 
 namespace UtilitatiCGXML
 {
-    public partial class CostumControl0 : UserControl
+    public partial class CustomControl0 : UserControl
     {
         private void tEnabled(bool state)
         {
@@ -87,9 +87,10 @@ namespace UtilitatiCGXML
         public string lbpart = "";
         //
 
-        public CostumControl0()
+        public CustomControl0()
         {
             InitializeComponent();
+            StylePanelAndButtons();
             tEnabled(false);
         }
         #region Designer Components

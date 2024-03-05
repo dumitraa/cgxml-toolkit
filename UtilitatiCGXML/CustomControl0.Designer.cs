@@ -1,6 +1,10 @@
-﻿namespace UtilitatiCGXML
+﻿using System.Linq;
+using System.Windows.Forms;
+using System.Drawing;
+
+namespace UtilitatiCGXML
 {
-    partial class CostumControl0
+    partial class CustomControl0
     {
         /// <summary> 
         /// Required designer variable.
@@ -26,10 +30,45 @@
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
+        /// 
+            private void StylePanelAndButtons()
+            {
+                // Assuming panel1 is already defined and added to the control
+                this.panel1.BackColor = System.Drawing.Color.Transparent;
+
+                foreach (var btn in this.panel1.Controls.OfType<Button>())
+                {
+                    // Set default button style here
+                    btn.BackColor = System.Drawing.Color.Transparent;
+                    btn.ForeColor = System.Drawing.Color.Black;
+                    btn.FlatStyle = FlatStyle.Flat;
+                    btn.FlatAppearance.BorderSize = 0;
+                    btn.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+
+                    // Add hover effects
+                    btn.MouseEnter += (sender, e) =>
+                    {
+                        var thisButton = (Button)sender;
+                        thisButton.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Blue background on hover
+                        thisButton.ForeColor = System.Drawing.Color.White; // White text on hover for contrast
+                    };
+                    btn.MouseLeave += (sender, e) =>
+                    {
+                        var thisButton = (Button)sender;
+                        thisButton.BackColor = System.Drawing.Color.Transparent; // Revert to transparent
+                        thisButton.ForeColor = System.Drawing.Color.Black; // Revert to original text color
+                    };
+                }
+            }
+
+
         private void InitializeComponent()
         {
+
+            // Set the panel to a neutral color or even transparent
+            // For each button in the panel
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CostumControl0));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomControl0));
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.label21 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
@@ -345,10 +384,10 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(91)))), ((int)(((byte)(90)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(227, 242, 253); // Lighter blue that's easier on the eyes
+            this.panel1.Padding = new System.Windows.Forms.Padding(10); // Adds padding inside the panel
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
@@ -399,10 +438,10 @@
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(91)))), ((int)(((byte)(90)))));
+            this.button7.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F);
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Location = new System.Drawing.Point(0, 110);
             this.button7.Margin = new System.Windows.Forms.Padding(0);
@@ -415,10 +454,10 @@
             // 
             // button6
             // 
-            // this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(91)))), ((int)(((byte)(90)))));
+            // this.button6.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
             // this.button6.FlatAppearance.BorderSize = 0;
             // this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            // this.button6.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F);
+            // this.button6.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             // this.button6.ForeColor = System.Drawing.Color.White;
             // this.button6.Location = new System.Drawing.Point(0, 364);
             // this.button6.Margin = new System.Windows.Forms.Padding(0);
@@ -432,10 +471,10 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(91)))), ((int)(((byte)(90)))));
+            this.button5.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F);
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(0, 324);
             this.button5.Margin = new System.Windows.Forms.Padding(0);
@@ -449,10 +488,10 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(91)))), ((int)(((byte)(90)))));
+            this.button3.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F);
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(0, 244);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
@@ -466,10 +505,10 @@
             
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(91)))), ((int)(((byte)(90)))));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F);
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(0, 204);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
@@ -481,24 +520,12 @@
             this.button2.Click += new System.EventHandler(this.button2_Click);
             this.button2.MouseHover += new System.EventHandler(this.button2_MouseHover);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Castellar", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(23, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 99);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Generare\r\nRaport \r\nCGXML";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(91)))), ((int)(((byte)(90)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(0, 164);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
@@ -512,10 +539,10 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(91)))), ((int)(((byte)(90)))));
+            this.button4.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F);
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(0, 284);
             this.button4.Margin = new System.Windows.Forms.Padding(0);
@@ -1020,7 +1047,7 @@
             this.tableLayoutPanel4.TabIndex = 76;
             this.tableLayoutPanel4.Visible = false;
             // 
-            // CostumControl0
+            // CustomControl0
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1033,7 +1060,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.tableLayoutPanel4);
-            this.Name = "CostumControl0";
+            this.Name = "CustomControl0";
             this.Size = new System.Drawing.Size(865, 425);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

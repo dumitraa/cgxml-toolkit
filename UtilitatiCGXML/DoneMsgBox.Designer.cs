@@ -39,19 +39,23 @@
             // 
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.BackColor = System.Drawing.Color.Transparent; // To make it consistent with the panel
+            this.button3.MouseEnter += (sender, e) => { this.button3.BackColor = System.Drawing.Color.Red; };
+            this.button3.MouseLeave += (sender, e) => { this.button3.BackColor = System.Drawing.Color.Transparent; };
             this.button3.Location = new System.Drawing.Point(370, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(22, 22);
             this.button3.TabIndex = 3;
-            this.button3.Text = "X";
+            this.button3.Text = "×";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(225, 225, 225); // Slightly lighter or darker than dialog
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle; // Adding a border
             this.panel1.Controls.Add(this.button3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -77,7 +81,8 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(171, 64);
             this.button1.TabIndex = 6;
-            this.button1.Text = "              Deschide Fisier";
+            this.button1.Text = "Deschide Fisier";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
@@ -92,7 +97,8 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(187, 64);
             this.button2.TabIndex = 7;
-            this.button2.Text = "                Deschide Dosar";
+            this.button2.Text = "Deschide Dosar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
             // 
             // DoneMsgBox

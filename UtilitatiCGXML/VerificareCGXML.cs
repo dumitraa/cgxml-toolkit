@@ -87,8 +87,8 @@ namespace UtilitatiCGXML
 
         private void button9_Click(object sender, EventArgs e)
         {
-            costumControl00.BringToFront();
-            costumControl11.SendToBack();
+            CustomControl00.BringToFront();
+            CustomControl11.SendToBack();
             
         }
 
@@ -99,8 +99,8 @@ namespace UtilitatiCGXML
 
         private void button10_Click(object sender, EventArgs e)
         {
-            costumControl11.BringToFront();
-            costumControl00.SendToBack();
+            CustomControl11.BringToFront();
+            CustomControl00.SendToBack();
         }
     }
 }

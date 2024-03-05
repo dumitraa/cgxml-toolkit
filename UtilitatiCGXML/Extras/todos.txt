@@ -10,9 +10,9 @@
 
 -----------------------------------------------------------------------------------------------------------------------------
 - Merge multiple raports (multiple sheets) into one Excel
-- CGXML -> SHP ~ Avoid CGXML data that doesn't have Points
-- CGXML -> SHP ~ Add a layer with buildings pints
+- CHANGE VARIABLE NAMES
+- MAKE GUI MORE MODERN LOOKING
 
 -----------------------------------------------------------------------------------------------------------------------------
-# Investigations differences detalii drept/comentarii/note - eterra/cgxml
+# Investigate differences detalii drept/comentarii/note - eterra/cgxml
 (note cgxml = detalii drept eterra, detalii drept cgxml = comentarii eterra)

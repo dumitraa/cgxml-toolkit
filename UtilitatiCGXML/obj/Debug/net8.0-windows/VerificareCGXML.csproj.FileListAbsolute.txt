@@ -1,6 +1,6 @@
 C:\Users\win\Documents\UtilitatiCGXML-master\UtilitatiCGXML\obj\Debug\net8.0-windows\VerificareCGXML.csproj.AssemblyReference.cache
-C:\Users\win\Documents\UtilitatiCGXML-master\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.CostumControl0.resources
-C:\Users\win\Documents\UtilitatiCGXML-master\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.CostumControl1.resources
+C:\Users\win\Documents\UtilitatiCGXML-master\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.CustomControl0.resources
+C:\Users\win\Documents\UtilitatiCGXML-master\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.CustomControl1.resources
 C:\Users\win\Documents\UtilitatiCGXML-master\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.DoneMsgBox.resources
 C:\Users\win\Documents\UtilitatiCGXML-master\UtilitatiCGXML\obj\Debug\net8.0-windows\VerificareCGXML.Properties.Resources.resources
 C:\Users\win\Documents\UtilitatiCGXML-master\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.UserControlPDF1.resources
@@ -88,8 +88,8 @@ C:\Users\USER\Documents\UtilitatiCGXML\UtilitatiCGXML\bin\Debug\net8.0-windows\N
 C:\Users\USER\Documents\UtilitatiCGXML\UtilitatiCGXML\bin\Debug\net8.0-windows\NetTopologySuite.IO.ShapeFile.xml
 C:\Users\USER\Documents\UtilitatiCGXML\UtilitatiCGXML\bin\Debug\net8.0-windows\NetTopologySuite.IO.ShapeFile.Extended.xml
 C:\Users\USER\Documents\UtilitatiCGXML\UtilitatiCGXML\obj\Debug\net8.0-windows\VerificareCGXML.csproj.AssemblyReference.cache
-C:\Users\USER\Documents\UtilitatiCGXML\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.CostumControl0.resources
-C:\Users\USER\Documents\UtilitatiCGXML\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.CostumControl1.resources
+C:\Users\USER\Documents\UtilitatiCGXML\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.CustomControl0.resources
+C:\Users\USER\Documents\UtilitatiCGXML\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.CustomControl1.resources
 C:\Users\USER\Documents\UtilitatiCGXML\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.DoneMsgBox.resources
 C:\Users\USER\Documents\UtilitatiCGXML\UtilitatiCGXML\obj\Debug\net8.0-windows\VerificareCGXML.Properties.Resources.resources
 C:\Users\USER\Documents\UtilitatiCGXML\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.UserControlPDF1.resources
@@ -142,8 +142,8 @@ C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\bin\Debug\net8.0-wi
 C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\bin\Debug\net8.0-windows\NetTopologySuite.IO.ShapeFile.xml
 C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\bin\Debug\net8.0-windows\NetTopologySuite.IO.ShapeFile.Extended.xml
 C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\obj\Debug\net8.0-windows\VerificareCGXML.csproj.AssemblyReference.cache
-C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.CostumControl0.resources
-C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.CostumControl1.resources
+C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.CustomControl0.resources
+C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.CustomControl1.resources
 C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.DoneMsgBox.resources
 C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\obj\Debug\net8.0-windows\VerificareCGXML.Properties.Resources.resources
 C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.UserControlPDF1.resources
@@ -196,8 +196,8 @@ C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\UtilitatiCGXML\bin\
 C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\UtilitatiCGXML\bin\Debug\net8.0-windows\NetTopologySuite.IO.ShapeFile.xml
 C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\UtilitatiCGXML\bin\Debug\net8.0-windows\NetTopologySuite.IO.ShapeFile.Extended.xml
 C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\UtilitatiCGXML\obj\Debug\net8.0-windows\VerificareCGXML.csproj.AssemblyReference.cache
-C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.CostumControl0.resources
-C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.CostumControl1.resources
+C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.CustomControl0.resources
+C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.CustomControl1.resources
 C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.DoneMsgBox.resources
 C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\UtilitatiCGXML\obj\Debug\net8.0-windows\VerificareCGXML.Properties.Resources.resources
 C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\UtilitatiCGXML\obj\Debug\net8.0-windows\UtilitatiCGXML.UserControlPDF1.resources
