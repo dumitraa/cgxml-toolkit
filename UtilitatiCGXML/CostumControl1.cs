@@ -274,12 +274,12 @@ namespace UtilitatiCGXML
                                     // Create attributes table for building
                                     var buildingAttributes = new AttributesTable();
                                     buildingAttributes.Add("ID", buildingRow.CADGENNO);
-                                    buildingAttributes.Add("Nr. Constr", buildingRow.BUILDNO);
+                                    buildingAttributes.Add("Nr. Constr", "C" + buildingRow.BUILDNO);
                                     buildingAttributes.Add("IE", buildingRow.E2IDENTIFIER);
                                     buildingAttributes.Add("Destinatie", buildingRow. BUILDINGDESTINATION);
                                     buildingAttributes.Add("Etaje", buildingRow.LEVELSNO);
-                                    buildingAttributes.Add("Supr Mas", buildingRow.MEASUREDAREA);
-                                    buildingAttributes.Add("Supr Totala", buildingRow.TOTALAREA);
+                                    buildingAttributes.Add("Supr Mas", Math.Round(buildingRow.MEASUREDAREA, 2).ToString());
+                                    buildingAttributes.Add("Supr Totala", Math.Round(buildingRow.TOTALAREA, 2).ToString());
                                     buildingAttributes.Add("Are Acte?", buildingRow.ISLEGAL ? "Da" : "Nu");
                                     buildingAttributes.Add("Note", buildingRow.NOTES);
 
@@ -413,6 +413,8 @@ namespace UtilitatiCGXML
 
             System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
         }
+
+        
         private void button3_MouseHover(object sender, EventArgs e)
         {
 
