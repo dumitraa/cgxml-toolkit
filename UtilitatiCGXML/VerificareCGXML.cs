@@ -54,13 +54,13 @@ namespace UtilitatiCGXML
         #endregion
 
         //Close Window
-        private void button7_Click(object sender, EventArgs e)
+        private void closeWindowBtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         //Minimize Window
-        private void button8_Click(object sender, EventArgs e)
+        private void minimizeWindowBtn_Click(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal)
             {
@@ -85,22 +85,33 @@ namespace UtilitatiCGXML
             }
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void rapoarteCgxmlTabBtn_Click(object sender, EventArgs e)
         {
             CustomControl00.BringToFront();
             CustomControl11.SendToBack();
-            
+
+            // Set active tab style
+            rapoarteCgxmlTabBtn.BackColor = System.Drawing.Color.FromArgb(153, 204, 255); // Lighter blue for active state
+            rapoarteCgxmlTabBtn.ForeColor = System.Drawing.Color.Black; // You may adjust if needed
+
+            // Reset other tab to default style
+            alteleTabBtn.BackColor = System.Drawing.Color.Transparent;
+            alteleTabBtn.ForeColor = System.Drawing.Color.Black;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button10_Click(object sender, EventArgs e)
+        private void alteleTabBtn_Click(object sender, EventArgs e)
         {
             CustomControl11.BringToFront();
             CustomControl00.SendToBack();
+
+            // Set active tab style
+            alteleTabBtn.BackColor = System.Drawing.Color.FromArgb(153, 204, 255); // Lighter blue for active state
+            alteleTabBtn.ForeColor = System.Drawing.Color.Black; // You may adjust if needed
+
+            // Reset other tab to default style
+            rapoarteCgxmlTabBtn.BackColor = System.Drawing.Color.Transparent;
+            rapoarteCgxmlTabBtn.ForeColor = System.Drawing.Color.Black;
         }
+
     }
 }

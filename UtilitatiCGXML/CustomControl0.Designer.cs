@@ -33,9 +33,6 @@ namespace UtilitatiCGXML
         /// 
             private void StylePanelAndButtons()
             {
-                // Assuming panel1 is already defined and added to the control
-                this.panel1.BackColor = System.Drawing.Color.Transparent;
-
                 foreach (var btn in this.panel1.Controls.OfType<Button>())
                 {
                     // Set default button style here
@@ -59,6 +56,27 @@ namespace UtilitatiCGXML
                     };
                 }
             }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            Panel panel = sender as Panel;
+            float borderWidth = 1; // Set the width of the border
+            Color borderColor = System.Drawing.Color.FromArgb(0, 130, 237); // Set the color of the border
+
+            // Adjust the coordinates to account for padding
+            int top = panel.Padding.Top;
+            int left = panel.Padding.Left;
+            int right = panel.Width;
+            int bottom = panel.Height;
+
+            // Draw the border on the right edge of the panel
+            using (SolidBrush brush = new SolidBrush(borderColor))
+            {
+                // Right border
+                e.Graphics.FillRectangle(brush, right - borderWidth, top, borderWidth, bottom - top);
+            }
+        }
+
 
 
         private void InitializeComponent()
@@ -420,8 +438,10 @@ namespace UtilitatiCGXML
             // 
             // panel1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+
             this.panel1.BackColor = System.Drawing.Color.FromArgb(227, 242, 253); // Lighter blue that's easier on the eyes
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel1.Paint += new PaintEventHandler(panel1_Paint);
             this.panel1.Padding = new System.Windows.Forms.Padding(10); // Adds padding inside the panel
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.button9);
@@ -436,7 +456,7 @@ namespace UtilitatiCGXML
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(216, 424);
+            this.panel1.Size = new System.Drawing.Size(220, 480);
             this.panel1.TabIndex = 71;
             // 
             // button10
@@ -1172,7 +1192,7 @@ namespace UtilitatiCGXML
             this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Name = "CustomControl0";
-            this.Size = new System.Drawing.Size(865, 425);
+            this.Size = new System.Drawing.Size(865, 600);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);

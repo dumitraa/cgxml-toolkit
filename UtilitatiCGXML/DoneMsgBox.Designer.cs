@@ -1,4 +1,9 @@
-﻿namespace UtilitatiCGXML
+﻿using System;
+using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using System.Drawing;
+
+namespace UtilitatiCGXML
 {
     partial class DoneMsgBox
     {
@@ -20,6 +25,51 @@
             base.Dispose(disposing);
         }
 
+        // Add this to the class level
+        public const int WM_NCHITTEST = 0x84;
+        public const int HTCLIENT = 0x1;
+        public const int HTCAPTION = 0x2;
+
+        // Add this to your form's class
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ClassStyle |= 0x20000; // CS_DROPSHADOW
+                return cp;
+            }
+        }
+
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case WM_NCHITTEST:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == HTCLIENT)
+                        m.Result = (IntPtr)HTCAPTION;
+                    break;
+                default:
+                    base.WndProc(ref m);
+                    break;
+         
+            }
+        }
+
+        private void FormPaint(object sender, PaintEventArgs e)
+        {
+            // Drawing a border around the form
+            e.Graphics.DrawRectangle(new Pen(Color.FromArgb(0, 130, 237), 2), this.DisplayRectangle);
+        }
+
+        private void Panel1Paint(object sender, PaintEventArgs e)
+        {
+            Pen borderPen = new Pen(Color.FromArgb(0, 130, 237), 1);
+            e.Graphics.DrawRectangle(borderPen, 0, 0, panel1.Width - 1, panel1.Height - 1);
+        }
+
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -28,35 +78,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
+            this.closeDialogBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.openFileBtn = new System.Windows.Forms.Button();
+            this.openFolderBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button3
+            // closeDialogBtn
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.BackColor = System.Drawing.Color.Transparent; // To make it consistent with the panel
-            this.button3.MouseEnter += (sender, e) => { this.button3.BackColor = System.Drawing.Color.Red; };
-            this.button3.MouseLeave += (sender, e) => { this.button3.BackColor = System.Drawing.Color.Transparent; };
-            this.button3.Location = new System.Drawing.Point(370, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(22, 22);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "×";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.closeDialogBtn.FlatAppearance.BorderSize = 0;
+            this.closeDialogBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeDialogBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.closeDialogBtn.ForeColor = System.Drawing.Color.Black;
+            this.closeDialogBtn.BackColor = System.Drawing.Color.FromArgb(227, 242, 253); // Same as the dialog's background
+            this.closeDialogBtn.Location = new System.Drawing.Point(370, 3);
+            this.closeDialogBtn.Name = "closeDialogBtn";
+            this.closeDialogBtn.Size = new System.Drawing.Size(22, 22);
+            this.closeDialogBtn.TabIndex = 3;
+            this.closeDialogBtn.Text = "X";
+            this.closeDialogBtn.UseVisualStyleBackColor = true;
+            this.closeDialogBtn.Click += new System.EventHandler(this.closeDialogBtn_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(225, 225, 225); // Slightly lighter or darker than dialog
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle; // Adding a border
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(227, 242, 253); // Same as the dialog's background
+            this.panel1.Paint += new PaintEventHandler(Panel1Paint);
+            this.panel1.Controls.Add(this.closeDialogBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -65,49 +113,50 @@
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
-            // button1
+            // openFileBtn
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Image = global::VerificareCGXML.Properties.Resources.excelR1;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 46);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 64);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Deschide Fisier";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
+            this.openFileBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.openFileBtn.DialogResult = System.Windows.Forms.DialogResult.Yes;
+            this.openFileBtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.openFileBtn.FlatAppearance.BorderSize = 0;
+            this.openFileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.openFileBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.openFileBtn.Image = global::VerificareCGXML.Properties.Resources.excelR1;
+            this.openFileBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.openFileBtn.Location = new System.Drawing.Point(12, 46);
+            this.openFileBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.openFileBtn.Name = "openFileBtn";
+            this.openFileBtn.Size = new System.Drawing.Size(171, 64);
+            this.openFileBtn.TabIndex = 6;
+            this.openFileBtn.Text = "Deschide Fisier";
+            this.openFileBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.openFileBtn.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // openFolderBtn
             // 
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.No;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Image = global::VerificareCGXML.Properties.Resources.FolderR;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(205, 46);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(187, 64);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Deschide Dosar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
+            this.openFolderBtn.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.openFolderBtn.FlatAppearance.BorderSize = 0;
+            this.openFolderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.openFolderBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.openFolderBtn.Image = global::VerificareCGXML.Properties.Resources.FolderR;
+            this.openFolderBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.openFolderBtn.Location = new System.Drawing.Point(205, 46);
+            this.openFolderBtn.Name = "openFolderBtn";
+            this.openFolderBtn.Size = new System.Drawing.Size(187, 64);
+            this.openFolderBtn.TabIndex = 7;
+            this.openFolderBtn.Text = "Deschide Dosar";
+            this.openFolderBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.openFolderBtn.UseVisualStyleBackColor = true;
             // 
             // DoneMsgBox
             // 
+            this.Paint += new PaintEventHandler(FormPaint);
+            this.BackColor = System.Drawing.Color.FromArgb(227, 242, 253); // Lighter blue that's easier on the eyes
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(404, 122);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.openFolderBtn);
+            this.Controls.Add(this.openFileBtn);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DoneMsgBox";
@@ -119,9 +168,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button closeDialogBtn;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button openFileBtn;
+        private System.Windows.Forms.Button openFolderBtn;
     }
 }

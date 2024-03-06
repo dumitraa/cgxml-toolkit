@@ -11,11 +11,10 @@ namespace UtilitatiCGXML
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
+
         private void StylePanelAndButtons()
         {
             // Assuming panel1 is already defined and added to the control
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-
             foreach (var btn in this.panel1.Controls.OfType<Button>())
             {
                 // Set default button style here
@@ -37,6 +36,26 @@ namespace UtilitatiCGXML
                     thisButton.BackColor = System.Drawing.Color.Transparent;
                     thisButton.ForeColor = System.Drawing.Color.Black;
                 };
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            Panel panel = sender as Panel;
+            float borderWidth = 1; // Set the width of the border
+            Color borderColor = System.Drawing.Color.FromArgb(0, 130, 237); // Set the color of the border
+
+            // Adjust the coordinates to account for padding
+            int top = panel.Padding.Top;
+            int left = panel.Padding.Left;
+            int right = panel.Width;
+            int bottom = panel.Height;
+
+            // Draw the border on the right edge of the panel
+            using (SolidBrush brush = new SolidBrush(borderColor))
+            {
+                // Right border
+                e.Graphics.FillRectangle(brush, right - borderWidth, top, borderWidth, bottom - top);
             }
         }
 
@@ -119,6 +138,7 @@ namespace UtilitatiCGXML
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(227, 242, 253); // Lighter blue that's easier on the eyes
+            this.panel1.Paint += new PaintEventHandler(panel1_Paint);
             this.panel1.Padding = new System.Windows.Forms.Padding(10); // Adds padding inside the panel
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5); 
@@ -131,7 +151,7 @@ namespace UtilitatiCGXML
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(216, 424);
+            this.panel1.Size = new System.Drawing.Size(220, 480);
             this.panel1.TabIndex = 15;
 
             // 
@@ -567,12 +587,13 @@ namespace UtilitatiCGXML
             this.obtainAFileBtn.TabIndex = 50;
             this.obtainAFileBtn.Text = "Obtine un fisier";
             this.obtainAFileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.obtainAFileBtn.BackColor = System.Drawing.Color.FromArgb(225, 225, 225); // Light gray background
+            this.obtainAFileBtn.BackColor = System.Drawing.Color.FromArgb(225, 235, 245); // A shade that fits the theme
             this.obtainAFileBtn.Font = new System.Drawing.Font("Segoe UI", 10);
             this.obtainAFileBtn.ForeColor = System.Drawing.Color.Black;
             this.obtainAFileBtn.UseVisualStyleBackColor = false;
             this.obtainAFileBtn.Visible = false;
             this.obtainAFileBtn.Click += new System.EventHandler(this.obtainAFileBtn_Click);
+            this.obtainAFileBtn.Cursor = Cursors.Hand;
             // 
             // obtainMultipleFilesBtn
             // 
@@ -582,26 +603,42 @@ namespace UtilitatiCGXML
             this.obtainMultipleFilesBtn.TabIndex = 51;
             this.obtainMultipleFilesBtn.Text = "Obtine fisiere multiple";
             this.obtainMultipleFilesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.obtainMultipleFilesBtn.BackColor = System.Drawing.Color.FromArgb(225, 225, 225); // Light gray background
+            this.obtainMultipleFilesBtn.BackColor = System.Drawing.Color.FromArgb(225, 235, 245); // Consistent with the other button
             this.obtainMultipleFilesBtn.Font = new System.Drawing.Font("Segoe UI", 10);
             this.obtainMultipleFilesBtn.ForeColor = System.Drawing.Color.Black;
             this.obtainMultipleFilesBtn.UseVisualStyleBackColor = false;
             this.obtainMultipleFilesBtn.Visible = false;
+            this.obtainMultipleFilesBtn.Cursor = Cursors.Hand;
             this.obtainMultipleFilesBtn.Click += new System.EventHandler(this.obtainMultipleFilesBtn_Click);
 
+            // Define colors for button states
+            Color primaryColor = Color.FromArgb(200, 220, 240); // Light, soft blue
+            Color hoverColor = Color.FromArgb(170, 187, 204); // A darker shade for hover state
+            Color fontColor = Color.Black; // Choose a color that contrasts well with the button colors
+
             foreach (var btn in new[] { this.obtainAFileBtn, this.obtainMultipleFilesBtn })
+            {
+                btn.BackColor = primaryColor;
+                btn.ForeColor = fontColor;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderColor = Color.FromArgb(160, 180, 200); // Slightly darker than the primaryColor for the border
+                btn.FlatAppearance.BorderSize = 1;
+                btn.Cursor = Cursors.Hand;
+
+                btn.MouseEnter += (sender, e) => 
                 {
-                    btn.MouseEnter += (sender, e) => 
-                    {
-                        var button = (Button)sender;
-                        button.BackColor = System.Drawing.Color.FromArgb(195, 195, 195); // Darker color on hover
-                    };
-                    btn.MouseLeave += (sender, e) =>
-                    {
-                        var button = (Button)sender;
-                        button.BackColor = System.Drawing.Color.FromArgb(225, 225, 225); // Original color when not hovered
-                    };
-                }
+                    var button = (Button)sender;
+                    button.BackColor = hoverColor; // Apply hover color
+                    button.FlatAppearance.BorderColor = Color.FromArgb(150, 170, 190); // Even darker for the border
+                };
+                btn.MouseLeave += (sender, e) =>
+                {
+                    var button = (Button)sender;
+                    button.BackColor = primaryColor; // Revert to primary color
+                    button.FlatAppearance.BorderColor = Color.FromArgb(160, 180, 200); // Revert border color
+                };
+            }
+
             // 
             // textBox8
             // 
@@ -691,7 +728,7 @@ namespace UtilitatiCGXML
             this.Controls.Add(this.button7);
             this.Controls.Add(this.backgroundImageLogo);
             this.Name = "CustomControl1";
-            this.Size = new System.Drawing.Size(865, 425);
+            this.Size = new System.Drawing.Size(865, 600);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImageLogo)).EndInit();
