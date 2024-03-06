@@ -65,20 +65,20 @@ namespace UtilitatiCGXML
             this.panel1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cgToShpBtn = new System.Windows.Forms.Button();
+            this.combinePdfs = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.copyArchiveCgBtn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.seVaCreaLabel = new System.Windows.Forms.Label();
+            this.waitMilliseconds = new System.Windows.Forms.Label();
             this.MiliSeconds = new System.Windows.Forms.TextBox();
             this.filePrefix = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.oneFileBtn = new System.Windows.Forms.Button();
+            this.multipleFileBtn = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -87,7 +87,7 @@ namespace UtilitatiCGXML
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.backgroundImageLogo = new System.Windows.Forms.PictureBox();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -98,21 +98,21 @@ namespace UtilitatiCGXML
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
+            this.startBtn = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
+            this.intrareLabel = new System.Windows.Forms.Label();
+            this.iesireLabel = new System.Windows.Forms.Label();
+            this.obtainAFileBtn = new System.Windows.Forms.Button();
+            this.obtainMultipleFilesBtn = new System.Windows.Forms.Button();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.renameFileCheck = new System.Windows.Forms.CheckBox();
             this.constrCheckbox = new System.Windows.Forms.CheckBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.userControlPDF11 = new UtilitatiCGXML.UserControlPDF1();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backgroundImageLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -121,13 +121,13 @@ namespace UtilitatiCGXML
             this.panel1.BackColor = System.Drawing.Color.FromArgb(227, 242, 253); // Lighter blue that's easier on the eyes
             this.panel1.Padding = new System.Windows.Forms.Padding(10); // Adds padding inside the panel
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.constrCheckbox);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button5); 
+            this.panel1.Controls.Add(this.cgToShpBtn); // CGXML -> SHP
+            this.panel1.Controls.Add(this.constrCheckbox); // Checkbox for exporting constructii
+            this.panel1.Controls.Add(this.combinePdfs);
+            this.panel1.Controls.Add(this.label1); 
+            this.panel1.Controls.Add(this.copyArchiveCgBtn); // Copiere arhivare CGXML
+            this.panel1.Controls.Add(this.button4); 
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
@@ -167,22 +167,22 @@ namespace UtilitatiCGXML
             // this.button5.Click += new System.EventHandler(this.button5_Click);
             // this.button5.MouseHover += new System.EventHandler(this.button5_MouseHover);
             // 
-            // button3
+            // cgToShpBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 220);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(214, 51);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "CGXML -> SHP";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            this.button3.MouseHover += new System.EventHandler(this.button3_MouseHover);
+            this.cgToShpBtn.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
+            this.cgToShpBtn.FlatAppearance.BorderSize = 0;
+            this.cgToShpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cgToShpBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cgToShpBtn.ForeColor = System.Drawing.Color.White;
+            this.cgToShpBtn.Location = new System.Drawing.Point(0, 220);
+            this.cgToShpBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.cgToShpBtn.Name = "cgToShpBtn";
+            this.cgToShpBtn.Size = new System.Drawing.Size(214, 51);
+            this.cgToShpBtn.TabIndex = 4;
+            this.cgToShpBtn.Text = "CGXML -> SHP";
+            this.cgToShpBtn.UseVisualStyleBackColor = false;
+            this.cgToShpBtn.Click += new System.EventHandler(this.cgToShpBtn_Click);
+            this.cgToShpBtn.MouseHover += new System.EventHandler(this.cgToShpBtn_MouseHover);
             //
             // constrCheckbox
             //
@@ -201,39 +201,39 @@ namespace UtilitatiCGXML
             this.constrCheckbox.Visible = true;
             this.constrCheckbox.Click += new System.EventHandler(this.constrCheckbox_Click);
             // 
-            // button2
+            // combinePdfs
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 169);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(214, 51);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Combina PDF-uri";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            this.button2.MouseHover += new System.EventHandler(this.button2_MouseHover);
+            this.combinePdfs.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
+            this.combinePdfs.FlatAppearance.BorderSize = 0;
+            this.combinePdfs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.combinePdfs.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.combinePdfs.ForeColor = System.Drawing.Color.White;
+            this.combinePdfs.Location = new System.Drawing.Point(0, 169);
+            this.combinePdfs.Margin = new System.Windows.Forms.Padding(0);
+            this.combinePdfs.Name = "combinePdfs";
+            this.combinePdfs.Size = new System.Drawing.Size(214, 51);
+            this.combinePdfs.TabIndex = 0;
+            this.combinePdfs.Text = "Combina PDF-uri";
+            this.combinePdfs.UseVisualStyleBackColor = false;
+            this.combinePdfs.Click += new System.EventHandler(this.combinePdfs_Click);
+            this.combinePdfs.MouseHover += new System.EventHandler(this.combinePdfs_MouseHover);
             // 
-            // button1
+            // copyArchiveCgBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 118);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 51);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Copiere si arhivare CGXML (WIP)";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
+            this.copyArchiveCgBtn.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
+            this.copyArchiveCgBtn.FlatAppearance.BorderSize = 0;
+            this.copyArchiveCgBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.copyArchiveCgBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.copyArchiveCgBtn.ForeColor = System.Drawing.Color.White;
+            this.copyArchiveCgBtn.Location = new System.Drawing.Point(0, 118);
+            this.copyArchiveCgBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.copyArchiveCgBtn.Name = "copyArchiveCgBtn";
+            this.copyArchiveCgBtn.Size = new System.Drawing.Size(214, 51);
+            this.copyArchiveCgBtn.TabIndex = 1;
+            this.copyArchiveCgBtn.Text = "Copiere si arhivare CGXML (WIP)";
+            this.copyArchiveCgBtn.UseVisualStyleBackColor = false;
+            this.copyArchiveCgBtn.Click += new System.EventHandler(this.copyArchiveCgBtn_Click);
+            this.copyArchiveCgBtn.MouseHover += new System.EventHandler(this.copyArchiveCgBtn_MouseHover);
             // 
             // button4
             // 
@@ -252,26 +252,26 @@ namespace UtilitatiCGXML
             // this.button4.Click += new System.EventHandler(this.button4_Click);
             // this.button4.MouseHover += new System.EventHandler(this.button4_MouseHover);
             // 
-            // label3
+            // seVaCreaLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(234, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 20);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Se va crea:";
-            this.label3.Visible = false;
+            this.seVaCreaLabel.AutoSize = true;
+            this.seVaCreaLabel.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.seVaCreaLabel.Location = new System.Drawing.Point(234, 13);
+            this.seVaCreaLabel.Name = "seVaCreaLabel";
+            this.seVaCreaLabel.Size = new System.Drawing.Size(109, 20);
+            this.seVaCreaLabel.TabIndex = 21;
+            this.seVaCreaLabel.Text = "Se va crea:";
+            this.seVaCreaLabel.Visible = false;
             // 
-            // label2
+            // waitMilliseconds
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(596, 117);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(264, 13);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Asteapta X milisecunde pana sa printezi urmatorul fisier";
-            this.label2.Visible = false;
+            this.waitMilliseconds.AutoSize = true;
+            this.waitMilliseconds.Location = new System.Drawing.Point(596, 117);
+            this.waitMilliseconds.Name = "waitMilliseconds";
+            this.waitMilliseconds.Size = new System.Drawing.Size(264, 13);
+            this.waitMilliseconds.TabIndex = 20;
+            this.waitMilliseconds.Text = "Asteapta X milisecunde pana sa printezi urmatorul fisier";
+            this.waitMilliseconds.Visible = false;
             // 
             // MiliSeconds
             // 
@@ -280,26 +280,6 @@ namespace UtilitatiCGXML
             this.MiliSeconds.Size = new System.Drawing.Size(287, 20);
             this.MiliSeconds.TabIndex = 19;
             this.MiliSeconds.Visible = false;
-            // 
-            // filePrefix
-            // 
-            this.filePrefix.Location = new System.Drawing.Point(312, 135);
-            this.filePrefix.Name = "filePrefix";
-            this.filePrefix.Size = new System.Drawing.Size(256, 20);
-            this.filePrefix.TabIndex = 18;
-            this.filePrefix.Text = "filePrefix";
-            this.filePrefix.Visible = false;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(574, 133);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 17;
-            this.button7.Text = "Start";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Visible = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // comboBox1
             // 
@@ -310,27 +290,27 @@ namespace UtilitatiCGXML
             this.comboBox1.TabIndex = 22;
             this.comboBox1.Visible = false;
             // 
-            // button8
+            // oneFileBtn
             // 
-            this.button8.Font = new System.Drawing.Font("Gill Sans Ultra Bold Condensed", 11.25F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button8.Location = new System.Drawing.Point(364, 8);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(140, 30);
-            this.button8.TabIndex = 23;
-            this.button8.Text = "Un fisier";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Visible = false;
+            this.oneFileBtn.Font = new System.Drawing.Font("Gill Sans Ultra Bold Condensed", 11.25F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.oneFileBtn.Location = new System.Drawing.Point(364, 8);
+            this.oneFileBtn.Name = "oneFileBtn";
+            this.oneFileBtn.Size = new System.Drawing.Size(140, 30);
+            this.oneFileBtn.TabIndex = 23;
+            this.oneFileBtn.Text = "Un fisier";
+            this.oneFileBtn.UseVisualStyleBackColor = true;
+            this.oneFileBtn.Visible = false;
             // 
-            // button9
+            // multipleFileBtn
             // 
-            this.button9.Font = new System.Drawing.Font("Gill Sans Ultra Bold Condensed", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button9.Location = new System.Drawing.Point(510, 8);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(140, 30);
-            this.button9.TabIndex = 24;
-            this.button9.Text = "Fisiere multiple";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Visible = false;
+            this.multipleFileBtn.Font = new System.Drawing.Font("Gill Sans Ultra Bold Condensed", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.multipleFileBtn.Location = new System.Drawing.Point(510, 8);
+            this.multipleFileBtn.Name = "multipleFileBtn";
+            this.multipleFileBtn.Size = new System.Drawing.Size(140, 30);
+            this.multipleFileBtn.TabIndex = 24;
+            this.multipleFileBtn.Text = "Fisiere multiple";
+            this.multipleFileBtn.UseVisualStyleBackColor = true;
+            this.multipleFileBtn.Visible = false;
             // 
             // textBox1
             // 
@@ -401,18 +381,6 @@ namespace UtilitatiCGXML
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Visible = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(378, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(400, 400);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
             // 
             // button12
             // 
@@ -524,16 +492,16 @@ namespace UtilitatiCGXML
             this.button21.Visible = false;
             this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
-            // button22
+            // startBtn
             // 
-            this.button22.Location = new System.Drawing.Point(599, 364);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(75, 23);
-            this.button22.TabIndex = 44;
-            this.button22.Text = "Start";
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Visible = false;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
+            this.startBtn.Location = new System.Drawing.Point(599, 364);
+            this.startBtn.Name = "startBtn";
+            this.startBtn.Size = new System.Drawing.Size(75, 23);
+            this.startBtn.TabIndex = 44;
+            this.startBtn.Text = "Start";
+            this.startBtn.UseVisualStyleBackColor = true;
+            this.startBtn.Visible = false;
+            this.startBtn.Click += new System.EventHandler(this.startBtn_Click);
             // 
             // button23
             // 
@@ -565,27 +533,27 @@ namespace UtilitatiCGXML
             this.textBox7.TabIndex = 47;
             this.textBox7.Visible = false;
             // 
-            // label4
+            // intrareLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(301, 66);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
-            this.label4.TabIndex = 48;
-            this.label4.Text = "Intrare";
-            this.label4.Visible = false;
+            this.intrareLabel.AutoSize = true;
+            this.intrareLabel.Location = new System.Drawing.Point(301, 66);
+            this.intrareLabel.Name = "intrareLabel";
+            this.intrareLabel.Size = new System.Drawing.Size(37, 13);
+            this.intrareLabel.TabIndex = 48;
+            this.intrareLabel.Text = "Intrare";
+            this.intrareLabel.Visible = false;
             // 
-            // label5
+            // iesireLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(310, 316);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "Iesire";
-            this.label5.Visible = false;
+            this.iesireLabel.AutoSize = true;
+            this.iesireLabel.Location = new System.Drawing.Point(310, 316);
+            this.iesireLabel.Name = "iesireLabel";
+            this.iesireLabel.Size = new System.Drawing.Size(32, 13);
+            this.iesireLabel.TabIndex = 49;
+            this.iesireLabel.Text = "Iesire";
+            this.iesireLabel.Visible = false;
             // 
-            // button25
+            // obtainAFileBtn
             // 
             // Define button size and location parameters
             int buttonWidth = 195;
@@ -593,35 +561,35 @@ namespace UtilitatiCGXML
             int horizontalSpacing = 50; // Space between the buttons
             int leftMargin = 300; // Centering the buttons horizontally in the form
 
-            this.button25.Location = new System.Drawing.Point(leftMargin, 133); // Adjusted for symmetry
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(buttonWidth, buttonHeight);
-            this.button25.TabIndex = 50;
-            this.button25.Text = "Obtine un fisier";
-            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button25.BackColor = System.Drawing.Color.FromArgb(225, 225, 225); // Light gray background
-            this.button25.Font = new System.Drawing.Font("Segoe UI", 10);
-            this.button25.ForeColor = System.Drawing.Color.Black;
-            this.button25.UseVisualStyleBackColor = false;
-            this.button25.Visible = false;
-            this.button25.Click += new System.EventHandler(this.button25_Click);
+            this.obtainAFileBtn.Location = new System.Drawing.Point(leftMargin, 133); // Adjusted for symmetry
+            this.obtainAFileBtn.Name = "obtainAFileBtn";
+            this.obtainAFileBtn.Size = new System.Drawing.Size(buttonWidth, buttonHeight);
+            this.obtainAFileBtn.TabIndex = 50;
+            this.obtainAFileBtn.Text = "Obtine un fisier";
+            this.obtainAFileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.obtainAFileBtn.BackColor = System.Drawing.Color.FromArgb(225, 225, 225); // Light gray background
+            this.obtainAFileBtn.Font = new System.Drawing.Font("Segoe UI", 10);
+            this.obtainAFileBtn.ForeColor = System.Drawing.Color.Black;
+            this.obtainAFileBtn.UseVisualStyleBackColor = false;
+            this.obtainAFileBtn.Visible = false;
+            this.obtainAFileBtn.Click += new System.EventHandler(this.obtainAFileBtn_Click);
             // 
-            // button26
+            // obtainMultipleFilesBtn
             // 
-            this.button26.Location = new System.Drawing.Point(leftMargin + buttonWidth + horizontalSpacing, 133); // Positioned with spacing from button25
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(buttonWidth, buttonHeight);
-            this.button26.TabIndex = 51;
-            this.button26.Text = "Obtine fisiere multiple";
-            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button26.BackColor = System.Drawing.Color.FromArgb(225, 225, 225); // Light gray background
-            this.button26.Font = new System.Drawing.Font("Segoe UI", 10);
-            this.button26.ForeColor = System.Drawing.Color.Black;
-            this.button26.UseVisualStyleBackColor = false;
-            this.button26.Visible = false;
-            this.button26.Click += new System.EventHandler(this.button26_Click);
+            this.obtainMultipleFilesBtn.Location = new System.Drawing.Point(leftMargin + buttonWidth + horizontalSpacing, 133); // Positioned with spacing from obtainAFileBtn
+            this.obtainMultipleFilesBtn.Name = "obtainMultipleFilesBtn";
+            this.obtainMultipleFilesBtn.Size = new System.Drawing.Size(buttonWidth, buttonHeight);
+            this.obtainMultipleFilesBtn.TabIndex = 51;
+            this.obtainMultipleFilesBtn.Text = "Obtine fisiere multiple";
+            this.obtainMultipleFilesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.obtainMultipleFilesBtn.BackColor = System.Drawing.Color.FromArgb(225, 225, 225); // Light gray background
+            this.obtainMultipleFilesBtn.Font = new System.Drawing.Font("Segoe UI", 10);
+            this.obtainMultipleFilesBtn.ForeColor = System.Drawing.Color.Black;
+            this.obtainMultipleFilesBtn.UseVisualStyleBackColor = false;
+            this.obtainMultipleFilesBtn.Visible = false;
+            this.obtainMultipleFilesBtn.Click += new System.EventHandler(this.obtainMultipleFilesBtn_Click);
 
-            foreach (var btn in new[] { this.button25, this.button26 })
+            foreach (var btn in new[] { this.obtainAFileBtn, this.obtainMultipleFilesBtn })
                 {
                     btn.MouseEnter += (sender, e) => 
                     {
@@ -643,17 +611,17 @@ namespace UtilitatiCGXML
             this.textBox8.TabIndex = 52;
             this.textBox8.Visible = false;
             // 
-            // checkBox1
+            // renameFileCheck
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(264, 369);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(159, 17);
-            this.checkBox1.TabIndex = 53;
-            this.checkBox1.Text = "Schimba denumirea fisierului";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.Visible = false;
-            this.checkBox1.Click += new System.EventHandler(this.checkBox1_Click);
+            this.renameFileCheck.AutoSize = true;
+            this.renameFileCheck.Location = new System.Drawing.Point(264, 369);
+            this.renameFileCheck.Name = "renameFileCheck";
+            this.renameFileCheck.Size = new System.Drawing.Size(159, 17);
+            this.renameFileCheck.TabIndex = 53;
+            this.renameFileCheck.Text = "Schimba denumirea fisierului";
+            this.renameFileCheck.UseVisualStyleBackColor = true;
+            this.renameFileCheck.Visible = false;
+            this.renameFileCheck.Click += new System.EventHandler(this.renameFileCheck_Click);
             // 
             // listBox1
             // 
@@ -683,17 +651,17 @@ namespace UtilitatiCGXML
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.renameFileCheck);
             this.Controls.Add(this.constrCheckbox);
             this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.button26);
-            this.Controls.Add(this.button25);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.obtainMultipleFilesBtn);
+            this.Controls.Add(this.obtainAFileBtn);
+            this.Controls.Add(this.iesireLabel);
+            this.Controls.Add(this.intrareLabel);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.button23);
             this.Controls.Add(this.button24);
-            this.Controls.Add(this.button22);
+            this.Controls.Add(this.startBtn);
             this.Controls.Add(this.button20);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.button18);
@@ -712,21 +680,21 @@ namespace UtilitatiCGXML
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.multipleFileBtn);
+            this.Controls.Add(this.oneFileBtn);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.seVaCreaLabel);
+            this.Controls.Add(this.waitMilliseconds);
             this.Controls.Add(this.MiliSeconds);
             this.Controls.Add(this.filePrefix);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.backgroundImageLogo);
             this.Name = "CustomControl1";
             this.Size = new System.Drawing.Size(865, 425);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backgroundImageLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -737,22 +705,22 @@ namespace UtilitatiCGXML
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button cgToShpBtn;
         private System.Windows.Forms.CheckBox constrCheckbox;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button combinePdfs;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button copyArchiveCgBtn;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label seVaCreaLabel;
+        private System.Windows.Forms.Label waitMilliseconds;
         private System.Windows.Forms.TextBox MiliSeconds;
         private System.Windows.Forms.TextBox filePrefix;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox backgroundImageLogo;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button oneFileBtn;
+        private System.Windows.Forms.Button multipleFileBtn;
         private UserControlPDF1 userControlPDF11;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
@@ -772,16 +740,16 @@ namespace UtilitatiCGXML
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button startBtn;
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Label intrareLabel;
+        private System.Windows.Forms.Label iesireLabel;
+        private System.Windows.Forms.Button obtainAFileBtn;
+        private System.Windows.Forms.Button obtainMultipleFilesBtn;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox renameFileCheck;
         private System.Windows.Forms.ListBox listBox1;
     }
 }

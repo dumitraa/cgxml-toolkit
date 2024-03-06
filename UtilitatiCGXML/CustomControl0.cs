@@ -33,11 +33,11 @@ namespace UtilitatiCGXML
         private void tEnabled(bool state)
         {
             checkBox1.Enabled = state;
-            button1.Enabled = state;
-            button2.Enabled = state;
-            button3.Enabled = state;
-            button4.Enabled = state;
-            button5.Enabled = state;
+            raportParcelaBtn.Enabled = state;
+            raportConstructiiBtn.Enabled = state;
+            raportSarciniBtn.Enabled = state;
+            raportTipInscrieriBtn.Enabled = state;
+            raportProprietariBtn.Enabled = state;
             button6.Enabled = state;
         }
         private List<string> AllFileListz = new List<string>();
@@ -96,9 +96,9 @@ namespace UtilitatiCGXML
         #region Designer Components
         private void label1_Click(object sender, EventArgs e)
         {
-            if (label21.Visible == true)
+            if (raportContentLabel.Visible == true)
             {
-                label21.Visible = false;
+                raportContentLabel.Visible = false;
             }
 
             if (tableLayoutPanelParcele.Visible == true)
@@ -131,17 +131,17 @@ namespace UtilitatiCGXML
                 tableLayoutPanel6.Visible = false;
             }
 
-            if (pictureBox1.Visible == false)
+            if (backgroundImageLogo.Visible == false)
             {
-                pictureBox1.Visible = true;
+                backgroundImageLogo.Visible = true;
             }
         }
 
-        private void button1_MouseHover(object sender, EventArgs e)
+        private void raportParcelaBtn_MouseHover(object sender, EventArgs e)
         {
-            if (pictureBox1.Visible == true)
+            if (backgroundImageLogo.Visible == true)
             {
-                pictureBox1.Visible = false;
+                backgroundImageLogo.Visible = false;
             }
 
             if (tableLayoutPanelConstructii.Visible == true)
@@ -169,9 +169,9 @@ namespace UtilitatiCGXML
                 tableLayoutPanel6.Visible = false;
             }
 
-            if (label21.Visible == false)
+            if (raportContentLabel.Visible == false)
             {
-                label21.Visible = true;
+                raportContentLabel.Visible = true;
             }
 
             if (tableLayoutPanelParcele.Visible == false)
@@ -184,11 +184,11 @@ namespace UtilitatiCGXML
             tableLayoutPanelParcele.Size.Width = 375;*/
         }
 
-        private void button2_MouseHover(object sender, EventArgs e)
+        private void raportConstructiiBtn_MouseHover(object sender, EventArgs e)
         {
-            if (pictureBox1.Visible == true)
+            if (backgroundImageLogo.Visible == true)
             {
-                pictureBox1.Visible = false;
+                backgroundImageLogo.Visible = false;
             }
 
             if (tableLayoutPanelParcele.Visible == true)
@@ -221,17 +221,17 @@ namespace UtilitatiCGXML
                 tableLayoutPanelConstructii.Visible = true;
             }
 
-            if (label21.Visible == false)
+            if (raportContentLabel.Visible == false)
             {
-                label21.Visible = true;
+                raportContentLabel.Visible = true;
             }
         }
 
-        private void button3_MouseHover(object sender, EventArgs e)
+        private void raportSarciniBtn_MouseHover(object sender, EventArgs e)
         {
-            if (pictureBox1.Visible == true)
+            if (backgroundImageLogo.Visible == true)
             {
-                pictureBox1.Visible = false;
+                backgroundImageLogo.Visible = false;
             }
 
             if (tableLayoutPanelParcele.Visible == true)
@@ -259,9 +259,9 @@ namespace UtilitatiCGXML
                 tableLayoutPanel6.Visible = false;
             }
 
-            if (label21.Visible == false)
+            if (raportContentLabel.Visible == false)
             {
-                label21.Visible = true;
+                raportContentLabel.Visible = true;
             }
 
             if (tableLayoutPanel3.Visible == false)
@@ -270,11 +270,11 @@ namespace UtilitatiCGXML
             }
         }
 
-        private void button4_MouseHover(object sender, EventArgs e)
+        private void raportTipInscrieriBtn_MouseHover(object sender, EventArgs e)
         {
-            if (pictureBox1.Visible == true)
+            if (backgroundImageLogo.Visible == true)
             {
-                pictureBox1.Visible = false;
+                backgroundImageLogo.Visible = false;
             }
 
             if (tableLayoutPanelParcele.Visible == true)
@@ -302,9 +302,9 @@ namespace UtilitatiCGXML
                 tableLayoutPanel6.Visible = false;
             }
 
-            if (label21.Visible == false)
+            if (raportContentLabel.Visible == false)
             {
-                label21.Visible = true;
+                raportContentLabel.Visible = true;
             }
 
             if (tableLayoutPanel4.Visible == false)
@@ -313,11 +313,11 @@ namespace UtilitatiCGXML
             }
         }
 
-        private void button5_MouseHover(object sender, EventArgs e)
+        private void raportProprietariBtn_MouseHover(object sender, EventArgs e)
         {
-            if (pictureBox1.Visible == true)
+            if (backgroundImageLogo.Visible == true)
             {
-                pictureBox1.Visible = false;
+                backgroundImageLogo.Visible = false;
             }
 
             if (tableLayoutPanelParcele.Visible == true)
@@ -345,9 +345,9 @@ namespace UtilitatiCGXML
                 tableLayoutPanel6.Visible = false;
             }
 
-            if (label21.Visible == false)
+            if (raportContentLabel.Visible == false)
             {
-                label21.Visible = true;
+                raportContentLabel.Visible = true;
             }
 
             if (tableLayoutPanel5.Visible == false)
@@ -358,9 +358,9 @@ namespace UtilitatiCGXML
 
         private void button6_MouseHover(object sender, EventArgs e)
         {
-            if (pictureBox1.Visible == true)
+            if (backgroundImageLogo.Visible == true)
             {
-                pictureBox1.Visible = false;
+                backgroundImageLogo.Visible = false;
             }
 
             if (tableLayoutPanelParcele.Visible == true)
@@ -388,9 +388,9 @@ namespace UtilitatiCGXML
                 tableLayoutPanel5.Visible = false;
             }
 
-            if (label21.Visible == false)
+            if (raportContentLabel.Visible == false)
             {
-                label21.Visible = true;
+                raportContentLabel.Visible = true;
             }
 
             if (tableLayoutPanel6.Visible == false)
@@ -403,7 +403,7 @@ namespace UtilitatiCGXML
 
         //Buttons
         #region Buttons
-        private void button1_Click(object sender, EventArgs e)
+        private void raportParcelaBtn_Click(object sender, EventArgs e)
         {
             string fileName = "Parcela";
             string raportname = "";
@@ -656,7 +656,7 @@ namespace UtilitatiCGXML
         }
 
 
-        private void button2_Click(object sender, EventArgs e)
+        private void raportConstructiiBtn_Click(object sender, EventArgs e)
         {
             string fileName = "Constructii";
             string raportname = "";
@@ -873,7 +873,7 @@ namespace UtilitatiCGXML
         }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void raportSarciniBtn_Click(object sender, EventArgs e)
         {
             string raportname = "Raport Sarcini";
             //Create new Excel Workbook
@@ -981,7 +981,7 @@ namespace UtilitatiCGXML
             
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void raportTipInscrieriBtn_Click(object sender, EventArgs e)
         {
             string fileName = "Tip Inscrieri";
             string raportname = "";
@@ -1221,7 +1221,7 @@ namespace UtilitatiCGXML
         }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void raportProprietariBtn_Click(object sender, EventArgs e)
         {
             string fileName = "Proprietar";
             string raportname = "";
@@ -1735,7 +1735,7 @@ namespace UtilitatiCGXML
             
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void caleFisiereCgxmlBtn_Click(object sender, EventArgs e)
         {
             if (this.checkBox1.Visible == true)
             {

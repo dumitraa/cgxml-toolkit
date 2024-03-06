@@ -69,71 +69,71 @@ namespace UtilitatiCGXML
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomControl0));
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
+            this.raportContentLabel = new System.Windows.Forms.Label();
+            this.idLabel = new System.Windows.Forms.Label();
+            this.sectorLabel = new System.Windows.Forms.Label();
+            this.tipInscriereLabel = new System.Windows.Forms.Label();
+            this.noteProprietarLabel = new System.Windows.Forms.Label();
+            this.ieLabel = new System.Windows.Forms.Label();
+            this.sarciniLabel = new System.Windows.Forms.Label();
+            this.sectorLabel2 = new System.Windows.Forms.Label();
+            this.idLabel2 = new System.Windows.Forms.Label();
+            this.idLabel3 = new System.Windows.Forms.Label();
+            this.sectorLabel3 = new System.Windows.Forms.Label();
+            this.tipInscriereLabel2 = new System.Windows.Forms.Label();
+            this.cnpLabel = new System.Windows.Forms.Label();
+            this.defunctLabel = new System.Windows.Forms.Label();
+            this.adresaProprietarLabel = new System.Windows.Forms.Label();
+            this.idLabel4 = new System.Windows.Forms.Label();
+            this.nrConstructieLabel = new System.Windows.Forms.Label();
+            this.sectorLabel4 = new System.Windows.Forms.Label();
+            this.ieLabel2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label45 = new System.Windows.Forms.Label();
+            this.tipIdLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.caleFisiereCgxmlBtn = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.raportProprietariBtn = new System.Windows.Forms.Button();
+            this.raportSarciniBtn = new System.Windows.Forms.Button();
+            this.raportConstructiiBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.raportParcelaBtn = new System.Windows.Forms.Button();
+            this.raportTipInscrieriBtn = new System.Windows.Forms.Button();
+            this.sectorLabel5 = new System.Windows.Forms.Label();
+            this.idLabel5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Label11 = new System.Windows.Forms.Label();
-            this.Label10 = new System.Windows.Forms.Label();
-            this.Label9 = new System.Windows.Forms.Label();
-            this.Label8 = new System.Windows.Forms.Label();
+            this.sectorLabel6 = new System.Windows.Forms.Label();
+            this.ieLabel3 = new System.Windows.Forms.Label();
+            this.nrCadLabel = new System.Windows.Forms.Label();
+            this.nrCfLabel = new System.Windows.Forms.Label();
+            this.nrParcelaLabel = new System.Windows.Forms.Label();
+            this.nrTarlaLabel = new System.Windows.Forms.Label();
+            this.nrTitluLabel = new System.Windows.Forms.Label();
+            this.diferentaSuprafeteLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.suprafataActeLabel = new System.Windows.Forms.Label();
+            this.noteConstructiiLabel = new System.Windows.Forms.Label();
+            this.nrEtajeLabel = new System.Windows.Forms.Label();
+            this.suprafataActeLabel2 = new System.Windows.Forms.Label();
+            this.suprafataMasurataLabel = new System.Windows.Forms.Label();
+            this.areActeLabel = new System.Windows.Forms.Label();
+            this.idLabel6 = new System.Windows.Forms.Label();
             this.tableLayoutPanelConstructii = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanelParcele = new System.Windows.Forms.TableLayoutPanel();
-            this.label63 = new System.Windows.Forms.Label();
-            this.Label16 = new System.Windows.Forms.Label();
-            this.Label15 = new System.Windows.Forms.Label();
-            this.Label14 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.noteProprietarLabel1 = new System.Windows.Forms.Label();
+            this.noteParcelaLabel2 = new System.Windows.Forms.Label();
+            this.noteImobilLabel = new System.Windows.Forms.Label();
+            this.tipTerenLabel = new System.Windows.Forms.Label();
+            this.imprejmuitLabel = new System.Windows.Forms.Label();
+            this.categorieFolosintaLabel = new System.Windows.Forms.Label();
+            this.suprafataActeLabel3 = new System.Windows.Forms.Label();
+            this.suprafataMasurataLabel2 = new System.Windows.Forms.Label();
+            this.nrTopoLabel = new System.Windows.Forms.Label();
+            this.proprietarLabel = new System.Windows.Forms.Label();
+            this.backgroundImageLogo = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -142,281 +142,281 @@ namespace UtilitatiCGXML
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanelConstructii.SuspendLayout();
             this.tableLayoutPanelParcele.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backgroundImageLogo)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label21
+            // raportContentLabel
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Gill Sans Nova", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(250, 25);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(401, 25);
-            this.label21.TabIndex = 72;
-            this.label21.Text = "Conținutul raportului:";
-            this.label21.Visible = false;
+            this.raportContentLabel.AutoSize = true;
+            this.raportContentLabel.Font = new System.Drawing.Font("Gill Sans Nova", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.raportContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.raportContentLabel.Location = new System.Drawing.Point(250, 25);
+            this.raportContentLabel.Name = "raportContentLabel";
+            this.raportContentLabel.Size = new System.Drawing.Size(401, 25);
+            this.raportContentLabel.TabIndex = 72;
+            this.raportContentLabel.Text = "Conținutul raportului:";
+            this.raportContentLabel.Visible = false;
             // 
-            // label42
+            // idLabel
             // 
-            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label42.AutoSize = true;
-            this.label42.BackColor = System.Drawing.Color.Transparent;
-            this.label42.ForeColor = System.Drawing.Color.Black;
-            this.label42.Location = new System.Drawing.Point(6, 31);
-            this.label42.Name = "label42";
-            this.label42.TabIndex = 49;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label42.Text = "● ID";
+            this.idLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.idLabel.AutoSize = true;
+            this.idLabel.BackColor = System.Drawing.Color.Transparent;
+            this.idLabel.ForeColor = System.Drawing.Color.Black;
+            this.idLabel.Location = new System.Drawing.Point(6, 31);
+            this.idLabel.Name = "idLabel";
+            this.idLabel.TabIndex = 49;
+            this.idLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.idLabel.AutoSize = true;
+            this.idLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.idLabel.Text = "● ID";
             // 
-            // label33
+            // sectorLabel
             // 
-            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.Transparent;
-            this.label33.ForeColor = System.Drawing.Color.Black;
-            this.label33.Location = new System.Drawing.Point(220, 31);
-            this.label33.Name = "label33";
-            this.label33.TabIndex = 50;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label33.Text = "● Sector";
+            this.sectorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.sectorLabel.AutoSize = true;
+            this.sectorLabel.BackColor = System.Drawing.Color.Transparent;
+            this.sectorLabel.ForeColor = System.Drawing.Color.Black;
+            this.sectorLabel.Location = new System.Drawing.Point(220, 31);
+            this.sectorLabel.Name = "sectorLabel";
+            this.sectorLabel.TabIndex = 50;
+            this.sectorLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.sectorLabel.AutoSize = true;
+            this.sectorLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.sectorLabel.Text = "● Sector";
             // 
-            // label34
+            // tipInscriereLabel
             // 
-            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.ForeColor = System.Drawing.Color.Black;
-            this.label34.Location = new System.Drawing.Point(434, 31);
-            this.label34.Name = "label34";
-            this.label34.TabIndex = 51;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label34.Text = "● Tip Inscriere";
+            this.tipInscriereLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tipInscriereLabel.AutoSize = true;
+            this.tipInscriereLabel.BackColor = System.Drawing.Color.Transparent;
+            this.tipInscriereLabel.ForeColor = System.Drawing.Color.Black;
+            this.tipInscriereLabel.Location = new System.Drawing.Point(434, 31);
+            this.tipInscriereLabel.Name = "tipInscriereLabel";
+            this.tipInscriereLabel.TabIndex = 51;
+            this.tipInscriereLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.tipInscriereLabel.AutoSize = true;
+            this.tipInscriereLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.tipInscriereLabel.Text = "● Tip Inscriere";
             // 
-            // label35
+            // noteProprietarLabel
             // 
-            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label35.AutoSize = true;
-            this.label35.BackColor = System.Drawing.Color.Transparent;
-            this.label35.Location = new System.Drawing.Point(6, 180);
-            this.label35.Name = "label35";
-            this.label35.TabIndex = 55;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label35.Text = "● Note Proprietar";
+            this.noteProprietarLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.noteProprietarLabel.AutoSize = true;
+            this.noteProprietarLabel.BackColor = System.Drawing.Color.Transparent;
+            this.noteProprietarLabel.Location = new System.Drawing.Point(6, 180);
+            this.noteProprietarLabel.Name = "noteProprietarLabel";
+            this.noteProprietarLabel.TabIndex = 55;
+            this.noteProprietarLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.noteProprietarLabel.AutoSize = true;
+            this.noteProprietarLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.noteProprietarLabel.Text = "● Note Proprietar";
             // 
-            // label61
+            // ieLabel
             // 
-            this.label61.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label61.AutoSize = true;
-            this.label61.BackColor = System.Drawing.Color.Transparent;
-            this.label61.ForeColor = System.Drawing.Color.Black;
-            this.label61.Location = new System.Drawing.Point(220, 31);
-            this.label61.Name = "label61";
-            this.label61.TabIndex = 54;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label61.Text = "● IE";
+            this.ieLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ieLabel.AutoSize = true;
+            this.ieLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ieLabel.ForeColor = System.Drawing.Color.Black;
+            this.ieLabel.Location = new System.Drawing.Point(220, 31);
+            this.ieLabel.Name = "ieLabel";
+            this.ieLabel.TabIndex = 54;
+            this.ieLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.ieLabel.AutoSize = true;
+            this.ieLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.ieLabel.Text = "● IE";
             // 
-            // label31
+            // sarciniLabel
             // 
-            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.ForeColor = System.Drawing.Color.Black;
-            this.label31.Location = new System.Drawing.Point(6, 104);
-            this.label31.Name = "label31";
-            this.label31.TabIndex = 53;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label31.Text = "● Sarcini?";
+            this.sarciniLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.sarciniLabel.AutoSize = true;
+            this.sarciniLabel.BackColor = System.Drawing.Color.Transparent;
+            this.sarciniLabel.ForeColor = System.Drawing.Color.Black;
+            this.sarciniLabel.Location = new System.Drawing.Point(6, 104);
+            this.sarciniLabel.Name = "sarciniLabel";
+            this.sarciniLabel.TabIndex = 53;
+            this.sarciniLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.sarciniLabel.AutoSize = true;
+            this.sarciniLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.sarciniLabel.Text = "● Sarcini?";
             // 
-            // label30
+            // sectorLabel2
             // 
-            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.ForeColor = System.Drawing.Color.Black;
-            this.label30.Location = new System.Drawing.Point(434, 31);
-            this.label30.Name = "label30";
-            this.label30.TabIndex = 52;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label30.Text = "● Sector";
+            this.sectorLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.sectorLabel2.AutoSize = true;
+            this.sectorLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.sectorLabel2.ForeColor = System.Drawing.Color.Black;
+            this.sectorLabel2.Location = new System.Drawing.Point(434, 31);
+            this.sectorLabel2.Name = "sectorLabel2";
+            this.sectorLabel2.TabIndex = 52;
+            this.sectorLabel2.TextAlign = ContentAlignment.MiddleLeft;
+            this.sectorLabel2.AutoSize = true;
+            this.sectorLabel2.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.sectorLabel2.Text = "● Sector";
             // 
-            // label36
+            // idLabel2
             // 
-            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Location = new System.Drawing.Point(6, 32);
-            this.label36.Name = "label36";
-            this.label36.TabIndex = 49;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label36.Text = "● ID";
+            this.idLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.idLabel2.AutoSize = true;
+            this.idLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.idLabel2.Location = new System.Drawing.Point(6, 32);
+            this.idLabel2.Name = "idLabel2";
+            this.idLabel2.TabIndex = 49;
+            this.idLabel2.TextAlign = ContentAlignment.MiddleLeft;
+            this.idLabel2.AutoSize = true;
+            this.idLabel2.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.idLabel2.Text = "● ID";
             // 
-            // label29
+            // idLabel3
             // 
-            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.ForeColor = System.Drawing.Color.Black;
-            this.label29.Location = new System.Drawing.Point(6, 31);
-            this.label29.Name = "label29";
-            this.label29.TabIndex = 51;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label29.Text = "● ID";
+            this.idLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.idLabel3.AutoSize = true;
+            this.idLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.idLabel3.ForeColor = System.Drawing.Color.Black;
+            this.idLabel3.Location = new System.Drawing.Point(6, 31);
+            this.idLabel3.Name = "idLabel3";
+            this.idLabel3.TabIndex = 51;
+            this.idLabel3.TextAlign = ContentAlignment.MiddleLeft;
+            this.idLabel3.AutoSize = true;
+            this.idLabel3.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.idLabel3.Text = "● ID";
             // 
-            // label37
+            // sectorLabel3
             // 
-            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.Transparent;
-            this.label37.Location = new System.Drawing.Point(220, 32);
-            this.label37.Name = "label37";
-            this.label37.TabIndex = 50;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label37.Text = "● Sector";
+            this.sectorLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.sectorLabel3.AutoSize = true;
+            this.sectorLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.sectorLabel3.Location = new System.Drawing.Point(220, 32);
+            this.sectorLabel3.Name = "sectorLabel3";
+            this.sectorLabel3.TabIndex = 50;
+            this.sectorLabel3.TextAlign = ContentAlignment.MiddleLeft;
+            this.sectorLabel3.AutoSize = true;
+            this.sectorLabel3.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.sectorLabel3.Text = "● Sector";
             // 
-            // label38
+            // tipInscriereLabel2
             // 
-            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.Transparent;
-            this.label38.Location = new System.Drawing.Point(434, 32);
-            this.label38.Name = "label38";
-            this.label38.TabIndex = 51;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label38.Text = "● Tip Inscriere";
+            this.tipInscriereLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tipInscriereLabel2.AutoSize = true;
+            this.tipInscriereLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.tipInscriereLabel2.Location = new System.Drawing.Point(434, 32);
+            this.tipInscriereLabel2.Name = "tipInscriereLabel2";
+            this.tipInscriereLabel2.TabIndex = 51;
+            this.tipInscriereLabel2.TextAlign = ContentAlignment.MiddleLeft;
+            this.tipInscriereLabel2.AutoSize = true;
+            this.tipInscriereLabel2.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.tipInscriereLabel2.Text = "● Tip Inscriere";
             // 
-            // label39
+            // cnpLabel
             // 
-            this.label39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.Transparent;
-            this.label39.Location = new System.Drawing.Point(6, 106);
-            this.label39.Name = "label39";
-            this.label39.TabIndex = 52;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label39.Text = "● CNP";
+            this.cnpLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cnpLabel.AutoSize = true;
+            this.cnpLabel.BackColor = System.Drawing.Color.Transparent;
+            this.cnpLabel.Location = new System.Drawing.Point(6, 106);
+            this.cnpLabel.Name = "cnpLabel";
+            this.cnpLabel.TabIndex = 52;
+            this.cnpLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.cnpLabel.AutoSize = true;
+            this.cnpLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.cnpLabel.Text = "● CNP";
             // 
-            // label40
+            // defunctLabel
             // 
-            this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.Transparent;
-            this.label40.Location = new System.Drawing.Point(220, 106);
-            this.label40.Name = "label40";
-            this.label40.TabIndex = 53;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label40.Text = "● Defunct?";
+            this.defunctLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.defunctLabel.AutoSize = true;
+            this.defunctLabel.BackColor = System.Drawing.Color.Transparent;
+            this.defunctLabel.Location = new System.Drawing.Point(220, 106);
+            this.defunctLabel.Name = "defunctLabel";
+            this.defunctLabel.TabIndex = 53;
+            this.defunctLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.defunctLabel.AutoSize = true;
+            this.defunctLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.defunctLabel.Text = "● Defunct?";
             // 
-            // label41
+            // adresaProprietarLabel
             // 
-            this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label41.AutoSize = true;
-            this.label41.BackColor = System.Drawing.Color.Transparent;
-            this.label41.Location = new System.Drawing.Point(434, 106);
-            this.label41.Name = "label41";
-            this.label41.TabIndex = 54;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label41.Text = "● Adresă Proprietar";
+            this.adresaProprietarLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.adresaProprietarLabel.AutoSize = true;
+            this.adresaProprietarLabel.BackColor = System.Drawing.Color.Transparent;
+            this.adresaProprietarLabel.Location = new System.Drawing.Point(434, 106);
+            this.adresaProprietarLabel.Name = "adresaProprietarLabel";
+            this.adresaProprietarLabel.TabIndex = 54;
+            this.adresaProprietarLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.adresaProprietarLabel.AutoSize = true;
+            this.adresaProprietarLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.adresaProprietarLabel.Text = "● Adresă Proprietar";
             // 
-            // label32
+            // idLabel4
             // 
-            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.Transparent;
-            this.label32.ForeColor = System.Drawing.Color.Black;
-            this.label32.Location = new System.Drawing.Point(6, 31);
-            this.label32.Name = "label32";
-            this.label32.TabIndex = 49;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label32.Text = "● ID";
+            this.idLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.idLabel4.AutoSize = true;
+            this.idLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.idLabel4.ForeColor = System.Drawing.Color.Black;
+            this.idLabel4.Location = new System.Drawing.Point(6, 31);
+            this.idLabel4.Name = "idLabel4";
+            this.idLabel4.TabIndex = 49;
+            this.idLabel4.TextAlign = ContentAlignment.MiddleLeft;
+            this.idLabel4.AutoSize = true;
+            this.idLabel4.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.idLabel4.Text = "● ID";
             // 
-            // label28
+            // nrConstructieLabel
             // 
-            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.ForeColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(326, 31);
-            this.label28.Name = "label28";
-            this.label28.TabIndex = 51;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label28.Text = "● Nr C";
+            this.nrConstructieLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nrConstructieLabel.AutoSize = true;
+            this.nrConstructieLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nrConstructieLabel.ForeColor = System.Drawing.Color.Black;
+            this.nrConstructieLabel.Location = new System.Drawing.Point(326, 31);
+            this.nrConstructieLabel.Name = "nrConstructieLabel";
+            this.nrConstructieLabel.TabIndex = 51;
+            this.nrConstructieLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.nrConstructieLabel.AutoSize = true;
+            this.nrConstructieLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.nrConstructieLabel.Text = "● Nr Constructie";
             // 
-            // label43
+            // sectorLabel4
             // 
-            this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label43.AutoSize = true;
-            this.label43.BackColor = System.Drawing.Color.Transparent;
-            this.label43.ForeColor = System.Drawing.Color.Black;
-            this.label43.Location = new System.Drawing.Point(166, 31);
-            this.label43.Name = "label43";
-            this.label43.TabIndex = 50;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label43.Text = "● Sector";
+            this.sectorLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.sectorLabel4.AutoSize = true;
+            this.sectorLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.sectorLabel4.ForeColor = System.Drawing.Color.Black;
+            this.sectorLabel4.Location = new System.Drawing.Point(166, 31);
+            this.sectorLabel4.Name = "sectorLabel4";
+            this.sectorLabel4.TabIndex = 50;
+            this.sectorLabel4.TextAlign = ContentAlignment.MiddleLeft;
+            this.sectorLabel4.AutoSize = true;
+            this.sectorLabel4.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.sectorLabel4.Text = "● Sector";
             // 
-            // label44
+            // ieLabel2
             // 
-            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label44.AutoSize = true;
-            this.label44.BackColor = System.Drawing.Color.Transparent;
-            this.label44.ForeColor = System.Drawing.Color.Black;
-            this.label44.Location = new System.Drawing.Point(326, 31);
-            this.label44.Name = "label44";
-            this.label44.TabIndex = 51;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label44.Text = "● IE";
+            this.ieLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ieLabel2.AutoSize = true;
+            this.ieLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.ieLabel2.ForeColor = System.Drawing.Color.Black;
+            this.ieLabel2.Location = new System.Drawing.Point(326, 31);
+            this.ieLabel2.Name = "ieLabel2";
+            this.ieLabel2.TabIndex = 51;
+            this.ieLabel2.TextAlign = ContentAlignment.MiddleLeft;
+            this.ieLabel2.AutoSize = true;
+            this.ieLabel2.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.ieLabel2.Text = "● IE";
             // 
-            // label45
+            // tipIdLabel
             // 
-            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label45.AutoSize = true;
-            this.label45.BackColor = System.Drawing.Color.Transparent;
-            this.label45.ForeColor = System.Drawing.Color.Black;
-            this.label45.Location = new System.Drawing.Point(486, 31);
-            this.label45.Name = "label45";
-            this.label45.TabIndex = 52;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label45.Text = "● Tip ID";
+            this.tipIdLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tipIdLabel.AutoSize = true;
+            this.tipIdLabel.BackColor = System.Drawing.Color.Transparent;
+            this.tipIdLabel.ForeColor = System.Drawing.Color.Black;
+            this.tipIdLabel.Location = new System.Drawing.Point(486, 31);
+            this.tipIdLabel.Name = "tipIdLabel";
+            this.tipIdLabel.TabIndex = 52;
+            this.tipIdLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.tipIdLabel.AutoSize = true;
+            this.tipIdLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.tipIdLabel.Text = "● Tip ID";
             // 
             // panel1
             // 
@@ -425,14 +425,14 @@ namespace UtilitatiCGXML
             this.panel1.Padding = new System.Windows.Forms.Padding(10); // Adds padding inside the panel
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.caleFisiereCgxmlBtn);
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.raportProprietariBtn);
+            this.panel1.Controls.Add(this.raportSarciniBtn);
+            this.panel1.Controls.Add(this.raportConstructiiBtn);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.raportParcelaBtn);
+            this.panel1.Controls.Add(this.raportTipInscrieriBtn);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
@@ -461,33 +461,21 @@ namespace UtilitatiCGXML
             this.button9.Visible = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // checkBox1
+            // caleFisiereCgxmlBtn
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(29, 404);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(167, 17);
-            this.checkBox1.TabIndex = 79;
-            this.checkBox1.Text = "Foloseste Esantionul Aleatoriu";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.Visible = false;
-            this.checkBox1.Click += new System.EventHandler(this.checkBox1_Click);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(0, 110);
-            this.button7.Margin = new System.Windows.Forms.Padding(0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(214, 40);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "Cale fisiere CGXML";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.caleFisiereCgxmlBtn.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
+            this.caleFisiereCgxmlBtn.FlatAppearance.BorderSize = 0;
+            this.caleFisiereCgxmlBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.caleFisiereCgxmlBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.caleFisiereCgxmlBtn.ForeColor = System.Drawing.Color.White;
+            this.caleFisiereCgxmlBtn.Location = new System.Drawing.Point(0, 110);
+            this.caleFisiereCgxmlBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.caleFisiereCgxmlBtn.Name = "caleFisiereCgxmlBtn";
+            this.caleFisiereCgxmlBtn.Size = new System.Drawing.Size(214, 40);
+            this.caleFisiereCgxmlBtn.TabIndex = 9;
+            this.caleFisiereCgxmlBtn.Text = "Cale fisiere CGXML";
+            this.caleFisiereCgxmlBtn.UseVisualStyleBackColor = false;
+            this.caleFisiereCgxmlBtn.Click += new System.EventHandler(this.caleFisiereCgxmlBtn_Click);
             // 
             // button6
             // 
@@ -506,118 +494,118 @@ namespace UtilitatiCGXML
             // this.button6.Click += new System.EventHandler(this.button6_Click);
             // this.button6.MouseHover += new System.EventHandler(this.button6_MouseHover);
             // 
-            // button5
+            // raportProprietariBtn
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(0, 324);
-            this.button5.Margin = new System.Windows.Forms.Padding(0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(214, 40);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Raport Proprietari";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            this.button5.MouseHover += new System.EventHandler(this.button5_MouseHover);
+            this.raportProprietariBtn.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
+            this.raportProprietariBtn.FlatAppearance.BorderSize = 0;
+            this.raportProprietariBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.raportProprietariBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.raportProprietariBtn.ForeColor = System.Drawing.Color.White;
+            this.raportProprietariBtn.Location = new System.Drawing.Point(0, 324);
+            this.raportProprietariBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.raportProprietariBtn.Name = "raportProprietariBtn";
+            this.raportProprietariBtn.Size = new System.Drawing.Size(214, 40);
+            this.raportProprietariBtn.TabIndex = 2;
+            this.raportProprietariBtn.Text = "Raport Proprietari";
+            this.raportProprietariBtn.UseVisualStyleBackColor = false;
+            this.raportProprietariBtn.Click += new System.EventHandler(this.raportProprietariBtn_Click);
+            this.raportProprietariBtn.MouseHover += new System.EventHandler(this.raportProprietariBtn_MouseHover);
             // 
-            // button3
+            // raportSarciniBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 244);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(214, 40);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Raport Sarcini";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            this.button3.MouseHover += new System.EventHandler(this.button3_MouseHover);
+            this.raportSarciniBtn.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
+            this.raportSarciniBtn.FlatAppearance.BorderSize = 0;
+            this.raportSarciniBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.raportSarciniBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.raportSarciniBtn.ForeColor = System.Drawing.Color.White;
+            this.raportSarciniBtn.Location = new System.Drawing.Point(0, 244);
+            this.raportSarciniBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.raportSarciniBtn.Name = "raportSarciniBtn";
+            this.raportSarciniBtn.Size = new System.Drawing.Size(214, 40);
+            this.raportSarciniBtn.TabIndex = 4;
+            this.raportSarciniBtn.Text = "Raport Sarcini";
+            this.raportSarciniBtn.UseVisualStyleBackColor = false;
+            this.raportSarciniBtn.Click += new System.EventHandler(this.raportSarciniBtn_Click);
+            this.raportSarciniBtn.MouseHover += new System.EventHandler(this.raportSarciniBtn_MouseHover);
             
-            // button2
+            // raportConstructiiBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 204);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(214, 40);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Raport Constructii";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            this.button2.MouseHover += new System.EventHandler(this.button2_MouseHover);
+            this.raportConstructiiBtn.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
+            this.raportConstructiiBtn.FlatAppearance.BorderSize = 0;
+            this.raportConstructiiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.raportConstructiiBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.raportConstructiiBtn.ForeColor = System.Drawing.Color.White;
+            this.raportConstructiiBtn.Location = new System.Drawing.Point(0, 204);
+            this.raportConstructiiBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.raportConstructiiBtn.Name = "raportConstructiiBtn";
+            this.raportConstructiiBtn.Size = new System.Drawing.Size(214, 40);
+            this.raportConstructiiBtn.TabIndex = 0;
+            this.raportConstructiiBtn.Text = "Raport Constructii";
+            this.raportConstructiiBtn.UseVisualStyleBackColor = false;
+            this.raportConstructiiBtn.Click += new System.EventHandler(this.raportConstructiiBtn_Click);
+            this.raportConstructiiBtn.MouseHover += new System.EventHandler(this.raportConstructiiBtn_MouseHover);
             // 
-            // button1
+            // raportParcelaBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 164);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 40);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Raport Parcela";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
+            this.raportParcelaBtn.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
+            this.raportParcelaBtn.FlatAppearance.BorderSize = 0;
+            this.raportParcelaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.raportParcelaBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.raportParcelaBtn.ForeColor = System.Drawing.Color.White;
+            this.raportParcelaBtn.Location = new System.Drawing.Point(0, 164);
+            this.raportParcelaBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.raportParcelaBtn.Name = "raportParcelaBtn";
+            this.raportParcelaBtn.Size = new System.Drawing.Size(214, 40);
+            this.raportParcelaBtn.TabIndex = 1;
+            this.raportParcelaBtn.Text = "Raport Parcela";
+            this.raportParcelaBtn.UseVisualStyleBackColor = false;
+            this.raportParcelaBtn.Click += new System.EventHandler(this.raportParcelaBtn_Click);
+            this.raportParcelaBtn.MouseHover += new System.EventHandler(this.raportParcelaBtn_MouseHover);
             // 
-            // button4
+            // raportTipInscrieriBtn
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 284);
-            this.button4.Margin = new System.Windows.Forms.Padding(0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(214, 40);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Raport Tip Inscrieri";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            this.button4.MouseHover += new System.EventHandler(this.button4_MouseHover);
+            this.raportTipInscrieriBtn.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
+            this.raportTipInscrieriBtn.FlatAppearance.BorderSize = 0;
+            this.raportTipInscrieriBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.raportTipInscrieriBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.raportTipInscrieriBtn.ForeColor = System.Drawing.Color.White;
+            this.raportTipInscrieriBtn.Location = new System.Drawing.Point(0, 284);
+            this.raportTipInscrieriBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.raportTipInscrieriBtn.Name = "raportTipInscrieriBtn";
+            this.raportTipInscrieriBtn.Size = new System.Drawing.Size(214, 40);
+            this.raportTipInscrieriBtn.TabIndex = 3;
+            this.raportTipInscrieriBtn.Text = "Raport Tip Inscrieri";
+            this.raportTipInscrieriBtn.UseVisualStyleBackColor = false;
+            this.raportTipInscrieriBtn.Click += new System.EventHandler(this.raportTipInscrieriBtn_Click);
+            this.raportTipInscrieriBtn.MouseHover += new System.EventHandler(this.raportTipInscrieriBtn_MouseHover);
             // 
-            // label27
+            // sectorLabel5
             // 
-            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.ForeColor = System.Drawing.Color.Black;
-            this.label27.Location = new System.Drawing.Point(166, 31);
-            this.label27.Name = "label27";
-            this.label27.TabIndex = 50;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label27.Text = "● Sector";
+            this.sectorLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.sectorLabel5.AutoSize = true;
+            this.sectorLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.sectorLabel5.ForeColor = System.Drawing.Color.Black;
+            this.sectorLabel5.Location = new System.Drawing.Point(166, 31);
+            this.sectorLabel5.Name = "sectorLabel5";
+            this.sectorLabel5.TabIndex = 50;
+            this.sectorLabel5.TextAlign = ContentAlignment.MiddleLeft;
+            this.sectorLabel5.AutoSize = true;
+            this.sectorLabel5.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.sectorLabel5.Text = "● Sector";
             // 
-            // label2
+            // idLabel5
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(6, 32);
-            this.label2.Name = "label2";
-            this.label2.TabIndex = 49;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label2.Text = "● ID";
+            this.idLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.idLabel5.AutoSize = true;
+            this.idLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.idLabel5.ForeColor = System.Drawing.Color.Black;
+            this.idLabel5.Location = new System.Drawing.Point(6, 32);
+            this.idLabel5.Name = "idLabel5";
+            this.idLabel5.TabIndex = 49;
+            this.idLabel5.TextAlign = ContentAlignment.MiddleLeft;
+            this.idLabel5.AutoSize = true;
+            this.idLabel5.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.idLabel5.Text = "● ID";
             // 
             // tableLayoutPanel6
             // 
@@ -633,10 +621,10 @@ namespace UtilitatiCGXML
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel6.Controls.Add(this.label42, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label43, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label44, 2, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label45, 3, 0);
+            this.tableLayoutPanel6.Controls.Add(this.idLabel, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.sectorLabel4, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.ieLabel2, 2, 0);
+            this.tableLayoutPanel6.Controls.Add(this.tipIdLabel, 3, 0);
             this.tableLayoutPanel6.Location = new System.Drawing.Point(218, 199);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
@@ -645,117 +633,117 @@ namespace UtilitatiCGXML
             this.tableLayoutPanel6.TabIndex = 78;
             this.tableLayoutPanel6.Visible = false;
             // 
-            // label3
+            // sectorLabel6
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(166, 32);
-            this.label3.Name = "label3";
-            this.label3.TabIndex = 50;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label3.Text = "● Sector";
+            this.sectorLabel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.sectorLabel6.AutoSize = true;
+            this.sectorLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.sectorLabel6.ForeColor = System.Drawing.Color.Black;
+            this.sectorLabel6.Location = new System.Drawing.Point(166, 32);
+            this.sectorLabel6.Name = "sectorLabel6";
+            this.sectorLabel6.TabIndex = 50;
+            this.sectorLabel6.TextAlign = ContentAlignment.MiddleLeft;
+            this.sectorLabel6.AutoSize = true;
+            this.sectorLabel6.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.sectorLabel6.Text = "● Sector";
             // 
-            // label4
+            // ieLabel3
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(326, 32);
-            this.label4.Name = "label4";
-            this.label4.TabIndex = 51;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label4.Text = "● IE";
+            this.ieLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ieLabel3.AutoSize = true;
+            this.ieLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.ieLabel3.ForeColor = System.Drawing.Color.Black;
+            this.ieLabel3.Location = new System.Drawing.Point(326, 32);
+            this.ieLabel3.Name = "ieLabel3";
+            this.ieLabel3.TabIndex = 51;
+            this.ieLabel3.TextAlign = ContentAlignment.MiddleLeft;
+            this.ieLabel3.AutoSize = true;
+            this.ieLabel3.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.ieLabel3.Text = "● IE";
             // 
-            // label5
+            // nrCadLabel
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(486, 32);
-            this.label5.Name = "label5";
-            this.label5.TabIndex = 52;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label5.Text = "● Nr CAD";
+            this.nrCadLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nrCadLabel.AutoSize = true;
+            this.nrCadLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nrCadLabel.ForeColor = System.Drawing.Color.Black;
+            this.nrCadLabel.Location = new System.Drawing.Point(486, 32);
+            this.nrCadLabel.Name = "nrCadLabel";
+            this.nrCadLabel.TabIndex = 52;
+            this.nrCadLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.nrCadLabel.AutoSize = true;
+            this.nrCadLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.nrCadLabel.Text = "● Nr CAD";
             // 
-            // label6
+            // nrCfLabel
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(6, 106);
-            this.label6.Name = "label6";
-            this.label6.TabIndex = 53;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label6.Text = "● Nr CF";
+            this.nrCfLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nrCfLabel.AutoSize = true;
+            this.nrCfLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nrCfLabel.ForeColor = System.Drawing.Color.Black;
+            this.nrCfLabel.Location = new System.Drawing.Point(6, 106);
+            this.nrCfLabel.Name = "nrCfLabel";
+            this.nrCfLabel.TabIndex = 53;
+            this.nrCfLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.nrCfLabel.AutoSize = true;
+            this.nrCfLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.nrCfLabel.Text = "● Nr CF";
             // 
-            // Label11
+            // nrParcelaLabel
             // 
-            this.Label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label11.AutoSize = true;
-            this.Label11.BackColor = System.Drawing.Color.Transparent;
-            this.Label11.ForeColor = System.Drawing.Color.Black;
-            this.Label11.Location = new System.Drawing.Point(6, 254);
-            this.Label11.Name = "Label11";
-            this.Label11.TabIndex = 59;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.Label11.Text = "● Nr Parcelă";
+            this.nrParcelaLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nrParcelaLabel.AutoSize = true;
+            this.nrParcelaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nrParcelaLabel.ForeColor = System.Drawing.Color.Black;
+            this.nrParcelaLabel.Location = new System.Drawing.Point(6, 254);
+            this.nrParcelaLabel.Name = "nrParcelaLabel";
+            this.nrParcelaLabel.TabIndex = 59;
+            this.nrParcelaLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.nrParcelaLabel.AutoSize = true;
+            this.nrParcelaLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.nrParcelaLabel.Text = "● Nr Parcelă";
             // 
-            // Label10
+            // nrTarlaLabel
             // 
-            this.Label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label10.AutoSize = true;
-            this.Label10.BackColor = System.Drawing.Color.Transparent;
-            this.Label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Label10.Location = new System.Drawing.Point(486, 180);
-            this.Label10.Name = "Label10";
-            this.Label10.TabIndex = 58;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.Label10.Text = "● Nr Tarla";
+            this.nrTarlaLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nrTarlaLabel.AutoSize = true;
+            this.nrTarlaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nrTarlaLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.nrTarlaLabel.Location = new System.Drawing.Point(486, 180);
+            this.nrTarlaLabel.Name = "nrTarlaLabel";
+            this.nrTarlaLabel.TabIndex = 58;
+            this.nrTarlaLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.nrTarlaLabel.AutoSize = true;
+            this.nrTarlaLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.nrTarlaLabel.Text = "● Nr Tarla";
             // 
-            // Label9
+            // nrTitluLabel
             // 
-            this.Label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label9.AutoSize = true;
-            this.Label9.BackColor = System.Drawing.Color.Transparent;
-            this.Label9.ForeColor = System.Drawing.Color.Black;
-            this.Label9.Location = new System.Drawing.Point(326, 180);
-            this.Label9.Name = "Label9";
-            this.Label9.TabIndex = 57;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.Label9.Text = "● Nr Titlu";
+            this.nrTitluLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nrTitluLabel.AutoSize = true;
+            this.nrTitluLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nrTitluLabel.ForeColor = System.Drawing.Color.Black;
+            this.nrTitluLabel.Location = new System.Drawing.Point(326, 180);
+            this.nrTitluLabel.Name = "nrTitluLabel";
+            this.nrTitluLabel.TabIndex = 57;
+            this.nrTitluLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.nrTitluLabel.AutoSize = true;
+            this.nrTitluLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.nrTitluLabel.Text = "● Nr Titlu";
             // 
-            // Label8
+            // diferentaSuprafeteLabel
             // 
-            this.Label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label8.AutoSize = true;
-            this.Label8.BackColor = System.Drawing.Color.Transparent;
-            this.Label8.ForeColor = System.Drawing.Color.Black;
-            this.Label8.Location = new System.Drawing.Point(166, 180);
-            this.Label8.Name = "Label8";
-            this.Label8.TabIndex = 56;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.Label8.Text = "● Dif Suprafațe";
+            this.diferentaSuprafeteLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.diferentaSuprafeteLabel.AutoSize = true;
+            this.diferentaSuprafeteLabel.BackColor = System.Drawing.Color.Transparent;
+            this.diferentaSuprafeteLabel.ForeColor = System.Drawing.Color.Black;
+            this.diferentaSuprafeteLabel.Location = new System.Drawing.Point(166, 180);
+            this.diferentaSuprafeteLabel.Name = "diferentaSuprafeteLabel";
+            this.diferentaSuprafeteLabel.TabIndex = 56;
+            this.diferentaSuprafeteLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.diferentaSuprafeteLabel.AutoSize = true;
+            this.diferentaSuprafeteLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.diferentaSuprafeteLabel.Text = "● Dif Suprafațe";
             // 
             // tableLayoutPanel3
             // 
@@ -770,10 +758,10 @@ namespace UtilitatiCGXML
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Controls.Add(this.label29, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label61, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label31, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label30, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.idLabel3, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.ieLabel, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.sarciniLabel, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.sectorLabel2, 2, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(218, 174);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
@@ -783,103 +771,103 @@ namespace UtilitatiCGXML
             this.tableLayoutPanel3.TabIndex = 75;
             this.tableLayoutPanel3.Visible = false;
             // 
-            // Label7
+            // suprafataActeLabel
             // 
-            this.Label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label7.AutoSize = true;
-            this.Label7.BackColor = System.Drawing.Color.Transparent;
-            this.Label7.ForeColor = System.Drawing.Color.Black;
-            this.Label7.Location = new System.Drawing.Point(6, 180);
-            this.Label7.Name = "Label7";
-            this.Label7.TabIndex = 55;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.Label7.Text = "● Suprafața din Act";
+            this.suprafataActeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.suprafataActeLabel.AutoSize = true;
+            this.suprafataActeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.suprafataActeLabel.ForeColor = System.Drawing.Color.Black;
+            this.suprafataActeLabel.Location = new System.Drawing.Point(6, 180);
+            this.suprafataActeLabel.Name = "suprafataActeLabel";
+            this.suprafataActeLabel.TabIndex = 55;
+            this.suprafataActeLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.suprafataActeLabel.AutoSize = true;
+            this.suprafataActeLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.suprafataActeLabel.Text = "● Suprafața din Act";
             // 
-            // label20
+            // noteConstructiiLabel
             // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(486, 105);
-            this.label20.Name = "label20";
-            this.label20.TabIndex = 56;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label20.Text = "● Note C";
+            this.noteConstructiiLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.noteConstructiiLabel.AutoSize = true;
+            this.noteConstructiiLabel.BackColor = System.Drawing.Color.Transparent;
+            this.noteConstructiiLabel.ForeColor = System.Drawing.Color.Black;
+            this.noteConstructiiLabel.Location = new System.Drawing.Point(486, 105);
+            this.noteConstructiiLabel.Name = "noteConstructiiLabel";
+            this.noteConstructiiLabel.TabIndex = 56;
+            this.noteConstructiiLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.noteConstructiiLabel.AutoSize = true;
+            this.noteConstructiiLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.noteConstructiiLabel.Text = "● Note Constructii";
             // 
-            // label22
+            // nrEtajeLabel
             // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(326, 105);
-            this.label22.Name = "label22";
-            this.label22.TabIndex = 55;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label22.Text = "● Nr. Etaje";
+            this.nrEtajeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nrEtajeLabel.AutoSize = true;
+            this.nrEtajeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nrEtajeLabel.ForeColor = System.Drawing.Color.Black;
+            this.nrEtajeLabel.Location = new System.Drawing.Point(326, 105);
+            this.nrEtajeLabel.Name = "nrEtajeLabel";
+            this.nrEtajeLabel.TabIndex = 55;
+            this.nrEtajeLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.nrEtajeLabel.AutoSize = true;
+            this.nrEtajeLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.nrEtajeLabel.Text = "● Nr. Etaje";
             // 
-            // label23
+            // suprafataActeLabel2
             // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(166, 105);
-            this.label23.Name = "label23";
-            this.label23.TabIndex = 54;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label23.Text = "● Suprafata din Act";
+            this.suprafataActeLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.suprafataActeLabel2.AutoSize = true;
+            this.suprafataActeLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.suprafataActeLabel2.ForeColor = System.Drawing.Color.Black;
+            this.suprafataActeLabel2.Location = new System.Drawing.Point(166, 105);
+            this.suprafataActeLabel2.Name = "suprafataActeLabel2";
+            this.suprafataActeLabel2.TabIndex = 54;
+            this.suprafataActeLabel2.TextAlign = ContentAlignment.MiddleLeft;
+            this.suprafataActeLabel2.AutoSize = true;
+            this.suprafataActeLabel2.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.suprafataActeLabel2.Text = "● Suprafata din Act";
             // 
-            // label24
+            // suprafataMasurataLabel
             // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(6, 105);
-            this.label24.Name = "label24";
-            this.label24.TabIndex = 53;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label24.Text = "● Suprafața Masurată";
+            this.suprafataMasurataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.suprafataMasurataLabel.AutoSize = true;
+            this.suprafataMasurataLabel.BackColor = System.Drawing.Color.Transparent;
+            this.suprafataMasurataLabel.ForeColor = System.Drawing.Color.Black;
+            this.suprafataMasurataLabel.Location = new System.Drawing.Point(6, 105);
+            this.suprafataMasurataLabel.Name = "suprafataMasurataLabel";
+            this.suprafataMasurataLabel.TabIndex = 53;
+            this.suprafataMasurataLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.suprafataMasurataLabel.AutoSize = true;
+            this.suprafataMasurataLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.suprafataMasurataLabel.Text = "● Suprafața Masurată";
             // 
-            // label25
+            // areActeLabel
             // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(486, 31);
-            this.label25.Name = "label25";
-            this.label25.TabIndex = 52;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label25.Text = "● Are Acte?";
+            this.areActeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.areActeLabel.AutoSize = true;
+            this.areActeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.areActeLabel.ForeColor = System.Drawing.Color.Black;
+            this.areActeLabel.Location = new System.Drawing.Point(486, 31);
+            this.areActeLabel.Name = "areActeLabel";
+            this.areActeLabel.TabIndex = 52;
+            this.areActeLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.areActeLabel.AutoSize = true;
+            this.areActeLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.areActeLabel.Text = "● Are Acte?";
             // 
-            // label26
+            // idLabel6
             // 
-            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(6, 31);
-            this.label26.Name = "label26";
-            this.label26.TabIndex = 49;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label26.Text = "● ID";
+            this.idLabel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.idLabel6.AutoSize = true;
+            this.idLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.idLabel6.ForeColor = System.Drawing.Color.Black;
+            this.idLabel6.Location = new System.Drawing.Point(6, 31);
+            this.idLabel6.Name = "idLabel6";
+            this.idLabel6.TabIndex = 49;
+            this.idLabel6.TextAlign = ContentAlignment.MiddleLeft;
+            this.idLabel6.AutoSize = true;
+            this.idLabel6.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.idLabel6.Text = "● ID";
             // 
             // tableLayoutPanelConstructii
             // 
@@ -896,15 +884,15 @@ namespace UtilitatiCGXML
             this.tableLayoutPanelConstructii.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelConstructii.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelConstructii.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanelConstructii.Controls.Add(this.label20, 3, 1);
-            this.tableLayoutPanelConstructii.Controls.Add(this.label22, 2, 1);
-            this.tableLayoutPanelConstructii.Controls.Add(this.label23, 1, 1);
-            this.tableLayoutPanelConstructii.Controls.Add(this.label62, 1, 1);
-            this.tableLayoutPanelConstructii.Controls.Add(this.label24, 0, 1);
-            this.tableLayoutPanelConstructii.Controls.Add(this.label25, 3, 0);
-            this.tableLayoutPanelConstructii.Controls.Add(this.label26, 0, 0);
-            this.tableLayoutPanelConstructii.Controls.Add(this.label27, 1, 0);
-            this.tableLayoutPanelConstructii.Controls.Add(this.label28, 2, 0);
+            this.tableLayoutPanelConstructii.Controls.Add(this.noteConstructiiLabel, 3, 1);
+            this.tableLayoutPanelConstructii.Controls.Add(this.nrEtajeLabel, 2, 1);
+            this.tableLayoutPanelConstructii.Controls.Add(this.suprafataActeLabel2, 1, 1);
+            this.tableLayoutPanelConstructii.Controls.Add(this.proprietarLabel, 1, 1);
+            this.tableLayoutPanelConstructii.Controls.Add(this.suprafataMasurataLabel, 0, 1);
+            this.tableLayoutPanelConstructii.Controls.Add(this.areActeLabel, 3, 0);
+            this.tableLayoutPanelConstructii.Controls.Add(this.idLabel6, 0, 0);
+            this.tableLayoutPanelConstructii.Controls.Add(this.sectorLabel5, 1, 0);
+            this.tableLayoutPanelConstructii.Controls.Add(this.nrConstructieLabel, 2, 0);
             this.tableLayoutPanelConstructii.Location = new System.Drawing.Point(218, 174);
             this.tableLayoutPanelConstructii.Name = "tableLayoutPanelConstructii";
             this.tableLayoutPanelConstructii.RowCount = 2;
@@ -930,26 +918,26 @@ namespace UtilitatiCGXML
             this.tableLayoutPanelParcele.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelParcele.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelParcele.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanelParcele.Controls.Add(this.label63, 3, 4);
-            this.tableLayoutPanelParcele.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanelParcele.Controls.Add(this.label3, 1, 0);
-            this.tableLayoutPanelParcele.Controls.Add(this.label4, 2, 0);
-            this.tableLayoutPanelParcele.Controls.Add(this.Label16, 2, 4);
-            this.tableLayoutPanelParcele.Controls.Add(this.Label15, 1, 4);
-            this.tableLayoutPanelParcele.Controls.Add(this.Label14, 0, 4);
-            this.tableLayoutPanelParcele.Controls.Add(this.label19, 3, 3);
-            this.tableLayoutPanelParcele.Controls.Add(this.label13, 2, 3);
-            this.tableLayoutPanelParcele.Controls.Add(this.label18, 1, 3);
-            this.tableLayoutPanelParcele.Controls.Add(this.Label11, 0, 3);
-            this.tableLayoutPanelParcele.Controls.Add(this.Label10, 3, 2);
-            this.tableLayoutPanelParcele.Controls.Add(this.Label9, 2, 2);
-            this.tableLayoutPanelParcele.Controls.Add(this.Label8, 1, 2);
-            this.tableLayoutPanelParcele.Controls.Add(this.Label7, 0, 2);
-            this.tableLayoutPanelParcele.Controls.Add(this.label12, 3, 1);
-            this.tableLayoutPanelParcele.Controls.Add(this.label5, 3, 0);
-            this.tableLayoutPanelParcele.Controls.Add(this.label6, 0, 1);
-            this.tableLayoutPanelParcele.Controls.Add(this.label17, 1, 1);
-            this.tableLayoutPanelParcele.Controls.Add(this.label62, 2, 1);
+            this.tableLayoutPanelParcele.Controls.Add(this.noteProprietarLabel1, 3, 4);
+            this.tableLayoutPanelParcele.Controls.Add(this.idLabel5, 0, 0);
+            this.tableLayoutPanelParcele.Controls.Add(this.sectorLabel6, 1, 0);
+            this.tableLayoutPanelParcele.Controls.Add(this.ieLabel3, 2, 0);
+            this.tableLayoutPanelParcele.Controls.Add(this.noteParcelaLabel2, 2, 4);
+            this.tableLayoutPanelParcele.Controls.Add(this.noteImobilLabel, 1, 4);
+            this.tableLayoutPanelParcele.Controls.Add(this.tipTerenLabel, 0, 4);
+            this.tableLayoutPanelParcele.Controls.Add(this.imprejmuitLabel, 3, 3);
+            this.tableLayoutPanelParcele.Controls.Add(this.categorieFolosintaLabel, 2, 3);
+            this.tableLayoutPanelParcele.Controls.Add(this.suprafataActeLabel3, 1, 3);
+            this.tableLayoutPanelParcele.Controls.Add(this.nrParcelaLabel, 0, 3);
+            this.tableLayoutPanelParcele.Controls.Add(this.nrTarlaLabel, 3, 2);
+            this.tableLayoutPanelParcele.Controls.Add(this.nrTitluLabel, 2, 2);
+            this.tableLayoutPanelParcele.Controls.Add(this.diferentaSuprafeteLabel, 1, 2);
+            this.tableLayoutPanelParcele.Controls.Add(this.suprafataActeLabel, 0, 2);
+            this.tableLayoutPanelParcele.Controls.Add(this.suprafataMasurataLabel2, 3, 1);
+            this.tableLayoutPanelParcele.Controls.Add(this.nrCadLabel, 3, 0);
+            this.tableLayoutPanelParcele.Controls.Add(this.nrCfLabel, 0, 1);
+            this.tableLayoutPanelParcele.Controls.Add(this.nrTopoLabel, 1, 1);
+            this.tableLayoutPanelParcele.Controls.Add(this.proprietarLabel, 2, 1);
             this.tableLayoutPanelParcele.Location = new System.Drawing.Point(218, 48);
             this.tableLayoutPanelParcele.Name = "tableLayoutPanelParcele";
             this.tableLayoutPanelParcele.RowCount = 5;
@@ -962,158 +950,158 @@ namespace UtilitatiCGXML
             this.tableLayoutPanelParcele.TabIndex = 73;
             this.tableLayoutPanelParcele.Visible = false;
             // 
-            // label63
+            // noteProprietarLabel1
             // 
-            this.label63.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label63.AutoSize = true;
-            this.label63.BackColor = System.Drawing.Color.Transparent;
-            this.label63.ForeColor = System.Drawing.Color.Black;
-            this.label63.Location = new System.Drawing.Point(486, 329);
-            this.label63.Name = "label63";
-            this.label63.TabIndex = 69;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label63.Text = "● Note Pers";
+            this.noteProprietarLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.noteProprietarLabel1.AutoSize = true;
+            this.noteProprietarLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.noteProprietarLabel1.ForeColor = System.Drawing.Color.Black;
+            this.noteProprietarLabel1.Location = new System.Drawing.Point(486, 329);
+            this.noteProprietarLabel1.Name = "noteProprietarLabel1";
+            this.noteProprietarLabel1.TabIndex = 69;
+            this.noteProprietarLabel1.TextAlign = ContentAlignment.MiddleLeft;
+            this.noteProprietarLabel1.AutoSize = true;
+            this.noteProprietarLabel1.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.noteProprietarLabel1.Text = "● Note Proprietar";
             // 
-            // Label16
+            // noteParcelaLabel2
             // 
-            this.Label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label16.AutoSize = true;
-            this.Label16.BackColor = System.Drawing.Color.Transparent;
-            this.Label16.ForeColor = System.Drawing.Color.Black;
-            this.Label16.Location = new System.Drawing.Point(326, 329);
-            this.Label16.Name = "Label16";
-            this.Label16.TabIndex = 64;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.Label16.Text = "● Note Parcelă";
+            this.noteParcelaLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.noteParcelaLabel2.AutoSize = true;
+            this.noteParcelaLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.noteParcelaLabel2.ForeColor = System.Drawing.Color.Black;
+            this.noteParcelaLabel2.Location = new System.Drawing.Point(326, 329);
+            this.noteParcelaLabel2.Name = "noteParcelaLabel2";
+            this.noteParcelaLabel2.TabIndex = 64;
+            this.noteParcelaLabel2.TextAlign = ContentAlignment.MiddleLeft;
+            this.noteParcelaLabel2.AutoSize = true;
+            this.noteParcelaLabel2.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.noteParcelaLabel2.Text = "● Note Parcelă";
             // 
-            // Label15
+            // noteImobilLabel
             // 
-            this.Label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label15.AutoSize = true;
-            this.Label15.BackColor = System.Drawing.Color.Transparent;
-            this.Label15.ForeColor = System.Drawing.Color.Black;
-            this.Label15.Location = new System.Drawing.Point(166, 329);
-            this.Label15.Name = "Label15";
-            this.Label15.TabIndex = 63;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.Label15.Text = "● Note Imobil";
+            this.noteImobilLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.noteImobilLabel.AutoSize = true;
+            this.noteImobilLabel.BackColor = System.Drawing.Color.Transparent;
+            this.noteImobilLabel.ForeColor = System.Drawing.Color.Black;
+            this.noteImobilLabel.Location = new System.Drawing.Point(166, 329);
+            this.noteImobilLabel.Name = "noteImobilLabel";
+            this.noteImobilLabel.TabIndex = 63;
+            this.noteImobilLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.noteImobilLabel.AutoSize = true;
+            this.noteImobilLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.noteImobilLabel.Text = "● Note Imobil";
             // 
-            // Label14
+            // tipTerenLabel
             // 
-            this.Label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label14.AutoSize = true;
-            this.Label14.BackColor = System.Drawing.Color.Transparent;
-            this.Label14.ForeColor = System.Drawing.Color.Black;
-            this.Label14.Location = new System.Drawing.Point(6, 329);
-            this.Label14.Name = "Label14";
-            this.Label14.TabIndex = 62;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.Label14.Text = "● Tip Teren (E/I)";
+            this.tipTerenLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tipTerenLabel.AutoSize = true;
+            this.tipTerenLabel.BackColor = System.Drawing.Color.Transparent;
+            this.tipTerenLabel.ForeColor = System.Drawing.Color.Black;
+            this.tipTerenLabel.Location = new System.Drawing.Point(6, 329);
+            this.tipTerenLabel.Name = "tipTerenLabel";
+            this.tipTerenLabel.TabIndex = 62;
+            this.tipTerenLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.tipTerenLabel.AutoSize = true;
+            this.tipTerenLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.tipTerenLabel.Text = "● Tip Teren (E/I)";
             // 
-            // label19
+            // imprejmuitLabel
             // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(486, 254);
-            this.label19.Name = "label19";
-            this.label19.TabIndex = 67;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label19.Text = "● Imprejmuit?";
+            this.imprejmuitLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.imprejmuitLabel.AutoSize = true;
+            this.imprejmuitLabel.BackColor = System.Drawing.Color.Transparent;
+            this.imprejmuitLabel.ForeColor = System.Drawing.Color.Black;
+            this.imprejmuitLabel.Location = new System.Drawing.Point(486, 254);
+            this.imprejmuitLabel.Name = "imprejmuitLabel";
+            this.imprejmuitLabel.TabIndex = 67;
+            this.imprejmuitLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.imprejmuitLabel.AutoSize = true;
+            this.imprejmuitLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.imprejmuitLabel.Text = "● Imprejmuit?";
             // 
-            // label13
+            // categorieFolosintaLabel
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(326, 254);
-            this.label13.Name = "label13";
-            this.label13.TabIndex = 60;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label13.Text = "● Categorie de folosință";
+            this.categorieFolosintaLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.categorieFolosintaLabel.AutoSize = true;
+            this.categorieFolosintaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.categorieFolosintaLabel.ForeColor = System.Drawing.Color.Black;
+            this.categorieFolosintaLabel.Location = new System.Drawing.Point(326, 254);
+            this.categorieFolosintaLabel.Name = "categorieFolosintaLabel";
+            this.categorieFolosintaLabel.TabIndex = 60;
+            this.categorieFolosintaLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.categorieFolosintaLabel.AutoSize = true;
+            this.categorieFolosintaLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.categorieFolosintaLabel.Text = "● Categorie de folosință";
             // 
-            // label18
+            // suprafataActeLabel3
             // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(166, 254);
-            this.label18.Name = "label18";
-            this.label18.TabIndex = 66;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label18.Text = "● Suprafata din Acte";
+            this.suprafataActeLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.suprafataActeLabel3.AutoSize = true;
+            this.suprafataActeLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.suprafataActeLabel3.ForeColor = System.Drawing.Color.Black;
+            this.suprafataActeLabel3.Location = new System.Drawing.Point(166, 254);
+            this.suprafataActeLabel3.Name = "suprafataActeLabel3";
+            this.suprafataActeLabel3.TabIndex = 66;
+            this.suprafataActeLabel3.TextAlign = ContentAlignment.MiddleLeft;
+            this.suprafataActeLabel3.AutoSize = true;
+            this.suprafataActeLabel3.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.suprafataActeLabel3.Text = "● Suprafata din Acte";
             // 
-            // label12
+            // suprafataMasurataLabel2
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(486, 106);
-            this.label12.Name = "label12";
-            this.label12.TabIndex = 54;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label12.Text = "● Suprafata  Masurata";
+            this.suprafataMasurataLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.suprafataMasurataLabel2.AutoSize = true;
+            this.suprafataMasurataLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.suprafataMasurataLabel2.ForeColor = System.Drawing.Color.Black;
+            this.suprafataMasurataLabel2.Location = new System.Drawing.Point(486, 106);
+            this.suprafataMasurataLabel2.Name = "suprafataMasurataLabel2";
+            this.suprafataMasurataLabel2.TabIndex = 54;
+            this.suprafataMasurataLabel2.TextAlign = ContentAlignment.MiddleLeft;
+            this.suprafataMasurataLabel2.AutoSize = true;
+            this.suprafataMasurataLabel2.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.suprafataMasurataLabel2.Text = "● Suprafata  Masurata";
             // 
-            // label17
+            // nrTopoLabel
             // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(166, 106);
-            this.label17.Name = "label17";
-            this.label17.TabIndex = 65;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label17.Text = "● Nr TOPO";
+            this.nrTopoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nrTopoLabel.AutoSize = true;
+            this.nrTopoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nrTopoLabel.ForeColor = System.Drawing.Color.Black;
+            this.nrTopoLabel.Location = new System.Drawing.Point(166, 106);
+            this.nrTopoLabel.Name = "nrTopoLabel";
+            this.nrTopoLabel.TabIndex = 65;
+            this.nrTopoLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.nrTopoLabel.AutoSize = true;
+            this.nrTopoLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.nrTopoLabel.Text = "● Nr TOPO";
             // 
-            // label62
+            // proprietarLabel
             // 
-            this.label62.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label62.AutoSize = true;
-            this.label62.BackColor = System.Drawing.Color.Transparent;
-            this.label62.ForeColor = System.Drawing.Color.Black;
-            this.label62.Location = new System.Drawing.Point(326, 106);
-            this.label62.Name = "label62";
-            this.label62.TabIndex = 68;
-            this.label26.TextAlign = ContentAlignment.MiddleLeft;
-            this.label26.AutoSize = true;
-            this.label26.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.label62.Text = "● Proprietar";
+            this.proprietarLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.proprietarLabel.AutoSize = true;
+            this.proprietarLabel.BackColor = System.Drawing.Color.Transparent;
+            this.proprietarLabel.ForeColor = System.Drawing.Color.Black;
+            this.proprietarLabel.Location = new System.Drawing.Point(326, 106);
+            this.proprietarLabel.Name = "proprietarLabel";
+            this.proprietarLabel.TabIndex = 68;
+            this.proprietarLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.proprietarLabel.AutoSize = true;
+            this.proprietarLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.proprietarLabel.Text = "● Proprietar";
 
             // 
-            // pictureBox1
+            // backgroundImageLogo
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(378, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(400, 400);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 70;
-            this.pictureBox1.TabStop = false;
+            this.backgroundImageLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.backgroundImageLogo.Image = ((System.Drawing.Image)(resources.GetObject("backgroundImageLogo.Image")));
+            this.backgroundImageLogo.Location = new System.Drawing.Point(378, 12);
+            this.backgroundImageLogo.Margin = new System.Windows.Forms.Padding(0);
+            this.backgroundImageLogo.Name = "backgroundImageLogo";
+            this.backgroundImageLogo.Size = new System.Drawing.Size(400, 400);
+            this.backgroundImageLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.backgroundImageLogo.TabIndex = 70;
+            this.backgroundImageLogo.TabStop = false;
             // 
             // tableLayoutPanel5
             // 
@@ -1128,14 +1116,14 @@ namespace UtilitatiCGXML
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.Controls.Add(this.label35, 0, 2);
-            this.tableLayoutPanel5.Controls.Add(this.label36, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.label44, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.label37, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.label38, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.label39, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.label40, 1, 1);
-            this.tableLayoutPanel5.Controls.Add(this.label41, 2, 1);
+            this.tableLayoutPanel5.Controls.Add(this.noteProprietarLabel, 0, 2);
+            this.tableLayoutPanel5.Controls.Add(this.idLabel2, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.ieLabel2, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.sectorLabel3, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.tipInscriereLabel2, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.cnpLabel, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.defunctLabel, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.adresaProprietarLabel, 2, 1);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(218, 125);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
@@ -1159,9 +1147,9 @@ namespace UtilitatiCGXML
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.Controls.Add(this.label32, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label33, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label34, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.idLabel4, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.sectorLabel, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.tipInscriereLabel, 2, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(218, 199);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
@@ -1174,13 +1162,13 @@ namespace UtilitatiCGXML
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label21);
+            this.Controls.Add(this.raportContentLabel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel6);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanelConstructii);
             this.Controls.Add(this.tableLayoutPanelParcele);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.backgroundImageLogo);
             this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Name = "CustomControl0";
@@ -1195,7 +1183,7 @@ namespace UtilitatiCGXML
             this.tableLayoutPanelConstructii.PerformLayout();
             this.tableLayoutPanelParcele.ResumeLayout(false);
             this.tableLayoutPanelParcele.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backgroundImageLogo)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -1208,72 +1196,72 @@ namespace UtilitatiCGXML
         #endregion
 
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label raportContentLabel;
+        private System.Windows.Forms.Label idLabel;
+        private System.Windows.Forms.Label sectorLabel;
+        private System.Windows.Forms.Label tipInscriereLabel;
+        private System.Windows.Forms.Label noteProprietarLabel;
+        private System.Windows.Forms.Label ieLabel;
+        private System.Windows.Forms.Label sarciniLabel;
+        private System.Windows.Forms.Label sectorLabel2;
+        private System.Windows.Forms.Label idLabel2;
+        private System.Windows.Forms.Label idLabel3;
+        private System.Windows.Forms.Label sectorLabel3;
+        private System.Windows.Forms.Label tipInscriereLabel2;
+        private System.Windows.Forms.Label cnpLabel;
+        private System.Windows.Forms.Label defunctLabel;
+        private System.Windows.Forms.Label adresaProprietarLabel;
+        private System.Windows.Forms.Label idLabel4;
+        private System.Windows.Forms.Label nrConstructieLabel;
+        private System.Windows.Forms.Label sectorLabel4;
+        private System.Windows.Forms.Label ieLabel2;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label tipIdLabel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button raportProprietariBtn;
+        private System.Windows.Forms.Button raportSarciniBtn;
+        private System.Windows.Forms.Button raportConstructiiBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button raportParcelaBtn;
+        private System.Windows.Forms.Button raportTipInscrieriBtn;
+        private System.Windows.Forms.Label sectorLabel5;
+        private System.Windows.Forms.Label idLabel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label Label11;
-        private System.Windows.Forms.Label Label10;
-        private System.Windows.Forms.Label Label9;
-        private System.Windows.Forms.Label Label8;
+        private System.Windows.Forms.Label sectorLabel6;
+        private System.Windows.Forms.Label ieLabel3;
+        private System.Windows.Forms.Label nrCadLabel;
+        private System.Windows.Forms.Label nrCfLabel;
+        private System.Windows.Forms.Label nrParcelaLabel;
+        private System.Windows.Forms.Label nrTarlaLabel;
+        private System.Windows.Forms.Label nrTitluLabel;
+        private System.Windows.Forms.Label diferentaSuprafeteLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label Label7;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label suprafataActeLabel;
+        private System.Windows.Forms.Label noteConstructiiLabel;
+        private System.Windows.Forms.Label nrEtajeLabel;
+        private System.Windows.Forms.Label suprafataActeLabel2;
+        private System.Windows.Forms.Label suprafataMasurataLabel;
+        private System.Windows.Forms.Label areActeLabel;
+        private System.Windows.Forms.Label idLabel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelConstructii;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelParcele;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label Label15;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label Label14;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label suprafataMasurataLabel2;
+        private System.Windows.Forms.Label nrTopoLabel;
+        private System.Windows.Forms.Label categorieFolosintaLabel;
+        private System.Windows.Forms.Label suprafataActeLabel3;
+        private System.Windows.Forms.Label noteImobilLabel;
+        private System.Windows.Forms.Label imprejmuitLabel;
+        private System.Windows.Forms.Label tipTerenLabel;
+        private System.Windows.Forms.PictureBox backgroundImageLogo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.Label Label16;
-        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label noteProprietarLabel1;
+        private System.Windows.Forms.Label noteParcelaLabel2;
+        private System.Windows.Forms.Label proprietarLabel;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button caleFisiereCgxmlBtn;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
     }

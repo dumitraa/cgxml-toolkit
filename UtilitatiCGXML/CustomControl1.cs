@@ -81,22 +81,22 @@ namespace UtilitatiCGXML
             button19.Visible = state;
             button20.Visible = state;
             button21.Visible = state;
-            button22.Visible = state;
+            startBtn.Visible = state;
             button23.Visible = state;
             button24.Visible = state;
-            button25.Visible = state;
-            button26.Visible = state;
+            obtainAFileBtn.Visible = state;
+            obtainMultipleFilesBtn.Visible = state;
             //comboBox
             comboBox1.Visible = state;
             //label
-            label2.Visible = state;
-            label3.Visible = state;
-            label4.Visible = state;
-            label5.Visible = state;
+            waitMilliseconds.Visible = state;
+            seVaCreaLabel.Visible = state;
+            intrareLabel.Visible = state;
+            iesireLabel.Visible = state;
             //pictureBox
-            pictureBox1.Visible = state;
+            backgroundImageLogo.Visible = state;
             //checkBox
-            checkBox1.Visible = state;
+            renameFileCheck.Visible = state;
         }
         public CustomControl1()
         {
@@ -119,26 +119,26 @@ namespace UtilitatiCGXML
             {
                 button7.Visible = false;
             }
-            if (label2.Visible == true)
+            if (waitMilliseconds.Visible == true)
             {
-                label2.Visible = false;
+                waitMilliseconds.Visible = false;
             }
-            if (label3.Visible == true)
+            if (seVaCreaLabel.Visible == true)
             {
-                label3.Visible = false;
+                seVaCreaLabel.Visible = false;
             }
-            if (pictureBox1.Visible == false)
+            if (backgroundImageLogo.Visible == false)
             {
-                pictureBox1.Visible = true;
+                backgroundImageLogo.Visible = true;
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void copyArchiveCgBtn_Click(object sender, EventArgs e)
         {
             eVisible(false);
-            if (pictureBox1.Visible == true)
+            if (backgroundImageLogo.Visible == true)
             {
-                pictureBox1.Visible = false;
+                backgroundImageLogo.Visible = false;
             }
             if (filePrefix.Visible == false)
             {
@@ -150,7 +150,7 @@ namespace UtilitatiCGXML
             }
         }
 
-        private void button1_MouseHover(object sender, EventArgs e)
+        private void copyArchiveCgBtn_MouseHover(object sender, EventArgs e)
         {
 
         }
@@ -162,19 +162,19 @@ namespace UtilitatiCGXML
             public string lbparno { get; set; }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void combinePdfs_Click(object sender, EventArgs e)
         {
             eVisible(false);
-            button25.Visible = true;
-            button26.Visible = true;
+            obtainAFileBtn.Visible = true;
+            obtainMultipleFilesBtn.Visible = true;
         }
 
-        private void button2_MouseHover(object sender, EventArgs e)
+        private void combinePdfs_MouseHover(object sender, EventArgs e)
         {
 
         }
         public string CostumFolderBrowserDialogPath = "";
-        private void button3_Click(object sender, EventArgs e) // CGXML -> SHP BTN
+        private void cgToShpBtn_Click(object sender, EventArgs e) // CGXML -> SHP BTN
         {
             string sectorVal = "";
             string ie = "";
@@ -416,7 +416,7 @@ namespace UtilitatiCGXML
         }
 
 
-        private void button3_MouseHover(object sender, EventArgs e)
+        private void cgToShpBtn_MouseHover(object sender, EventArgs e)
         {
 
         }
@@ -630,9 +630,9 @@ namespace UtilitatiCGXML
         private void label1_Click(object sender, EventArgs e)
         {
             eVisible(false);
-            if (pictureBox1.Visible == false)
+            if (backgroundImageLogo.Visible == false)
             {
-                pictureBox1.Visible = true;
+                backgroundImageLogo.Visible = true;
             }
         }
         #endregion
@@ -1041,7 +1041,7 @@ namespace UtilitatiCGXML
             }
         }
 
-        private void button22_Click(object sender, EventArgs e)
+        private void startBtn_Click(object sender, EventArgs e)
         {
             if (MultiplePDF == false)
             {
@@ -1201,7 +1201,7 @@ namespace UtilitatiCGXML
             
         }
 
-        private void button26_Click(object sender, EventArgs e)
+        private void obtainMultipleFilesBtn_Click(object sender, EventArgs e)
         {
             eVisible(false);
             button11.Visible = true;
@@ -1210,7 +1210,7 @@ namespace UtilitatiCGXML
             button16.Visible = true;
             button18.Visible = true;
             button20.Visible = true;
-            button22.Visible = true;
+            startBtn.Visible = true;
             button23.Visible = true;
             button13.Visible = true;
             button15.Visible = true;
@@ -1224,12 +1224,12 @@ namespace UtilitatiCGXML
             textBox5.Visible = true;
             textBox6.Visible = true;
             textBox7.Visible = true;
-            label4.Visible = true;
-            label5.Visible = true;
+            intrareLabel.Visible = true;
+            iesireLabel.Visible = true;
             MultiplePDF = true;
         }
 
-        private void button25_Click(object sender, EventArgs e)
+        private void obtainAFileBtn_Click(object sender, EventArgs e)
         {
             eVisible(false);
             button10.Visible = true;
@@ -1238,7 +1238,7 @@ namespace UtilitatiCGXML
             button17.Visible = true;
             button19.Visible = true;
             button21.Visible = true;
-            button22.Visible = true;
+            startBtn.Visible = true;
             button23.Visible = true;
             textBox1.Visible = true;
             textBox2.Visible = true;
@@ -1247,13 +1247,13 @@ namespace UtilitatiCGXML
             textBox5.Visible = true;
             textBox6.Visible = true;
             textBox7.Visible = true;
-            label4.Visible = true;
-            label5.Visible = true;
-            checkBox1.Visible = true;
+            intrareLabel.Visible = true;
+            iesireLabel.Visible = true;
+            renameFileCheck.Visible = true;
             MultiplePDF = false;
         }
 
-        private void checkBox1_Click(object sender, EventArgs e)
+        private void renameFileCheck_Click(object sender, EventArgs e)
         {
             if(textBox8.Visible == true)
             {
