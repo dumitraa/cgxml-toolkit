@@ -26,6 +26,8 @@ using NPOI.SS.Util;
 using nc;
 using NPOI.SS.Formula.Eval;
 using NPOI.SS.Formula.Functions;
+using IronPython.Hosting;
+using Microsoft.Scripting.Hosting;
 
 namespace UtilitatiCGXML
 {
@@ -135,19 +137,8 @@ namespace UtilitatiCGXML
 
         private void copyArchiveCgBtn_Click(object sender, EventArgs e)
         {
-            eVisible(false);
-            if (backgroundImageLogo.Visible == true)
-            {
-                backgroundImageLogo.Visible = false;
-            }
-            if (filePrefix.Visible == false)
-            {
-                filePrefix.Visible = true;
-            }
-            if (button7.Visible == false)
-            {
-                button7.Visible = true;
-            }
+            ScriptEngine engine = Python.CreateEngine();
+            engine.ExecuteFile(@"Resources\copyArchiveCg.py");
         }
 
         private void copyArchiveCgBtn_MouseHover(object sender, EventArgs e)

@@ -1,10 +1,24 @@
 {
   "version": 2,
-  "dgSpecHash": "5F8wxzwsXxVOdXTdqc2hk0456/m8SPA27y5ivkagvYvOzH0hHnv8YbdPgx4Vv4iNMNG4LLU48hYwolI5txqt+A==",
+  "dgSpecHash": "s1hwhnZx6u6VWooP59nTlGjoeDrui30/CGaz2GJdwZxTWMQvA6xYiElt7v87+WzUyh72TF9uDqlwdX8KdzTYFA==",
   "success": true,
   "projectFilePath": "C:\\Users\\USER\\Documents\\scripts\\cgxml-toolkit\\UtilitatiCGXML\\VerificareCGXML.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\USER\\.nuget\\packages\\system.resources.extensions\\4.7.1\\system.resources.extensions.4.7.1.nupkg.sha512"
+    "C:\\Users\\USER\\.nuget\\packages\\dynamiclanguageruntime\\1.3.0\\dynamiclanguageruntime.1.3.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\ironpython\\2.7.11\\ironpython.2.7.11.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\ironpython.stdlib\\2.7.11\\ironpython.stdlib.2.7.11.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.codedom\\4.7.0\\system.codedom.4.7.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.resources.extensions\\4.7.1\\system.resources.extensions.4.7.1.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.7.0\\system.security.cryptography.protecteddata.4.7.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

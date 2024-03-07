@@ -583,11 +583,21 @@ namespace UtilitatiCGXML
                         note = lr.NOTES;
                         enclosed = (lr.ENCLOSED ? "DA" : "NU");
 
-                        foreach (CGXML.PersonRow pp in fisier.Person)
+                        HashSet<string> uniquePerson = new HashSet<string>();
+                        string fullName = "";
+                        string proprietar = "";
+                        string person = "";
+
+                            foreach (CGXML.PersonRow pp in fisier.Person)
                         {
-                            proprietar = string.Concat(pp.LASTNAME, " ", pp.FIRSTNAME);
-                            pnotes = pp.NOTES;
+                            fullName = string.Concat(pp.LASTNAME, " ", pp.FIRSTNAME);
+                            person = fullName;
+                            uniquePerson.Add(fullName);
                         }
+
+                        string aggregatedOwners = string.Join("; ", uniquePerson);
+                        proprietar = aggregatedOwners;
+
                         foreach (CGXML.ParcelRow pr in fisier.Parcel)
                         {
                             nrtopo = pr.TOPONO.ToString();

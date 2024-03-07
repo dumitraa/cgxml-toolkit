@@ -206,7 +206,7 @@ namespace UtilitatiCGXML
             //
             // constrCheckbox
             //
-            this.constrCheckbox.BackColor = System.Drawing.Color.Transparent;
+            this.constrCheckbox.BackColor = System.Drawing.Color.FromArgb(227, 242, 253); // Lighter blue that's easier on the eyes
             this.constrCheckbox.ForeColor = System.Drawing.Color.Black;
             this.constrCheckbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.constrCheckbox.AutoSize = true;
@@ -734,7 +734,6 @@ namespace UtilitatiCGXML
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImageLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

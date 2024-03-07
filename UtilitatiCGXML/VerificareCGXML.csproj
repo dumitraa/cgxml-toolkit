@@ -52,6 +52,8 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="IronPython" Version="2.7.11" />
+    <PackageReference Include="IronPython.StdLib" Version="2.7.11" />
     <PackageReference Include="System.Resources.Extensions" Version="4.7.1" />
     <Reference Include="GeoAPI, Version=1.7.5.0, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
       <HintPath>..\packages\GeoAPI.Core.1.7.5\lib\net40-client\GeoAPI.dll</HintPath>
