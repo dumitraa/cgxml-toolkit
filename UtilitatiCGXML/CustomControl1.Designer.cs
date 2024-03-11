@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Windows.Forms;
 using System.Drawing;
+using System;
 
 namespace UtilitatiCGXML
 {
@@ -10,6 +11,13 @@ namespace UtilitatiCGXML
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+
+        // This event handler can be used for both checkboxes' Click event
+        private void checkbox_Click(object sender, EventArgs e)
+        {
+            // Enable the "Start Conversion" button only if at least one checkbox is checked
+            this.cgToShpBtn.Enabled = this.imobileCheckbox.Checked || this.constrCheckbox.Checked;
+        }
 
 public class CustomGroupBox : GroupBox
 {
@@ -253,6 +261,7 @@ public class CustomGroupBox : GroupBox
             this.cgToShpBtn.Image = Image.FromFile("C:\\Users\\USER\\Documents\\scripts\\cgxml-toolkit\\UtilitatiCGXML\\Resources\\map-location.png"); // Ensure the path is correct
             this.cgToShpBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             this.cgToShpBtn.ImageAlign = ContentAlignment.MiddleRight;
+            this.cgToShpBtn.Enabled = false; // Start as disabled
 
             ToolTip cgToShpToolTip = new ToolTip();
             cgToShpToolTip.SetToolTip(this.cgToShpBtn, "Începe procesul de conversie a fișierelor CGXML în format SHP după selectarea opțiunilor.");
@@ -287,6 +296,7 @@ public class CustomGroupBox : GroupBox
             this.imobileCheckbox.UseVisualStyleBackColor = false;
             this.imobileCheckbox.Visible = true;
             this.imobileCheckbox.Click += new System.EventHandler(this.imobileCheckbox_Click);
+            this.imobileCheckbox.Click += new System.EventHandler(this.checkbox_Click);
 
             //
             // constrCheckbox
@@ -305,6 +315,8 @@ public class CustomGroupBox : GroupBox
             this.constrCheckbox.UseVisualStyleBackColor = false;
             this.constrCheckbox.Visible = true;
             this.constrCheckbox.Click += new System.EventHandler(this.constrCheckbox_Click);
+            this.constrCheckbox.Click += new System.EventHandler(this.checkbox_Click);
+
 
 
             // Add the button and checkbox to the GroupBox controls, not directly to the form
@@ -324,7 +336,7 @@ public class CustomGroupBox : GroupBox
             this.combinePdfs.Name = "combinePdfs";
             this.combinePdfs.Size = new System.Drawing.Size(220, 51);
             this.combinePdfs.TabIndex = 0;
-            this.combinePdfs.Text = " Combina PDF-uri";
+            this.combinePdfs.Text = " Combină PDF-uri";
             this.combinePdfs.UseVisualStyleBackColor = false;
             this.combinePdfs.Click += new System.EventHandler(this.combinePdfs_Click);
             this.combinePdfs.MouseHover += new System.EventHandler(this.combinePdfs_MouseHover);

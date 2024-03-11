@@ -137,6 +137,7 @@ namespace UtilitatiCGXML
 
         private async void copyArchiveCgBtn_Click(object sender, EventArgs e)
         {
+            this.copyArchiveCgBtn.Enabled = false;
             string exePath = @"C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\Resources\copyArchiveCgxml\dist\copyArchiveCg.exe";
             ProcessStartInfo startInfo = new ProcessStartInfo(exePath)
             {
@@ -158,6 +159,7 @@ namespace UtilitatiCGXML
 
                 Console.WriteLine("Output: " + output);
                 Console.WriteLine("Error: " + error);
+                this.copyArchiveCgBtn.Enabled = true;
             }
         }
 
@@ -433,7 +435,7 @@ namespace UtilitatiCGXML
                 buildingWriter.Write(buildingFeaturesList);
             }
 
-            
+
             System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
             this.Cursor = Cursors.Default;
         }

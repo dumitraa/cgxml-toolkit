@@ -8,12 +8,11 @@
 -----------------------------------------------------------------------------------------------------------------------------
 + If user selects folder with no CGXML files, err message
 + Add "Help" section
++ Disable button after clicking to prevent double processing
 
 
 -----------------------------------------------------------------------------------------------------------------------------
 - Merge multiple raports (multiple sheets) into one Excel
-- Tooltips
-- Icons next to some buttons
 - Progress for cgxml to shp
 
 -----------------------------------------------------------------------------------------------------------------------------

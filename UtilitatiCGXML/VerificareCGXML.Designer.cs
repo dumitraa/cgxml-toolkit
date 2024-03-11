@@ -33,6 +33,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.alteleTabBtn = new System.Windows.Forms.Button();
             this.rapoarteCgxmlTabBtn = new System.Windows.Forms.Button();
+            this.helpTabBtn = new System.Windows.Forms.Button();
             this.minimizeWindowBtn = new System.Windows.Forms.Button();
             this.closeWindowBtn = new System.Windows.Forms.Button();
             this.CustomControl00 = new UtilitatiCGXML.VerificareCGXML.CustomControl0();
@@ -47,6 +48,7 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.alteleTabBtn);
             this.panel2.Controls.Add(this.rapoarteCgxmlTabBtn);
+            this.panel2.Controls.Add(this.helpTabBtn);
             this.panel2.Controls.Add(this.minimizeWindowBtn);
             this.panel2.Controls.Add(this.closeWindowBtn);
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -72,22 +74,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Visible = false;
             // 
-            // alteleTabBtn
-            // 
-            this.alteleTabBtn.BackColor = System.Drawing.Color.Transparent;
-            this.alteleTabBtn.ForeColor = System.Drawing.Color.Black;
-            this.alteleTabBtn.FlatAppearance.BorderSize = 0;
-            this.alteleTabBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alteleTabBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point); // Bold font for better visibility
-            this.alteleTabBtn.Location = new System.Drawing.Point(94, 0);
-            this.alteleTabBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.alteleTabBtn.Name = "alteleTabBtn";
-            this.alteleTabBtn.Size = new System.Drawing.Size(105, 55);
-            this.alteleTabBtn.TabIndex = 11;
-            this.alteleTabBtn.Text = "Altele";
-            this.alteleTabBtn.UseVisualStyleBackColor = false;
-            this.alteleTabBtn.Click += new System.EventHandler(this.alteleTabBtn_Click);
-            // 
             // rapoarteCgxmlTabBtn
             // 
             this.rapoarteCgxmlTabBtn.BackColor = System.Drawing.Color.Transparent;
@@ -105,6 +91,38 @@
             this.rapoarteCgxmlTabBtn.BackColor = System.Drawing.Color.FromArgb(153, 204, 255); // Lighter blue for active state
             this.rapoarteCgxmlTabBtn.ForeColor = System.Drawing.Color.Black; // You may adjust if needed
             this.rapoarteCgxmlTabBtn.Click += new System.EventHandler(this.rapoarteCgxmlTabBtn_Click);
+            // 
+            // alteleTabBtn
+            // 
+            this.alteleTabBtn.BackColor = System.Drawing.Color.Transparent;
+            this.alteleTabBtn.ForeColor = System.Drawing.Color.Black;
+            this.alteleTabBtn.FlatAppearance.BorderSize = 0;
+            this.alteleTabBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.alteleTabBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point); // Bold font for better visibility
+            this.alteleTabBtn.Location = new System.Drawing.Point(94, 0);
+            this.alteleTabBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.alteleTabBtn.Name = "alteleTabBtn";
+            this.alteleTabBtn.Size = new System.Drawing.Size(105, 55);
+            this.alteleTabBtn.TabIndex = 11;
+            this.alteleTabBtn.Text = "Altele";
+            this.alteleTabBtn.UseVisualStyleBackColor = false;
+            this.alteleTabBtn.Click += new System.EventHandler(this.alteleTabBtn_Click);
+            //
+            // helpTabBtn
+            //
+            this.helpTabBtn.BackColor = System.Drawing.Color.Transparent;
+            this.helpTabBtn.ForeColor = System.Drawing.Color.Black;
+            this.helpTabBtn.FlatAppearance.BorderSize = 0;
+            this.helpTabBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.helpTabBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.helpTabBtn.Location = new System.Drawing.Point(188, 0);
+            this.helpTabBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.helpTabBtn.Name = "helpTabBtn";
+            this.helpTabBtn.Size = new System.Drawing.Size(105, 55);
+            this.helpTabBtn.TabIndex = 11;
+            this.helpTabBtn.Text = "    Ajutor (WIP)";
+            this.helpTabBtn.UseVisualStyleBackColor = false;
+            this.helpTabBtn.Click += new System.EventHandler(this.helpTabBtn_Click);
             // 
             // minimizeWindowBtn
             // 
@@ -181,6 +199,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button alteleTabBtn;
         private System.Windows.Forms.Button rapoarteCgxmlTabBtn;
+        private System.Windows.Forms.Button helpTabBtn;
         private System.Windows.Forms.Button minimizeWindowBtn;
         private System.Windows.Forms.Button closeWindowBtn;
         private CustomControl0 CustomControl00;

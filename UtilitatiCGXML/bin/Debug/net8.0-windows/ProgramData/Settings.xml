@@ -2,8 +2,8 @@
 <CConfigDO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <JudetIndex>0</JudetIndex>
   <StartPos>
-    <X>364</X>
-    <Y>219</Y>
+    <X>485</X>
+    <Y>224</Y>
   </StartPos>
   <StartSize>
     <Width>1009</Width>
