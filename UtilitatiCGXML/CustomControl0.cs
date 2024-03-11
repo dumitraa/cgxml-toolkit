@@ -1752,7 +1752,7 @@ namespace UtilitatiCGXML
                 this.checkBox1.Visible = false;
             }
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
-            string Titlu = "Alege Dosarul cu CGXML'uri";
+            string Titlu = "Alege Dosarul cu CGXML-uri";
             CostumFolderBrowserDialog.Title = Titlu;
             CostumFolderBrowserDialog.StartPosition = FormStartPosition.CenterParent;
             DialogResult dr = CostumFolderBrowserDialog.ShowDialog(this);

@@ -250,7 +250,7 @@ namespace UtilitatiCGXML
             this.copyArchiveCgBtn.Name = "copyArchiveCgBtn";
             this.copyArchiveCgBtn.Size = new System.Drawing.Size(214, 51);
             this.copyArchiveCgBtn.TabIndex = 1;
-            this.copyArchiveCgBtn.Text = "Copiere si arhivare CGXML (WIP)";
+            this.copyArchiveCgBtn.Text = "Copiere si arhivare fișiere CGXML";
             this.copyArchiveCgBtn.UseVisualStyleBackColor = false;
             this.copyArchiveCgBtn.Click += new System.EventHandler(this.copyArchiveCgBtn_Click);
             this.copyArchiveCgBtn.MouseHover += new System.EventHandler(this.copyArchiveCgBtn_MouseHover);

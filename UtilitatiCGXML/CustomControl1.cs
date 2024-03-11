@@ -135,27 +135,32 @@ namespace UtilitatiCGXML
             }
         }
 
-        private void copyArchiveCgBtn_Click(object sender, EventArgs e)
+    private async void copyArchiveCgBtn_Click(object sender, EventArgs e)
+    {
+        string exePath = @"C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\Resources\copyArchiveCgxml\dist\copyArchiveCg.exe";
+        ProcessStartInfo startInfo = new ProcessStartInfo(exePath)
         {
-            string exePath = @"C:\Users\USER\Documents\scripts\cgxml-toolkit\UtilitatiCGXML\Resources\copyArchiveCgxml\dist\copyArchiveCg.exe";
-            ProcessStartInfo startInfo = new ProcessStartInfo(exePath)
-            {
-                UseShellExecute = false, // Set to false to redirect output
-                RedirectStandardOutput = true,
-                RedirectStandardError = true,
-                CreateNoWindow = true // Set to true if you don't want the console window to be visible
-            };
+            UseShellExecute = false, // Set to false to redirect output
+            RedirectStandardOutput = true,
+            RedirectStandardError = true,
+            CreateNoWindow = true // Set to true if you don't want the console window to be visible
+        };
 
-            using (Process process = Process.Start(startInfo))
-            {
-                string output = process.StandardOutput.ReadToEnd();
-                string error = process.StandardError.ReadToEnd();
-                process.WaitForExit();
+        using (Process process = new Process { StartInfo = startInfo })
+        {
+            process.Start();
 
-                Console.WriteLine("Output: " + output);
-                Console.WriteLine("Error: " + error);
-            }
+            // Reading output asynchronously
+            string output = await process.StandardOutput.ReadToEndAsync();
+            string error = await process.StandardError.ReadToEndAsync();
+
+            await Task.Run(() => process.WaitForExit());
+
+            Console.WriteLine("Output: " + output);
+            Console.WriteLine("Error: " + error);
         }
+    }
+
 
 
         private void copyArchiveCgBtn_MouseHover(object sender, EventArgs e)
@@ -196,7 +201,7 @@ namespace UtilitatiCGXML
 
             //browse
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
-            string Titlu = "Alege Dosarul cu CGXML'uri";
+            string Titlu = "Alege Dosarul cu CGXML-uri";
             CostumFolderBrowserDialog.Title = Titlu;
             CostumFolderBrowserDialog.StartPosition = FormStartPosition.CenterParent;
             DialogResult dr = CostumFolderBrowserDialog.ShowDialog(this);
@@ -204,6 +209,11 @@ namespace UtilitatiCGXML
             {
                 CostumFolderBrowserDialogPath = CostumFolderBrowserDialog.SelectedPath;
             }
+            else if (dr == DialogResult.Cancel)
+            {
+                return;
+            }
+
             string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath.ToString(), "*.cgxml", SearchOption.AllDirectories);
             NumericComparer ns = new NumericComparer();
             System.Array.Sort(filez, ns);
@@ -478,7 +488,7 @@ namespace UtilitatiCGXML
             //
 
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
-            string Titlu = "Alege Dosarul cu CGXML'uri";
+            string Titlu = "Alege Dosarul cu CGXML-uri";
             CostumFolderBrowserDialog.Title = Titlu;
             CostumFolderBrowserDialog.StartPosition = FormStartPosition.CenterParent;
 
@@ -954,7 +964,7 @@ namespace UtilitatiCGXML
         private void button11_Click(object sender, EventArgs e)
         {
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
-            string Titlu = "Alege Dosarul cu CGXML'uri";
+            string Titlu = "Alege Dosarul cu CGXML-uri";
             CostumFolderBrowserDialog.Title = Titlu;
             CostumFolderBrowserDialog.StartPosition = FormStartPosition.CenterParent;
             DialogResult dr = CostumFolderBrowserDialog.ShowDialog(this);
@@ -968,7 +978,7 @@ namespace UtilitatiCGXML
         private void button12_Click(object sender, EventArgs e)
         {
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
-            string Titlu = "Alege Dosarul cu CGXML'uri";
+            string Titlu = "Alege Dosarul cu CGXML-uri";
             CostumFolderBrowserDialog.Title = Titlu;
             CostumFolderBrowserDialog.StartPosition = FormStartPosition.CenterParent;
             DialogResult dr = CostumFolderBrowserDialog.ShowDialog(this);
@@ -982,7 +992,7 @@ namespace UtilitatiCGXML
         private void button14_Click(object sender, EventArgs e)
         {
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
-            string Titlu = "Alege Dosarul cu CGXML'uri";
+            string Titlu = "Alege Dosarul cu CGXML-uri";
             CostumFolderBrowserDialog.Title = Titlu;
             CostumFolderBrowserDialog.StartPosition = FormStartPosition.CenterParent;
             DialogResult dr = CostumFolderBrowserDialog.ShowDialog(this);
@@ -996,7 +1006,7 @@ namespace UtilitatiCGXML
         private void button16_Click(object sender, EventArgs e)
         {
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
-            string Titlu = "Alege Dosarul cu CGXML'uri";
+            string Titlu = "Alege Dosarul cu CGXML-uri";
             CostumFolderBrowserDialog.Title = Titlu;
             CostumFolderBrowserDialog.StartPosition = FormStartPosition.CenterParent;
             DialogResult dr = CostumFolderBrowserDialog.ShowDialog(this);
@@ -1010,7 +1020,7 @@ namespace UtilitatiCGXML
         private void button18_Click(object sender, EventArgs e)
         {
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
-            string Titlu = "Alege Dosarul cu CGXML'uri";
+            string Titlu = "Alege Dosarul cu CGXML-uri";
             CostumFolderBrowserDialog.Title = Titlu;
             CostumFolderBrowserDialog.StartPosition = FormStartPosition.CenterParent;
             DialogResult dr = CostumFolderBrowserDialog.ShowDialog(this);
@@ -1024,7 +1034,7 @@ namespace UtilitatiCGXML
         private void button20_Click(object sender, EventArgs e)
         {
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
-            string Titlu = "Alege Dosarul cu CGXML'uri";
+            string Titlu = "Alege Dosarul cu CGXML-uri";
             CostumFolderBrowserDialog.Title = Titlu;
             CostumFolderBrowserDialog.StartPosition = FormStartPosition.CenterParent;
             DialogResult dr = CostumFolderBrowserDialog.ShowDialog(this);
@@ -1038,7 +1048,7 @@ namespace UtilitatiCGXML
         private void button23_Click(object sender, EventArgs e)
         {
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
-            string Titlu = "Alege Dosarul cu CGXML'uri";
+            string Titlu = "Alege Dosarul cu CGXML-uri";
             CostumFolderBrowserDialog.Title = Titlu;
             CostumFolderBrowserDialog.StartPosition = FormStartPosition.CenterParent;
             DialogResult dr = CostumFolderBrowserDialog.ShowDialog(this);
