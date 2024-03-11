@@ -405,6 +405,7 @@ namespace UtilitatiCGXML
         #region Buttons
         private void raportParcelaBtn_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             string fileName = "Parcela";
             string raportname = "";
             if (checkBox1.Checked == true)
@@ -663,11 +664,13 @@ namespace UtilitatiCGXML
             // Open file
             System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
         }
+        this.Cursor = Cursors.Default;
         }
 
 
         private void raportConstructiiBtn_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             string fileName = "Constructii";
             string raportname = "";
             if (checkBox1.Checked == true)
@@ -881,10 +884,12 @@ namespace UtilitatiCGXML
             // Open file
             System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
         }
+        this.Cursor = Cursors.Default;
         }
 
         private void raportSarciniBtn_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             string raportname = "Raport Sarcini";
             //Create new Excel Workbook
             HSSFWorkbook hssfworkbook = new HSSFWorkbook();
@@ -988,11 +993,12 @@ namespace UtilitatiCGXML
             // Open file
             System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
         }
-            
+            this.Cursor = Cursors.Default;
         }
 
         private void raportTipInscrieriBtn_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             string fileName = "Tip Inscrieri";
             string raportname = "";
             if (checkBox1.Checked == true)
@@ -1229,10 +1235,12 @@ namespace UtilitatiCGXML
             // Open file
             System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
         }
+            this.Cursor = Cursors.Default;
         }
 
         private void raportProprietariBtn_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             string fileName = "Proprietar";
             string raportname = "";
             if (checkBox1.Checked == true)
@@ -1561,7 +1569,7 @@ namespace UtilitatiCGXML
             // Open file
             System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
         }
-
+        this.Cursor = Cursors.Default;
         }
 
         private void button6_Click(object sender, EventArgs e)

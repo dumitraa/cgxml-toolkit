@@ -236,15 +236,14 @@ public class CustomGroupBox : GroupBox
             cgShpGroupBox.Padding = new System.Windows.Forms.Padding(10); // Padding inside the group box
             this.Controls.Add(cgShpGroupBox); // Add the group box to the form's controls
             // cgToShpBtn
-            // 
             this.cgToShpBtn.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
             this.cgToShpBtn.FlatAppearance.BorderSize = 0;
             this.cgToShpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cgToShpBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cgToShpBtn.Location = new System.Drawing.Point(10, 20); // Adjust these values as needed
+            this.cgToShpBtn.Location = new System.Drawing.Point(1, 20); // Adjust these values as needed
             this.cgToShpBtn.Margin = new System.Windows.Forms.Padding(0);
             this.cgToShpBtn.Name = "cgToShpBtn";
-            this.cgToShpBtn.Size = new System.Drawing.Size(180, 51);
+            this.cgToShpBtn.Size = new System.Drawing.Size(198, 40);
             this.cgToShpBtn.TabIndex = 4;
             this.cgToShpBtn.Text = "Start conversie";
             this.cgToShpBtn.UseVisualStyleBackColor = false;
@@ -272,7 +271,7 @@ public class CustomGroupBox : GroupBox
             this.imobileCheckbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.imobileCheckbox.AutoSize = true;
             this.imobileCheckbox.Location = new System.Drawing.Point(20, 70); // Adjust these values as needed
-            this.imobileCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.imobileCheckbox.Margin = new System.Windows.Forms.Padding(10);
             this.imobileCheckbox.Name = "imobileCheckbox";
             this.imobileCheckbox.Size = new System.Drawing.Size(167, 17);
             this.imobileCheckbox.TabIndex = 5;
@@ -289,7 +288,7 @@ public class CustomGroupBox : GroupBox
             this.constrCheckbox.ForeColor = System.Drawing.Color.Black;
             this.constrCheckbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.constrCheckbox.AutoSize = true;
-            this.constrCheckbox.Location = new System.Drawing.Point(20, 100); // Adjust these values as needed
+            this.constrCheckbox.Location = new System.Drawing.Point(20, 90); // Adjust these values as needed
             this.constrCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.constrCheckbox.Name = "constrCheckbox";
             this.constrCheckbox.Size = new System.Drawing.Size(167, 17);
@@ -316,7 +315,7 @@ public class CustomGroupBox : GroupBox
             this.combinePdfs.Location = new System.Drawing.Point(0, 169);
             this.combinePdfs.Margin = new System.Windows.Forms.Padding(0);
             this.combinePdfs.Name = "combinePdfs";
-            this.combinePdfs.Size = new System.Drawing.Size(214, 51);
+            this.combinePdfs.Size = new System.Drawing.Size(220, 51);
             this.combinePdfs.TabIndex = 0;
             this.combinePdfs.Text = "Combina PDF-uri";
             this.combinePdfs.UseVisualStyleBackColor = false;
@@ -334,7 +333,7 @@ public class CustomGroupBox : GroupBox
             this.copyArchiveCgBtn.Location = new System.Drawing.Point(0, 118);
             this.copyArchiveCgBtn.Margin = new System.Windows.Forms.Padding(0);
             this.copyArchiveCgBtn.Name = "copyArchiveCgBtn";
-            this.copyArchiveCgBtn.Size = new System.Drawing.Size(214, 51);
+            this.copyArchiveCgBtn.Size = new System.Drawing.Size(220, 51);
             this.copyArchiveCgBtn.TabIndex = 1;
             this.copyArchiveCgBtn.Text = "Copiere si arhivare fișiere CGXML";
             this.copyArchiveCgBtn.UseVisualStyleBackColor = false;

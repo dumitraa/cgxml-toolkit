@@ -57,6 +57,37 @@ namespace UtilitatiCGXML
                 }
             }
 
+public class CustomGroupBox : GroupBox
+{
+    private Color borderColor;
+
+    public Color BorderColor
+    {
+        get { return borderColor; }
+        set { borderColor = value; }
+    }
+
+    public CustomGroupBox()
+    {
+        borderColor = Color.Black; // Default color
+    }
+
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        Size tSize = TextRenderer.MeasureText(this.Text, this.Font);
+        Rectangle borderRect = e.ClipRectangle;
+        borderRect.Y += tSize.Height / 2;
+        borderRect.Height -= tSize.Height / 2;
+        ControlPaint.DrawBorder(e.Graphics, borderRect, this.borderColor, ButtonBorderStyle.Solid);
+
+        Rectangle textRect = e.ClipRectangle;
+        textRect.X += 6;
+        textRect.Width = tSize.Width;
+        textRect.Height = tSize.Height;
+        e.Graphics.FillRectangle(new SolidBrush(this.BackColor), textRect);
+        e.Graphics.DrawString(this.Text, this.Font, new SolidBrush(this.ForeColor), textRect);
+    }
+}
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             Panel panel = sender as Panel;
@@ -447,12 +478,7 @@ namespace UtilitatiCGXML
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.caleFisiereCgxmlBtn);
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.raportProprietariBtn);
-            this.panel1.Controls.Add(this.raportSarciniBtn);
-            this.panel1.Controls.Add(this.raportConstructiiBtn);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.raportParcelaBtn);
-            this.panel1.Controls.Add(this.raportTipInscrieriBtn);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
@@ -481,21 +507,53 @@ namespace UtilitatiCGXML
             this.button9.Visible = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // caleFisiereCgxmlBtn
+            // caleFisiereCgxmlBtn GroupBox
             // 
+            CustomGroupBox caleFisiereCgxmlGroupBox = new CustomGroupBox();
+            caleFisiereCgxmlGroupBox.Text = "1. Cale Fisiere CGXML"; // Set the title for the group box
+            caleFisiereCgxmlGroupBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            caleFisiereCgxmlGroupBox.BackColor = System.Drawing.Color.FromArgb(227, 242, 253);
+            caleFisiereCgxmlGroupBox.ForeColor = System.Drawing.Color.Black;
+            caleFisiereCgxmlGroupBox.BorderColor = System.Drawing.Color.FromArgb(0, 130, 237);
+            caleFisiereCgxmlGroupBox.Location = new System.Drawing.Point(10, 10); // Position it accordingly on the form
+            caleFisiereCgxmlGroupBox.Size = new System.Drawing.Size(200, 70); // Set the appropriate size
+            caleFisiereCgxmlGroupBox.Margin = new System.Windows.Forms.Padding(0);
+            caleFisiereCgxmlGroupBox.Padding = new System.Windows.Forms.Padding(10); // Padding inside the group box
+            this.Controls.Add(caleFisiereCgxmlGroupBox); // Add the group box to the form's controls
+
             this.caleFisiereCgxmlBtn.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
             this.caleFisiereCgxmlBtn.FlatAppearance.BorderSize = 0;
             this.caleFisiereCgxmlBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.caleFisiereCgxmlBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.caleFisiereCgxmlBtn.ForeColor = System.Drawing.Color.White;
-            this.caleFisiereCgxmlBtn.Location = new System.Drawing.Point(0, 110);
+            this.caleFisiereCgxmlBtn.Location = new System.Drawing.Point(1, 20);
             this.caleFisiereCgxmlBtn.Margin = new System.Windows.Forms.Padding(0);
             this.caleFisiereCgxmlBtn.Name = "caleFisiereCgxmlBtn";
-            this.caleFisiereCgxmlBtn.Size = new System.Drawing.Size(214, 40);
+            this.caleFisiereCgxmlBtn.Size = new System.Drawing.Size(198, 40);
             this.caleFisiereCgxmlBtn.TabIndex = 9;
-            this.caleFisiereCgxmlBtn.Text = "Cale fisiere CGXML";
+            this.caleFisiereCgxmlBtn.Text = "Alege Dosar CGXML";
             this.caleFisiereCgxmlBtn.UseVisualStyleBackColor = false;
             this.caleFisiereCgxmlBtn.Click += new System.EventHandler(this.caleFisiereCgxmlBtn_Click);
+            this.caleFisiereCgxmlBtn.BackColor = System.Drawing.Color.FromArgb(227, 242, 253);
+            this.caleFisiereCgxmlBtn.ForeColor = System.Drawing.Color.Black;
+            this.caleFisiereCgxmlBtn.FlatStyle = FlatStyle.Flat;
+            this.caleFisiereCgxmlBtn.FlatAppearance.BorderSize = 0;
+
+            // Add hover effects
+            this.caleFisiereCgxmlBtn.MouseEnter += (sender, e) =>
+            {
+                var thisButton = (Button)sender;
+                thisButton.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Blue background on hover
+                thisButton.ForeColor = System.Drawing.Color.White; // White text on hover for contrast
+            };
+            this.caleFisiereCgxmlBtn.MouseLeave += (sender, e) =>
+            {
+                var thisButton = (Button)sender;
+                thisButton.BackColor = System.Drawing.Color.FromArgb(227, 242, 253); // Revert to transparent
+                thisButton.ForeColor = System.Drawing.Color.Black; // Revert to original text color
+            };
+            
+            caleFisiereCgxmlGroupBox.Controls.Add(this.caleFisiereCgxmlBtn);
             // 
             // button6
             // 
@@ -507,12 +565,27 @@ namespace UtilitatiCGXML
             // this.button6.Location = new System.Drawing.Point(0, 364);
             // this.button6.Margin = new System.Windows.Forms.Padding(0);
             // this.button6.Name = "button6";
-            // this.button6.Size = new System.Drawing.Size(214, 40);
+            // this.button6.Size = new System.Drawing.Size(220, 40);
             // this.button6.TabIndex = 5;
             // this.button6.Text = " "; // raport 10%
             // this.button6.UseVisualStyleBackColor = false;
             // this.button6.Click += new System.EventHandler(this.button6_Click);
             // this.button6.MouseHover += new System.EventHandler(this.button6_MouseHover);
+
+            //
+            // rapoarte groupbox
+            //
+            CustomGroupBox rapoarteGroupBox = new CustomGroupBox();
+            rapoarteGroupBox.Text = "2. Generare rapoarte XLS"; // Set the title for the group box
+            rapoarteGroupBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            rapoarteGroupBox.BackColor = System.Drawing.Color.FromArgb(227, 242, 253);
+            rapoarteGroupBox.ForeColor = System.Drawing.Color.Black;
+            rapoarteGroupBox.BorderColor = System.Drawing.Color.FromArgb(0, 130, 237);
+            rapoarteGroupBox.Location = new System.Drawing.Point(10, 110); // Position it accordingly on the form
+            rapoarteGroupBox.Size = new System.Drawing.Size(200, 240); // Set the appropriate size
+            rapoarteGroupBox.Margin = new System.Windows.Forms.Padding(0);
+            rapoarteGroupBox.Padding = new System.Windows.Forms.Padding(10); // Padding inside the group box
+            this.Controls.Add(rapoarteGroupBox); // Add the group box to the form's controls
             // 
             // raportProprietariBtn
             // 
@@ -520,16 +593,33 @@ namespace UtilitatiCGXML
             this.raportProprietariBtn.FlatAppearance.BorderSize = 0;
             this.raportProprietariBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.raportProprietariBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.raportProprietariBtn.ForeColor = System.Drawing.Color.White;
-            this.raportProprietariBtn.Location = new System.Drawing.Point(0, 324);
+            this.raportProprietariBtn.Location = new System.Drawing.Point(1, 100);
             this.raportProprietariBtn.Margin = new System.Windows.Forms.Padding(0);
             this.raportProprietariBtn.Name = "raportProprietariBtn";
-            this.raportProprietariBtn.Size = new System.Drawing.Size(214, 40);
+            this.raportProprietariBtn.Size = new System.Drawing.Size(198, 40);
             this.raportProprietariBtn.TabIndex = 2;
-            this.raportProprietariBtn.Text = "Raport Proprietari";
+            this.raportProprietariBtn.Text = "Proprietari";
             this.raportProprietariBtn.UseVisualStyleBackColor = false;
             this.raportProprietariBtn.Click += new System.EventHandler(this.raportProprietariBtn_Click);
             this.raportProprietariBtn.MouseHover += new System.EventHandler(this.raportProprietariBtn_MouseHover);
+            this.raportProprietariBtn.BackColor = System.Drawing.Color.FromArgb(227, 242, 253);
+            this.raportProprietariBtn.ForeColor = System.Drawing.Color.Black;
+            this.raportProprietariBtn.FlatStyle = FlatStyle.Flat;
+            this.raportProprietariBtn.FlatAppearance.BorderSize = 0;
+
+            // Add hover effects
+            this.raportProprietariBtn.MouseEnter += (sender, e) =>
+            {
+                var thisButton = (Button)sender;
+                thisButton.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Blue background on hover
+                thisButton.ForeColor = System.Drawing.Color.White; // White text on hover for contrast
+            };
+            this.raportProprietariBtn.MouseLeave += (sender, e) =>
+            {
+                var thisButton = (Button)sender;
+                thisButton.BackColor = System.Drawing.Color.FromArgb(227, 242, 253); // Revert to transparent
+                thisButton.ForeColor = System.Drawing.Color.Black; // Revert to original text color
+            };
             // 
             // raportSarciniBtn
             // 
@@ -538,15 +628,33 @@ namespace UtilitatiCGXML
             this.raportSarciniBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.raportSarciniBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.raportSarciniBtn.ForeColor = System.Drawing.Color.White;
-            this.raportSarciniBtn.Location = new System.Drawing.Point(0, 244);
+            this.raportSarciniBtn.Location = new System.Drawing.Point(1, 140);
             this.raportSarciniBtn.Margin = new System.Windows.Forms.Padding(0);
             this.raportSarciniBtn.Name = "raportSarciniBtn";
-            this.raportSarciniBtn.Size = new System.Drawing.Size(214, 40);
+            this.raportSarciniBtn.Size = new System.Drawing.Size(198, 40);
             this.raportSarciniBtn.TabIndex = 4;
-            this.raportSarciniBtn.Text = "Raport Sarcini";
+            this.raportSarciniBtn.Text = "Sarcini";
             this.raportSarciniBtn.UseVisualStyleBackColor = false;
             this.raportSarciniBtn.Click += new System.EventHandler(this.raportSarciniBtn_Click);
             this.raportSarciniBtn.MouseHover += new System.EventHandler(this.raportSarciniBtn_MouseHover);
+            this.raportSarciniBtn.BackColor = System.Drawing.Color.FromArgb(227, 242, 253);
+            this.raportSarciniBtn.ForeColor = System.Drawing.Color.Black;
+            this.raportSarciniBtn.FlatStyle = FlatStyle.Flat;
+            this.raportSarciniBtn.FlatAppearance.BorderSize = 0;
+
+            // Add hover effects
+            this.raportSarciniBtn.MouseEnter += (sender, e) =>
+            {
+                var thisButton = (Button)sender;
+                thisButton.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Blue background on hover
+                thisButton.ForeColor = System.Drawing.Color.White; // White text on hover for contrast
+            };
+            this.raportSarciniBtn.MouseLeave += (sender, e) =>
+            {
+                var thisButton = (Button)sender;
+                thisButton.BackColor = System.Drawing.Color.FromArgb(227, 242, 253); // Revert to transparent
+                thisButton.ForeColor = System.Drawing.Color.Black; // Revert to original text color
+            };
             
             // raportConstructiiBtn
             // 
@@ -555,15 +663,33 @@ namespace UtilitatiCGXML
             this.raportConstructiiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.raportConstructiiBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.raportConstructiiBtn.ForeColor = System.Drawing.Color.White;
-            this.raportConstructiiBtn.Location = new System.Drawing.Point(0, 204);
+            this.raportConstructiiBtn.Location = new System.Drawing.Point(1, 60);
             this.raportConstructiiBtn.Margin = new System.Windows.Forms.Padding(0);
             this.raportConstructiiBtn.Name = "raportConstructiiBtn";
-            this.raportConstructiiBtn.Size = new System.Drawing.Size(214, 40);
+            this.raportConstructiiBtn.Size = new System.Drawing.Size(198, 40);
             this.raportConstructiiBtn.TabIndex = 0;
-            this.raportConstructiiBtn.Text = "Raport Constructii";
+            this.raportConstructiiBtn.Text = "Constructii";
             this.raportConstructiiBtn.UseVisualStyleBackColor = false;
             this.raportConstructiiBtn.Click += new System.EventHandler(this.raportConstructiiBtn_Click);
             this.raportConstructiiBtn.MouseHover += new System.EventHandler(this.raportConstructiiBtn_MouseHover);
+            this.raportConstructiiBtn.BackColor = System.Drawing.Color.FromArgb(227, 242, 253);
+            this.raportConstructiiBtn.ForeColor = System.Drawing.Color.Black;
+            this.raportConstructiiBtn.FlatStyle = FlatStyle.Flat;
+            this.raportConstructiiBtn.FlatAppearance.BorderSize = 0;
+
+            // Add hover effects
+            this.raportConstructiiBtn.MouseEnter += (sender, e) =>
+            {
+                var thisButton = (Button)sender;
+                thisButton.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Blue background on hover
+                thisButton.ForeColor = System.Drawing.Color.White; // White text on hover for contrast
+            };
+            this.raportConstructiiBtn.MouseLeave += (sender, e) =>
+            {
+                var thisButton = (Button)sender;
+                thisButton.BackColor = System.Drawing.Color.FromArgb(227, 242, 253); // Revert to transparent
+                thisButton.ForeColor = System.Drawing.Color.Black; // Revert to original text color
+            };
             // 
             // raportParcelaBtn
             // 
@@ -572,15 +698,33 @@ namespace UtilitatiCGXML
             this.raportParcelaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.raportParcelaBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.raportParcelaBtn.ForeColor = System.Drawing.Color.White;
-            this.raportParcelaBtn.Location = new System.Drawing.Point(0, 164);
+            this.raportParcelaBtn.Location = new System.Drawing.Point(1, 20);
             this.raportParcelaBtn.Margin = new System.Windows.Forms.Padding(0);
             this.raportParcelaBtn.Name = "raportParcelaBtn";
-            this.raportParcelaBtn.Size = new System.Drawing.Size(214, 40);
+            this.raportParcelaBtn.Size = new System.Drawing.Size(198, 40);
             this.raportParcelaBtn.TabIndex = 1;
-            this.raportParcelaBtn.Text = "Raport Parcela";
+            this.raportParcelaBtn.Text = "Parcele";
             this.raportParcelaBtn.UseVisualStyleBackColor = false;
             this.raportParcelaBtn.Click += new System.EventHandler(this.raportParcelaBtn_Click);
             this.raportParcelaBtn.MouseHover += new System.EventHandler(this.raportParcelaBtn_MouseHover);
+            this.raportParcelaBtn.BackColor = System.Drawing.Color.FromArgb(227, 242, 253);
+            this.raportParcelaBtn.ForeColor = System.Drawing.Color.Black;
+            this.raportParcelaBtn.FlatStyle = FlatStyle.Flat;
+            this.raportParcelaBtn.FlatAppearance.BorderSize = 0;
+
+            // Add hover effects
+            this.raportParcelaBtn.MouseEnter += (sender, e) =>
+            {
+                var thisButton = (Button)sender;
+                thisButton.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Blue background on hover
+                thisButton.ForeColor = System.Drawing.Color.White; // White text on hover for contrast
+            };
+            this.raportParcelaBtn.MouseLeave += (sender, e) =>
+            {
+                var thisButton = (Button)sender;
+                thisButton.BackColor = System.Drawing.Color.FromArgb(227, 242, 253); // Revert to transparent
+                thisButton.ForeColor = System.Drawing.Color.Black; // Revert to original text color
+            };
             // 
             // raportTipInscrieriBtn
             // 
@@ -589,15 +733,39 @@ namespace UtilitatiCGXML
             this.raportTipInscrieriBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.raportTipInscrieriBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.raportTipInscrieriBtn.ForeColor = System.Drawing.Color.White;
-            this.raportTipInscrieriBtn.Location = new System.Drawing.Point(0, 284);
+            this.raportTipInscrieriBtn.Location = new System.Drawing.Point(1, 180);
             this.raportTipInscrieriBtn.Margin = new System.Windows.Forms.Padding(0);
             this.raportTipInscrieriBtn.Name = "raportTipInscrieriBtn";
-            this.raportTipInscrieriBtn.Size = new System.Drawing.Size(214, 40);
+            this.raportTipInscrieriBtn.Size = new System.Drawing.Size(198, 40);
             this.raportTipInscrieriBtn.TabIndex = 3;
-            this.raportTipInscrieriBtn.Text = "Raport Tip Inscrieri";
+            this.raportTipInscrieriBtn.Text = "Tip Inscrieri";
             this.raportTipInscrieriBtn.UseVisualStyleBackColor = false;
             this.raportTipInscrieriBtn.Click += new System.EventHandler(this.raportTipInscrieriBtn_Click);
             this.raportTipInscrieriBtn.MouseHover += new System.EventHandler(this.raportTipInscrieriBtn_MouseHover);
+            this.raportTipInscrieriBtn.BackColor = System.Drawing.Color.FromArgb(227, 242, 253);
+            this.raportTipInscrieriBtn.ForeColor = System.Drawing.Color.Black;
+            this.raportTipInscrieriBtn.FlatStyle = FlatStyle.Flat;
+            this.raportTipInscrieriBtn.FlatAppearance.BorderSize = 0;
+
+            // Add hover effects
+            this.raportTipInscrieriBtn.MouseEnter += (sender, e) =>
+            {
+                var thisButton = (Button)sender;
+                thisButton.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Blue background on hover
+                thisButton.ForeColor = System.Drawing.Color.White; // White text on hover for contrast
+            };
+            this.raportTipInscrieriBtn.MouseLeave += (sender, e) =>
+            {
+                var thisButton = (Button)sender;
+                thisButton.BackColor = System.Drawing.Color.FromArgb(227, 242, 253); // Revert to transparent
+                thisButton.ForeColor = System.Drawing.Color.Black; // Revert to original text color
+            };
+
+            rapoarteGroupBox.Controls.Add(this.raportParcelaBtn);
+            rapoarteGroupBox.Controls.Add(this.raportConstructiiBtn);
+            rapoarteGroupBox.Controls.Add(this.raportProprietariBtn);
+            rapoarteGroupBox.Controls.Add(this.raportSarciniBtn);
+            rapoarteGroupBox.Controls.Add(this.raportTipInscrieriBtn);
             // 
             // sectorLabel5
             // 

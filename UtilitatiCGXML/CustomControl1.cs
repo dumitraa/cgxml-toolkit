@@ -201,7 +201,7 @@ namespace UtilitatiCGXML
 
             if (imobileCheckbox.Checked || constrCheckbox.Checked)
             {
-            //browse
+            this.Cursor = Cursors.WaitCursor;
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
             string Titlu = "Alege Dosarul cu CGXML-uri";
             CostumFolderBrowserDialog.Title = Titlu;
@@ -433,7 +433,9 @@ namespace UtilitatiCGXML
                 buildingWriter.Write(buildingFeaturesList);
             }
 
+            
             System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
+            this.Cursor = Cursors.Default;
         }
             else
             {
