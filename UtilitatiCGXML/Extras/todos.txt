@@ -10,8 +10,6 @@
 
 -----------------------------------------------------------------------------------------------------------------------------
 - Merge multiple raports (multiple sheets) into one Excel
-- CHANGE VARIABLE NAMES
-- MAKE GUI MORE MODERN LOOKING
 
 -----------------------------------------------------------------------------------------------------------------------------
 # Investigate differences detalii drept/comentarii/note - eterra/cgxml
