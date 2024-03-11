@@ -591,7 +591,7 @@ namespace UtilitatiCGXML
                             foreach (CGXML.PersonRow pp in fisier.Person)
                         {
                             fullName = string.Concat(pp.LASTNAME, " ", pp.FIRSTNAME);
-                            person = fullName;
+                            person = fullName.Trim();
                             uniquePerson.Add(fullName);
                         }
 
