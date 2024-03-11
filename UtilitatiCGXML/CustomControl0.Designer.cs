@@ -515,7 +515,7 @@ public class CustomGroupBox : GroupBox
             caleFisiereCgxmlGroupBox.BackColor = System.Drawing.Color.FromArgb(227, 242, 253);
             caleFisiereCgxmlGroupBox.ForeColor = System.Drawing.Color.Black;
             caleFisiereCgxmlGroupBox.BorderColor = System.Drawing.Color.FromArgb(0, 130, 237);
-            caleFisiereCgxmlGroupBox.Location = new System.Drawing.Point(10, 10); // Position it accordingly on the form
+            caleFisiereCgxmlGroupBox.Location = new System.Drawing.Point(10, 30); // Position it accordingly on the form
             caleFisiereCgxmlGroupBox.Size = new System.Drawing.Size(200, 70); // Set the appropriate size
             caleFisiereCgxmlGroupBox.Margin = new System.Windows.Forms.Padding(0);
             caleFisiereCgxmlGroupBox.Padding = new System.Windows.Forms.Padding(10); // Padding inside the group box
@@ -531,13 +531,21 @@ public class CustomGroupBox : GroupBox
             this.caleFisiereCgxmlBtn.Name = "caleFisiereCgxmlBtn";
             this.caleFisiereCgxmlBtn.Size = new System.Drawing.Size(198, 40);
             this.caleFisiereCgxmlBtn.TabIndex = 9;
-            this.caleFisiereCgxmlBtn.Text = "Alege Dosar CGXML";
+            this.caleFisiereCgxmlBtn.Text = " Alege Dosar CGXML";
             this.caleFisiereCgxmlBtn.UseVisualStyleBackColor = false;
             this.caleFisiereCgxmlBtn.Click += new System.EventHandler(this.caleFisiereCgxmlBtn_Click);
             this.caleFisiereCgxmlBtn.BackColor = System.Drawing.Color.FromArgb(227, 242, 253);
             this.caleFisiereCgxmlBtn.ForeColor = System.Drawing.Color.Black;
             this.caleFisiereCgxmlBtn.FlatStyle = FlatStyle.Flat;
             this.caleFisiereCgxmlBtn.FlatAppearance.BorderSize = 0;
+
+            this.caleFisiereCgxmlBtn.Image = Image.FromFile("C:\\Users\\USER\\Documents\\scripts\\cgxml-toolkit\\UtilitatiCGXML\\Resources\\folder.png"); // Ensure the path is correct
+            this.caleFisiereCgxmlBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+            this.caleFisiereCgxmlBtn.ImageAlign = ContentAlignment.MiddleRight;
+
+            ToolTip caleFisiereToolTip = new ToolTip();
+            caleFisiereToolTip.SetToolTip(this.caleFisiereCgxmlBtn, "Selectează dosarul care conține fișierele CGXML pentru a începe generarea rapoartelor");
+
 
             // Add hover effects
             this.caleFisiereCgxmlBtn.MouseEnter += (sender, e) =>
@@ -581,7 +589,7 @@ public class CustomGroupBox : GroupBox
             rapoarteGroupBox.BackColor = System.Drawing.Color.FromArgb(227, 242, 253);
             rapoarteGroupBox.ForeColor = System.Drawing.Color.Black;
             rapoarteGroupBox.BorderColor = System.Drawing.Color.FromArgb(0, 130, 237);
-            rapoarteGroupBox.Location = new System.Drawing.Point(10, 110); // Position it accordingly on the form
+            rapoarteGroupBox.Location = new System.Drawing.Point(10, 130); // Position it accordingly on the form
             rapoarteGroupBox.Size = new System.Drawing.Size(200, 240); // Set the appropriate size
             rapoarteGroupBox.Margin = new System.Windows.Forms.Padding(0);
             rapoarteGroupBox.Padding = new System.Windows.Forms.Padding(10); // Padding inside the group box

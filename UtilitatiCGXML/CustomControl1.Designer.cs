@@ -245,11 +245,18 @@ public class CustomGroupBox : GroupBox
             this.cgToShpBtn.Name = "cgToShpBtn";
             this.cgToShpBtn.Size = new System.Drawing.Size(198, 40);
             this.cgToShpBtn.TabIndex = 4;
-            this.cgToShpBtn.Text = "Start conversie";
+            this.cgToShpBtn.Text = " Începe conversia";
             this.cgToShpBtn.UseVisualStyleBackColor = false;
             this.cgToShpBtn.Click += new System.EventHandler(this.cgToShpBtn_Click);
             this.cgToShpBtn.BackColor = System.Drawing.Color.FromArgb(227, 242, 253); // Inactive color, same as GroupBox
             this.cgToShpBtn.ForeColor = System.Drawing.Color.Black;
+            this.cgToShpBtn.Image = Image.FromFile("C:\\Users\\USER\\Documents\\scripts\\cgxml-toolkit\\UtilitatiCGXML\\Resources\\map-location.png"); // Ensure the path is correct
+            this.cgToShpBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+            this.cgToShpBtn.ImageAlign = ContentAlignment.MiddleRight;
+
+            ToolTip cgToShpToolTip = new ToolTip();
+            cgToShpToolTip.SetToolTip(this.cgToShpBtn, "Începe procesul de conversie a fișierelor CGXML în format SHP după selectarea opțiunilor.");
+
             // Add hover effects
             this.cgToShpBtn.MouseEnter += (sender, e) =>
             {
@@ -275,7 +282,7 @@ public class CustomGroupBox : GroupBox
             this.imobileCheckbox.Name = "imobileCheckbox";
             this.imobileCheckbox.Size = new System.Drawing.Size(167, 17);
             this.imobileCheckbox.TabIndex = 5;
-            this.imobileCheckbox.Text = "+ imobile";
+            this.imobileCheckbox.Text = "include imobile";
             this.imobileCheckbox.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);    
             this.imobileCheckbox.UseVisualStyleBackColor = false;
             this.imobileCheckbox.Visible = true;
@@ -293,7 +300,7 @@ public class CustomGroupBox : GroupBox
             this.constrCheckbox.Name = "constrCheckbox";
             this.constrCheckbox.Size = new System.Drawing.Size(167, 17);
             this.constrCheckbox.TabIndex = 5;
-            this.constrCheckbox.Text = "+ construcții";
+            this.constrCheckbox.Text = "include construcții";
             this.constrCheckbox.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);    
             this.constrCheckbox.UseVisualStyleBackColor = false;
             this.constrCheckbox.Visible = true;
@@ -317,10 +324,16 @@ public class CustomGroupBox : GroupBox
             this.combinePdfs.Name = "combinePdfs";
             this.combinePdfs.Size = new System.Drawing.Size(220, 51);
             this.combinePdfs.TabIndex = 0;
-            this.combinePdfs.Text = "Combina PDF-uri";
+            this.combinePdfs.Text = " Combina PDF-uri";
             this.combinePdfs.UseVisualStyleBackColor = false;
             this.combinePdfs.Click += new System.EventHandler(this.combinePdfs_Click);
             this.combinePdfs.MouseHover += new System.EventHandler(this.combinePdfs_MouseHover);
+            this.combinePdfs.Image = Image.FromFile("C:\\Users\\USER\\Documents\\scripts\\cgxml-toolkit\\UtilitatiCGXML\\Resources\\pdf-file.png"); // Ensure the path is correct
+            this.combinePdfs.TextImageRelation = TextImageRelation.ImageBeforeText;
+            this.combinePdfs.ImageAlign = ContentAlignment.MiddleRight;
+
+            ToolTip pdftToolTip = new ToolTip();
+            pdftToolTip.SetToolTip(this.combinePdfs, "Unește mai multe fișiere PDF într-un singur document.");
             // 
             // copyArchiveCgBtn
             // 
@@ -339,6 +352,13 @@ public class CustomGroupBox : GroupBox
             this.copyArchiveCgBtn.UseVisualStyleBackColor = false;
             this.copyArchiveCgBtn.Click += new System.EventHandler(this.copyArchiveCgBtn_Click);
             this.copyArchiveCgBtn.MouseHover += new System.EventHandler(this.copyArchiveCgBtn_MouseHover);
+            this.copyArchiveCgBtn.Image = Image.FromFile("C:\\Users\\USER\\Documents\\scripts\\cgxml-toolkit\\UtilitatiCGXML\\Resources\\archive.png"); // Ensure the path is correct
+            this.copyArchiveCgBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+            this.copyArchiveCgBtn.ImageAlign = ContentAlignment.MiddleRight;
+
+            ToolTip copyArchiveToolTip = new ToolTip();
+            copyArchiveToolTip.SetToolTip(this.copyArchiveCgBtn, "Copiază și arhivează fișierele CGXML selectate");
+
             // 
             // button4
             // 
