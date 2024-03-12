@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VerificareCGXML")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f379e8897bf70266326903e5862a0df3f2ba8262")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57f71ea7cd727cc6f3e850d0569800f6a56a895b")]
 [assembly: System.Reflection.AssemblyProductAttribute("VerificareCGXML")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VerificareCGXML")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

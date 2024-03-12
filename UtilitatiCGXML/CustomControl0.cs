@@ -416,7 +416,7 @@ namespace UtilitatiCGXML
             {
                 raportname = string.Concat("Raport ", fileName);
             }
-            
+
             //Create new Excel Workbook
             HSSFWorkbook hssfworkbook = new HSSFWorkbook();
 
@@ -498,44 +498,44 @@ namespace UtilitatiCGXML
                 if (checkBox1.Checked == true)
                 {
 
-                        foreach (CGXML.LandRow lr in fisier.Land)
+                    foreach (CGXML.LandRow lr in fisier.Land)
+                    {
+                        cadgenno = lr.CADGENNO;
+                        sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? "S" + lr.CADSECTOR : string.Empty;
+                        ie = lr.E2IDENTIFIER;
+                        measarea = lr.MEASUREDAREA.ToString();
+                        if (lr.PARCELLEGALAREA == 9898989)
                         {
-                            cadgenno = lr.CADGENNO;
-                            sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? "S" + lr.CADSECTOR : string.Empty;                            
-                            ie = lr.E2IDENTIFIER;
-                            measarea = lr.MEASUREDAREA.ToString();
-                            if (lr.PARCELLEGALAREA == 9898989)
-                            {
                             parcellegalarea = "Necompletat";
-                            }
-                            else
-                            {
-                                parcellegalarea = lr.PARCELLEGALAREA.ToString();
-                            }
-                            dif = (lr.PARCELLEGALAREA - lr.MEASUREDAREA).ToString();
-                            note = lr.NOTES;
-                            enclosed = lr.ENCLOSED ? "DA" : "NU";
-                            foreach (CGXML.PersonRow pp in fisier.Person)
-                            {
-                                string fullName = string.Concat(pp.LASTNAME, " ", pp.FIRSTNAME);
-                                proprietar = fullName;
-                                pnotes = pp.NOTES;
-                            }
-                            foreach (CGXML.ParcelRow pr in fisier.Parcel)
-                            {
-                                nrtopo = pr.TOPONO.ToString();
-                                titleno = pr.TITLENO.ToString();
-                                landplotno = pr.LANDPLOTNO;
-                                parcelno = pr.PARCELNO;
-                                parcelarea = pr.MEASUREDAREA.ToString();
-                                cat = pr.USECATEGORY;
-                                intra = pr.INTRAVILAN ? "Intravilan" : "Extravilan";
-                                notes = pr.NOTES;
-                                nrcad = pr.PAPERCADNO;
-                                nrcf = pr.PAPERLBNO;
-                                nrtopo = pr.TOPONO;
+                        }
+                        else
+                        {
+                            parcellegalarea = lr.PARCELLEGALAREA.ToString();
+                        }
+                        dif = (lr.PARCELLEGALAREA - lr.MEASUREDAREA).ToString();
+                        note = lr.NOTES;
+                        enclosed = lr.ENCLOSED ? "DA" : "NU";
+                        foreach (CGXML.PersonRow pp in fisier.Person)
+                        {
+                            string fullName = string.Concat(pp.LASTNAME, " ", pp.FIRSTNAME);
+                            proprietar = fullName;
+                            pnotes = pp.NOTES;
+                        }
+                        foreach (CGXML.ParcelRow pr in fisier.Parcel)
+                        {
+                            nrtopo = pr.TOPONO.ToString();
+                            titleno = pr.TITLENO.ToString();
+                            landplotno = pr.LANDPLOTNO;
+                            parcelno = pr.PARCELNO;
+                            parcelarea = pr.MEASUREDAREA.ToString();
+                            cat = pr.USECATEGORY;
+                            intra = pr.INTRAVILAN ? "Intravilan" : "Extravilan";
+                            notes = pr.NOTES;
+                            nrcad = pr.PAPERCADNO;
+                            nrcf = pr.PAPERLBNO;
+                            nrtopo = pr.TOPONO;
                             if (RandomListz.Any(fo.FullName.Contains))
-                                {
+                            {
                                 var row = sheet.CreateRow(rowIndex);
                                 row.CreateCell(0).SetCellValue(cadgenno);
                                 row.CreateCell(1).SetCellValue(sector);
@@ -559,17 +559,17 @@ namespace UtilitatiCGXML
                                 row.CreateCell(19).SetCellValue(pnotes);
 
                                 rowIndex++;
-                                }
                             }
                         }
-                        
+                    }
+
                 }
                 else
                 {
                     foreach (CGXML.LandRow lr in fisier.Land)
                     {
                         cadgenno = lr.CADGENNO;
-                        sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? "S" + lr.CADSECTOR : string.Empty;                        
+                        sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? "S" + lr.CADSECTOR : string.Empty;
                         ie = lr.E2IDENTIFIER;
                         measarea = lr.MEASUREDAREA.ToString();
                         if (lr.PARCELLEGALAREA == 9898989)
@@ -589,7 +589,7 @@ namespace UtilitatiCGXML
                         string proprietar = "";
                         string person = "";
 
-                            foreach (CGXML.PersonRow pp in fisier.Person)
+                        foreach (CGXML.PersonRow pp in fisier.Person)
                         {
                             fullName = string.Concat(pp.LASTNAME, " ", pp.FIRSTNAME);
                             person = fullName.Trim();
@@ -612,7 +612,7 @@ namespace UtilitatiCGXML
                             nrcad = pr.PAPERCADNO;
                             nrcf = pr.PAPERLBNO;
                             nrtopo = pr.TOPONO;
-                            
+
                             var row = sheet.CreateRow(rowIndex);
 
                             row.CreateCell(0).SetCellValue(cadgenno);
@@ -643,28 +643,28 @@ namespace UtilitatiCGXML
                 }
             }
             //Write the stream data of workbook to the root directory
-        DateTime now = DateTime.Now;
-        string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
-        FileStream file = new FileStream(Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls"), FileMode.Create);
-        hssfworkbook.Write(file);
-        file.Close();
-        //MessageBox
-        DoneMsgBox msg = new DoneMsgBox();
-        msg.ShowDialog();
-     
-        string filePath = Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls");
+            DateTime now = DateTime.Now;
+            string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
+            FileStream file = new FileStream(Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls"), FileMode.Create);
+            hssfworkbook.Write(file);
+            file.Close();
+            //MessageBox
+            DoneMsgBox msg = new DoneMsgBox();
+            msg.ShowDialog();
 
-        if (msg.DialogResult == DialogResult.No)
-        {
-            // Open folder
-            System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
-        }
-        else if (msg.DialogResult == DialogResult.Yes)
-        {
-            // Open file
-            System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
-        }
-        this.Cursor = Cursors.Default;
+            string filePath = Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls");
+
+            if (msg.DialogResult == DialogResult.No)
+            {
+                // Open folder
+                System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
+            }
+            else if (msg.DialogResult == DialogResult.Yes)
+            {
+                // Open file
+                System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
+            }
+            this.Cursor = Cursors.Default;
         }
 
 
@@ -723,168 +723,168 @@ namespace UtilitatiCGXML
 
             int rowIndex = 1;
 
-                string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.AllDirectories);
-                NumericComparer ns = new NumericComparer();
-                System.Array.Sort(filez, ns);
-                var files = filez.Select(x => new FileInfo(x)).ToArray();
-                for (int i = 0; i < (int)files.Length; i++)
+            string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.AllDirectories);
+            NumericComparer ns = new NumericComparer();
+            System.Array.Sort(filez, ns);
+            var files = filez.Select(x => new FileInfo(x)).ToArray();
+            for (int i = 0; i < (int)files.Length; i++)
+            {
+                FileInfo fo = files[i];
+                CGXML fisier = new CGXML();
+
+                try
                 {
-                    FileInfo fo = files[i];
-                    CGXML fisier = new CGXML();
+                    fisier.ReadXml(fo.FullName);
+                }
+                catch (Exception exception)
+                {
+                    Exception ex = exception;
+                    MessageBox.Show(string.Concat(new string[] { "Eroare ", ex.GetType().ToString(), "\n", ex.Message, fo.FullName }));
+                }
 
-                    try
+
+                //Populate Raport
+                //actions
+
+                if (checkBox1.Checked == true)
+                {
+                    foreach (CGXML.LandRow lr in fisier.Land)
                     {
-                        fisier.ReadXml(fo.FullName);
-                    }
-                    catch (Exception exception)
-                    {
-                        Exception ex = exception;
-                        MessageBox.Show(string.Concat(new string[] { "Eroare ", ex.GetType().ToString(), "\n", ex.Message, fo.FullName }));
-                    }
-
-
-                    //Populate Raport
-                    //actions
-
-                    if (checkBox1.Checked == true)
-                    {
-                            foreach (CGXML.LandRow lr in fisier.Land)
+                        cadgenno = lr.CADGENNO;
+                        sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? "S" + lr.CADSECTOR : string.Empty;
+                        ie = lr.E2IDENTIFIER;
+                        if (lr.BUILDINGLEGALAREA == 9898989)
+                        {
+                            BLA = "Necompletat";
+                        }
+                        else
+                        {
+                            BLA = lr.BUILDINGLEGALAREA.ToString();
+                        }
+                        foreach (CGXML.PersonRow pp in fisier.Person)
+                        {
+                            proprietar = string.Concat(pp.LASTNAME, " ", pp.FIRSTNAME);
+                            foreach (CGXML.BuildingRow br in fisier.Building)
                             {
-                                cadgenno = lr.CADGENNO;
-                                sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? "S" + lr.CADSECTOR : string.Empty;                                
-                                ie = lr.E2IDENTIFIER;
-                                if (lr.BUILDINGLEGALAREA == 9898989)
+                                buildingid = br.BUILDINGID.ToString();
+                                measuredarea = br.MEASUREDAREA.ToString();
+                                destinatie = br.BUILDINGDESTINATION;
+                                legalbuilding = br.ISLEGAL ? "DA" : "NU";
+                                bnotes = br.NOTES;
+                                nivel = br.LEVELSNO.ToString();
+                                if (br.LEGALAREA == 9898989)
                                 {
-                                    BLA = "Necompletat";
+                                    legalarea = "Necompletat";
                                 }
                                 else
                                 {
-                                    BLA = lr.BUILDINGLEGALAREA.ToString();
+                                    legalarea = br.LEGALAREA.ToString();
                                 }
-                                foreach (CGXML.PersonRow pp in fisier.Person)
+                                if (RandomListz.Any(fo.FullName.Contains))
                                 {
-                                    proprietar = string.Concat(pp.LASTNAME, " ", pp.FIRSTNAME);
-                                    foreach (CGXML.BuildingRow br in fisier.Building)
-                                    {
-                                        buildingid = br.BUILDINGID.ToString();
-                                        measuredarea = br.MEASUREDAREA.ToString();
-                                        destinatie = br.BUILDINGDESTINATION;
-                                        legalbuilding = br.ISLEGAL ? "DA" : "NU";
-                                        bnotes = br.NOTES;
-                                        nivel = br.LEVELSNO.ToString();
-                                        if (br.LEGALAREA == 9898989)
-                                        {
-                                            legalarea = "Necompletat";
-                                        }
-                                        else
-                                        {
-                                            legalarea = br.LEGALAREA.ToString();
-                                        }
-                                    if (RandomListz.Any(fo.FullName.Contains))
-                                    {
-                                        var row = sheet.CreateRow(rowIndex);
-
-                                        row.CreateCell(0).SetCellValue(cadgenno);
-                                        row.CreateCell(1).SetCellValue(sector);
-                                        row.CreateCell(2).SetCellValue(ie);
-                                        row.CreateCell(3).SetCellValue(buildingid);
-                                        row.CreateCell(4).SetCellValue(proprietar);
-                                        row.CreateCell(5).SetCellValue(legalbuilding);
-                                        row.CreateCell(6).SetCellValue(measuredarea);
-                                        row.CreateCell(7).SetCellValue(legalarea);
-                                        row.CreateCell(8).SetCellValue(destinatie);
-                                        row.CreateCell(9).SetCellValue(nivel);
-                                        row.CreateCell(10).SetCellValue(bnotes);
-
-                                        rowIndex++;
-                                    }
-                                    }
-                                }
-                            
-                            }
-                        
-                    }
-                    else
-                    {
-                        foreach (CGXML.LandRow lr in fisier.Land)
-                        {
-                            cadgenno = lr.CADGENNO;
-                            sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? "S" + lr.CADSECTOR : string.Empty;                            
-                            ie = lr.E2IDENTIFIER;
-                            if (lr.BUILDINGLEGALAREA == 9898989)
-                            {
-                                BLA = "Necompletat";
-                            }
-                            else
-                            {
-                                BLA = lr.BUILDINGLEGALAREA.ToString();
-                            }
-
-                            foreach (CGXML.PersonRow pp in fisier.Person)
-                            {
-                                    proprietar = string.Concat(pp.LASTNAME, " ", pp.FIRSTNAME);
-                                foreach (CGXML.BuildingRow br in fisier.Building)
-                                {
-                                    buildingid = br.BUILDINGID.ToString();
-                                    measuredarea = br.MEASUREDAREA.ToString();
-                                    destinatie = br.BUILDINGDESTINATION;
-                                    legalbuilding = br.ISLEGAL ? "DA" : "NU";
-                                    bnotes = br.NOTES;
-                                    nivel = br.LEVELSNO.ToString();
-                                    if (br.LEGALAREA == 9898989)
-                                    {
-                                        legalarea = "Necompletat";
-                                    }
-                                    else
-                                    {
-                                        legalarea = br.LEGALAREA.ToString();
-                                    }
-
                                     var row = sheet.CreateRow(rowIndex);
 
-                                        row.CreateCell(0).SetCellValue(cadgenno);
-                                        row.CreateCell(1).SetCellValue(sector);
-                                        row.CreateCell(2).SetCellValue(ie);
-                                        row.CreateCell(3).SetCellValue(buildingid);
-                                        row.CreateCell(4).SetCellValue(proprietar);
-                                        row.CreateCell(5).SetCellValue(legalbuilding);
-                                        row.CreateCell(6).SetCellValue(measuredarea);
-                                        row.CreateCell(7).SetCellValue(legalarea);
-                                        row.CreateCell(8).SetCellValue(destinatie);
-                                        row.CreateCell(9).SetCellValue(nivel);
-                                        row.CreateCell(10).SetCellValue(bnotes);
+                                    row.CreateCell(0).SetCellValue(cadgenno);
+                                    row.CreateCell(1).SetCellValue(sector);
+                                    row.CreateCell(2).SetCellValue(ie);
+                                    row.CreateCell(3).SetCellValue(buildingid);
+                                    row.CreateCell(4).SetCellValue(proprietar);
+                                    row.CreateCell(5).SetCellValue(legalbuilding);
+                                    row.CreateCell(6).SetCellValue(measuredarea);
+                                    row.CreateCell(7).SetCellValue(legalarea);
+                                    row.CreateCell(8).SetCellValue(destinatie);
+                                    row.CreateCell(9).SetCellValue(nivel);
+                                    row.CreateCell(10).SetCellValue(bnotes);
 
                                     rowIndex++;
-
                                 }
+                            }
+                        }
+
+                    }
+
+                }
+                else
+                {
+                    foreach (CGXML.LandRow lr in fisier.Land)
+                    {
+                        cadgenno = lr.CADGENNO;
+                        sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? "S" + lr.CADSECTOR : string.Empty;
+                        ie = lr.E2IDENTIFIER;
+                        if (lr.BUILDINGLEGALAREA == 9898989)
+                        {
+                            BLA = "Necompletat";
+                        }
+                        else
+                        {
+                            BLA = lr.BUILDINGLEGALAREA.ToString();
+                        }
+
+                        foreach (CGXML.PersonRow pp in fisier.Person)
+                        {
+                            proprietar = string.Concat(pp.LASTNAME, " ", pp.FIRSTNAME);
+                            foreach (CGXML.BuildingRow br in fisier.Building)
+                            {
+                                buildingid = br.BUILDINGID.ToString();
+                                measuredarea = br.MEASUREDAREA.ToString();
+                                destinatie = br.BUILDINGDESTINATION;
+                                legalbuilding = br.ISLEGAL ? "DA" : "NU";
+                                bnotes = br.NOTES;
+                                nivel = br.LEVELSNO.ToString();
+                                if (br.LEGALAREA == 9898989)
+                                {
+                                    legalarea = "Necompletat";
+                                }
+                                else
+                                {
+                                    legalarea = br.LEGALAREA.ToString();
+                                }
+
+                                var row = sheet.CreateRow(rowIndex);
+
+                                row.CreateCell(0).SetCellValue(cadgenno);
+                                row.CreateCell(1).SetCellValue(sector);
+                                row.CreateCell(2).SetCellValue(ie);
+                                row.CreateCell(3).SetCellValue(buildingid);
+                                row.CreateCell(4).SetCellValue(proprietar);
+                                row.CreateCell(5).SetCellValue(legalbuilding);
+                                row.CreateCell(6).SetCellValue(measuredarea);
+                                row.CreateCell(7).SetCellValue(legalarea);
+                                row.CreateCell(8).SetCellValue(destinatie);
+                                row.CreateCell(9).SetCellValue(nivel);
+                                row.CreateCell(10).SetCellValue(bnotes);
+
+                                rowIndex++;
+
                             }
                         }
                     }
                 }
+            }
 
-                //Write the stream data of workbook to the root directory
-        DateTime now = DateTime.Now;
-        string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
-        FileStream file = new FileStream(Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls"), FileMode.Create);
-        hssfworkbook.Write(file);
-        file.Close();
-        //MessageBox
-        DoneMsgBox msg = new DoneMsgBox();
-        msg.ShowDialog();
+            //Write the stream data of workbook to the root directory
+            DateTime now = DateTime.Now;
+            string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
+            FileStream file = new FileStream(Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls"), FileMode.Create);
+            hssfworkbook.Write(file);
+            file.Close();
+            //MessageBox
+            DoneMsgBox msg = new DoneMsgBox();
+            msg.ShowDialog();
 
-        string filePath = Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls");
+            string filePath = Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls");
 
-        if (msg.DialogResult == DialogResult.No)
-        {
-            // Open folder
-            System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
-        }
-        else if (msg.DialogResult == DialogResult.Yes)
-        {
-            // Open file
-            System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
-        }
-        this.Cursor = Cursors.Default;
+            if (msg.DialogResult == DialogResult.No)
+            {
+                // Open folder
+                System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
+            }
+            else if (msg.DialogResult == DialogResult.Yes)
+            {
+                // Open file
+                System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
+            }
+            this.Cursor = Cursors.Default;
         }
 
         private void raportSarciniBtn_Click(object sender, EventArgs e)
@@ -924,75 +924,75 @@ namespace UtilitatiCGXML
 
             int rowIndex = 1;
 
-                string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.AllDirectories);
-                NumericComparer ns = new NumericComparer();
-                System.Array.Sort(filez, ns);
-                var files = filez.Select(x => new FileInfo(x)).ToArray();
-                for (int i = 0; i < (int)files.Length; i++)
+            string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.AllDirectories);
+            NumericComparer ns = new NumericComparer();
+            System.Array.Sort(filez, ns);
+            var files = filez.Select(x => new FileInfo(x)).ToArray();
+            for (int i = 0; i < (int)files.Length; i++)
+            {
+                FileInfo fo = files[i];
+                CGXML fisier = new CGXML();
+
+                try
                 {
-                    FileInfo fo = files[i];
-                    CGXML fisier = new CGXML();
-
-                    try
-                    {
-                        fisier.ReadXml(fo.FullName);
-                    }
-                    catch (Exception exception)
-                    {
-                        Exception ex = exception;
-                        MessageBox.Show(string.Concat(new string[] { "Eroare ", ex.GetType().ToString(), "\n", ex.Message, fo.FullName }));
-                    }
-
-                    //Populate Raport
-                    //actions
-                        foreach (CGXML.RegistrationRow lb in fisier.Registration)
-                        {
-                            if (lb.LBPARTNO != 3)
-                                ;
-                            else
-                            {
-                                lbpart = "DA";
-                                foreach (CGXML.LandRow lr in fisier.Land)
-                                {
-                                    cadgenno = lr.CADGENNO;
-                                    sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? "S" + lr.CADSECTOR : string.Empty;                                    
-                                    ie = lr.E2IDENTIFIER;
-
-                                    var row = sheet.CreateRow(rowIndex);
-
-                                    row.CreateCell(0).SetCellValue(cadgenno);
-                                    row.CreateCell(1).SetCellValue(sector);
-                                    row.CreateCell(2).SetCellValue(ie);
-                                    row.CreateCell(3).SetCellValue(lbpart);
-
-                                    rowIndex++;
-
-                                }
-                            }
-                        }
+                    fisier.ReadXml(fo.FullName);
                 }
-                //Write the stream data of workbook to the root directory
-        DateTime now = DateTime.Now;
-        string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
-        FileStream file = new FileStream(Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls"), FileMode.Create);
-        hssfworkbook.Write(file);
-        file.Close();
-        //MessageBox
-        DoneMsgBox msg = new DoneMsgBox();
-        msg.ShowDialog();
+                catch (Exception exception)
+                {
+                    Exception ex = exception;
+                    MessageBox.Show(string.Concat(new string[] { "Eroare ", ex.GetType().ToString(), "\n", ex.Message, fo.FullName }));
+                }
 
-        string filePath = Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls");
+                //Populate Raport
+                //actions
+                foreach (CGXML.RegistrationRow lb in fisier.Registration)
+                {
+                    if (lb.LBPARTNO != 3)
+                        ;
+                    else
+                    {
+                        lbpart = "DA";
+                        foreach (CGXML.LandRow lr in fisier.Land)
+                        {
+                            cadgenno = lr.CADGENNO;
+                            sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? "S" + lr.CADSECTOR : string.Empty;
+                            ie = lr.E2IDENTIFIER;
 
-        if (msg.DialogResult == DialogResult.No)
-        {
-            // Open folder
-            System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
-        }
-        else if (msg.DialogResult == DialogResult.Yes)
-        {
-            // Open file
-            System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
-        }
+                            var row = sheet.CreateRow(rowIndex);
+
+                            row.CreateCell(0).SetCellValue(cadgenno);
+                            row.CreateCell(1).SetCellValue(sector);
+                            row.CreateCell(2).SetCellValue(ie);
+                            row.CreateCell(3).SetCellValue(lbpart);
+
+                            rowIndex++;
+
+                        }
+                    }
+                }
+            }
+            //Write the stream data of workbook to the root directory
+            DateTime now = DateTime.Now;
+            string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
+            FileStream file = new FileStream(Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls"), FileMode.Create);
+            hssfworkbook.Write(file);
+            file.Close();
+            //MessageBox
+            DoneMsgBox msg = new DoneMsgBox();
+            msg.ShowDialog();
+
+            string filePath = Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls");
+
+            if (msg.DialogResult == DialogResult.No)
+            {
+                // Open folder
+                System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
+            }
+            else if (msg.DialogResult == DialogResult.Yes)
+            {
+                // Open file
+                System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
+            }
             this.Cursor = Cursors.Default;
         }
 
@@ -1050,148 +1050,79 @@ namespace UtilitatiCGXML
 
             int rowIndex = 1;
 
-                string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.AllDirectories);
-                NumericComparer ns = new NumericComparer();
-                System.Array.Sort(filez, ns);
-                var files = filez.Select(x => new FileInfo(x)).ToArray();
-                for (int i = 0; i < (int)files.Length; i++)
+            string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.AllDirectories);
+            NumericComparer ns = new NumericComparer();
+            System.Array.Sort(filez, ns);
+            var files = filez.Select(x => new FileInfo(x)).ToArray();
+            for (int i = 0; i < (int)files.Length; i++)
+            {
+                FileInfo fo = files[i];
+                CGXML fisier = new CGXML();
+
+                try
                 {
-                    FileInfo fo = files[i];
-                    CGXML fisier = new CGXML();
+                    fisier.ReadXml(fo.FullName);
+                }
+                catch (Exception exception)
+                {
+                    Exception ex = exception;
+                    MessageBox.Show(string.Concat(new string[] { "Eroare ", ex.GetType().ToString(), "\n", ex.Message, fo.FullName }));
+                }
 
-                    try
+
+                //Populate Raport
+                //actions
+                if (checkBox1.Checked == true)
+                {
+                    foreach (CGXML.LandRow lr in fisier.Land)
                     {
-                        fisier.ReadXml(fo.FullName);
+                        cadgenno = lr.CADGENNO;
+                        sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? "S" + lr.CADSECTOR : string.Empty;
+                        sup = lr.MEASUREDAREA.ToString();
+                        ie = lr.E2IDENTIFIER;
                     }
-                    catch (Exception exception)
+                    foreach (CGXML.RegistrationRow lb in fisier.Registration)
                     {
-                        Exception ex = exception;
-                        MessageBox.Show(string.Concat(new string[] { "Eroare ", ex.GetType().ToString(), "\n", ex.Message, fo.FullName }));
-                    }
-
-
-                    //Populate Raport
-                    //actions
-                    if (checkBox1.Checked == true)
-                    {
-                        foreach (CGXML.LandRow lr in fisier.Land)
+                        if (lb.REGISTRATIONTYPE == "NOTATION")
                         {
-                            cadgenno = lr.CADGENNO;
-                            sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? "S" + lr.CADSECTOR : string.Empty;                            
-                            sup = lr.MEASUREDAREA.ToString();
-                            ie = lr.E2IDENTIFIER;
+                            regtype = "Notare";
                         }
-                            foreach (CGXML.RegistrationRow lb in fisier.Registration)
-                            {
-                                if (lb.REGISTRATIONTYPE == "NOTATION")
-                                {
-                                    regtype = "Notare";
-                                }
-                                if (lb.REGISTRATIONTYPE == "POSESION_REGISTATION")
-                                {
-                                    regtype = "Inscrierea posesiei";
-                                }
-                                if (lb.REGISTRATIONTYPE == "PROVISIONALENTRY")
-                                {
-                                    regtype = "Inscrierea provizorie";
-                                }
-                                if (lb.REGISTRATIONTYPE == "INTAB")
-                                {
-                                    regtype = "Intabulare";
-                                }
-                            string regnotes = lb.COMMENTS;
-
-                                foreach (CGXML.DeedRow lm in fisier.Deed)
-                                {
-                                    string deed = lm.DEEDNUMBER;
-                                    string deeddate = lm.DEEDDATE.ToString();
-                                    string deednote = lm.NOTES;
-                                    if(lm.DEEDTYPE == "ACT_NOTARIAL")
-                                    {
-                                    deedtype = "Act Notarial";
-                                    }
-                                    if (lm.DEEDTYPE == "ADMINISTRATIVE_1")
-                                    {
-                                        deedtype = "Act Administrativ";
-                                    }
-                                    else
-                                {
-                                    deedtype = lm.DEEDTYPE;
-                                }
-                                    
-                                string deedautority = lm.AUTHORITY;
-
-                                if (RandomListz.Any(fo.FullName.Contains))
-                                {
-                                    var row = sheet.CreateRow(rowIndex);
-
-                                    row.CreateCell(0).SetCellValue(cadgenno);
-                                    row.CreateCell(1).SetCellValue(sector);
-                                    row.CreateCell(2).SetCellValue(ie);
-                                    row.CreateCell(3).SetCellValue(sup);
-                                    row.CreateCell(4).SetCellValue(regtype);
-                                    row.CreateCell(5).SetCellValue(deed);
-                                    row.CreateCell(6).SetCellValue(deeddate);
-                                    row.CreateCell(7).SetCellValue(deedtype);
-                                    row.CreateCell(8).SetCellValue(deedautority);
-                                    row.CreateCell(9).SetCellValue(regnotes);
-                                    row.CreateCell(10).SetCellValue(deednote);
-
-                                    rowIndex++;
-                                }
-                                }
-                            }
-                        
-                    }
-                    else
-                    {
-                        foreach (CGXML.LandRow lr in fisier.Land)
+                        if (lb.REGISTRATIONTYPE == "POSESION_REGISTATION")
                         {
-                            cadgenno = lr.CADGENNO;
-                            sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? "S" + lr.CADSECTOR : string.Empty;                            
-                            sup = lr.MEASUREDAREA.ToString();
-                            ie = lr.E2IDENTIFIER;
+                            regtype = "Inscrierea posesiei";
                         }
-                        foreach (CGXML.RegistrationRow lb in fisier.Registration)
+                        if (lb.REGISTRATIONTYPE == "PROVISIONALENTRY")
                         {
-                            if (lb.REGISTRATIONTYPE == "NOTATION")
-                            {
-                                regtype = "Notare";
-                            }
-                            if (lb.REGISTRATIONTYPE == "POSESION_REGISTATION")
-                            {
-                                regtype = "Inscrierea posesiei";
-                            }
-                            if (lb.REGISTRATIONTYPE == "PROVISIONALENTRY")
-                            {
-                                regtype = "Inscrierea provizorie";
-                            }
-                            if (lb.REGISTRATIONTYPE == "INTAB")
-                            {
-                                regtype = "Intabulare";
-                            }
-                            string regnotes = lb.COMMENTS;
+                            regtype = "Inscrierea provizorie";
+                        }
+                        if (lb.REGISTRATIONTYPE == "INTAB")
+                        {
+                            regtype = "Intabulare";
+                        }
+                        string regnotes = lb.COMMENTS;
 
-                            foreach (CGXML.DeedRow lm in fisier.Deed)
+                        foreach (CGXML.DeedRow lm in fisier.Deed)
+                        {
+                            string deed = lm.DEEDNUMBER;
+                            string deeddate = lm.DEEDDATE.ToString();
+                            string deednote = lm.NOTES;
+                            if (lm.DEEDTYPE == "ACT_NOTARIAL")
                             {
-                                string deed = lm.DEEDNUMBER;
-                                string deeddate = lm.DEEDDATE.ToString();
-                                string deednote = lm.NOTES;
-                                if (lm.DEEDTYPE == "ACT_NOTARIAL")
-                                {
-                                    deedtype = "Act Notarial";
-                                }
-                                if (lm.DEEDTYPE == "ADMINISTRATIVE_1")
-                                {
-                                    deedtype = "Act Administrativ";
-                                }
-                                else
-                                {
-                                    deedtype = lm.DEEDTYPE;
-                                }
+                                deedtype = "Act Notarial";
+                            }
+                            if (lm.DEEDTYPE == "ADMINISTRATIVE_1")
+                            {
+                                deedtype = "Act Administrativ";
+                            }
+                            else
+                            {
+                                deedtype = lm.DEEDTYPE;
+                            }
 
-                                string deedautority = lm.AUTHORITY;
+                            string deedautority = lm.AUTHORITY;
 
+                            if (RandomListz.Any(fo.FullName.Contains))
+                            {
                                 var row = sheet.CreateRow(rowIndex);
 
                                 row.CreateCell(0).SetCellValue(cadgenno);
@@ -1207,34 +1138,103 @@ namespace UtilitatiCGXML
                                 row.CreateCell(10).SetCellValue(deednote);
 
                                 rowIndex++;
-
                             }
                         }
                     }
+
                 }
-                //Write the stream data of workbook to the root directory
+                else
+                {
+                    foreach (CGXML.LandRow lr in fisier.Land)
+                    {
+                        cadgenno = lr.CADGENNO;
+                        sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? "S" + lr.CADSECTOR : string.Empty;
+                        sup = lr.MEASUREDAREA.ToString();
+                        ie = lr.E2IDENTIFIER;
+                    }
+                    foreach (CGXML.RegistrationRow lb in fisier.Registration)
+                    {
+                        if (lb.REGISTRATIONTYPE == "NOTATION")
+                        {
+                            regtype = "Notare";
+                        }
+                        if (lb.REGISTRATIONTYPE == "POSESION_REGISTATION")
+                        {
+                            regtype = "Inscrierea posesiei";
+                        }
+                        if (lb.REGISTRATIONTYPE == "PROVISIONALENTRY")
+                        {
+                            regtype = "Inscrierea provizorie";
+                        }
+                        if (lb.REGISTRATIONTYPE == "INTAB")
+                        {
+                            regtype = "Intabulare";
+                        }
+                        string regnotes = lb.COMMENTS;
 
-        DateTime now = DateTime.Now;
-        string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
-        FileStream file = new FileStream(Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls"), FileMode.Create);
-        hssfworkbook.Write(file);
-        file.Close();
-        //MessageBox
-        DoneMsgBox msg = new DoneMsgBox();
-        msg.ShowDialog();
+                        foreach (CGXML.DeedRow lm in fisier.Deed)
+                        {
+                            string deed = lm.DEEDNUMBER;
+                            string deeddate = lm.DEEDDATE.ToString();
+                            string deednote = lm.NOTES;
+                            if (lm.DEEDTYPE == "ACT_NOTARIAL")
+                            {
+                                deedtype = "Act Notarial";
+                            }
+                            if (lm.DEEDTYPE == "ADMINISTRATIVE_1")
+                            {
+                                deedtype = "Act Administrativ";
+                            }
+                            else
+                            {
+                                deedtype = lm.DEEDTYPE;
+                            }
 
-        string filePath = Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls");
+                            string deedautority = lm.AUTHORITY;
 
-        if (msg.DialogResult == DialogResult.No)
-        {
-            // Open folder
-            System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
-        }
-        else if (msg.DialogResult == DialogResult.Yes)
-        {
-            // Open file
-            System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
-        }
+                            var row = sheet.CreateRow(rowIndex);
+
+                            row.CreateCell(0).SetCellValue(cadgenno);
+                            row.CreateCell(1).SetCellValue(sector);
+                            row.CreateCell(2).SetCellValue(ie);
+                            row.CreateCell(3).SetCellValue(sup);
+                            row.CreateCell(4).SetCellValue(regtype);
+                            row.CreateCell(5).SetCellValue(deed);
+                            row.CreateCell(6).SetCellValue(deeddate);
+                            row.CreateCell(7).SetCellValue(deedtype);
+                            row.CreateCell(8).SetCellValue(deedautority);
+                            row.CreateCell(9).SetCellValue(regnotes);
+                            row.CreateCell(10).SetCellValue(deednote);
+
+                            rowIndex++;
+
+                        }
+                    }
+                }
+            }
+            //Write the stream data of workbook to the root directory
+
+            DateTime now = DateTime.Now;
+            string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
+            FileStream file = new FileStream(Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls"), FileMode.Create);
+            hssfworkbook.Write(file);
+            file.Close();
+            //MessageBox
+            DoneMsgBox msg = new DoneMsgBox();
+            msg.ShowDialog();
+
+            string filePath = Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls");
+
+            if (msg.DialogResult == DialogResult.No)
+            {
+                // Open folder
+                System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
+            }
+            else if (msg.DialogResult == DialogResult.Yes)
+            {
+                // Open file
+                System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
+            }
             this.Cursor = Cursors.Default;
         }
 
@@ -1297,148 +1297,154 @@ namespace UtilitatiCGXML
             dsStreetType.ReadXml(string.Concat(Application.StartupPath.ToString(), "\\ProgramData\\Dictionary.xml"));
 
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
-            
-                string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.AllDirectories);
-                NumericComparer ns = new NumericComparer();
-                System.Array.Sort(filez, ns);
-                var files = filez.Select(x => new FileInfo(x)).ToArray();
-                for (int i = 0; i < (int)files.Length; i++)
+
+            string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.AllDirectories);
+            NumericComparer ns = new NumericComparer();
+            System.Array.Sort(filez, ns);
+            var files = filez.Select(x => new FileInfo(x)).ToArray();
+            for (int i = 0; i < (int)files.Length; i++)
+            {
+                FileInfo fo = files[i];
+                CGXML fisier = new CGXML();
+
+                try
                 {
-                    FileInfo fo = files[i];
-                    CGXML fisier = new CGXML();
+                    fisier.ReadXml(fo.FullName);
+                }
+                catch (Exception exception)
+                {
+                    Exception ex = exception;
+                    MessageBox.Show(string.Concat(new string[] { "Eroare ", ex.GetType().ToString(), "\n", ex.Message, fo.FullName }));
+                }
 
-                    try
-                    {
-                        fisier.ReadXml(fo.FullName);
-                    }
-                    catch (Exception exception)
-                    {
-                        Exception ex = exception;
-                        MessageBox.Show(string.Concat(new string[] { "Eroare ", ex.GetType().ToString(), "\n", ex.Message, fo.FullName }));
-                    }
 
-                
-                    //Populate Raport
-                    //set vars
+                //Populate Raport
+                //set vars
 
-                    //actions
-                    if (checkBox1.Checked == true)
+                //actions
+                if (checkBox1.Checked == true)
+                {
+                    foreach (CGXML.LandRow lr in fisier.Land)
                     {
-                        foreach (CGXML.LandRow lr in fisier.Land)
+                        ie = lr.E2IDENTIFIER;
+                        cadgenno = lr.CADGENNO;
+                        DataTable item = fisier.Tables["ADDRESS"];
+                        int aDDRESSID = lr.ADDRESSID;
+                        DataRow[] drAddress = item.Select($"ADDRESSID={aDDRESSID}");
+                        // Initialize UAT_land to a default value or null
+                        string UAT_land = null;
+
+                        if (drAddress.Length > 0 && drAddress[0].ItemArray.Length > 1)
                         {
-                            ie = lr.E2IDENTIFIER;
-                            cadgenno = lr.CADGENNO;
-                            DataTable item = fisier.Tables["ADDRESS"];  
-                            int aDDRESSID = lr.ADDRESSID;
-                            DataRow[] drAddress = item.Select($"ADDRESSID={aDDRESSID}");
-                            // Initialize UAT_land to a default value or null
-                            string UAT_land = null;
+                            // Safely attempt to access the data
+                            var administrativeUnitId = drAddress[0][1].ToString();
 
-                            if (drAddress.Length > 0 && drAddress[0].ItemArray.Length > 1) {
-                                // Safely attempt to access the data
-                                var administrativeUnitId = drAddress[0][1].ToString();
+                            DataRow[] uatRows = dsUAT.Tables[0].Select($"ADMINISTRATIVEUNITID='{administrativeUnitId}'");
 
-                                DataRow[] uatRows = dsUAT.Tables[0].Select($"ADMINISTRATIVEUNITID='{administrativeUnitId}'");
-                                
-                                if (uatRows.Length > 0 && uatRows[0].ItemArray.Length > 2) {
-                                    UAT_land = uatRows[0][2].ToString();
-                                    UAT_land = UAT_land.Normalize(NormalizationForm.FormD);
-                                } else {
-                                    Console.WriteLine($"No rows found in dsUAT.Tables[0] for ADMINISTRATIVEUNITID='{administrativeUnitId}', or column index 2 is missing.");
-                                }
-                            } else {
-                                    Console.WriteLine($"No rows found for ADDRESSID={aDDRESSID} in 'ADDRESS' table, or the row does not contain enough data.");
-                            }
-
-                            string sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? $"S{lr.CADSECTOR}" : string.Empty;
-                            }
-                            foreach (CGXML.PersonRow pr in fisier.Person)
+                            if (uatRows.Length > 0 && uatRows[0].ItemArray.Length > 2)
                             {
-                                proprietar = string.Concat(pr.LASTNAME, " ", pr.FIRSTNAME);
-                                proprietar = proprietar.Replace("|", "");
-                                defunct = pr.DEFUNCT ? "DA" : "NU";
-                                note = pr.NOTES;
-                                cnp = pr.IDCODE != string.Empty ? pr.IDCODE : "9999999999999";
-                                int addressid = pr.ADDRESSID;
-                                DataRow[] drAddress = fisier.Tables["ADDRESS"].Select(string.Concat("ADDRESSID=", addressid.ToString()));
-                                if (!string.IsNullOrEmpty(drAddress[0][1].ToString()))
-                                {
-                                    try
-                                    {
-                                        DataRow[] drUAT = dsUAT.Tables[0].Select(string.Concat("ADMINISTRATIVEUNITID='", drAddress[0][1], "'"));
-                                        adresa = string.Concat("UAT ", drUAT[0][2]);
-                                        if (drAddress[0][3].ToString().ToLower() == "true")
-                                        {
-                                            DataRow[] drLocality = dsLocality.Tables[0].Select(string.Concat("LOCALITYID='", drAddress[0][2], "'"));
-                                            adresa = string.Concat(new object[] { adresa, ", Loc. ", drLocality[0][2], ", " });
-                                            if (fisier.Tables["ADDRESS"].Columns.Contains("DISTRICTTYPE") && !string.IsNullOrEmpty(drAddress[0][4].ToString()))
-                                            {
-                                                DataRow[] drDict = dsStreetType.Tables[0].Select(string.Concat("DICTIONARYITEMCODE='", drAddress[0]["DISTRICTTYPE"], "' AND DICTIONARYCODE='DISTRICT'"));
-                                                adresa = string.Concat(new object[] { adresa, drDict[0][3], " ", drAddress[0][5] });
-                                            }
-                                            if (fisier.Tables["ADDRESS"].Columns.Contains("STREETTYPE") && !string.IsNullOrEmpty(drAddress[0][6].ToString()))
-                                            {
-                                                DataRow[] drDict = dsStreetType.Tables[0].Select(string.Concat("DICTIONARYITEMCODE='", drAddress[0]["STREETTYPE"], "' AND DICTIONARYCODE='ST'"));
-                                                adresa = string.Concat(new object[] { adresa, ", ", drDict[0][3], " ", drAddress[0][7] });
-                                            }
-                                            if (fisier.Tables["ADDRESS"].Columns.Contains("POSTALNUMBER") && !string.IsNullOrEmpty(drAddress[0][8].ToString()))
-                                            {
-                                                adresa = string.Concat(adresa, ", Nr. ", drAddress[0][8]);
-                                            }
-                                            if (fisier.Tables["ADDRESS"].Columns.Contains("BLOCK") && !string.IsNullOrEmpty(drAddress[0][9].ToString()))
-                                            {
-                                                adresa = string.Concat(adresa, ", Bloc ", drAddress[0][9]);
-                                            }
-                                            if (fisier.Tables["ADDRESS"].Columns.Contains("ENTRY") && !string.IsNullOrEmpty(drAddress[0][10].ToString()))
-                                            {
-                                                adresa = string.Concat(adresa, ", Sc. ", drAddress[0][10]);
-                                            }
-                                            if (fisier.Tables["ADDRESS"].Columns.Contains("FLOOR") && !string.IsNullOrEmpty(drAddress[0][11].ToString()))
-                                            {
-                                                adresa = string.Concat(adresa, ", Et. ", drAddress[0][11]);
-                                            }
-                                            if (fisier.Tables["ADDRESS"].Columns.Contains("APNO") && !string.IsNullOrEmpty(drAddress[0][12].ToString()))
-                                            {
-                                                adresa = string.Concat(adresa, ", Ap. ", drAddress[0][12]);
-                                            }
-                                            if (fisier.Tables["ADDRESS"].Columns.Contains("ZIPCODE") && !string.IsNullOrEmpty(drAddress[0][13].ToString()))
-                                            {
-                                                adresa = string.Concat(adresa, ", Cod postal ", drAddress[0][13]);
-                                            }
-                                        }
-                                    }
-                                    catch (Exception)
-                                    {
-                                        MessageBox.Show(string.Concat(cadgenno, " cu probleme"));
-                                    }
-                                }
-                                else
-                                {
-                                    adresa = "Nespecificata";
-                                }
-                                if (RandomListz.Any(fo.FullName.Contains))
-                                {
-                                    var row = sheet.CreateRow(rowIndex);
+                                UAT_land = uatRows[0][2].ToString();
+                                UAT_land = UAT_land.Normalize(NormalizationForm.FormD);
+                            }
+                            else
+                            {
+                                Console.WriteLine($"No rows found in dsUAT.Tables[0] for ADMINISTRATIVEUNITID='{administrativeUnitId}', or column index 2 is missing.");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine($"No rows found for ADDRESSID={aDDRESSID} in 'ADDRESS' table, or the row does not contain enough data.");
+                        }
 
-                                    row.CreateCell(0).SetCellValue(cadgenno);
-                                    row.CreateCell(1).SetCellValue(sector);
-                                    row.CreateCell(2).SetCellValue(ie);
-                                    row.CreateCell(3).SetCellValue(proprietar);
-                                    row.CreateCell(4).SetCellValue(cnp);
-                                    row.CreateCell(5).SetCellValue(defunct);
-                                    row.CreateCell(6).SetCellValue(adresa);
-                                    row.CreateCell(7).SetCellValue(note);
-
-                                    rowIndex++;
+                        string sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? $"S{lr.CADSECTOR}" : string.Empty;
+                    }
+                    foreach (CGXML.PersonRow pr in fisier.Person)
+                    {
+                        proprietar = string.Concat(pr.LASTNAME, " ", pr.FIRSTNAME);
+                        proprietar = proprietar.Replace("|", "");
+                        defunct = pr.DEFUNCT ? "DA" : "NU";
+                        note = pr.NOTES;
+                        cnp = pr.IDCODE != string.Empty ? pr.IDCODE : "9999999999999";
+                        int addressid = pr.ADDRESSID;
+                        DataRow[] drAddress = fisier.Tables["ADDRESS"].Select(string.Concat("ADDRESSID=", addressid.ToString()));
+                        if (!string.IsNullOrEmpty(drAddress[0][1].ToString()))
+                        {
+                            try
+                            {
+                                DataRow[] drUAT = dsUAT.Tables[0].Select(string.Concat("ADMINISTRATIVEUNITID='", drAddress[0][1], "'"));
+                                adresa = string.Concat("UAT ", drUAT[0][2]);
+                                if (drAddress[0][3].ToString().ToLower() == "true")
+                                {
+                                    DataRow[] drLocality = dsLocality.Tables[0].Select(string.Concat("LOCALITYID='", drAddress[0][2], "'"));
+                                    adresa = string.Concat(new object[] { adresa, ", Loc. ", drLocality[0][2], ", " });
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("DISTRICTTYPE") && !string.IsNullOrEmpty(drAddress[0][4].ToString()))
+                                    {
+                                        DataRow[] drDict = dsStreetType.Tables[0].Select(string.Concat("DICTIONARYITEMCODE='", drAddress[0]["DISTRICTTYPE"], "' AND DICTIONARYCODE='DISTRICT'"));
+                                        adresa = string.Concat(new object[] { adresa, drDict[0][3], " ", drAddress[0][5] });
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("STREETTYPE") && !string.IsNullOrEmpty(drAddress[0][6].ToString()))
+                                    {
+                                        DataRow[] drDict = dsStreetType.Tables[0].Select(string.Concat("DICTIONARYITEMCODE='", drAddress[0]["STREETTYPE"], "' AND DICTIONARYCODE='ST'"));
+                                        adresa = string.Concat(new object[] { adresa, ", ", drDict[0][3], " ", drAddress[0][7] });
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("POSTALNUMBER") && !string.IsNullOrEmpty(drAddress[0][8].ToString()))
+                                    {
+                                        adresa = string.Concat(adresa, ", Nr. ", drAddress[0][8]);
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("BLOCK") && !string.IsNullOrEmpty(drAddress[0][9].ToString()))
+                                    {
+                                        adresa = string.Concat(adresa, ", Bloc ", drAddress[0][9]);
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("ENTRY") && !string.IsNullOrEmpty(drAddress[0][10].ToString()))
+                                    {
+                                        adresa = string.Concat(adresa, ", Sc. ", drAddress[0][10]);
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("FLOOR") && !string.IsNullOrEmpty(drAddress[0][11].ToString()))
+                                    {
+                                        adresa = string.Concat(adresa, ", Et. ", drAddress[0][11]);
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("APNO") && !string.IsNullOrEmpty(drAddress[0][12].ToString()))
+                                    {
+                                        adresa = string.Concat(adresa, ", Ap. ", drAddress[0][12]);
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("ZIPCODE") && !string.IsNullOrEmpty(drAddress[0][13].ToString()))
+                                    {
+                                        adresa = string.Concat(adresa, ", Cod postal ", drAddress[0][13]);
+                                    }
                                 }
                             }
-                    }
-                    else
-                    {
-                        foreach (CGXML.LandRow lr in fisier.Land)
+                            catch (Exception)
+                            {
+                                MessageBox.Show(string.Concat(cadgenno, " cu probleme"));
+                            }
+                        }
+                        else
                         {
-                            cadgenno = lr.CADGENNO;
-                            ie = lr.E2IDENTIFIER;
+                            adresa = "Nespecificata";
+                        }
+                        if (RandomListz.Any(fo.FullName.Contains))
+                        {
+                            var row = sheet.CreateRow(rowIndex);
+
+                            row.CreateCell(0).SetCellValue(cadgenno);
+                            row.CreateCell(1).SetCellValue(sector);
+                            row.CreateCell(2).SetCellValue(ie);
+                            row.CreateCell(3).SetCellValue(proprietar);
+                            row.CreateCell(4).SetCellValue(cnp);
+                            row.CreateCell(5).SetCellValue(defunct);
+                            row.CreateCell(6).SetCellValue(adresa);
+                            row.CreateCell(7).SetCellValue(note);
+
+                            rowIndex++;
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (CGXML.LandRow lr in fisier.Land)
+                    {
+                        cadgenno = lr.CADGENNO;
+                        ie = lr.E2IDENTIFIER;
                         DataTable item = fisier.Tables["ADDRESS"];
                         int aDDRESSID = lr.ADDRESSID;
                         DataRow[] drAddress = item.Select($"ADDRESSID={aDDRESSID}");
@@ -1446,35 +1452,41 @@ namespace UtilitatiCGXML
                         // Initialize UAT_land to a default value or null
                         string UAT_land = null;
 
-                        if (drAddress.Length > 0 && drAddress[0].ItemArray.Length > 1) {
+                        if (drAddress.Length > 0 && drAddress[0].ItemArray.Length > 1)
+                        {
                             // Safely attempt to access the data
                             var administrativeUnitId = drAddress[0][1].ToString();
 
                             DataRow[] uatRows = dsUAT.Tables[0].Select($"ADMINISTRATIVEUNITID='{administrativeUnitId}'");
-                            
-                            if (uatRows.Length > 0 && uatRows[0].ItemArray.Length > 2) {
+
+                            if (uatRows.Length > 0 && uatRows[0].ItemArray.Length > 2)
+                            {
                                 UAT_land = uatRows[0][2].ToString();
                                 UAT_land = UAT_land.Normalize(NormalizationForm.FormD);
-                            } else {
+                            }
+                            else
+                            {
                                 Console.WriteLine($"No rows found in dsUAT.Tables[0] for ADMINISTRATIVEUNITID='{administrativeUnitId}', or column index 2 is missing.");
                             }
-                        } else {
-                                Console.WriteLine($"No rows found for ADDRESSID={aDDRESSID} in 'ADDRESS' table, or the row does not contain enough data.");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"No rows found for ADDRESSID={aDDRESSID} in 'ADDRESS' table, or the row does not contain enough data.");
                         }
 
                         string sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? $"S{lr.CADSECTOR}" : string.Empty;
-                        }
-                        foreach (CGXML.PersonRow pr in fisier.Person)
+                    }
+                    foreach (CGXML.PersonRow pr in fisier.Person)
+                    {
+                        proprietar = string.Concat(pr.LASTNAME, " ", pr.FIRSTNAME);
+                        proprietar = proprietar.Replace("|", "");
+                        defunct = pr.DEFUNCT ? "DA" : "NU";
+                        note = pr.NOTES;
+                        cnp = pr.IDCODE;
+                        int addressid = pr.ADDRESSID;
+                        DataRow[] drAddress = fisier.Tables["ADDRESS"].Select(string.Concat("ADDRESSID=", addressid.ToString()));
+                        if (drAddress.Length > 0 && drAddress[0].ItemArray.Length > 1 && !(drAddress[0][1] is DBNull))
                         {
-                            proprietar = string.Concat(pr.LASTNAME, " ", pr.FIRSTNAME);
-                            proprietar = proprietar.Replace("|", "");
-                            defunct = pr.DEFUNCT ? "DA" : "NU";
-                            note = pr.NOTES;
-                            cnp = pr.IDCODE;
-                            int addressid = pr.ADDRESSID;
-                            DataRow[] drAddress = fisier.Tables["ADDRESS"].Select(string.Concat("ADDRESSID=", addressid.ToString()));
-                            if (drAddress.Length > 0 && drAddress[0].ItemArray.Length > 1 && !(drAddress[0][1] is DBNull))
-                            {
                             if (!string.IsNullOrEmpty(drAddress[0][1].ToString()))
                             {
                                 try
@@ -1543,33 +1555,33 @@ namespace UtilitatiCGXML
 
                             rowIndex++;
                         }
-                        }
                     }
                 }
-                //Write the stream data of workbook to the root directory
+            }
+            //Write the stream data of workbook to the root directory
 
-        DateTime now = DateTime.Now;
-        string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
-        FileStream file = new FileStream(Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls"), FileMode.Create);
-        hssfworkbook.Write(file);
-        file.Close();
-        //MessageBox
-        DoneMsgBox msg = new DoneMsgBox();
-        msg.ShowDialog();
+            DateTime now = DateTime.Now;
+            string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
+            FileStream file = new FileStream(Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls"), FileMode.Create);
+            hssfworkbook.Write(file);
+            file.Close();
+            //MessageBox
+            DoneMsgBox msg = new DoneMsgBox();
+            msg.ShowDialog();
 
-        string filePath = Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls");
+            string filePath = Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls");
 
-        if (msg.DialogResult == DialogResult.No)
-        {
-            // Open folder
-            System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
-        }
-        else if (msg.DialogResult == DialogResult.Yes)
-        {
-            // Open file
-            System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
-        }
-        this.Cursor = Cursors.Default;
+            if (msg.DialogResult == DialogResult.No)
+            {
+                // Open folder
+                System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
+            }
+            else if (msg.DialogResult == DialogResult.Yes)
+            {
+                // Open file
+                System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
+            }
+            this.Cursor = Cursors.Default;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -1617,140 +1629,140 @@ namespace UtilitatiCGXML
 
             //
 
-                string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.AllDirectories);
-                NumericComparer ns = new NumericComparer();
-                System.Array.Sort(filez, ns);
-                var files = filez.Select(x => new FileInfo(x)).ToArray();
-                for (int i = 0; i < (int)files.Length; i++)
+            string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.AllDirectories);
+            NumericComparer ns = new NumericComparer();
+            System.Array.Sort(filez, ns);
+            var files = filez.Select(x => new FileInfo(x)).ToArray();
+            for (int i = 0; i < (int)files.Length; i++)
+            {
+                FileInfo fo = files[i];
+                CGXML fisier = new CGXML();
+
+                try
                 {
-                    FileInfo fo = files[i];
-                    CGXML fisier = new CGXML();
+                    fisier.ReadXml(fo.FullName);
+                }
+                catch (Exception exception)
+                {
+                    Exception ex = exception;
+                    MessageBox.Show(string.Concat(new string[] { "Eroare ", ex.GetType().ToString(), "\n", ex.Message, fo.FullName }));
+                }
 
-                    try
+
+                AllFileListz.Add(files[i].FullName);
+
+                //Populate Raport
+                //actions
+
+                foreach (CGXML.LandRow lr in fisier.Land)
+                {
+                    cadgenno = lr.CADGENNO;
+                    sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? "S" + lr.CADSECTOR : string.Empty;
+                    ie = lr.E2IDENTIFIER;
+                    bool a = TempFileListz.Any(fo.FullName.Contains);
+                    bool b = TempFileListz.Contains(fo.FullName);
+                    bool c = (TempFileListz.Where(o => string.Equals(fo.FullName, o, StringComparison.OrdinalIgnoreCase)).Any());
+
+                    foreach (CGXML.RegistrationRow lb in fisier.Registration)
                     {
-                        fisier.ReadXml(fo.FullName);
-                    }
-                    catch (Exception exception)
-                    {
-                        Exception ex = exception;
-                        MessageBox.Show(string.Concat(new string[] { "Eroare ", ex.GetType().ToString(), "\n", ex.Message, fo.FullName }));
-                    }
+                        if (lb.LBPARTNO == 3)
+                        {
+                            lbpart = "Sarcini";
 
-
-                    AllFileListz.Add(files[i].FullName);
-
-                    //Populate Raport
-                    //actions
-                    
-                    foreach (CGXML.LandRow lr in fisier.Land)
-                    {
-                        cadgenno = lr.CADGENNO;
-                        sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? "S" + lr.CADSECTOR : string.Empty;
-                        ie = lr.E2IDENTIFIER;
-                        bool a = TempFileListz.Any(fo.FullName.Contains);
-                        bool b = TempFileListz.Contains(fo.FullName);
-                        bool c = (TempFileListz.Where(o => string.Equals(fo.FullName, o, StringComparison.OrdinalIgnoreCase)).Any());
-
-                            foreach (CGXML.RegistrationRow lb in fisier.Registration)
+                            if (!TempFileListz.Any(fo.FullName.Contains))
                             {
-                                if (lb.LBPARTNO == 3)
-                                {
-                                    lbpart = "Sarcini";
-                                    
-                                if (!TempFileListz.Any(fo.FullName.Contains))
-                                {
-                                    var row = sheet.CreateRow(rowIndex);
-                                    row.CreateCell(0).SetCellValue(cadgenno);
-                                    row.CreateCell(1).SetCellValue(sector);
-                                    row.CreateCell(2).SetCellValue(ie);
-                                    row.CreateCell(3).SetCellValue(lbpart);
-                                    TempFileListz.Add(fo.FullName);
-                                    MustFileListz.Add(fo.FullName);
-                                    RandomListz.Add(fo.FullName);
-                                    rowIndex++;
+                                var row = sheet.CreateRow(rowIndex);
+                                row.CreateCell(0).SetCellValue(cadgenno);
+                                row.CreateCell(1).SetCellValue(sector);
+                                row.CreateCell(2).SetCellValue(ie);
+                                row.CreateCell(3).SetCellValue(lbpart);
+                                TempFileListz.Add(fo.FullName);
+                                MustFileListz.Add(fo.FullName);
+                                RandomListz.Add(fo.FullName);
+                                rowIndex++;
 
-                                }
                             }
                         }
                     }
-
-
                 }
-                AllFileListz.RemoveAll(item => MustFileListz.Contains(item));
-                double roundfilescount = Math.Round(AllFileListz.Count / 10.0);
-                //adauga 1 daca valoarea este mai mare de ".0"
-                //(FileListSet.Count / 10) + (FileListSet.Count % procent > 0 ? 1 : 0)
 
-                int files2random = Convert.ToInt32(roundfilescount);
-                Random = AllFileListz.OrderBy(x => r.Next()).Take(files2random);
 
-                //second part
-                //de reparat pt fiecare obiect dint random nu din filelistsets
-                //for (int k = 0; k < (int)FileListSet.Count; k++)
-                foreach (var RandomVar in Random)
+            }
+            AllFileListz.RemoveAll(item => MustFileListz.Contains(item));
+            double roundfilescount = Math.Round(AllFileListz.Count / 10.0);
+            //adauga 1 daca valoarea este mai mare de ".0"
+            //(FileListSet.Count / 10) + (FileListSet.Count % procent > 0 ? 1 : 0)
+
+            int files2random = Convert.ToInt32(roundfilescount);
+            Random = AllFileListz.OrderBy(x => r.Next()).Take(files2random);
+
+            //second part
+            //de reparat pt fiecare obiect dint random nu din filelistsets
+            //for (int k = 0; k < (int)FileListSet.Count; k++)
+            foreach (var RandomVar in Random)
+            {
+
+                CGXML fisier = new CGXML();
+
+                try
                 {
-
-                    CGXML fisier = new CGXML();
-
-                    try
-                    {
-                        fisier.ReadXml(RandomVar);
-                    }
-                    catch (Exception exception)
-                    {
-                        Exception ex = exception;
-                        MessageBox.Show(string.Concat(new string[] { "Eroare ", ex.GetType().ToString(), "\n", ex.Message, RandomVar }));
-                    }
-
-
-                    //Populate Raport
-                    //set vars
-                    foreach (CGXML.LandRow ffs in fisier.Land)
-                    {
-                        cadgenno = (ffs.CADGENNO);
-                        sector = !string.IsNullOrEmpty(ffs.CADSECTOR) ? "S" + ffs.CADSECTOR : string.Empty;
-                        ie = ffs.E2IDENTIFIER;
-                        var row = sheet.CreateRow(rowIndex);
-
-                        row.CreateCell(0).SetCellValue(cadgenno);
-                        row.CreateCell(1).SetCellValue(sector);
-                        row.CreateCell(2).SetCellValue(ie);
-                        row.CreateCell(3).SetCellValue(lbpart);
-                        RandomListz.Add(RandomVar);
-                        rowIndex++;
-                    }
+                    fisier.ReadXml(RandomVar);
                 }
-
-                //Write the stream data of workbook to the root directory
-
-                DateTime now = DateTime.Now;
-                string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
-                FileStream file = new FileStream(Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls"), FileMode.Create);
-                hssfworkbook.Write(file);
-                file.Close();
-                //MessageBox
-                DoneMsgBox msg = new DoneMsgBox();
-                msg.ShowDialog();
-
-                string filePath = Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls");
-
-                if (msg.DialogResult == DialogResult.No)
+                catch (Exception exception)
                 {
-                    // Open folder
-                    System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
-                }
-                else if (msg.DialogResult == DialogResult.Yes)
-                {
-                    // Open file
-                    System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
+                    Exception ex = exception;
+                    MessageBox.Show(string.Concat(new string[] { "Eroare ", ex.GetType().ToString(), "\n", ex.Message, RandomVar }));
                 }
 
-                
-                if (checkBox1.Visible != true)
-                { checkBox1.Visible = true; }
-                
-                TempFileListz.Clear();
-            
+
+                //Populate Raport
+                //set vars
+                foreach (CGXML.LandRow ffs in fisier.Land)
+                {
+                    cadgenno = (ffs.CADGENNO);
+                    sector = !string.IsNullOrEmpty(ffs.CADSECTOR) ? "S" + ffs.CADSECTOR : string.Empty;
+                    ie = ffs.E2IDENTIFIER;
+                    var row = sheet.CreateRow(rowIndex);
+
+                    row.CreateCell(0).SetCellValue(cadgenno);
+                    row.CreateCell(1).SetCellValue(sector);
+                    row.CreateCell(2).SetCellValue(ie);
+                    row.CreateCell(3).SetCellValue(lbpart);
+                    RandomListz.Add(RandomVar);
+                    rowIndex++;
+                }
+            }
+
+            //Write the stream data of workbook to the root directory
+
+            DateTime now = DateTime.Now;
+            string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
+            FileStream file = new FileStream(Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls"), FileMode.Create);
+            hssfworkbook.Write(file);
+            file.Close();
+            //MessageBox
+            DoneMsgBox msg = new DoneMsgBox();
+            msg.ShowDialog();
+
+            string filePath = Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls");
+
+            if (msg.DialogResult == DialogResult.No)
+            {
+                // Open folder
+                System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
+            }
+            else if (msg.DialogResult == DialogResult.Yes)
+            {
+                // Open file
+                System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
+            }
+
+
+            if (checkBox1.Visible != true)
+            { checkBox1.Visible = true; }
+
+            TempFileListz.Clear();
+
         }
 
         private void caleFisiereCgxmlBtn_Click(object sender, EventArgs e)
@@ -1766,10 +1778,27 @@ namespace UtilitatiCGXML
             DialogResult dr = CostumFolderBrowserDialog.ShowDialog(this);
             if (dr == DialogResult.OK)
             {
-                tEnabled(true);
-                CostumFolderBrowserDialogPath = CostumFolderBrowserDialog.SelectedPath;
+                string selectedPath = CostumFolderBrowserDialog.SelectedPath;
+                // Check if the folder contains any .cgxml files
+                if (!Directory.EnumerateFiles(selectedPath, "*.cgxml", SearchOption.TopDirectoryOnly).Any())
+                {
+                    // No .cgxml files found, show an error message
+                    MessageBox.Show("Nu s-au găsit fișiere .cgxml în dosarul selectat.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    // .cgxml files found, proceed with your logic
+                    tEnabled(true);
+                    CostumFolderBrowserDialogPath = selectedPath;
+                }
+            }
+            else if (dr == DialogResult.Cancel)
+            {
+                return;
             }
         }
+
 
         #endregion
 
@@ -1788,7 +1817,7 @@ namespace UtilitatiCGXML
         private void button9_Click(object sender, EventArgs e)
         {
             //browse
-            FileInfo[] files = (new DirectoryInfo(CostumFolderBrowserDialogPath)).GetFiles("*.cgxml", SearchOption.TopDirectoryOnly);       
+            FileInfo[] files = (new DirectoryInfo(CostumFolderBrowserDialogPath)).GetFiles("*.cgxml", SearchOption.TopDirectoryOnly);
             //initial vars
             DateTime now = DateTime.Now;
             string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
@@ -1802,22 +1831,22 @@ namespace UtilitatiCGXML
             {
                 nrCGXML++;
             }
-            
+
             Feature[] poop = new Feature[nrCGXML];
             //loop trough cgxml
             for (int i = 0; i < (int)files.Length; i++)
             {
-                    FileInfo fo = files[i];
-                    CGXML fisier = new CGXML();
-                    try
-                    {
-                        fisier.ReadXml(fo.FullName);
-                    }
-                    catch (Exception exception)
-                    {
-                        Exception ex = exception;
-                        MessageBox.Show(string.Concat(new string[] { "Eroare ", ex.GetType().ToString(), "\n", ex.Message, fo.FullName }));
-                    }
+                FileInfo fo = files[i];
+                CGXML fisier = new CGXML();
+                try
+                {
+                    fisier.ReadXml(fo.FullName);
+                }
+                catch (Exception exception)
+                {
+                    Exception ex = exception;
+                    MessageBox.Show(string.Concat(new string[] { "Eroare ", ex.GetType().ToString(), "\n", ex.Message, fo.FullName }));
+                }
 
                 //create geometry factory
                 IGeometryFactory geomFactory = NtsGeometryServices.Instance.CreateGeometryFactory();
@@ -1831,9 +1860,9 @@ namespace UtilitatiCGXML
                         myCoord[r] = new Coordinate(pr.X, pr.Y);
                         r++;
                     }
-                    foreach(CGXML.PersonRow pp in fisier.Person)
+                    foreach (CGXML.PersonRow pp in fisier.Person)
                     {
-                        if(pp.PERSONID == 1)
+                        if (pp.PERSONID == 1)
                         {
                             Person = string.Concat(pp.FIRSTNAME, " ", pp.LASTNAME);
                         }
@@ -1846,7 +1875,7 @@ namespace UtilitatiCGXML
                     AttributesTable t = new AttributesTable();
                     t.Add(futureFieldName, lr.CADGENNO);
                     t.Add(futureFieldAreaCG, lr.MEASUREDAREA);
-                    t.Add(futureFieldLegalCG , lr.PARCELLEGALAREA);
+                    t.Add(futureFieldLegalCG, lr.PARCELLEGALAREA);
                     t.Add(futurePerson, Person);
                     //Geometry 
                     if (myCoord[0] != myCoord.Last())
@@ -1904,7 +1933,7 @@ namespace UtilitatiCGXML
             headerRow.CreateCell(3).SetCellValue("ID");
             //(Optional) freeze the header row so it is not scrolled
             sheet.CreateFreezePane(0, 1, 0, 1);
-            
+
             //Auto Filter
 
             sheet.SetAutoFilter(new CellRangeAddress(0, 0, 0, 19));
@@ -1944,27 +1973,27 @@ namespace UtilitatiCGXML
             }
             //Write the stream data of workbook to the root directory
 
-        DateTime now = DateTime.Now;
-        string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
-        FileStream file = new FileStream(Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls"), FileMode.Create);
-        hssfworkbook.Write(file);
-        file.Close();
-        //MessageBox
-        DoneMsgBox msg = new DoneMsgBox();
-        msg.ShowDialog();
+            DateTime now = DateTime.Now;
+            string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
+            FileStream file = new FileStream(Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls"), FileMode.Create);
+            hssfworkbook.Write(file);
+            file.Close();
+            //MessageBox
+            DoneMsgBox msg = new DoneMsgBox();
+            msg.ShowDialog();
 
-        string filePath = Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls");
+            string filePath = Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}{sector}_{formattedDate}.xls");
 
-        if (msg.DialogResult == DialogResult.No)
-        {
-            // Open folder
-            System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
-        }
-        else if (msg.DialogResult == DialogResult.Yes)
-        {
-            // Open file
-            System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
-        }
+            if (msg.DialogResult == DialogResult.No)
+            {
+                // Open folder
+                System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
+            }
+            else if (msg.DialogResult == DialogResult.Yes)
+            {
+                // Open file
+                System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
+            }
         }
     }
 }
