@@ -467,7 +467,7 @@ namespace UtilitatiCGXML
             int rowIndex = 1;
 
 
-            string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.AllDirectories);
+            string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.TopDirectoryOnly);
             NumericComparer ns = new NumericComparer();
             System.Array.Sort(filez, ns);
             var files = filez.Select(x => new FileInfo(x)).ToArray();
@@ -671,6 +671,40 @@ namespace UtilitatiCGXML
         private void raportConstructiiBtn_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
+
+            bool hasBuildings = false;
+
+            string[] filezz = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.TopDirectoryOnly);
+            NumericComparer nss = new NumericComparer();
+            System.Array.Sort(filezz, nss);
+
+            foreach (string filee in filezz)
+            {
+                CGXML fisier = new CGXML();
+                try
+                {
+                    fisier.ReadXml(filee);
+                    if (fisier.Building.Count > 0)
+                    {
+                        hasBuildings = true;
+                        break; // Exit the loop as soon as we find a file with buildings
+                    }
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show($"Error reading file {filee}: {exception.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Cursor = Cursors.Default;
+                    return; // Exit the method if there's an error reading a file
+                }
+            }
+
+            if (!hasBuildings)
+            {
+                MessageBox.Show("Nu s-au găsit construcții în fișierele .cgxml selectate.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Cursor = Cursors.Default;
+                return; // Exit the method since no buildings were found
+            }
+
             string fileName = "Constructii";
             string raportname = "";
             if (checkBox1.Checked == true)
@@ -723,7 +757,7 @@ namespace UtilitatiCGXML
 
             int rowIndex = 1;
 
-            string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.AllDirectories);
+            string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.TopDirectoryOnly);
             NumericComparer ns = new NumericComparer();
             System.Array.Sort(filez, ns);
             var files = filez.Select(x => new FileInfo(x)).ToArray();
@@ -924,7 +958,7 @@ namespace UtilitatiCGXML
 
             int rowIndex = 1;
 
-            string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.AllDirectories);
+            string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.TopDirectoryOnly);
             NumericComparer ns = new NumericComparer();
             System.Array.Sort(filez, ns);
             var files = filez.Select(x => new FileInfo(x)).ToArray();
@@ -1050,7 +1084,7 @@ namespace UtilitatiCGXML
 
             int rowIndex = 1;
 
-            string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.AllDirectories);
+            string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.TopDirectoryOnly);
             NumericComparer ns = new NumericComparer();
             System.Array.Sort(filez, ns);
             var files = filez.Select(x => new FileInfo(x)).ToArray();
@@ -1298,7 +1332,7 @@ namespace UtilitatiCGXML
 
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
 
-            string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.AllDirectories);
+            string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.TopDirectoryOnly);
             NumericComparer ns = new NumericComparer();
             System.Array.Sort(filez, ns);
             var files = filez.Select(x => new FileInfo(x)).ToArray();
@@ -1629,7 +1663,7 @@ namespace UtilitatiCGXML
 
             //
 
-            string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.AllDirectories);
+            string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath, "*.cgxml", SearchOption.TopDirectoryOnly);
             NumericComparer ns = new NumericComparer();
             System.Array.Sort(filez, ns);
             var files = filez.Select(x => new FileInfo(x)).ToArray();

@@ -230,7 +230,7 @@ namespace UtilitatiCGXML
                 }
 
                 this.Cursor = Cursors.WaitCursor;
-                string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath.ToString(), "*.cgxml", SearchOption.AllDirectories);
+                string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath.ToString(), "*.cgxml", SearchOption.TopDirectoryOnly);
                 NumericComparer ns = new NumericComparer();
                 System.Array.Sort(filez, ns);
                 var files = filez.Select(x => new FileInfo(x)).ToArray();
