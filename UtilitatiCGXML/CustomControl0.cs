@@ -981,8 +981,9 @@ namespace UtilitatiCGXML
                 //actions
                 foreach (CGXML.RegistrationRow lb in fisier.Registration)
                 {
-                    if (lb.LBPARTNO != 3)
-                        ;
+                    if (lb.LBPARTNO != 3) {
+
+                    }
                     else
                     {
                         lbpart = "DA";

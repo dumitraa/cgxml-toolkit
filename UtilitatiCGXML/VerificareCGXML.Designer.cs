@@ -38,6 +38,7 @@
             this.closeWindowBtn = new System.Windows.Forms.Button();
             this.CustomControl00 = new UtilitatiCGXML.VerificareCGXML.CustomControl0();
             this.CustomControl11 = new UtilitatiCGXML.CustomControl1();
+            this.CustomHelpControl = new UtilitatiCGXML.CustomHelpControl();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,7 +121,7 @@
             this.helpTabBtn.Name = "helpTabBtn";
             this.helpTabBtn.Size = new System.Drawing.Size(105, 55);
             this.helpTabBtn.TabIndex = 11;
-            this.helpTabBtn.Text = "    Ajutor (WIP)";
+            this.helpTabBtn.Text = "     Ajutor (WIP)";
             this.helpTabBtn.UseVisualStyleBackColor = false;
             this.helpTabBtn.Click += new System.EventHandler(this.helpTabBtn_Click);
             // 
@@ -170,6 +171,13 @@
             this.CustomControl11.Name = "CustomControl11";
             this.CustomControl11.Size = new System.Drawing.Size(865, 600);
             this.CustomControl11.TabIndex = 11;
+            //
+            // CustomHelpControl
+            //
+            this.CustomHelpControl.Location = new System.Drawing.Point(0, 59);
+            this.CustomHelpControl.Name = "CustomHelpControl";
+            this.CustomHelpControl.Size = new System.Drawing.Size(865, 600);
+            this.CustomHelpControl.TabIndex = 12;
             // 
             // VerificareCGXML
             // 
@@ -180,6 +188,7 @@
             this.Controls.Add(this.CustomControl00);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.CustomControl11);
+            this.Controls.Add(this.CustomHelpControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Utilitati CGXML";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -204,6 +213,7 @@
         private System.Windows.Forms.Button closeWindowBtn;
         private CustomControl0 CustomControl00;
         private CustomControl1 CustomControl11;
+        private CustomHelpControl CustomHelpControl;
 
         private class CustomControl0 : global::UtilitatiCGXML.CustomControl0
         {

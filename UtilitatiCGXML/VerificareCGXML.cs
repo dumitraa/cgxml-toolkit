@@ -88,27 +88,26 @@ namespace UtilitatiCGXML
 
         private void helpTabBtn_Click(object sender, EventArgs e)
         {
-            // bring to front custom help control
-            // CustomControlHelp.BringToFront();
-            // CustomControl00.SendToBack();
-            // CustomControl11.SendToBack();
+            CustomHelpControl.BringToFront();
+            CustomControl00.SendToBack();
+            CustomControl11.SendToBack();
 
-            // // Set active tab style
-            // helpTabBtn.BackColor = System.Drawing.Color.FromArgb(153, 204, 255); // Lighter blue for active state
-            // helpTabBtn.ForeColor = System.Drawing.Color.Black; // You may adjust if needed
+            // Set active tab style
+            helpTabBtn.BackColor = System.Drawing.Color.FromArgb(153, 204, 255); // Lighter blue for active state
+            helpTabBtn.ForeColor = System.Drawing.Color.Black; // You may adjust if needed
 
-            // // Reset other tab to default style
-            // rapoarteCgxmlTabBtn.BackColor = System.Drawing.Color.Transparent;
-            // rapoarteCgxmlTabBtn.ForeColor = System.Drawing.Color.Black;
+            // Reset other tab to default style
+            rapoarteCgxmlTabBtn.BackColor = System.Drawing.Color.Transparent;
+            rapoarteCgxmlTabBtn.ForeColor = System.Drawing.Color.Black;
 
-            // alteleTabBtn.BackColor = System.Drawing.Color.Transparent;
-            // alteleTabBtn.ForeColor = System.Drawing.Color.Black;
+            alteleTabBtn.BackColor = System.Drawing.Color.Transparent;
+            alteleTabBtn.ForeColor = System.Drawing.Color.Black;
         }
         private void rapoarteCgxmlTabBtn_Click(object sender, EventArgs e)
         {
             CustomControl00.BringToFront();
             CustomControl11.SendToBack();
-            // CustomControlHelp.SendToBack();
+            CustomHelpControl.SendToBack();
 
             // Set active tab style
             rapoarteCgxmlTabBtn.BackColor = System.Drawing.Color.FromArgb(153, 204, 255); // Lighter blue for active state
@@ -126,7 +125,7 @@ namespace UtilitatiCGXML
         {
             CustomControl11.BringToFront();
             CustomControl00.SendToBack();
-            // CustomControlHelp.SendToBack();
+            CustomHelpControl.SendToBack();
 
             // Set active tab style
             alteleTabBtn.BackColor = System.Drawing.Color.FromArgb(153, 204, 255); // Lighter blue for active state
