@@ -121,7 +121,7 @@
             this.helpTabBtn.Name = "helpTabBtn";
             this.helpTabBtn.Size = new System.Drawing.Size(105, 55);
             this.helpTabBtn.TabIndex = 11;
-            this.helpTabBtn.Text = "     Ajutor (WIP)";
+            this.helpTabBtn.Text = "     Ajutor";
             this.helpTabBtn.UseVisualStyleBackColor = false;
             this.helpTabBtn.Click += new System.EventHandler(this.helpTabBtn_Click);
             // 

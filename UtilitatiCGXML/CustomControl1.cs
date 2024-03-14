@@ -60,31 +60,31 @@ namespace UtilitatiCGXML
         private void eVisible(bool state)
         {
             //textBox
-            textBox1.Visible = state;
-            textBox2.Visible = state;
-            textBox3.Visible = state;
-            textBox4.Visible = state;
-            textBox5.Visible = state;
-            textBox6.Visible = state;
-            textBox7.Visible = state;
-            textBox8.Visible = state;
+            fileTextBox1.Visible = state;
+            fileTextBox2.Visible = state;
+            fileTextBox3.Visible = state;
+            fileTextBox4.Visible = state;
+            fileTextBox5.Visible = state;
+            fileTextBox6.Visible = state;
+            fileTextBox7.Visible = state;
+            renameFileTextBox.Visible = state;
             filePrefix.Visible = state;
             //button
             button7.Visible = state;
-            button10.Visible = state;
-            button11.Visible = state;
-            button12.Visible = state;
-            button13.Visible = state;
-            button14.Visible = state;
-            button15.Visible = state;
-            button16.Visible = state;
-            button17.Visible = state;
-            button18.Visible = state;
-            button19.Visible = state;
-            button20.Visible = state;
-            button21.Visible = state;
+            pdfFileBtn1.Visible = state;
+            fileFolderBtn1.Visible = state;
+            folderBtn2.Visible = state;
+            pdfFileBtn2.Visible = state;
+            folderBtn3.Visible = state;
+            pdfFileBtn3.Visible = state;
+            folderBtn4.Visible = state;
+            pdfFileBtn4.Visible = state;
+            folderBtn5.Visible = state;
+            pdfFileBtn5.Visible = state;
+            folderBtn6.Visible = state;
+            pdfFileBtn6.Visible = state;
             startBtn.Visible = state;
-            button23.Visible = state;
+            folderBtn7.Visible = state;
             button24.Visible = state;
             obtainAFileBtn.Visible = state;
             obtainMultipleFilesBtn.Visible = state;
@@ -327,6 +327,10 @@ namespace UtilitatiCGXML
                                 Console.WriteLine("Error: The coordinates array is empty or has less than 3 points.");
                             }
                         }
+                    }
+                    else if (fisier.Building.Count == 0 && constrCheckbox.Checked)
+                    {
+                        MessageBox.Show("Nu s-au găsit construcții în fișierul selectat.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                     if (imobileCheckbox.Checked)
@@ -777,7 +781,7 @@ namespace UtilitatiCGXML
             }
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void pdfFileBtn1_Click(object sender, EventArgs e)
         {
             var fileContent = string.Empty;
             var filePath = string.Empty;
@@ -804,11 +808,11 @@ namespace UtilitatiCGXML
                 }
             }
             PathFolder1 = false;
-            textBox1.Text = filePath;
+            fileTextBox1.Text = filePath;
             FilePath1 = filePath;
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private void pdfFileBtn2_Click(object sender, EventArgs e)
         {
             var fileContent = string.Empty;
             var filePath = string.Empty;
@@ -835,10 +839,10 @@ namespace UtilitatiCGXML
                 }
             }
             PathFolder2 = false;
-            textBox2.Text = filePath;
+            fileTextBox2.Text = filePath;
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void pdfFileBtn3_Click(object sender, EventArgs e)
         {
             var fileContent = string.Empty;
             var filePath = string.Empty;
@@ -865,10 +869,10 @@ namespace UtilitatiCGXML
                 }
             }
             PathFolder3 = false;
-            textBox3.Text = filePath;
+            fileTextBox3.Text = filePath;
         }
 
-        private void button17_Click(object sender, EventArgs e)
+        private void pdfFileBtn4_Click(object sender, EventArgs e)
         {
             var fileContent = string.Empty;
             var filePath = string.Empty;
@@ -895,10 +899,10 @@ namespace UtilitatiCGXML
                 }
             }
             PathFolder4 = false;
-            textBox4.Text = filePath;
+            fileTextBox4.Text = filePath;
         }
 
-        private void button19_Click(object sender, EventArgs e)
+        private void pdfFileBtn5_Click(object sender, EventArgs e)
         {
             var fileContent = string.Empty;
             var filePath = string.Empty;
@@ -925,10 +929,10 @@ namespace UtilitatiCGXML
                 }
             }
             PathFolder5 = false;
-            textBox5.Text = filePath;
+            fileTextBox5.Text = filePath;
         }
 
-        private void button21_Click(object sender, EventArgs e)
+        private void pdfFileBtn6_Click(object sender, EventArgs e)
         {
             var fileContent = string.Empty;
             var filePath = string.Empty;
@@ -955,7 +959,7 @@ namespace UtilitatiCGXML
                 }
             }
             PathFolder6 = false;
-            textBox6.Text = filePath;
+            fileTextBox6.Text = filePath;
         }
 
         private void button24_Click(object sender, EventArgs e)
@@ -985,10 +989,10 @@ namespace UtilitatiCGXML
                 }
             }
             PathFolder7 = false;
-            textBox7.Text = filePath;
+            fileTextBox7.Text = filePath;
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void fileFolderBtn1_Click(object sender, EventArgs e)
         {
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
             string Titlu = "Alege Dosarul cu CGXML-uri";
@@ -998,11 +1002,11 @@ namespace UtilitatiCGXML
             if (dr == DialogResult.OK)
             {
                 PathFolder1 = true;
-                textBox1.Text = CostumFolderBrowserDialog.SelectedPath;
+                fileTextBox1.Text = CostumFolderBrowserDialog.SelectedPath;
             }
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void folderBtn2_Click(object sender, EventArgs e)
         {
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
             string Titlu = "Alege Dosarul cu CGXML-uri";
@@ -1012,11 +1016,11 @@ namespace UtilitatiCGXML
             if (dr == DialogResult.OK)
             {
                 PathFolder2 = true;
-                textBox2.Text = CostumFolderBrowserDialog.SelectedPath;
+                fileTextBox2.Text = CostumFolderBrowserDialog.SelectedPath;
             }
         }
 
-        private void button14_Click(object sender, EventArgs e)
+        private void folderBtn3_Click(object sender, EventArgs e)
         {
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
             string Titlu = "Alege Dosarul cu CGXML-uri";
@@ -1026,11 +1030,11 @@ namespace UtilitatiCGXML
             if (dr == DialogResult.OK)
             {
                 PathFolder3 = true;
-                textBox3.Text = CostumFolderBrowserDialog.SelectedPath;
+                fileTextBox3.Text = CostumFolderBrowserDialog.SelectedPath;
             }
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void folderBtn4_Click(object sender, EventArgs e)
         {
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
             string Titlu = "Alege Dosarul cu CGXML-uri";
@@ -1040,11 +1044,11 @@ namespace UtilitatiCGXML
             if (dr == DialogResult.OK)
             {
                 PathFolder4 = true;
-                textBox4.Text = CostumFolderBrowserDialog.SelectedPath;
+                fileTextBox4.Text = CostumFolderBrowserDialog.SelectedPath;
             }
         }
 
-        private void button18_Click(object sender, EventArgs e)
+        private void folderBtn5_Click(object sender, EventArgs e)
         {
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
             string Titlu = "Alege Dosarul cu CGXML-uri";
@@ -1054,11 +1058,11 @@ namespace UtilitatiCGXML
             if (dr == DialogResult.OK)
             {
                 PathFolder5 = true;
-                textBox5.Text = CostumFolderBrowserDialog.SelectedPath;
+                fileTextBox5.Text = CostumFolderBrowserDialog.SelectedPath;
             }
         }
 
-        private void button20_Click(object sender, EventArgs e)
+        private void folderBtn6_Click(object sender, EventArgs e)
         {
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
             string Titlu = "Alege Dosarul cu CGXML-uri";
@@ -1068,11 +1072,11 @@ namespace UtilitatiCGXML
             if (dr == DialogResult.OK)
             {
                 PathFolder6 = true;
-                textBox6.Text = CostumFolderBrowserDialog.SelectedPath;
+                fileTextBox6.Text = CostumFolderBrowserDialog.SelectedPath;
             }
         }
 
-        private void button23_Click(object sender, EventArgs e)
+        private void folderBtn7_Click(object sender, EventArgs e)
         {
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
             string Titlu = "Alege Dosarul cu CGXML-uri";
@@ -1082,7 +1086,7 @@ namespace UtilitatiCGXML
             if (dr == DialogResult.OK)
             {
                 PathFolder7 = true;
-                textBox7.Text = CostumFolderBrowserDialog.SelectedPath;
+                fileTextBox7.Text = CostumFolderBrowserDialog.SelectedPath;
             }
         }
 
@@ -1094,25 +1098,25 @@ namespace UtilitatiCGXML
 
                 var paths = new List<string>();
 
-                paths.Add(string.Concat("\"" + textBox1.Text + "\""));
-                paths.Add(string.Concat("\"" + textBox2.Text + "\""));
-                if (!string.IsNullOrWhiteSpace(textBox3.Text))
+                paths.Add(string.Concat("\"" + fileTextBox1.Text + "\""));
+                paths.Add(string.Concat("\"" + fileTextBox2.Text + "\""));
+                if (!string.IsNullOrWhiteSpace(fileTextBox3.Text))
                 {
-                    paths.Add(string.Concat("\"" + textBox3.Text + "\""));
+                    paths.Add(string.Concat("\"" + fileTextBox3.Text + "\""));
                 }
-                if (!string.IsNullOrWhiteSpace(textBox4.Text))
+                if (!string.IsNullOrWhiteSpace(fileTextBox4.Text))
                 {
-                    paths.Add(string.Concat("\"" + textBox4.Text + "\""));
+                    paths.Add(string.Concat("\"" + fileTextBox4.Text + "\""));
                 }
-                if (!string.IsNullOrWhiteSpace(textBox5.Text))
+                if (!string.IsNullOrWhiteSpace(fileTextBox5.Text))
                 {
-                    paths.Add(string.Concat("\"" + textBox5.Text + "\""));
+                    paths.Add(string.Concat("\"" + fileTextBox5.Text + "\""));
                 }
-                if (!string.IsNullOrWhiteSpace(textBox6.Text))
+                if (!string.IsNullOrWhiteSpace(fileTextBox6.Text))
                 {
-                    paths.Add(string.Concat("\"" + textBox6.Text + "\""));
+                    paths.Add(string.Concat("\"" + fileTextBox6.Text + "\""));
                 }
-                string output = string.Concat("\"" + textBox7.Text + "\"");
+                string output = string.Concat("\"" + fileTextBox7.Text + "\"");
 
                 var cmd = String.Join(" ", paths) + " cat output " + output;
 
@@ -1125,14 +1129,14 @@ namespace UtilitatiCGXML
 
                 p.WaitForExit();
             }
-            if (MultiplePDF == true && string.IsNullOrWhiteSpace(textBox2.Text))
+            if (MultiplePDF == true && string.IsNullOrWhiteSpace(fileTextBox2.Text))
             {
                 const string pdfkPath = "Extras\\pdftk.exe";
 
                 var paths = new List<string>();
 
-                string input = (string.Concat("\"" + textBox1.Text + "\\" + "*.pdf" + "\""));
-                string output = string.Concat("\"" + textBox7.Text + "\\" + "test.pdf" + "\"");
+                string input = (string.Concat("\"" + fileTextBox1.Text + "\\" + "*.pdf" + "\""));
+                string output = string.Concat("\"" + fileTextBox7.Text + "\\" + "test.pdf" + "\"");
 
                 var cmd = input + " cat output " + output;
 
@@ -1148,7 +1152,7 @@ namespace UtilitatiCGXML
             else
             {
                 List<string> filenames = new List<string>();
-                FileInfo[] files = (new DirectoryInfo(textBox1.Text)).GetFiles("*.pdf", SearchOption.TopDirectoryOnly);
+                FileInfo[] files = (new DirectoryInfo(fileTextBox1.Text)).GetFiles("*.pdf", SearchOption.TopDirectoryOnly);
                 for (int i = 0; i < (int)files.Length; i++)
                 {
                     filenames.Add(files[i].Name);
@@ -1160,73 +1164,73 @@ namespace UtilitatiCGXML
 
                     var paths = new List<string>();
 
-                    //paths.Add(textBox1.Text);
+                    //paths.Add(fileTextBox1.Text);
                     if (PathFolder1 == false)
                     {
-                        paths.Add(string.Concat("\"" + textBox1.Text + "\""));
+                        paths.Add(string.Concat("\"" + fileTextBox1.Text + "\""));
                     }
                     if (PathFolder1 == true)
                     {
-                        paths.Add(string.Concat("\"", textBox1.Text, "\\", fo2, "\""));
+                        paths.Add(string.Concat("\"", fileTextBox1.Text, "\\", fo2, "\""));
                     }
                     if (PathFolder2 == false)
                     {
-                        paths.Add(string.Concat("\"" + textBox2.Text + "\""));
+                        paths.Add(string.Concat("\"" + fileTextBox2.Text + "\""));
                     }
                     else
                     {
-                        paths.Add(string.Concat("\"", textBox2.Text, "\\", fo2, "\""));
+                        paths.Add(string.Concat("\"", fileTextBox2.Text, "\\", fo2, "\""));
                     }
-                    //paths.Add(@textBox3.Text);
-                    if (!string.IsNullOrWhiteSpace(textBox3.Text))
+                    //paths.Add(@fileTextBox3.Text);
+                    if (!string.IsNullOrWhiteSpace(fileTextBox3.Text))
                     {
                         if (PathFolder3 == false)
                         {
-                            paths.Add(string.Concat("\"", textBox3.Text, "\""));
+                            paths.Add(string.Concat("\"", fileTextBox3.Text, "\""));
                         }
                         else
                         {
-                            paths.Add(string.Concat("\"", textBox3.Text, "\\", fo2, "\""));
+                            paths.Add(string.Concat("\"", fileTextBox3.Text, "\\", fo2, "\""));
                         }
                     }
-                    //paths.Add(@textBox4.Text);
-                    if (!string.IsNullOrWhiteSpace(textBox4.Text))
+                    //paths.Add(@fileTextBox4.Text);
+                    if (!string.IsNullOrWhiteSpace(fileTextBox4.Text))
                     {
                         if (PathFolder4 == false)
                         {
-                            paths.Add(string.Concat("\"", textBox4.Text, "\""));
+                            paths.Add(string.Concat("\"", fileTextBox4.Text, "\""));
                         }
                         else
                         {
-                            paths.Add(string.Concat("\"", textBox4.Text, "\\", fo2, "\""));
+                            paths.Add(string.Concat("\"", fileTextBox4.Text, "\\", fo2, "\""));
                         }
                     }
-                    //paths.Add(@textBox5.Text);
-                    if (!string.IsNullOrWhiteSpace(textBox5.Text))
+                    //paths.Add(@fileTextBox5.Text);
+                    if (!string.IsNullOrWhiteSpace(fileTextBox5.Text))
                     {
                         if (PathFolder5 == false)
                         {
-                            paths.Add(string.Concat("\"", textBox5.Text, "\""));
+                            paths.Add(string.Concat("\"", fileTextBox5.Text, "\""));
                         }
                         else
                         {
-                            paths.Add(string.Concat("\"", textBox5.Text, "\\", fo2, "\""));
+                            paths.Add(string.Concat("\"", fileTextBox5.Text, "\\", fo2, "\""));
                         }
                     }
-                    if (!string.IsNullOrWhiteSpace(textBox6.Text))
+                    if (!string.IsNullOrWhiteSpace(fileTextBox6.Text))
                     {
-                        //paths.Add(@textBox6.Text);
+                        //paths.Add(@fileTextBox6.Text);
                         if (PathFolder6 == false)
                         {
-                            paths.Add(string.Concat("\"", textBox6.Text, "\""));
+                            paths.Add(string.Concat("\"", fileTextBox6.Text, "\""));
                         }
                         else
                         {
-                            paths.Add(string.Concat("\"", textBox6.Text, "\\", fo2, "\""));
+                            paths.Add(string.Concat("\"", fileTextBox6.Text, "\\", fo2, "\""));
                         }
                     }
 
-                    string output = string.Concat("\"", textBox7.Text, "\\", fo2, "\"");
+                    string output = string.Concat("\"", fileTextBox7.Text, "\\", fo2, "\"");
 
                     var cmd = String.Join(" ", paths) + " cat output " + output;
 
@@ -1249,26 +1253,26 @@ namespace UtilitatiCGXML
         private void obtainMultipleFilesBtn_Click(object sender, EventArgs e)
         {
             eVisible(false);
-            button11.Visible = true;
-            button12.Visible = true;
-            button14.Visible = true;
-            button16.Visible = true;
-            button18.Visible = true;
-            button20.Visible = true;
+            fileFolderBtn1.Visible = true;
+            folderBtn2.Visible = true;
+            folderBtn3.Visible = true;
+            folderBtn4.Visible = true;
+            folderBtn5.Visible = true;
+            folderBtn6.Visible = true;
             startBtn.Visible = true;
-            button23.Visible = true;
-            button13.Visible = true;
-            button15.Visible = true;
-            button17.Visible = true;
-            button19.Visible = true;
-            button21.Visible = true;
-            textBox1.Visible = true;
-            textBox2.Visible = true;
-            textBox3.Visible = true;
-            textBox4.Visible = true;
-            textBox5.Visible = true;
-            textBox6.Visible = true;
-            textBox7.Visible = true;
+            folderBtn7.Visible = true;
+            pdfFileBtn2.Visible = true;
+            pdfFileBtn3.Visible = true;
+            pdfFileBtn4.Visible = true;
+            pdfFileBtn5.Visible = true;
+            pdfFileBtn6.Visible = true;
+            fileTextBox1.Visible = true;
+            fileTextBox2.Visible = true;
+            fileTextBox3.Visible = true;
+            fileTextBox4.Visible = true;
+            fileTextBox5.Visible = true;
+            fileTextBox6.Visible = true;
+            fileTextBox7.Visible = true;
             intrareLabel.Visible = true;
             iesireLabel.Visible = true;
             MultiplePDF = true;
@@ -1277,21 +1281,21 @@ namespace UtilitatiCGXML
         private void obtainAFileBtn_Click(object sender, EventArgs e)
         {
             eVisible(false);
-            button10.Visible = true;
-            button13.Visible = true;
-            button15.Visible = true;
-            button17.Visible = true;
-            button19.Visible = true;
-            button21.Visible = true;
+            pdfFileBtn1.Visible = true;
+            pdfFileBtn2.Visible = true;
+            pdfFileBtn3.Visible = true;
+            pdfFileBtn4.Visible = true;
+            pdfFileBtn5.Visible = true;
+            pdfFileBtn6.Visible = true;
             startBtn.Visible = true;
-            button23.Visible = true;
-            textBox1.Visible = true;
-            textBox2.Visible = true;
-            textBox3.Visible = true;
-            textBox4.Visible = true;
-            textBox5.Visible = true;
-            textBox6.Visible = true;
-            textBox7.Visible = true;
+            folderBtn7.Visible = true;
+            fileTextBox1.Visible = true;
+            fileTextBox2.Visible = true;
+            fileTextBox3.Visible = true;
+            fileTextBox4.Visible = true;
+            fileTextBox5.Visible = true;
+            fileTextBox6.Visible = true;
+            fileTextBox7.Visible = true;
             intrareLabel.Visible = true;
             iesireLabel.Visible = true;
             renameFileCheck.Visible = true;
@@ -1300,13 +1304,13 @@ namespace UtilitatiCGXML
 
         private void renameFileCheck_Click(object sender, EventArgs e)
         {
-            if (textBox8.Visible == true)
+            if (renameFileTextBox.Visible == true)
             {
-                textBox8.Visible = false;
-                textBox8.Clear();
+                renameFileTextBox.Visible = false;
+                renameFileTextBox.Clear();
             }
             else
-            { textBox8.Visible = true; }
+            { renameFileTextBox.Visible = true; }
         }
 
         private void imobileCheckbox_Click(object sender, EventArgs e)

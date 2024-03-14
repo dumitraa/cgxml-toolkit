@@ -139,34 +139,34 @@ public class CustomGroupBox : GroupBox
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.oneFileBtn = new System.Windows.Forms.Button();
             this.multipleFileBtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.fileTextBox1 = new System.Windows.Forms.TextBox();
+            this.fileTextBox2 = new System.Windows.Forms.TextBox();
+            this.fileTextBox3 = new System.Windows.Forms.TextBox();
+            this.fileTextBox4 = new System.Windows.Forms.TextBox();
+            this.fileTextBox5 = new System.Windows.Forms.TextBox();
+            this.fileTextBox6 = new System.Windows.Forms.TextBox();
+            this.fileFolderBtn1 = new System.Windows.Forms.Button();
+            this.pdfFileBtn1 = new System.Windows.Forms.Button();
             this.backgroundImageLogo = new System.Windows.Forms.PictureBox();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
+            this.folderBtn2 = new System.Windows.Forms.Button();
+            this.pdfFileBtn2 = new System.Windows.Forms.Button();
+            this.folderBtn3 = new System.Windows.Forms.Button();
+            this.pdfFileBtn3 = new System.Windows.Forms.Button();
+            this.folderBtn4 = new System.Windows.Forms.Button();
+            this.pdfFileBtn4 = new System.Windows.Forms.Button();
+            this.folderBtn5 = new System.Windows.Forms.Button();
+            this.pdfFileBtn5 = new System.Windows.Forms.Button();
+            this.folderBtn6 = new System.Windows.Forms.Button();
+            this.pdfFileBtn6 = new System.Windows.Forms.Button();
             this.startBtn = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
+            this.folderBtn7 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.fileTextBox7 = new System.Windows.Forms.TextBox();
             this.intrareLabel = new System.Windows.Forms.Label();
             this.iesireLabel = new System.Windows.Forms.Label();
             this.obtainAFileBtn = new System.Windows.Forms.Button();
             this.obtainMultipleFilesBtn = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.renameFileTextBox = new System.Windows.Forms.TextBox();
             this.renameFileCheck = new System.Windows.Forms.CheckBox();
             this.imobileCheckbox = new System.Windows.Forms.CheckBox();
             this.constrCheckbox = new System.Windows.Forms.CheckBox();
@@ -227,7 +227,23 @@ public class CustomGroupBox : GroupBox
             // this.button5.Click += new System.EventHandler(this.button5_Click);
             // this.button5.MouseHover += new System.EventHandler(this.button5_MouseHover);
             // 
+            Button[] fileButtons = { pdfFileBtn1, pdfFileBtn2, pdfFileBtn3, pdfFileBtn4, pdfFileBtn5, pdfFileBtn6, folderBtn2, folderBtn3, folderBtn4, folderBtn5, folderBtn6, folderBtn7, fileFolderBtn1 };
+            foreach (Button btn in fileButtons)
+            {
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.BackColor = Color.Transparent;
+                btn.Size = new Size(40, 40); // Adjust the size as needed
+            }
 
+            TextBox[] textBoxes = { fileTextBox1, fileTextBox2, fileTextBox3, fileTextBox4, fileTextBox5, fileTextBox6, fileTextBox7 };
+            foreach (TextBox txt in textBoxes)
+            {
+                txt.Font = new Font("Segoe UI", 9);
+                txt.ForeColor = Color.Black;
+                txt.BackColor = Color.White; // A softer white
+                txt.BorderStyle = BorderStyle.FixedSingle; // A flat border
+            }
             //
             // cgToShpBtn and constrCheckbox groupbox
             //
@@ -449,212 +465,220 @@ public class CustomGroupBox : GroupBox
             this.multipleFileBtn.UseVisualStyleBackColor = true;
             this.multipleFileBtn.Visible = false;
             // 
-            // textBox1
+            // fileTextBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(313, 119);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(264, 20);
-            this.textBox1.TabIndex = 26;
-            this.textBox1.Visible = false;
+            this.fileTextBox1.Location = new System.Drawing.Point(413, 65);
+            this.fileTextBox1.Name = "fileTextBox1";
+            this.fileTextBox1.Size = new System.Drawing.Size(264, 20);
+            this.fileTextBox1.TabIndex = 26;
+            this.fileTextBox1.Visible = false;
             // 
-            // textBox2
+            // fileTextBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(313, 150);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(264, 20);
-            this.textBox2.TabIndex = 27;
-            this.textBox2.Visible = false;
+            this.fileTextBox2.Location = new System.Drawing.Point(413, 96);
+            this.fileTextBox2.Name = "fileTextBox2";
+            this.fileTextBox2.Size = new System.Drawing.Size(264, 20);
+            this.fileTextBox2.TabIndex = 27;
+            this.fileTextBox2.Visible = false;
             // 
-            // textBox3
+            // fileTextBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(313, 181);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(264, 20);
-            this.textBox3.TabIndex = 28;
-            this.textBox3.Visible = false;
+            this.fileTextBox3.Location = new System.Drawing.Point(413, 127);
+            this.fileTextBox3.Name = "fileTextBox3";
+            this.fileTextBox3.Size = new System.Drawing.Size(264, 20);
+            this.fileTextBox3.TabIndex = 28;
+            this.fileTextBox3.Visible = false;
             // 
-            // textBox4
+            // fileTextBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(313, 210);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(264, 20);
-            this.textBox4.TabIndex = 29;
-            this.textBox4.Visible = false;
+            this.fileTextBox4.Location = new System.Drawing.Point(413, 156);
+            this.fileTextBox4.Name = "fileTextBox4";
+            this.fileTextBox4.Size = new System.Drawing.Size(264, 20);
+            this.fileTextBox4.TabIndex = 29;
+            this.fileTextBox4.Visible = false;
             // 
-            // textBox5
+            // fileTextBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(313, 241);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(264, 20);
-            this.textBox5.TabIndex = 30;
-            this.textBox5.Visible = false;
+            this.fileTextBox5.Location = new System.Drawing.Point(413, 187);
+            this.fileTextBox5.Name = "fileTextBox5";
+            this.fileTextBox5.Size = new System.Drawing.Size(264, 20);
+            this.fileTextBox5.TabIndex = 30;
+            this.fileTextBox5.Visible = false;
             // 
-            // textBox6
+            // fileTextBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(313, 272);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(264, 20);
-            this.textBox6.TabIndex = 31;
-            this.textBox6.Visible = false;
+            this.fileTextBox6.Location = new System.Drawing.Point(413, 220);
+            this.fileTextBox6.Name = "fileTextBox6";
+            this.fileTextBox6.Size = new System.Drawing.Size(264, 20);
+            this.fileTextBox6.TabIndex = 31;
+            this.fileTextBox6.Visible = false;
             // 
-            // button11
+            // fileFolderBtn1
             // 
-            this.button11.Image = global::VerificareCGXML.Properties.Resources.FolderR_2png;
-            this.button11.Location = new System.Drawing.Point(254, 119);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(25, 25);
-            this.button11.TabIndex = 33;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Visible = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.fileFolderBtn1.Image = global::VerificareCGXML.Properties.Resources.FolderR_2png;
+            this.fileFolderBtn1.Location = new System.Drawing.Point(370, 65);
+            this.fileFolderBtn1.Name = "fileFolderBtn1";
+            this.fileFolderBtn1.Size = new System.Drawing.Size(25, 25);
+            this.fileFolderBtn1.TabIndex = 33;
+            this.fileFolderBtn1.UseVisualStyleBackColor = true;
+            this.fileFolderBtn1.Visible = false;
+            this.fileFolderBtn1.Click += new System.EventHandler(this.fileFolderBtn1_Click);
             // 
-            // button10
+            // pdfFileBtn1
             // 
-            this.button10.Image = global::VerificareCGXML.Properties.Resources.fileR2;
-            this.button10.Location = new System.Drawing.Point(224, 119);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(25, 25);
-            this.button10.TabIndex = 32;
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Visible = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.pdfFileBtn1.Image = global::VerificareCGXML.Properties.Resources.fileR2;
+            this.pdfFileBtn1.FlatAppearance.BorderSize = 0;
+            this.pdfFileBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pdfFileBtn1.BackColor = System.Drawing.Color.Transparent;
+            this.pdfFileBtn1.Location = new System.Drawing.Point(370, 65);
+            this.pdfFileBtn1.Name = "pdfFileBtn1";
+            this.pdfFileBtn1.Size = new System.Drawing.Size(25, 25);
+            this.pdfFileBtn1.TabIndex = 32;
+            this.pdfFileBtn1.UseVisualStyleBackColor = true;
+            this.pdfFileBtn1.Visible = false;
+            this.pdfFileBtn1.Click += new System.EventHandler(this.pdfFileBtn1_Click);
             // 
-            // button12
+            // folderBtn2
             // 
-            this.button12.Image = global::VerificareCGXML.Properties.Resources.FolderR_2png;
-            this.button12.Location = new System.Drawing.Point(254, 150);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(25, 25);
-            this.button12.TabIndex = 35;
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Visible = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.folderBtn2.Image = global::VerificareCGXML.Properties.Resources.FolderR_2png;
+            this.folderBtn2.Location = new System.Drawing.Point(340, 96);
+            this.folderBtn2.Name = "folderBtn2";
+            this.folderBtn2.Size = new System.Drawing.Size(25, 25);
+            this.folderBtn2.TabIndex = 35;
+            this.folderBtn2.UseVisualStyleBackColor = true;
+            this.folderBtn2.Visible = false;
+            this.folderBtn2.Click += new System.EventHandler(this.folderBtn2_Click);
             // 
-            // button13
+            // pdfFileBtn2
             // 
-            this.button13.Image = global::VerificareCGXML.Properties.Resources.fileR2;
-            this.button13.Location = new System.Drawing.Point(224, 150);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(25, 25);
-            this.button13.TabIndex = 34;
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Visible = false;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.pdfFileBtn2.Image = global::VerificareCGXML.Properties.Resources.fileR2;
+            this.pdfFileBtn2.Location = new System.Drawing.Point(370, 96);
+            this.pdfFileBtn2.Name = "pdfFileBtn2";
+            this.pdfFileBtn2.Size = new System.Drawing.Size(25, 25);
+            this.pdfFileBtn2.TabIndex = 34;
+            this.pdfFileBtn2.UseVisualStyleBackColor = true;
+            this.pdfFileBtn2.Visible = false;
+            this.pdfFileBtn2.Click += new System.EventHandler(this.pdfFileBtn2_Click);
             // 
-            // button14
+            // folderBtn3
             // 
-            this.button14.Image = global::VerificareCGXML.Properties.Resources.FolderR_2png;
-            this.button14.Location = new System.Drawing.Point(254, 181);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(25, 25);
-            this.button14.TabIndex = 37;
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Visible = false;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.folderBtn3.Image = global::VerificareCGXML.Properties.Resources.FolderR_2png;
+            this.folderBtn3.Location = new System.Drawing.Point(340, 127);
+            this.folderBtn3.Name = "folderBtn3";
+            this.folderBtn3.Size = new System.Drawing.Size(25, 25);
+            this.folderBtn3.TabIndex = 37;
+            this.folderBtn3.UseVisualStyleBackColor = true;
+            this.folderBtn3.Visible = false;
+            this.folderBtn3.Click += new System.EventHandler(this.folderBtn3_Click);
             // 
-            // button15
+            // pdfFileBtn3
             // 
-            this.button15.Image = global::VerificareCGXML.Properties.Resources.fileR2;
-            this.button15.Location = new System.Drawing.Point(224, 181);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(25, 25);
-            this.button15.TabIndex = 36;
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Visible = false;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.pdfFileBtn3.Image = global::VerificareCGXML.Properties.Resources.fileR2;
+            this.pdfFileBtn3.Location = new System.Drawing.Point(370, 127);
+            this.pdfFileBtn3.Name = "pdfFileBtn3";
+            this.pdfFileBtn3.Size = new System.Drawing.Size(25, 25);
+            this.pdfFileBtn3.TabIndex = 36;
+            this.pdfFileBtn3.UseVisualStyleBackColor = true;
+            this.pdfFileBtn3.Visible = false;
+            this.pdfFileBtn3.Click += new System.EventHandler(this.pdfFileBtn3_Click);
             // 
-            // button16
+            // folderBtn4
             // 
-            this.button16.Image = global::VerificareCGXML.Properties.Resources.FolderR_2png;
-            this.button16.Location = new System.Drawing.Point(254, 210);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(25, 25);
-            this.button16.TabIndex = 39;
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Visible = false;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.folderBtn4.Image = global::VerificareCGXML.Properties.Resources.FolderR_2png;
+            this.folderBtn4.Location = new System.Drawing.Point(340, 156);
+            this.folderBtn4.Name = "folderBtn4";
+            this.folderBtn4.Size = new System.Drawing.Size(25, 25);
+            this.folderBtn4.TabIndex = 39;
+            this.folderBtn4.UseVisualStyleBackColor = true;
+            this.folderBtn4.Visible = false;
+            this.folderBtn4.Click += new System.EventHandler(this.folderBtn4_Click);
             // 
-            // button17
+            // pdfFileBtn4
             // 
-            this.button17.Image = global::VerificareCGXML.Properties.Resources.fileR2;
-            this.button17.Location = new System.Drawing.Point(224, 210);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(25, 25);
-            this.button17.TabIndex = 38;
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Visible = false;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.pdfFileBtn4.Image = global::VerificareCGXML.Properties.Resources.fileR2;
+            this.pdfFileBtn4.Location = new System.Drawing.Point(370, 156);
+            this.pdfFileBtn4.Name = "pdfFileBtn4";
+            this.pdfFileBtn4.Size = new System.Drawing.Size(25, 25);
+            this.pdfFileBtn4.TabIndex = 38;
+            this.pdfFileBtn4.UseVisualStyleBackColor = true;
+            this.pdfFileBtn4.Visible = false;
+            this.pdfFileBtn4.Click += new System.EventHandler(this.pdfFileBtn4_Click);
             // 
-            // button18
+            // folderBtn5
             // 
-            this.button18.Image = global::VerificareCGXML.Properties.Resources.FolderR_2png;
-            this.button18.Location = new System.Drawing.Point(254, 241);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(25, 25);
-            this.button18.TabIndex = 41;
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Visible = false;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.folderBtn5.Image = global::VerificareCGXML.Properties.Resources.FolderR_2png;
+            this.folderBtn5.Location = new System.Drawing.Point(340, 187);
+            this.folderBtn5.Name = "folderBtn5";
+            this.folderBtn5.Size = new System.Drawing.Size(25, 25);
+            this.folderBtn5.TabIndex = 41;
+            this.folderBtn5.UseVisualStyleBackColor = true;
+            this.folderBtn5.Visible = false;
+            this.folderBtn5.Click += new System.EventHandler(this.folderBtn5_Click);
             // 
-            // button19
+            // pdfFileBtn5
             // 
-            this.button19.Image = global::VerificareCGXML.Properties.Resources.fileR2;
-            this.button19.Location = new System.Drawing.Point(224, 241);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(25, 25);
-            this.button19.TabIndex = 40;
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Visible = false;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
+            this.pdfFileBtn5.Image = global::VerificareCGXML.Properties.Resources.fileR2;
+            this.pdfFileBtn5.Location = new System.Drawing.Point(370, 187);
+            this.pdfFileBtn5.Name = "pdfFileBtn5";
+            this.pdfFileBtn5.Size = new System.Drawing.Size(25, 25);
+            this.pdfFileBtn5.TabIndex = 40;
+            this.pdfFileBtn5.UseVisualStyleBackColor = true;
+            this.pdfFileBtn5.Visible = false;
+            this.pdfFileBtn5.Click += new System.EventHandler(this.pdfFileBtn5_Click);
             // 
-            // button20
+            // folderBtn6
             // 
-            this.button20.Image = global::VerificareCGXML.Properties.Resources.FolderR_2png;
-            this.button20.Location = new System.Drawing.Point(254, 272);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(25, 25);
-            this.button20.TabIndex = 43;
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Visible = false;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
+            this.folderBtn6.Image = global::VerificareCGXML.Properties.Resources.FolderR_2png;
+            this.folderBtn6.Location = new System.Drawing.Point(340, 218);
+            this.folderBtn6.Name = "folderBtn6";
+            this.folderBtn6.Size = new System.Drawing.Size(25, 25);
+            this.folderBtn6.TabIndex = 43;
+            this.folderBtn6.UseVisualStyleBackColor = true;
+            this.folderBtn6.Visible = false;
+            this.folderBtn6.Click += new System.EventHandler(this.folderBtn6_Click);
             // 
-            // button21
+            // pdfFileBtn6
             // 
-            this.button21.Image = global::VerificareCGXML.Properties.Resources.fileR2;
-            this.button21.Location = new System.Drawing.Point(224, 272);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(25, 25);
-            this.button21.TabIndex = 42;
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Visible = false;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
+            this.pdfFileBtn6.Image = global::VerificareCGXML.Properties.Resources.fileR2;
+            this.pdfFileBtn6.Location = new System.Drawing.Point(370, 218);
+            this.pdfFileBtn6.Name = "pdfFileBtn6";
+            this.pdfFileBtn6.Size = new System.Drawing.Size(25, 25);
+            this.pdfFileBtn6.TabIndex = 42;
+            this.pdfFileBtn6.UseVisualStyleBackColor = true;
+            this.pdfFileBtn6.Visible = false;
+            this.pdfFileBtn6.Click += new System.EventHandler(this.pdfFileBtn6_Click);
             // 
             // startBtn
             // 
-            this.startBtn.Location = new System.Drawing.Point(599, 364);
+            this.startBtn.Location = new System.Drawing.Point(485, 380);
+            this.startBtn.FlatStyle = FlatStyle.Flat;
+            this.startBtn.FlatAppearance.BorderSize = 0;
+            this.startBtn.BackColor = Color.DodgerBlue;
+            this.startBtn.ForeColor = Color.White;
+            this.startBtn.Font = new Font("Segoe UI", 9, FontStyle.Bold);
             this.startBtn.Name = "startBtn";
-            this.startBtn.Size = new System.Drawing.Size(75, 23);
+            this.startBtn.Size = new System.Drawing.Size(90, 35);
             this.startBtn.TabIndex = 44;
             this.startBtn.Text = "Start";
             this.startBtn.UseVisualStyleBackColor = true;
             this.startBtn.Visible = false;
             this.startBtn.Click += new System.EventHandler(this.startBtn_Click);
             // 
-            // button23
+            // folderBtn7
             // 
-            this.button23.Image = global::VerificareCGXML.Properties.Resources.FolderR_2png;
-            this.button23.Location = new System.Drawing.Point(253, 339);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(25, 25);
-            this.button23.TabIndex = 46;
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Visible = false;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
+            this.folderBtn7.Image = global::VerificareCGXML.Properties.Resources.FolderR_2png;
+            this.folderBtn7.Location = new System.Drawing.Point(370, 285);
+            this.folderBtn7.Name = "folderBtn7";
+            this.folderBtn7.Size = new System.Drawing.Size(25, 25);
+            this.folderBtn7.TabIndex = 46;
+            this.folderBtn7.UseVisualStyleBackColor = true;
+            this.folderBtn7.Visible = false;
+            this.folderBtn7.Click += new System.EventHandler(this.folderBtn7_Click);
             // 
             // button24
             // 
             this.button24.Image = global::VerificareCGXML.Properties.Resources.fileR2;
-            this.button24.Location = new System.Drawing.Point(224, 339);
+            this.button24.Location = new System.Drawing.Point(284, 339);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(25, 25);
             this.button24.TabIndex = 45;
@@ -662,32 +686,34 @@ public class CustomGroupBox : GroupBox
             this.button24.Visible = false;
             this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
-            // textBox7
+            // fileTextBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(312, 339);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(264, 20);
-            this.textBox7.TabIndex = 47;
-            this.textBox7.Visible = false;
+            this.fileTextBox7.Location = new System.Drawing.Point(412, 285);
+            this.fileTextBox7.Name = "fileTextBox7";
+            this.fileTextBox7.Size = new System.Drawing.Size(264, 20);
+            this.fileTextBox7.TabIndex = 47;
+            this.fileTextBox7.Visible = false;
             // 
             // intrareLabel
             // 
             this.intrareLabel.AutoSize = true;
-            this.intrareLabel.Location = new System.Drawing.Point(301, 66);
+            this.intrareLabel.Location = new System.Drawing.Point(360, 35);
             this.intrareLabel.Name = "intrareLabel";
             this.intrareLabel.Size = new System.Drawing.Size(37, 13);
             this.intrareLabel.TabIndex = 48;
             this.intrareLabel.Text = "Intrare";
+            this.intrareLabel.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             this.intrareLabel.Visible = false;
             // 
             // iesireLabel
             // 
             this.iesireLabel.AutoSize = true;
-            this.iesireLabel.Location = new System.Drawing.Point(310, 316);
+            this.iesireLabel.Location = new System.Drawing.Point(375, 262);
             this.iesireLabel.Name = "iesireLabel";
             this.iesireLabel.Size = new System.Drawing.Size(32, 13);
             this.iesireLabel.TabIndex = 49;
             this.iesireLabel.Text = "Iesire";
+            this.iesireLabel.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             this.iesireLabel.Visible = false;
             // 
             // obtainAFileBtn
@@ -757,18 +783,20 @@ public class CustomGroupBox : GroupBox
             }
 
             // 
-            // textBox8
+            // renameFileTextBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(312, 392);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(264, 20);
-            this.textBox8.TabIndex = 52;
-            this.textBox8.Visible = false;
+            this.renameFileTextBox.Location = new System.Drawing.Point(382, 350);
+            this.renameFileTextBox.Name = "renameFileTextBox";
+            this.renameFileTextBox.Size = new System.Drawing.Size(310, 20);
+            this.renameFileTextBox.TabIndex = 52;
+            this.renameFileTextBox.Visible = false;
             // 
             // renameFileCheck
             // 
             this.renameFileCheck.AutoSize = true;
-            this.renameFileCheck.Location = new System.Drawing.Point(264, 369);
+            this.renameFileCheck.FlatStyle = FlatStyle.Flat;
+            this.renameFileCheck.Font = new Font("Segoe UI", 9, FontStyle.Regular);
+            this.renameFileCheck.Location = new Point(380, fileTextBox7.Location.Y + 40);
             this.renameFileCheck.Name = "renameFileCheck";
             this.renameFileCheck.Size = new System.Drawing.Size(159, 17);
             this.renameFileCheck.TabIndex = 53;
@@ -781,7 +809,7 @@ public class CustomGroupBox : GroupBox
             // 
             this.listBox1.AllowDrop = true;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(536, 171);
+            this.listBox1.Location = new System.Drawing.Point(596, 171);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(242, 95);
             this.listBox1.TabIndex = 54;
@@ -806,33 +834,33 @@ public class CustomGroupBox : GroupBox
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.renameFileCheck);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.renameFileTextBox);
             this.Controls.Add(this.obtainMultipleFilesBtn);
             this.Controls.Add(this.obtainAFileBtn);
             this.Controls.Add(this.iesireLabel);
             this.Controls.Add(this.intrareLabel);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.button23);
+            this.Controls.Add(this.fileTextBox7);
+            this.Controls.Add(this.folderBtn7);
             this.Controls.Add(this.button24);
             this.Controls.Add(this.startBtn);
-            this.Controls.Add(this.button20);
-            this.Controls.Add(this.button21);
-            this.Controls.Add(this.button18);
-            this.Controls.Add(this.button19);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button17);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.folderBtn6);
+            this.Controls.Add(this.pdfFileBtn6);
+            this.Controls.Add(this.folderBtn5);
+            this.Controls.Add(this.pdfFileBtn5);
+            this.Controls.Add(this.folderBtn4);
+            this.Controls.Add(this.pdfFileBtn4);
+            this.Controls.Add(this.folderBtn3);
+            this.Controls.Add(this.pdfFileBtn3);
+            this.Controls.Add(this.folderBtn2);
+            this.Controls.Add(this.pdfFileBtn2);
+            this.Controls.Add(this.fileFolderBtn1);
+            this.Controls.Add(this.pdfFileBtn1);
+            this.Controls.Add(this.fileTextBox6);
+            this.Controls.Add(this.fileTextBox5);
+            this.Controls.Add(this.fileTextBox4);
+            this.Controls.Add(this.fileTextBox3);
+            this.Controls.Add(this.fileTextBox2);
+            this.Controls.Add(this.fileTextBox1);
             this.Controls.Add(this.multipleFileBtn);
             this.Controls.Add(this.oneFileBtn);
             this.Controls.Add(this.comboBox1);
@@ -875,33 +903,33 @@ public class CustomGroupBox : GroupBox
         private System.Windows.Forms.Button oneFileBtn;
         private System.Windows.Forms.Button multipleFileBtn;
         private UserControlPDF1 userControlPDF11;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.TextBox fileTextBox1;
+        private System.Windows.Forms.TextBox fileTextBox2;
+        private System.Windows.Forms.TextBox fileTextBox3;
+        private System.Windows.Forms.TextBox fileTextBox4;
+        private System.Windows.Forms.TextBox fileTextBox5;
+        private System.Windows.Forms.TextBox fileTextBox6;
+        private System.Windows.Forms.Button pdfFileBtn1;
+        private System.Windows.Forms.Button fileFolderBtn1;
+        private System.Windows.Forms.Button folderBtn2;
+        private System.Windows.Forms.Button pdfFileBtn2;
+        private System.Windows.Forms.Button folderBtn3;
+        private System.Windows.Forms.Button pdfFileBtn3;
+        private System.Windows.Forms.Button folderBtn4;
+        private System.Windows.Forms.Button pdfFileBtn4;
+        private System.Windows.Forms.Button folderBtn5;
+        private System.Windows.Forms.Button pdfFileBtn5;
+        private System.Windows.Forms.Button folderBtn6;
+        private System.Windows.Forms.Button pdfFileBtn6;
         private System.Windows.Forms.Button startBtn;
-        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button folderBtn7;
         private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox fileTextBox7;
         private System.Windows.Forms.Label intrareLabel;
         private System.Windows.Forms.Label iesireLabel;
         private System.Windows.Forms.Button obtainAFileBtn;
         private System.Windows.Forms.Button obtainMultipleFilesBtn;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox renameFileTextBox;
         private System.Windows.Forms.CheckBox renameFileCheck;
         private System.Windows.Forms.ListBox listBox1;
     }

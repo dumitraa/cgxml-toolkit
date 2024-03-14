@@ -6,11 +6,14 @@
 *
 
 -----------------------------------------------------------------------------------------------------------------------------
-+ Add "Help" section
++ Refine "Help" section
++ Look into "Combine Pdfs"
+
 
 -----------------------------------------------------------------------------------------------------------------------------
 - Merge multiple raports (multiple sheets) into one Excel
 - Progress for cgxml to shp
+- Dialog box to open folder for cgxml to shp
 
 -----------------------------------------------------------------------------------------------------------------------------
 # Investigate differences detalii drept/comentarii/note - eterra/cgxml
