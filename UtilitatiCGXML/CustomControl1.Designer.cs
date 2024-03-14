@@ -145,7 +145,7 @@ public class CustomGroupBox : GroupBox
             this.fileTextBox4 = new System.Windows.Forms.TextBox();
             this.fileTextBox5 = new System.Windows.Forms.TextBox();
             this.fileTextBox6 = new System.Windows.Forms.TextBox();
-            this.fileFolderBtn1 = new System.Windows.Forms.Button();
+            this.folderBtn1 = new System.Windows.Forms.Button();
             this.pdfFileBtn1 = new System.Windows.Forms.Button();
             this.backgroundImageLogo = new System.Windows.Forms.PictureBox();
             this.folderBtn2 = new System.Windows.Forms.Button();
@@ -227,7 +227,7 @@ public class CustomGroupBox : GroupBox
             // this.button5.Click += new System.EventHandler(this.button5_Click);
             // this.button5.MouseHover += new System.EventHandler(this.button5_MouseHover);
             // 
-            Button[] fileButtons = { pdfFileBtn1, pdfFileBtn2, pdfFileBtn3, pdfFileBtn4, pdfFileBtn5, pdfFileBtn6, folderBtn2, folderBtn3, folderBtn4, folderBtn5, folderBtn6, folderBtn7, fileFolderBtn1 };
+            Button[] fileButtons = { pdfFileBtn1, pdfFileBtn2, pdfFileBtn3, pdfFileBtn4, pdfFileBtn5, pdfFileBtn6, folderBtn2, folderBtn3, folderBtn4, folderBtn5, folderBtn6, folderBtn7, folderBtn1 };
             foreach (Button btn in fileButtons)
             {
                 btn.FlatStyle = FlatStyle.Flat;
@@ -513,16 +513,16 @@ public class CustomGroupBox : GroupBox
             this.fileTextBox6.TabIndex = 31;
             this.fileTextBox6.Visible = false;
             // 
-            // fileFolderBtn1
+            // folderBtn1
             // 
-            this.fileFolderBtn1.Image = global::VerificareCGXML.Properties.Resources.FolderR_2png;
-            this.fileFolderBtn1.Location = new System.Drawing.Point(370, 65);
-            this.fileFolderBtn1.Name = "fileFolderBtn1";
-            this.fileFolderBtn1.Size = new System.Drawing.Size(25, 25);
-            this.fileFolderBtn1.TabIndex = 33;
-            this.fileFolderBtn1.UseVisualStyleBackColor = true;
-            this.fileFolderBtn1.Visible = false;
-            this.fileFolderBtn1.Click += new System.EventHandler(this.fileFolderBtn1_Click);
+            this.folderBtn1.Image = global::VerificareCGXML.Properties.Resources.FolderR_2png;
+            this.folderBtn1.Location = new System.Drawing.Point(370, 65);
+            this.folderBtn1.Name = "folderBtn1";
+            this.folderBtn1.Size = new System.Drawing.Size(25, 25);
+            this.folderBtn1.TabIndex = 33;
+            this.folderBtn1.UseVisualStyleBackColor = true;
+            this.folderBtn1.Visible = false;
+            this.folderBtn1.Click += new System.EventHandler(this.folderBtn1_Click);
             // 
             // pdfFileBtn1
             // 
@@ -853,7 +853,7 @@ public class CustomGroupBox : GroupBox
             this.Controls.Add(this.pdfFileBtn3);
             this.Controls.Add(this.folderBtn2);
             this.Controls.Add(this.pdfFileBtn2);
-            this.Controls.Add(this.fileFolderBtn1);
+            this.Controls.Add(this.folderBtn1);
             this.Controls.Add(this.pdfFileBtn1);
             this.Controls.Add(this.fileTextBox6);
             this.Controls.Add(this.fileTextBox5);
@@ -910,7 +910,7 @@ public class CustomGroupBox : GroupBox
         private System.Windows.Forms.TextBox fileTextBox5;
         private System.Windows.Forms.TextBox fileTextBox6;
         private System.Windows.Forms.Button pdfFileBtn1;
-        private System.Windows.Forms.Button fileFolderBtn1;
+        private System.Windows.Forms.Button folderBtn1;
         private System.Windows.Forms.Button folderBtn2;
         private System.Windows.Forms.Button pdfFileBtn2;
         private System.Windows.Forms.Button folderBtn3;

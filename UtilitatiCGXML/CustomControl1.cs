@@ -72,7 +72,7 @@ namespace UtilitatiCGXML
             //button
             button7.Visible = state;
             pdfFileBtn1.Visible = state;
-            fileFolderBtn1.Visible = state;
+            folderBtn1.Visible = state;
             folderBtn2.Visible = state;
             pdfFileBtn2.Visible = state;
             folderBtn3.Visible = state;
@@ -783,216 +783,209 @@ namespace UtilitatiCGXML
 
         private void pdfFileBtn1_Click(object sender, EventArgs e)
         {
-            var fileContent = string.Empty;
             var filePath = string.Empty;
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.InitialDirectory = "F:\\a\\";
                 openFileDialog.Filter = "fisiere pdf (*.pdf)|*.pdf|Orice fisier (*.*)|*.*";
-                openFileDialog.FilterIndex = 2;
+                openFileDialog.FilterIndex = 1;
                 openFileDialog.RestoreDirectory = true;
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    //Get the path of specified file
                     filePath = openFileDialog.FileName;
 
-                    //Read the contents of the file into a stream
-                    var fileStream = openFileDialog.OpenFile();
-
-                    using (StreamReader reader = new StreamReader(fileStream))
+                    if (Path.GetExtension(filePath).Equals(".pdf", StringComparison.OrdinalIgnoreCase))
                     {
-                        fileContent = reader.ReadToEnd();
+                        PathFolder1 = false;
+                        fileTextBox1.Text = filePath;
+                        FilePath1 = filePath;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selectați un fișier PDF.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
-            PathFolder1 = false;
-            fileTextBox1.Text = filePath;
-            FilePath1 = filePath;
         }
+
 
         private void pdfFileBtn2_Click(object sender, EventArgs e)
         {
-            var fileContent = string.Empty;
             var filePath = string.Empty;
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.InitialDirectory = "F:\\a\\";
                 openFileDialog.Filter = "fisiere pdf (*.pdf)|*.pdf|Orice fisier (*.*)|*.*";
-                openFileDialog.FilterIndex = 2;
+                openFileDialog.FilterIndex = 1;
                 openFileDialog.RestoreDirectory = true;
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    //Get the path of specified file
                     filePath = openFileDialog.FileName;
 
-                    //Read the contents of the file into a stream
-                    var fileStream = openFileDialog.OpenFile();
-
-                    using (StreamReader reader = new StreamReader(fileStream))
+                    if (Path.GetExtension(filePath).Equals(".pdf", StringComparison.OrdinalIgnoreCase))
                     {
-                        fileContent = reader.ReadToEnd();
+                        PathFolder2 = false;
+                        fileTextBox2.Text = filePath;
+                        FilePath2 = filePath;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selectați un fișier PDF.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
-            PathFolder2 = false;
-            fileTextBox2.Text = filePath;
         }
 
         private void pdfFileBtn3_Click(object sender, EventArgs e)
         {
-            var fileContent = string.Empty;
             var filePath = string.Empty;
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.InitialDirectory = "F:\\a\\";
                 openFileDialog.Filter = "fisiere pdf (*.pdf)|*.pdf|Orice fisier (*.*)|*.*";
-                openFileDialog.FilterIndex = 2;
+                openFileDialog.FilterIndex = 1;
                 openFileDialog.RestoreDirectory = true;
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    //Get the path of specified file
                     filePath = openFileDialog.FileName;
 
-                    //Read the contents of the file into a stream
-                    var fileStream = openFileDialog.OpenFile();
-
-                    using (StreamReader reader = new StreamReader(fileStream))
+                    if (Path.GetExtension(filePath).Equals(".pdf", StringComparison.OrdinalIgnoreCase))
                     {
-                        fileContent = reader.ReadToEnd();
+                        PathFolder3 = false;
+                        fileTextBox3.Text = filePath;
+                        FilePath3 = filePath;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selectați un fișier PDF.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
-            PathFolder3 = false;
-            fileTextBox3.Text = filePath;
         }
 
         private void pdfFileBtn4_Click(object sender, EventArgs e)
         {
-            var fileContent = string.Empty;
             var filePath = string.Empty;
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.InitialDirectory = "F:\\a\\";
                 openFileDialog.Filter = "fisiere pdf (*.pdf)|*.pdf|Orice fisier (*.*)|*.*";
-                openFileDialog.FilterIndex = 2;
+                openFileDialog.FilterIndex = 1;
                 openFileDialog.RestoreDirectory = true;
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    //Get the path of specified file
                     filePath = openFileDialog.FileName;
 
-                    //Read the contents of the file into a stream
-                    var fileStream = openFileDialog.OpenFile();
-
-                    using (StreamReader reader = new StreamReader(fileStream))
+                    if (Path.GetExtension(filePath).Equals(".pdf", StringComparison.OrdinalIgnoreCase))
                     {
-                        fileContent = reader.ReadToEnd();
+                        PathFolder4 = false;
+                        fileTextBox4.Text = filePath;
+                        FilePath4 = filePath;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selectați un fișier PDF.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
-            PathFolder4 = false;
-            fileTextBox4.Text = filePath;
         }
 
         private void pdfFileBtn5_Click(object sender, EventArgs e)
         {
-            var fileContent = string.Empty;
             var filePath = string.Empty;
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.InitialDirectory = "F:\\a\\";
                 openFileDialog.Filter = "fisiere pdf (*.pdf)|*.pdf|Orice fisier (*.*)|*.*";
-                openFileDialog.FilterIndex = 2;
+                openFileDialog.FilterIndex = 1;
                 openFileDialog.RestoreDirectory = true;
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    //Get the path of specified file
                     filePath = openFileDialog.FileName;
 
-                    //Read the contents of the file into a stream
-                    var fileStream = openFileDialog.OpenFile();
-
-                    using (StreamReader reader = new StreamReader(fileStream))
+                    if (Path.GetExtension(filePath).Equals(".pdf", StringComparison.OrdinalIgnoreCase))
                     {
-                        fileContent = reader.ReadToEnd();
+                        PathFolder5 = false;
+                        fileTextBox5.Text = filePath;
+                        FilePath5 = filePath;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selectați un fișier PDF.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
-            PathFolder5 = false;
-            fileTextBox5.Text = filePath;
         }
 
         private void pdfFileBtn6_Click(object sender, EventArgs e)
         {
-            var fileContent = string.Empty;
             var filePath = string.Empty;
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.InitialDirectory = "F:\\a\\";
                 openFileDialog.Filter = "fisiere pdf (*.pdf)|*.pdf|Orice fisier (*.*)|*.*";
-                openFileDialog.FilterIndex = 2;
+                openFileDialog.FilterIndex = 1;
                 openFileDialog.RestoreDirectory = true;
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    //Get the path of specified file
                     filePath = openFileDialog.FileName;
 
-                    //Read the contents of the file into a stream
-                    var fileStream = openFileDialog.OpenFile();
-
-                    using (StreamReader reader = new StreamReader(fileStream))
+                    if (Path.GetExtension(filePath).Equals(".pdf", StringComparison.OrdinalIgnoreCase))
                     {
-                        fileContent = reader.ReadToEnd();
+                        PathFolder6 = false;
+                        fileTextBox6.Text = filePath;
+                        FilePath6 = filePath;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selectați un fișier PDF.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
-            PathFolder6 = false;
-            fileTextBox6.Text = filePath;
         }
 
         private void button24_Click(object sender, EventArgs e)
         {
-            var fileContent = string.Empty;
             var filePath = string.Empty;
 
-            using (SaveFileDialog openFileDialog = new SaveFileDialog())
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.InitialDirectory = "F:\\a\\";
-                openFileDialog.Filter = "Fisier PDF (*.pdf)|*.pdf";
-                openFileDialog.FilterIndex = 2;
+                openFileDialog.Filter = "fisiere pdf (*.pdf)|*.pdf|Orice fisier (*.*)|*.*";
+                openFileDialog.FilterIndex = 1;
                 openFileDialog.RestoreDirectory = true;
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    //Get the path of specified file
                     filePath = openFileDialog.FileName;
 
-                    //Read the contents of the file into a stream
-                    var fileStream = openFileDialog.OpenFile();
-
-                    using (StreamReader reader = new StreamReader(fileStream))
+                    if (Path.GetExtension(filePath).Equals(".pdf", StringComparison.OrdinalIgnoreCase))
                     {
-                        fileContent = reader.ReadToEnd();
+                        PathFolder7 = false;
+                        fileTextBox7.Text = filePath;
+                        FilePath7 = filePath;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selectați un fișier PDF.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
-            PathFolder7 = false;
-            fileTextBox7.Text = filePath;
         }
 
-        private void fileFolderBtn1_Click(object sender, EventArgs e)
+        private void folderBtn1_Click(object sender, EventArgs e)
         {
             FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
             string Titlu = "Alege Dosarul cu CGXML-uri";
@@ -1001,10 +994,21 @@ namespace UtilitatiCGXML
             DialogResult dr = CostumFolderBrowserDialog.ShowDialog(this);
             if (dr == DialogResult.OK)
             {
-                PathFolder1 = true;
-                fileTextBox1.Text = CostumFolderBrowserDialog.SelectedPath;
+                string selectedPath = CostumFolderBrowserDialog.SelectedPath;
+                if (Directory.Exists(selectedPath))
+                {
+                    PathFolder1 = true;
+                    fileTextBox1.Text = selectedPath;
+                }
+                else
+                {
+                    MessageBox.Show("Calea selectată nu există.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
+
+
+
 
         private void folderBtn2_Click(object sender, EventArgs e)
         {
@@ -1015,8 +1019,16 @@ namespace UtilitatiCGXML
             DialogResult dr = CostumFolderBrowserDialog.ShowDialog(this);
             if (dr == DialogResult.OK)
             {
-                PathFolder2 = true;
-                fileTextBox2.Text = CostumFolderBrowserDialog.SelectedPath;
+                string selectedPath = CostumFolderBrowserDialog.SelectedPath;
+                if (Directory.Exists(selectedPath))
+                {
+                    PathFolder2 = true;
+                    fileTextBox2.Text = selectedPath;
+                }
+                else
+                {
+                    MessageBox.Show("Calea selectată nu există.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -1029,8 +1041,16 @@ namespace UtilitatiCGXML
             DialogResult dr = CostumFolderBrowserDialog.ShowDialog(this);
             if (dr == DialogResult.OK)
             {
-                PathFolder3 = true;
-                fileTextBox3.Text = CostumFolderBrowserDialog.SelectedPath;
+                string selectedPath = CostumFolderBrowserDialog.SelectedPath;
+                if (Directory.Exists(selectedPath))
+                {
+                    PathFolder3 = true;
+                    fileTextBox3.Text = selectedPath;
+                }
+                else
+                {
+                    MessageBox.Show("Calea selectată nu există.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -1043,8 +1063,16 @@ namespace UtilitatiCGXML
             DialogResult dr = CostumFolderBrowserDialog.ShowDialog(this);
             if (dr == DialogResult.OK)
             {
-                PathFolder4 = true;
-                fileTextBox4.Text = CostumFolderBrowserDialog.SelectedPath;
+                string selectedPath = CostumFolderBrowserDialog.SelectedPath;
+                if (Directory.Exists(selectedPath))
+                {
+                    PathFolder4 = true;
+                    fileTextBox4.Text = selectedPath;
+                }
+                else
+                {
+                    MessageBox.Show("Calea selectată nu există.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -1057,8 +1085,16 @@ namespace UtilitatiCGXML
             DialogResult dr = CostumFolderBrowserDialog.ShowDialog(this);
             if (dr == DialogResult.OK)
             {
-                PathFolder5 = true;
-                fileTextBox5.Text = CostumFolderBrowserDialog.SelectedPath;
+                string selectedPath = CostumFolderBrowserDialog.SelectedPath;
+                if (Directory.Exists(selectedPath))
+                {
+                    PathFolder5 = true;
+                    fileTextBox5.Text = selectedPath;
+                }
+                else
+                {
+                    MessageBox.Show("Calea selectată nu există.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -1071,8 +1107,16 @@ namespace UtilitatiCGXML
             DialogResult dr = CostumFolderBrowserDialog.ShowDialog(this);
             if (dr == DialogResult.OK)
             {
-                PathFolder6 = true;
-                fileTextBox6.Text = CostumFolderBrowserDialog.SelectedPath;
+                string selectedPath = CostumFolderBrowserDialog.SelectedPath;
+                if (Directory.Exists(selectedPath))
+                {
+                    PathFolder6 = true;
+                    fileTextBox6.Text = selectedPath;
+                }
+                else
+                {
+                    MessageBox.Show("Calea selectată nu există.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -1085,8 +1129,16 @@ namespace UtilitatiCGXML
             DialogResult dr = CostumFolderBrowserDialog.ShowDialog(this);
             if (dr == DialogResult.OK)
             {
-                PathFolder7 = true;
-                fileTextBox7.Text = CostumFolderBrowserDialog.SelectedPath;
+                string selectedPath = CostumFolderBrowserDialog.SelectedPath;
+                if (Directory.Exists(selectedPath))
+                {
+                    PathFolder7 = true;
+                    fileTextBox7.Text = selectedPath;
+                }
+                else
+                {
+                    MessageBox.Show("Calea selectată nu există.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -1253,7 +1305,7 @@ namespace UtilitatiCGXML
         private void obtainMultipleFilesBtn_Click(object sender, EventArgs e)
         {
             eVisible(false);
-            fileFolderBtn1.Visible = true;
+            folderBtn1.Visible = true;
             folderBtn2.Visible = true;
             folderBtn3.Visible = true;
             folderBtn4.Visible = true;
