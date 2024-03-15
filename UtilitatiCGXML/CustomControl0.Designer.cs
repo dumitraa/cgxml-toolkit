@@ -156,9 +156,11 @@ public class CustomGroupBox : GroupBox
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.sectorLabel6 = new System.Windows.Forms.Label();
             this.ieLabel3 = new System.Windows.Forms.Label();
+            this.destinatieConstructieLabel = new System.Windows.Forms.Label();
+            this.areGeometrieLabel = new System.Windows.Forms.Label();
             this.nrCadLabel = new System.Windows.Forms.Label();
             this.nrCfLabel = new System.Windows.Forms.Label();
-            this.nrParcelaLabel = new System.Windows.Forms.Label();
+            this.nrTarlaParcelaLabel = new System.Windows.Forms.Label();
             this.nrTarlaLabel = new System.Windows.Forms.Label();
             this.nrTitluLabel = new System.Windows.Forms.Label();
             this.diferentaSuprafeteLabel = new System.Windows.Forms.Label();
@@ -856,6 +858,34 @@ public class CustomGroupBox : GroupBox
             this.ieLabel3.AutoSize = true;
             this.ieLabel3.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
             this.ieLabel3.Text = "● IE";
+            //
+            // destinatieConstructieLabel
+            //
+            this.destinatieConstructieLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.destinatieConstructieLabel.AutoSize = true;
+            this.destinatieConstructieLabel.BackColor = System.Drawing.Color.Transparent;
+            this.destinatieConstructieLabel.ForeColor = System.Drawing.Color.Black;
+            this.destinatieConstructieLabel.Location = new System.Drawing.Point(6, 106);
+            this.destinatieConstructieLabel.Name = "destinatieConstructieLabel";
+            this.destinatieConstructieLabel.TabIndex = 56;
+            this.destinatieConstructieLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.destinatieConstructieLabel.AutoSize = true;
+            this.destinatieConstructieLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.destinatieConstructieLabel.Text = "● Destinatie Constructie";
+            //
+            // areGeometrieLabel
+            //
+            this.areGeometrieLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.areGeometrieLabel.AutoSize = true;
+            this.areGeometrieLabel.BackColor = System.Drawing.Color.Transparent;
+            this.areGeometrieLabel.ForeColor = System.Drawing.Color.Black;
+            this.areGeometrieLabel.Location = new System.Drawing.Point(486, 32);
+            this.areGeometrieLabel.Name = "areGeometrieLabel";
+            this.areGeometrieLabel.TabIndex = 51;
+            this.areGeometrieLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.areGeometrieLabel.AutoSize = true;
+            this.areGeometrieLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.areGeometrieLabel.Text = "● Are Geometrie?";
             // 
             // nrCadLabel
             // 
@@ -885,19 +915,19 @@ public class CustomGroupBox : GroupBox
             this.nrCfLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
             this.nrCfLabel.Text = "● Nr CF";
             // 
-            // nrParcelaLabel
+            // nrTarlaParcelaLabel
             // 
-            this.nrParcelaLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nrParcelaLabel.AutoSize = true;
-            this.nrParcelaLabel.BackColor = System.Drawing.Color.Transparent;
-            this.nrParcelaLabel.ForeColor = System.Drawing.Color.Black;
-            this.nrParcelaLabel.Location = new System.Drawing.Point(6, 254);
-            this.nrParcelaLabel.Name = "nrParcelaLabel";
-            this.nrParcelaLabel.TabIndex = 59;
-            this.nrParcelaLabel.TextAlign = ContentAlignment.MiddleLeft;
-            this.nrParcelaLabel.AutoSize = true;
-            this.nrParcelaLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
-            this.nrParcelaLabel.Text = "● Nr Parcelă";
+            this.nrTarlaParcelaLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nrTarlaParcelaLabel.AutoSize = true;
+            this.nrTarlaParcelaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nrTarlaParcelaLabel.ForeColor = System.Drawing.Color.Black;
+            this.nrTarlaParcelaLabel.Location = new System.Drawing.Point(6, 254);
+            this.nrTarlaParcelaLabel.Name = "nrTarlaParcelaLabel";
+            this.nrTarlaParcelaLabel.TabIndex = 59;
+            this.nrTarlaParcelaLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.nrTarlaParcelaLabel.AutoSize = true;
+            this.nrTarlaParcelaLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.nrTarlaParcelaLabel.Text = "● Nr Tarla + Parcelă";
             // 
             // nrTarlaLabel
             // 
@@ -1080,15 +1110,17 @@ public class CustomGroupBox : GroupBox
             this.tableLayoutPanelConstructii.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelConstructii.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelConstructii.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanelConstructii.Controls.Add(this.noteConstructiiLabel, 3, 1);
-            this.tableLayoutPanelConstructii.Controls.Add(this.nrEtajeLabel, 2, 1);
-            this.tableLayoutPanelConstructii.Controls.Add(this.suprafataActeLabel2, 1, 1);
-            this.tableLayoutPanelConstructii.Controls.Add(this.proprietarLabel, 1, 1);
-            this.tableLayoutPanelConstructii.Controls.Add(this.suprafataMasurataLabel, 0, 1);
-            this.tableLayoutPanelConstructii.Controls.Add(this.areActeLabel, 3, 0);
             this.tableLayoutPanelConstructii.Controls.Add(this.idLabel6, 0, 0);
             this.tableLayoutPanelConstructii.Controls.Add(this.sectorLabel5, 1, 0);
-            this.tableLayoutPanelConstructii.Controls.Add(this.nrConstructieLabel, 2, 0);
+            this.tableLayoutPanelConstructii.Controls.Add(this.ieLabel3, 2, 0);
+            this.tableLayoutPanelConstructii.Controls.Add(this.destinatieConstructieLabel, 3, 0);
+            this.tableLayoutPanelConstructii.Controls.Add(this.nrConstructieLabel, 4, 0);
+            this.tableLayoutPanelConstructii.Controls.Add(this.areActeLabel, 0, 1);
+            this.tableLayoutPanelConstructii.Controls.Add(this.suprafataMasurataLabel, 1, 1);
+            this.tableLayoutPanelConstructii.Controls.Add(this.nrEtajeLabel, 2, 1);
+            this.tableLayoutPanelConstructii.Controls.Add(this.suprafataActeLabel2, 3, 1);
+            this.tableLayoutPanelConstructii.Controls.Add(this.proprietarLabel, 4, 1);
+            this.tableLayoutPanelConstructii.Controls.Add(this.noteConstructiiLabel, 0, 2);
             this.tableLayoutPanelConstructii.Location = new System.Drawing.Point(218, 174);
             this.tableLayoutPanelConstructii.Name = "tableLayoutPanelConstructii";
             this.tableLayoutPanelConstructii.RowCount = 2;
@@ -1118,14 +1150,14 @@ public class CustomGroupBox : GroupBox
             this.tableLayoutPanelParcele.Controls.Add(this.idLabel5, 0, 0);
             this.tableLayoutPanelParcele.Controls.Add(this.sectorLabel6, 1, 0);
             this.tableLayoutPanelParcele.Controls.Add(this.ieLabel3, 2, 0);
-            this.tableLayoutPanelParcele.Controls.Add(this.noteParcelaLabel2, 2, 4);
-            this.tableLayoutPanelParcele.Controls.Add(this.noteImobilLabel, 1, 4);
-            this.tableLayoutPanelParcele.Controls.Add(this.tipTerenLabel, 0, 4);
-            this.tableLayoutPanelParcele.Controls.Add(this.imprejmuitLabel, 3, 3);
-            this.tableLayoutPanelParcele.Controls.Add(this.categorieFolosintaLabel, 2, 3);
-            this.tableLayoutPanelParcele.Controls.Add(this.suprafataActeLabel3, 1, 3);
-            this.tableLayoutPanelParcele.Controls.Add(this.nrParcelaLabel, 0, 3);
-            this.tableLayoutPanelParcele.Controls.Add(this.nrTarlaLabel, 3, 2);
+            this.tableLayoutPanelParcele.Controls.Add(this.areGeometrieLabel, 3, 0);
+            this.tableLayoutPanelParcele.Controls.Add(this.noteParcelaLabel2, 1, 4);
+            this.tableLayoutPanelParcele.Controls.Add(this.noteImobilLabel, 0, 4);
+            this.tableLayoutPanelParcele.Controls.Add(this.tipTerenLabel, 3, 3);
+            this.tableLayoutPanelParcele.Controls.Add(this.imprejmuitLabel, 2, 3);
+            this.tableLayoutPanelParcele.Controls.Add(this.categorieFolosintaLabel, 1, 3);
+            this.tableLayoutPanelParcele.Controls.Add(this.suprafataActeLabel3, 0, 3);
+            this.tableLayoutPanelParcele.Controls.Add(this.nrTarlaParcelaLabel, 3, 2);
             this.tableLayoutPanelParcele.Controls.Add(this.nrTitluLabel, 2, 2);
             this.tableLayoutPanelParcele.Controls.Add(this.diferentaSuprafeteLabel, 1, 2);
             this.tableLayoutPanelParcele.Controls.Add(this.suprafataActeLabel, 0, 2);
@@ -1426,9 +1458,11 @@ public class CustomGroupBox : GroupBox
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Label sectorLabel6;
         private System.Windows.Forms.Label ieLabel3;
+        private System.Windows.Forms.Label destinatieConstructieLabel;
+        private System.Windows.Forms.Label areGeometrieLabel;
         private System.Windows.Forms.Label nrCadLabel;
         private System.Windows.Forms.Label nrCfLabel;
-        private System.Windows.Forms.Label nrParcelaLabel;
+        private System.Windows.Forms.Label nrTarlaParcelaLabel;
         private System.Windows.Forms.Label nrTarlaLabel;
         private System.Windows.Forms.Label nrTitluLabel;
         private System.Windows.Forms.Label diferentaSuprafeteLabel;
