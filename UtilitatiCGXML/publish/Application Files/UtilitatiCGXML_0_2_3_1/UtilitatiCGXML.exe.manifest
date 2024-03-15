@@ -113,33 +113,6 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Extras\libiconv2.dll" size="978432">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>5wJASIKwMBSr6yrerTip6HrZAEY=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Extras\pdftk.exe" size="5875200">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>6jnFIH4Vy+GQxcDMFFKr2CNSSbU=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Extras\pdftk_gpl_license.txt" size="492">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>nqgRSxI9fllDNh+DpnjAPB7faoY=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="ProgramData\Admin.xml" size="603523" writeableType="applicationData">
     <hash>
       <dsig:Transforms>

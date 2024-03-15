@@ -132,17 +132,7 @@
     <None Include="Resources\FolderR.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\packages\pdftk.exe.1.44.0\tools\pdftk\bin\libiconv2.dll">
-      <Link>Extras\libiconv2.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\packages\pdftk.exe.1.44.0\tools\pdftk\bin\pdftk.exe">
-      <Link>Extras\pdftk.exe</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Extras\Done.txt" />
-    <Content Include="Extras\pdftk_gpl_license.txt" />
-    <Content Include="pdftk_gpl_license.txt" />
     <Content Include="ProgramData\Admin.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
