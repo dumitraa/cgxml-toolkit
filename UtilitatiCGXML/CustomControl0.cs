@@ -68,6 +68,7 @@ namespace UtilitatiCGXML
         public string nrcad = "";
         public string enclosed = "";
         public string proprietar = "";
+        public string isPhysical = "";
         public string pnotes = "";
         public string buildingid = "";
         public string measuredarea = "";
@@ -1309,10 +1310,11 @@ namespace UtilitatiCGXML
             headerRow.CreateCell(1).SetCellValue("Sector");
             headerRow.CreateCell(2).SetCellValue("IE");
             headerRow.CreateCell(3).SetCellValue("Proprietar");
-            headerRow.CreateCell(4).SetCellValue("CNP/CUI");
-            headerRow.CreateCell(5).SetCellValue("Defunct");
-            headerRow.CreateCell(6).SetCellValue("Adresa");
-            headerRow.CreateCell(7).SetCellValue("Note");
+            headerRow.CreateCell(4).SetCellValue("Tip Persoana");
+            headerRow.CreateCell(5).SetCellValue("CNP/CUI");
+            headerRow.CreateCell(6).SetCellValue("Defunct");
+            headerRow.CreateCell(7).SetCellValue("Adresa");
+            headerRow.CreateCell(8).SetCellValue("Note");
 
             //(Optional) freeze the header row so it is not scrolled
             sheet.CreateFreezePane(0, 1, 0, 1);
@@ -1397,6 +1399,8 @@ namespace UtilitatiCGXML
                     {
                         proprietar = string.Concat(pr.LASTNAME, " ", pr.FIRSTNAME);
                         proprietar = proprietar.Replace("|", "");
+                        isPhysical = pr.ISPHYSICAL ? "Fizica" : "Juridica";
+                        Console.WriteLine($"isPhysical: {isPhysical}");
                         defunct = pr.DEFUNCT ? "DA" : "NU";
                         note = pr.NOTES;
                         cnp = pr.IDCODE != string.Empty ? pr.IDCODE : "9999999999999";
@@ -1465,10 +1469,11 @@ namespace UtilitatiCGXML
                             row.CreateCell(1).SetCellValue(sector);
                             row.CreateCell(2).SetCellValue(ie);
                             row.CreateCell(3).SetCellValue(proprietar);
-                            row.CreateCell(4).SetCellValue(cnp);
-                            row.CreateCell(5).SetCellValue(defunct);
-                            row.CreateCell(6).SetCellValue(adresa);
-                            row.CreateCell(7).SetCellValue(note);
+                            row.CreateCell(4).SetCellValue(isPhysical);
+                            row.CreateCell(5).SetCellValue(cnp);
+                            row.CreateCell(6).SetCellValue(defunct);
+                            row.CreateCell(7).SetCellValue(adresa);
+                            row.CreateCell(8).SetCellValue(note);
 
                             rowIndex++;
                         }
@@ -1515,6 +1520,7 @@ namespace UtilitatiCGXML
                     {
                         proprietar = string.Concat(pr.LASTNAME, " ", pr.FIRSTNAME);
                         proprietar = proprietar.Replace("|", "");
+                        isPhysical = pr.ISPHYSICAL ? "Fizica" : "Juridica";
                         defunct = pr.DEFUNCT ? "DA" : "NU";
                         note = pr.NOTES;
                         cnp = pr.IDCODE;
@@ -1583,10 +1589,11 @@ namespace UtilitatiCGXML
                             row.CreateCell(1).SetCellValue(sector);
                             row.CreateCell(2).SetCellValue(ie);
                             row.CreateCell(3).SetCellValue(proprietar);
-                            row.CreateCell(4).SetCellValue(cnp);
-                            row.CreateCell(5).SetCellValue(defunct);
-                            row.CreateCell(6).SetCellValue(adresa);
-                            row.CreateCell(7).SetCellValue(note);
+                            row.CreateCell(4).SetCellValue(isPhysical);
+                            row.CreateCell(5).SetCellValue(cnp);
+                            row.CreateCell(6).SetCellValue(defunct);
+                            row.CreateCell(7).SetCellValue(adresa);
+                            row.CreateCell(8).SetCellValue(note);
 
                             rowIndex++;
                         }

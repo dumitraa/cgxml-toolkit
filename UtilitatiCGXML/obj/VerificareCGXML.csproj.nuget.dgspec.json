@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\Documents\\scripts\\cgxml-toolkit\\UtilitatiCGXML\\VerificareCGXML.csproj": {}
+    "c:\\Users\\USER\\Documents\\scripts\\cgxml-toolkit\\UtilitatiCGXML\\VerificareCGXML.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\Documents\\scripts\\cgxml-toolkit\\UtilitatiCGXML\\VerificareCGXML.csproj": {
+    "c:\\Users\\USER\\Documents\\scripts\\cgxml-toolkit\\UtilitatiCGXML\\VerificareCGXML.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Documents\\scripts\\cgxml-toolkit\\UtilitatiCGXML\\VerificareCGXML.csproj",
+        "projectUniqueName": "c:\\Users\\USER\\Documents\\scripts\\cgxml-toolkit\\UtilitatiCGXML\\VerificareCGXML.csproj",
         "projectName": "VerificareCGXML",
-        "projectPath": "C:\\Users\\USER\\Documents\\scripts\\cgxml-toolkit\\UtilitatiCGXML\\VerificareCGXML.csproj",
+        "projectPath": "c:\\Users\\USER\\Documents\\scripts\\cgxml-toolkit\\UtilitatiCGXML\\VerificareCGXML.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Documents\\scripts\\cgxml-toolkit\\UtilitatiCGXML\\obj\\",
+        "outputPath": "c:\\Users\\USER\\Documents\\scripts\\cgxml-toolkit\\UtilitatiCGXML\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",

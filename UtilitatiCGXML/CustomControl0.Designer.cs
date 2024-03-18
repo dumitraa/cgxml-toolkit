@@ -751,7 +751,7 @@ public class CustomGroupBox : GroupBox
             this.raportTipInscrieriBtn.Name = "raportTipInscrieriBtn";
             this.raportTipInscrieriBtn.Size = new System.Drawing.Size(198, 40);
             this.raportTipInscrieriBtn.TabIndex = 3;
-            this.raportTipInscrieriBtn.Text = "Tip Inscrieri";
+            this.raportTipInscrieriBtn.Text = "Inscrieri";
             this.raportTipInscrieriBtn.UseVisualStyleBackColor = false;
             this.raportTipInscrieriBtn.Click += new System.EventHandler(this.raportTipInscrieriBtn_Click);
             this.raportTipInscrieriBtn.MouseHover += new System.EventHandler(this.raportTipInscrieriBtn_MouseHover);
