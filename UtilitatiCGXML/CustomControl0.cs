@@ -1210,7 +1210,7 @@ namespace UtilitatiCGXML
                         foreach (CGXML.DeedRow lm in fisier.Deed)
                         {
                             string deed = lm.DEEDNUMBER;
-                            string deeddate = lm.DEEDDATE.ToString();
+                            string deeddate = lm.DEEDDATE.ToString("dd/MM/yyyy");
                             string deednote = lm.NOTES;
                             if (lm.DEEDTYPE == "ACT_NOTARIAL")
                             {
