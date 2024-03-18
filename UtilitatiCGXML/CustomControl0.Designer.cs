@@ -122,6 +122,13 @@ public class CustomGroupBox : GroupBox
             this.idLabel = new System.Windows.Forms.Label();
             this.sectorLabel = new System.Windows.Forms.Label();
             this.tipInscriereLabel = new System.Windows.Forms.Label();
+            this.ieLabel5 = new System.Windows.Forms.Label();
+            this.tipActLabel = new System.Windows.Forms.Label();
+            this.nrActLabel = new System.Windows.Forms.Label();
+            this.dataActLabel = new System.Windows.Forms.Label();
+            this.emitentActLabel = new System.Windows.Forms.Label();
+            this.noteInscriereLabel = new System.Windows.Forms.Label();
+            this.noteActLabel = new System.Windows.Forms.Label();
             this.noteProprietarLabel = new System.Windows.Forms.Label();
             this.ieLabel = new System.Windows.Forms.Label();
             this.sarciniLabel = new System.Windows.Forms.Label();
@@ -254,7 +261,106 @@ public class CustomGroupBox : GroupBox
             this.tipInscriereLabel.AutoSize = true;
             this.tipInscriereLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
             this.tipInscriereLabel.Text = "● Tip Inscriere";
+            //
+            // ieLabel5
+            //
+            this.ieLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ieLabel5.AutoSize = true;
+            this.ieLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.ieLabel5.ForeColor = System.Drawing.Color.Black;
+            this.ieLabel5.Location = new System.Drawing.Point(326, 31);
+            this.ieLabel5.Name = "ieLabel5";
+            this.ieLabel5.TabIndex = 51;
+            this.ieLabel5.TextAlign = ContentAlignment.MiddleLeft;
+            this.ieLabel5.AutoSize = true;
+            this.ieLabel5.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.ieLabel5.Text = "● IE";
+            //
+            // tipActLabel
             // 
+            this.tipActLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tipActLabel.AutoSize = true;
+            this.tipActLabel.BackColor = System.Drawing.Color.Transparent;
+            this.tipActLabel.ForeColor = System.Drawing.Color.Black;
+            this.tipActLabel.Location = new System.Drawing.Point(486, 31);
+            this.tipActLabel.Name = "tipActLabel";
+            this.tipActLabel.TabIndex = 51;
+            this.tipActLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.tipActLabel.AutoSize = true;
+            this.tipActLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.tipActLabel.Text = "● Tip Act";
+            //
+            // nrActLabel
+            //
+            this.nrActLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nrActLabel.AutoSize = true;
+            this.nrActLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nrActLabel.ForeColor = System.Drawing.Color.Black;
+            this.nrActLabel.Location = new System.Drawing.Point(6, 31);
+            this.nrActLabel.Name = "nrActLabel";
+            this.nrActLabel.TabIndex = 51;
+            this.nrActLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.nrActLabel.AutoSize = true;
+            this.nrActLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.nrActLabel.Text = "● Nr Act";
+            //
+            // dataActLabel
+            //
+            this.dataActLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataActLabel.AutoSize = true;
+            this.dataActLabel.BackColor = System.Drawing.Color.Transparent;
+            this.dataActLabel.ForeColor = System.Drawing.Color.Black;
+            this.dataActLabel.Location = new System.Drawing.Point(166, 31);
+            this.dataActLabel.Name = "dataActLabel";
+            this.dataActLabel.TabIndex = 51;
+            this.dataActLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.dataActLabel.AutoSize = true;
+            this.dataActLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.dataActLabel.Text = "● Data Act";
+            // 
+            // emitentActLabel
+            //
+            this.emitentActLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.emitentActLabel.AutoSize = true;
+            this.emitentActLabel.BackColor = System.Drawing.Color.Transparent;
+            this.emitentActLabel.ForeColor = System.Drawing.Color.Black;
+            this.emitentActLabel.Location = new System.Drawing.Point(326, 31);
+            this.emitentActLabel.Name = "emitentActLabel";
+            this.emitentActLabel.TabIndex = 51;
+            this.emitentActLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.emitentActLabel.AutoSize = true;
+            this.emitentActLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.emitentActLabel.Text = "● Emitent Act";
+            //
+            // noteInscriereLabel
+            //
+            this.noteInscriereLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.noteInscriereLabel.AutoSize = true;
+            this.noteInscriereLabel.BackColor = System.Drawing.Color.Transparent;
+            this.noteInscriereLabel.ForeColor = System.Drawing.Color.Black;
+            this.noteInscriereLabel.Location = new System.Drawing.Point(6, 180);
+            this.noteInscriereLabel.Name = "noteInscriereLabel";
+            this.noteInscriereLabel.TabIndex = 51;
+            this.noteInscriereLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.noteInscriereLabel.AutoSize = true;
+            this.noteInscriereLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.noteInscriereLabel.Text = "● Note Inscriere";
+            //
+            // noteActLabel
+            //
+            this.noteActLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.noteActLabel.AutoSize = true;
+            this.noteActLabel.BackColor = System.Drawing.Color.Transparent;
+            this.noteActLabel.ForeColor = System.Drawing.Color.Black;
+            this.noteActLabel.Location = new System.Drawing.Point(6, 180);
+            this.noteActLabel.Name = "noteActLabel";
+            this.noteActLabel.TabIndex = 51;
+            this.noteActLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.noteActLabel.AutoSize = true;
+            this.noteActLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.noteActLabel.Text = "● Note Act";
+            //
+            //
             // noteProprietarLabel
             // 
             this.noteProprietarLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -1378,6 +1484,7 @@ public class CustomGroupBox : GroupBox
             // 
             // tableLayoutPanelProprietari
             // 
+            this.tableLayoutPanelProprietari.AutoSize = true;
             this.tableLayoutPanelProprietari.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanelProprietari.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanelProprietari.Padding = new Padding(20);
@@ -1408,6 +1515,7 @@ public class CustomGroupBox : GroupBox
             // 
             // tableLayoutPanelInscrieri
             // 
+            this.tableLayoutPanelInscrieri.AutoSize = true;
             this.tableLayoutPanelInscrieri.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanelInscrieri.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanelInscrieri.Padding = new Padding(20);
@@ -1415,19 +1523,30 @@ public class CustomGroupBox : GroupBox
             {
                 c.Margin = new Padding(10);
             }
-            this.tableLayoutPanelInscrieri.ColumnCount = 3;
-            this.tableLayoutPanelInscrieri.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanelInscrieri.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanelInscrieri.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelInscrieri.ColumnCount = 4;
+            this.tableLayoutPanelInscrieri.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelInscrieri.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelInscrieri.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelInscrieri.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelInscrieri.Controls.Add(this.idLabel4, 0, 0);
             this.tableLayoutPanelInscrieri.Controls.Add(this.sectorLabel, 1, 0);
-            this.tableLayoutPanelInscrieri.Controls.Add(this.tipInscriereLabel, 2, 0);
-            this.tableLayoutPanelInscrieri.Location = new System.Drawing.Point(218, 199);
+            this.tableLayoutPanelInscrieri.Controls.Add(this.ieLabel5, 2, 0);
+            this.tableLayoutPanelInscrieri.Controls.Add(this.tipInscriereLabel, 3, 0);
+            this.tableLayoutPanelInscrieri.Controls.Add(this.tipActLabel, 0, 1);
+            this.tableLayoutPanelInscrieri.Controls.Add(this.nrActLabel, 1, 1);  
+            this.tableLayoutPanelInscrieri.Controls.Add(this.dataActLabel, 2, 1);
+            this.tableLayoutPanelInscrieri.Controls.Add(this.emitentActLabel, 3, 1);
+            this.tableLayoutPanelInscrieri.Controls.Add(this.noteInscriereLabel, 0, 2);
+            this.tableLayoutPanelInscrieri.Controls.Add(this.noteActLabel, 1, 2);
+            this.tableLayoutPanelInscrieri.Location = new System.Drawing.Point(218, 174);
             this.tableLayoutPanelInscrieri.Name = "tableLayoutPanelInscrieri";
-            this.tableLayoutPanelInscrieri.RowCount = 1;
-            this.tableLayoutPanelInscrieri.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelInscrieri.Size = new System.Drawing.Size(645, 75);
+            this.tableLayoutPanelInscrieri.RowCount = 3;
+            this.tableLayoutPanelInscrieri.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelInscrieri.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelInscrieri.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelInscrieri.Size = new System.Drawing.Size(645, 150);
             this.tableLayoutPanelInscrieri.TabIndex = 76;
+
             this.tableLayoutPanelInscrieri.Visible = false;
             // 
             // CustomControl0
@@ -1472,6 +1591,13 @@ public class CustomGroupBox : GroupBox
         private System.Windows.Forms.Label idLabel;
         private System.Windows.Forms.Label sectorLabel;
         private System.Windows.Forms.Label tipInscriereLabel;
+        private System.Windows.Forms.Label ieLabel5;
+        private System.Windows.Forms.Label tipActLabel;
+        private System.Windows.Forms.Label nrActLabel;
+        private System.Windows.Forms.Label dataActLabel;
+        private System.Windows.Forms.Label emitentActLabel;
+        private System.Windows.Forms.Label noteInscriereLabel;
+        private System.Windows.Forms.Label noteActLabel;
         private System.Windows.Forms.Label noteProprietarLabel;
         private System.Windows.Forms.Label ieLabel;
         private System.Windows.Forms.Label sarciniLabel;
