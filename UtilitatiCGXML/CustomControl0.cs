@@ -111,19 +111,19 @@ namespace UtilitatiCGXML
                 tableLayoutPanelConstructii.Visible = false;
             }
 
-            if (tableLayoutPanel3.Visible == true)
+            if (tableLayoutPanelSarcini.Visible == true)
             {
-                tableLayoutPanel3.Visible = false;
+                tableLayoutPanelSarcini.Visible = false;
             }
 
-            if (tableLayoutPanel4.Visible == true)
+            if (tableLayoutPanelInscrieri.Visible == true)
             {
-                tableLayoutPanel4.Visible = false;
+                tableLayoutPanelInscrieri.Visible = false;
             }
 
-            if (tableLayoutPanel5.Visible == true)
+            if (tableLayoutPanelProprietari.Visible == true)
             {
-                tableLayoutPanel5.Visible = false;
+                tableLayoutPanelProprietari.Visible = false;
             }
 
             if (tableLayoutPanel6.Visible == true)
@@ -149,19 +149,19 @@ namespace UtilitatiCGXML
                 tableLayoutPanelConstructii.Visible = false;
             }
 
-            if (tableLayoutPanel3.Visible == true)
+            if (tableLayoutPanelSarcini.Visible == true)
             {
-                tableLayoutPanel3.Visible = false;
+                tableLayoutPanelSarcini.Visible = false;
             }
 
-            if (tableLayoutPanel4.Visible == true)
+            if (tableLayoutPanelInscrieri.Visible == true)
             {
-                tableLayoutPanel4.Visible = false;
+                tableLayoutPanelInscrieri.Visible = false;
             }
 
-            if (tableLayoutPanel5.Visible == true)
+            if (tableLayoutPanelProprietari.Visible == true)
             {
-                tableLayoutPanel5.Visible = false;
+                tableLayoutPanelProprietari.Visible = false;
             }
 
             if (tableLayoutPanel6.Visible == true)
@@ -196,19 +196,19 @@ namespace UtilitatiCGXML
                 tableLayoutPanelParcele.Visible = false;
             }
 
-            if (tableLayoutPanel3.Visible == true)
+            if (tableLayoutPanelSarcini.Visible == true)
             {
-                tableLayoutPanel3.Visible = false;
+                tableLayoutPanelSarcini.Visible = false;
             }
 
-            if (tableLayoutPanel4.Visible == true)
+            if (tableLayoutPanelInscrieri.Visible == true)
             {
-                tableLayoutPanel4.Visible = false;
+                tableLayoutPanelInscrieri.Visible = false;
             }
 
-            if (tableLayoutPanel5.Visible == true)
+            if (tableLayoutPanelProprietari.Visible == true)
             {
-                tableLayoutPanel5.Visible = false;
+                tableLayoutPanelProprietari.Visible = false;
             }
 
             if (tableLayoutPanel6.Visible == true)
@@ -244,14 +244,14 @@ namespace UtilitatiCGXML
                 tableLayoutPanelConstructii.Visible = false;
             }
 
-            if (tableLayoutPanel4.Visible == true)
+            if (tableLayoutPanelInscrieri.Visible == true)
             {
-                tableLayoutPanel4.Visible = false;
+                tableLayoutPanelInscrieri.Visible = false;
             }
 
-            if (tableLayoutPanel5.Visible == true)
+            if (tableLayoutPanelProprietari.Visible == true)
             {
-                tableLayoutPanel5.Visible = false;
+                tableLayoutPanelProprietari.Visible = false;
             }
 
             if (tableLayoutPanel6.Visible == true)
@@ -264,9 +264,9 @@ namespace UtilitatiCGXML
                 raportContentLabel.Visible = true;
             }
 
-            if (tableLayoutPanel3.Visible == false)
+            if (tableLayoutPanelSarcini.Visible == false)
             {
-                tableLayoutPanel3.Visible = true;
+                tableLayoutPanelSarcini.Visible = true;
             }
         }
 
@@ -287,14 +287,14 @@ namespace UtilitatiCGXML
                 tableLayoutPanelConstructii.Visible = false;
             }
 
-            if (tableLayoutPanel3.Visible == true)
+            if (tableLayoutPanelSarcini.Visible == true)
             {
-                tableLayoutPanel3.Visible = false;
+                tableLayoutPanelSarcini.Visible = false;
             }
 
-            if (tableLayoutPanel5.Visible == true)
+            if (tableLayoutPanelProprietari.Visible == true)
             {
-                tableLayoutPanel5.Visible = false;
+                tableLayoutPanelProprietari.Visible = false;
             }
 
             if (tableLayoutPanel6.Visible == true)
@@ -307,9 +307,9 @@ namespace UtilitatiCGXML
                 raportContentLabel.Visible = true;
             }
 
-            if (tableLayoutPanel4.Visible == false)
+            if (tableLayoutPanelInscrieri.Visible == false)
             {
-                tableLayoutPanel4.Visible = true;
+                tableLayoutPanelInscrieri.Visible = true;
             }
         }
 
@@ -330,14 +330,14 @@ namespace UtilitatiCGXML
                 tableLayoutPanelConstructii.Visible = false;
             }
 
-            if (tableLayoutPanel3.Visible == true)
+            if (tableLayoutPanelSarcini.Visible == true)
             {
-                tableLayoutPanel3.Visible = false;
+                tableLayoutPanelSarcini.Visible = false;
             }
 
-            if (tableLayoutPanel4.Visible == true)
+            if (tableLayoutPanelInscrieri.Visible == true)
             {
-                tableLayoutPanel4.Visible = false;
+                tableLayoutPanelInscrieri.Visible = false;
             }
 
             if (tableLayoutPanel6.Visible == true)
@@ -350,9 +350,9 @@ namespace UtilitatiCGXML
                 raportContentLabel.Visible = true;
             }
 
-            if (tableLayoutPanel5.Visible == false)
+            if (tableLayoutPanelProprietari.Visible == false)
             {
-                tableLayoutPanel5.Visible = true;
+                tableLayoutPanelProprietari.Visible = true;
             }
         }
 
@@ -373,19 +373,19 @@ namespace UtilitatiCGXML
                 tableLayoutPanelConstructii.Visible = false;
             }
 
-            if (tableLayoutPanel3.Visible == true)
+            if (tableLayoutPanelSarcini.Visible == true)
             {
-                tableLayoutPanel3.Visible = false;
+                tableLayoutPanelSarcini.Visible = false;
             }
 
-            if (tableLayoutPanel4.Visible == true)
+            if (tableLayoutPanelInscrieri.Visible == true)
             {
-                tableLayoutPanel4.Visible = false;
+                tableLayoutPanelInscrieri.Visible = false;
             }
 
-            if (tableLayoutPanel5.Visible == true)
+            if (tableLayoutPanelProprietari.Visible == true)
             {
-                tableLayoutPanel5.Visible = false;
+                tableLayoutPanelProprietari.Visible = false;
             }
 
             if (raportContentLabel.Visible == false)
@@ -981,14 +981,13 @@ namespace UtilitatiCGXML
 
                 //Populate Raport
                 //actions
+
                 foreach (CGXML.RegistrationRow lb in fisier.Registration)
                 {
-                    if (lb.LBPARTNO != 3) {
-
+                    bool hasSarcini = false;
+                    if (lb.LBPARTNO == 3) {
+                        hasSarcini = true;
                     }
-                    else
-                    {
-                        lbpart = "DA";
                         foreach (CGXML.LandRow lr in fisier.Land)
                         {
                             cadgenno = lr.CADGENNO;
@@ -1000,12 +999,11 @@ namespace UtilitatiCGXML
                             row.CreateCell(0).SetCellValue(cadgenno);
                             row.CreateCell(1).SetCellValue(sector);
                             row.CreateCell(2).SetCellValue(ie);
-                            row.CreateCell(3).SetCellValue(lbpart);
+                            row.CreateCell(3).SetCellValue(hasSarcini ? "DA" : "NU");
 
                             rowIndex++;
 
                         }
-                    }
                 }
             }
             //Write the stream data of workbook to the root directory

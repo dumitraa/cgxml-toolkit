@@ -13,7 +13,6 @@
           "System.Resources.Extensions": "4.7.1",
           "GeoAPI.CoordinateSystems": "1.7.5.0",
           "GeoAPI": "1.7.5.0",
-          "ICSharpCode.SharpZipLib": "0.86.0.518",
           "NetTopologySuite": "1.15.0.0",
           "NetTopologySuite.Features": "1.15.0.0",
           "NetTopologySuite.IO.GeoTools": "1.15.0.0",
@@ -136,14 +135,6 @@
           "GeoAPI.dll": {
             "assemblyVersion": "1.7.5.0",
             "fileVersion": "1.7.5.0"
-          }
-        }
-      },
-      "ICSharpCode.SharpZipLib/0.86.0.518": {
-        "runtime": {
-          "ICSharpCode.SharpZipLib.dll": {
-            "assemblyVersion": "0.86.0.518",
-            "fileVersion": "0.86.0.518"
           }
         }
       },
@@ -346,11 +337,6 @@
       "sha512": ""
     },
     "GeoAPI/1.7.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "ICSharpCode.SharpZipLib/0.86.0.518": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

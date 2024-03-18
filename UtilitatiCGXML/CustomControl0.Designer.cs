@@ -156,6 +156,7 @@ public class CustomGroupBox : GroupBox
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.sectorLabel6 = new System.Windows.Forms.Label();
             this.ieLabel3 = new System.Windows.Forms.Label();
+            this.ieLabel4 = new System.Windows.Forms.Label();
             this.destinatieConstructieLabel = new System.Windows.Forms.Label();
             this.areGeometrieLabel = new System.Windows.Forms.Label();
             this.nrCadLabel = new System.Windows.Forms.Label();
@@ -164,7 +165,7 @@ public class CustomGroupBox : GroupBox
             this.nrTarlaLabel = new System.Windows.Forms.Label();
             this.nrTitluLabel = new System.Windows.Forms.Label();
             this.diferentaSuprafeteLabel = new System.Windows.Forms.Label();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelSarcini = new System.Windows.Forms.TableLayoutPanel();
             this.suprafataActeLabel = new System.Windows.Forms.Label();
             this.noteConstructiiLabel = new System.Windows.Forms.Label();
             this.nrEtajeLabel = new System.Windows.Forms.Label();
@@ -181,21 +182,23 @@ public class CustomGroupBox : GroupBox
             this.imprejmuitLabel = new System.Windows.Forms.Label();
             this.categorieFolosintaLabel = new System.Windows.Forms.Label();
             this.suprafataActeLabel3 = new System.Windows.Forms.Label();
+            this.suprafataParcelaLabel = new System.Windows.Forms.Label();
             this.suprafataMasurataLabel2 = new System.Windows.Forms.Label();
             this.nrTopoLabel = new System.Windows.Forms.Label();
             this.proprietarLabel = new System.Windows.Forms.Label();
+            this.proprietarLabel2 = new System.Windows.Forms.Label();
             this.backgroundImageLogo = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelProprietari = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelInscrieri = new System.Windows.Forms.TableLayoutPanel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanelSarcini.SuspendLayout();
             this.tableLayoutPanelConstructii.SuspendLayout();
             this.tableLayoutPanelParcele.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImageLogo)).BeginInit();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanelProprietari.SuspendLayout();
+            this.tableLayoutPanelInscrieri.SuspendLayout();
             this.SuspendLayout();
             // 
             // raportContentLabel
@@ -858,6 +861,20 @@ public class CustomGroupBox : GroupBox
             this.ieLabel3.AutoSize = true;
             this.ieLabel3.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
             this.ieLabel3.Text = "● IE";
+            // 
+            // ieLabel4
+            // 
+            this.ieLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ieLabel4.AutoSize = true;
+            this.ieLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.ieLabel4.ForeColor = System.Drawing.Color.Black;
+            this.ieLabel4.Location = new System.Drawing.Point(326, 32);
+            this.ieLabel4.Name = "ieLabel4";
+            this.ieLabel4.TabIndex = 56;
+            this.ieLabel4.TextAlign = ContentAlignment.MiddleLeft;
+            this.ieLabel4.AutoSize = true;
+            this.ieLabel4.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.ieLabel4.Text = "● IE";
             //
             // destinatieConstructieLabel
             //
@@ -971,31 +988,31 @@ public class CustomGroupBox : GroupBox
             this.diferentaSuprafeteLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
             this.diferentaSuprafeteLabel.Text = "● Dif Suprafațe";
             // 
-            // tableLayoutPanel3
+            // tableLayoutPanelSarcini
             // 
-            this.tableLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel3.Padding = new Padding(20);
-            foreach (Control c in this.tableLayoutPanel3.Controls)
+            this.tableLayoutPanelSarcini.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanelSarcini.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanelSarcini.Padding = new Padding(20);
+            foreach (Control c in this.tableLayoutPanelSarcini.Controls)
             {
                 c.Margin = new Padding(10);
             }
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Controls.Add(this.idLabel3, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.ieLabel, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.sarciniLabel, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.sectorLabel2, 2, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(218, 174);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 72F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(645, 150);
-            this.tableLayoutPanel3.TabIndex = 75;
-            this.tableLayoutPanel3.Visible = false;
+            this.tableLayoutPanelSarcini.ColumnCount = 4;
+            this.tableLayoutPanelSarcini.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelSarcini.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelSarcini.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelSarcini.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelSarcini.Controls.Add(this.idLabel3, 0, 0);
+            this.tableLayoutPanelSarcini.Controls.Add(this.sectorLabel2, 1, 0);
+            this.tableLayoutPanelSarcini.Controls.Add(this.ieLabel, 2, 0);
+            this.tableLayoutPanelSarcini.Controls.Add(this.sarciniLabel, 3, 0);
+            this.tableLayoutPanelSarcini.Location = new System.Drawing.Point(218, 174);
+            this.tableLayoutPanelSarcini.Name = "tableLayoutPanelSarcini";
+            this.tableLayoutPanelSarcini.RowCount = 1;
+            this.tableLayoutPanelSarcini.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelSarcini.Size = new System.Drawing.Size(645, 150);
+            this.tableLayoutPanelSarcini.TabIndex = 75;
+            this.tableLayoutPanelSarcini.Visible = false;
             // 
             // suprafataActeLabel
             // 
@@ -1112,18 +1129,19 @@ public class CustomGroupBox : GroupBox
             this.tableLayoutPanelConstructii.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelConstructii.Controls.Add(this.idLabel6, 0, 0);
             this.tableLayoutPanelConstructii.Controls.Add(this.sectorLabel5, 1, 0);
-            this.tableLayoutPanelConstructii.Controls.Add(this.ieLabel3, 2, 0);
+            this.tableLayoutPanelConstructii.Controls.Add(this.ieLabel4, 2, 0);
             this.tableLayoutPanelConstructii.Controls.Add(this.destinatieConstructieLabel, 3, 0);
-            this.tableLayoutPanelConstructii.Controls.Add(this.nrConstructieLabel, 4, 0);
-            this.tableLayoutPanelConstructii.Controls.Add(this.areActeLabel, 0, 1);
+            this.tableLayoutPanelConstructii.Controls.Add(this.nrConstructieLabel, 0, 1);
+            this.tableLayoutPanelConstructii.Controls.Add(this.areActeLabel, 2, 1);
             this.tableLayoutPanelConstructii.Controls.Add(this.suprafataMasurataLabel, 1, 1);
-            this.tableLayoutPanelConstructii.Controls.Add(this.nrEtajeLabel, 2, 1);
-            this.tableLayoutPanelConstructii.Controls.Add(this.suprafataActeLabel2, 3, 1);
-            this.tableLayoutPanelConstructii.Controls.Add(this.proprietarLabel, 4, 1);
+            this.tableLayoutPanelConstructii.Controls.Add(this.nrEtajeLabel, 3, 1);
+            this.tableLayoutPanelConstructii.Controls.Add(this.suprafataActeLabel2, 0, 2);
+            this.tableLayoutPanelConstructii.Controls.Add(this.proprietarLabel, 1, 2);
             this.tableLayoutPanelConstructii.Controls.Add(this.noteConstructiiLabel, 0, 2);
             this.tableLayoutPanelConstructii.Location = new System.Drawing.Point(218, 174);
             this.tableLayoutPanelConstructii.Name = "tableLayoutPanelConstructii";
-            this.tableLayoutPanelConstructii.RowCount = 2;
+            this.tableLayoutPanelConstructii.RowCount = 3;
+            this.tableLayoutPanelConstructii.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelConstructii.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelConstructii.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelConstructii.Size = new System.Drawing.Size(645, 150);
@@ -1146,26 +1164,26 @@ public class CustomGroupBox : GroupBox
             this.tableLayoutPanelParcele.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelParcele.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelParcele.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanelParcele.Controls.Add(this.noteProprietarLabel1, 3, 4);
             this.tableLayoutPanelParcele.Controls.Add(this.idLabel5, 0, 0);
             this.tableLayoutPanelParcele.Controls.Add(this.sectorLabel6, 1, 0);
             this.tableLayoutPanelParcele.Controls.Add(this.ieLabel3, 2, 0);
             this.tableLayoutPanelParcele.Controls.Add(this.areGeometrieLabel, 3, 0);
-            this.tableLayoutPanelParcele.Controls.Add(this.noteParcelaLabel2, 1, 4);
-            this.tableLayoutPanelParcele.Controls.Add(this.noteImobilLabel, 0, 4);
-            this.tableLayoutPanelParcele.Controls.Add(this.tipTerenLabel, 3, 3);
-            this.tableLayoutPanelParcele.Controls.Add(this.imprejmuitLabel, 2, 3);
-            this.tableLayoutPanelParcele.Controls.Add(this.categorieFolosintaLabel, 1, 3);
-            this.tableLayoutPanelParcele.Controls.Add(this.suprafataActeLabel3, 0, 3);
-            this.tableLayoutPanelParcele.Controls.Add(this.nrTarlaParcelaLabel, 3, 2);
-            this.tableLayoutPanelParcele.Controls.Add(this.nrTitluLabel, 2, 2);
-            this.tableLayoutPanelParcele.Controls.Add(this.diferentaSuprafeteLabel, 1, 2);
-            this.tableLayoutPanelParcele.Controls.Add(this.suprafataActeLabel, 0, 2);
-            this.tableLayoutPanelParcele.Controls.Add(this.suprafataMasurataLabel2, 3, 1);
-            this.tableLayoutPanelParcele.Controls.Add(this.nrCadLabel, 3, 0);
-            this.tableLayoutPanelParcele.Controls.Add(this.nrCfLabel, 0, 1);
-            this.tableLayoutPanelParcele.Controls.Add(this.nrTopoLabel, 1, 1);
-            this.tableLayoutPanelParcele.Controls.Add(this.proprietarLabel, 2, 1);
+            this.tableLayoutPanelParcele.Controls.Add(this.nrCadLabel, 0, 1);
+            this.tableLayoutPanelParcele.Controls.Add(this.nrCfLabel, 1, 1);
+            this.tableLayoutPanelParcele.Controls.Add(this.nrTopoLabel, 2, 1);
+            this.tableLayoutPanelParcele.Controls.Add(this.proprietarLabel, 3, 1);
+            this.tableLayoutPanelParcele.Controls.Add(this.suprafataMasurataLabel2, 0, 2);
+            this.tableLayoutPanelParcele.Controls.Add(this.suprafataActeLabel, 1, 2);
+            this.tableLayoutPanelParcele.Controls.Add(this.diferentaSuprafeteLabel, 2, 2);
+            this.tableLayoutPanelParcele.Controls.Add(this.nrTitluLabel, 3, 2);
+            this.tableLayoutPanelParcele.Controls.Add(this.nrTarlaParcelaLabel, 0, 3);
+            this.tableLayoutPanelParcele.Controls.Add(this.suprafataParcelaLabel, 1, 3);
+            this.tableLayoutPanelParcele.Controls.Add(this.categorieFolosintaLabel, 2, 3);
+            this.tableLayoutPanelParcele.Controls.Add(this.imprejmuitLabel, 3, 3);
+            this.tableLayoutPanelParcele.Controls.Add(this.tipTerenLabel, 0, 4);
+            this.tableLayoutPanelParcele.Controls.Add(this.noteImobilLabel, 1, 4);
+            this.tableLayoutPanelParcele.Controls.Add(this.noteParcelaLabel2, 2, 4);
+            this.tableLayoutPanelParcele.Controls.Add(this.noteProprietarLabel1, 3, 4);
             this.tableLayoutPanelParcele.Location = new System.Drawing.Point(218, 48);
             this.tableLayoutPanelParcele.Name = "tableLayoutPanelParcele";
             this.tableLayoutPanelParcele.RowCount = 5;
@@ -1276,6 +1294,20 @@ public class CustomGroupBox : GroupBox
             this.suprafataActeLabel3.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
             this.suprafataActeLabel3.Text = "● Suprafata din Acte";
             // 
+            // suprafataParcelaLabel
+            // 
+            this.suprafataParcelaLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.suprafataParcelaLabel.AutoSize = true;
+            this.suprafataParcelaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.suprafataParcelaLabel.ForeColor = System.Drawing.Color.Black;
+            this.suprafataParcelaLabel.Location = new System.Drawing.Point(166, 254);
+            this.suprafataParcelaLabel.Name = "suprafataParcelaLabel";
+            this.suprafataParcelaLabel.TabIndex = 66;
+            this.suprafataParcelaLabel.TextAlign = ContentAlignment.MiddleLeft;
+            this.suprafataParcelaLabel.AutoSize = true;
+            this.suprafataParcelaLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.suprafataParcelaLabel.Text = "● Suprafata Parcela";
+            // 
             // suprafataMasurataLabel2
             // 
             this.suprafataMasurataLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -1317,7 +1349,20 @@ public class CustomGroupBox : GroupBox
             this.proprietarLabel.AutoSize = true;
             this.proprietarLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
             this.proprietarLabel.Text = "● Proprietar";
-
+            // 
+            // proprietarLabel2
+            // 
+            this.proprietarLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.proprietarLabel2.AutoSize = true;
+            this.proprietarLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.proprietarLabel2.ForeColor = System.Drawing.Color.Black;
+            this.proprietarLabel2.Location = new System.Drawing.Point(326, 106);
+            this.proprietarLabel2.Name = "proprietarLabel2";
+            this.proprietarLabel2.TabIndex = 68;
+            this.proprietarLabel2.TextAlign = ContentAlignment.MiddleLeft;
+            this.proprietarLabel2.AutoSize = true;
+            this.proprietarLabel2.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            this.proprietarLabel2.Text = "● Proprietar";
             // 
             // backgroundImageLogo
             // 
@@ -1331,60 +1376,59 @@ public class CustomGroupBox : GroupBox
             this.backgroundImageLogo.TabIndex = 70;
             this.backgroundImageLogo.TabStop = false;
             // 
-            // tableLayoutPanel5
+            // tableLayoutPanelProprietari
             // 
-            this.tableLayoutPanel5.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel5.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel5.Padding = new Padding(20);
-            foreach (Control c in this.tableLayoutPanel5.Controls)
+            this.tableLayoutPanelProprietari.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanelProprietari.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanelProprietari.Padding = new Padding(20);
+            foreach (Control c in this.tableLayoutPanelProprietari.Controls)
             {
                 c.Margin = new Padding(10);
             }
-            this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.Controls.Add(this.noteProprietarLabel, 0, 2);
-            this.tableLayoutPanel5.Controls.Add(this.idLabel2, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.ieLabel2, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.sectorLabel3, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.tipInscriereLabel2, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.cnpLabel, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.defunctLabel, 1, 1);
-            this.tableLayoutPanel5.Controls.Add(this.adresaProprietarLabel, 2, 1);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(218, 125);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 3;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(645, 225);
-            this.tableLayoutPanel5.TabIndex = 77;
-            this.tableLayoutPanel5.Visible = false;
+            this.tableLayoutPanelProprietari.ColumnCount = 4;
+            this.tableLayoutPanelProprietari.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelProprietari.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelProprietari.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelProprietari.Controls.Add(this.idLabel2, 0, 0);
+            this.tableLayoutPanelProprietari.Controls.Add(this.sectorLabel3, 1, 0);
+            this.tableLayoutPanelProprietari.Controls.Add(this.ieLabel2, 2, 0);
+            this.tableLayoutPanelProprietari.Controls.Add(this.proprietarLabel2, 3, 0);
+            this.tableLayoutPanelProprietari.Controls.Add(this.cnpLabel, 0, 1);
+            this.tableLayoutPanelProprietari.Controls.Add(this.defunctLabel, 1, 1);
+            this.tableLayoutPanelProprietari.Controls.Add(this.adresaProprietarLabel, 2, 1);
+            this.tableLayoutPanelProprietari.Controls.Add(this.noteProprietarLabel, 3, 1);
+            this.tableLayoutPanelProprietari.Location = new System.Drawing.Point(218, 125);
+            this.tableLayoutPanelProprietari.Name = "tableLayoutPanelProprietari";
+            this.tableLayoutPanelProprietari.RowCount = 2;
+            this.tableLayoutPanelProprietari.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanelProprietari.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanelProprietari.Size = new System.Drawing.Size(645, 225);
+            this.tableLayoutPanelProprietari.TabIndex = 77;
+            this.tableLayoutPanelProprietari.Visible = false;
             // 
-            // tableLayoutPanel4
+            // tableLayoutPanelInscrieri
             // 
-            this.tableLayoutPanel4.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel4.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel4.Padding = new Padding(20);
-            foreach (Control c in this.tableLayoutPanel4.Controls)
+            this.tableLayoutPanelInscrieri.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanelInscrieri.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanelInscrieri.Padding = new Padding(20);
+            foreach (Control c in this.tableLayoutPanelInscrieri.Controls)
             {
                 c.Margin = new Padding(10);
             }
-            this.tableLayoutPanel4.ColumnCount = 3;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.Controls.Add(this.idLabel4, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.sectorLabel, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.tipInscriereLabel, 2, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(218, 199);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(645, 75);
-            this.tableLayoutPanel4.TabIndex = 76;
-            this.tableLayoutPanel4.Visible = false;
+            this.tableLayoutPanelInscrieri.ColumnCount = 3;
+            this.tableLayoutPanelInscrieri.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelInscrieri.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelInscrieri.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelInscrieri.Controls.Add(this.idLabel4, 0, 0);
+            this.tableLayoutPanelInscrieri.Controls.Add(this.sectorLabel, 1, 0);
+            this.tableLayoutPanelInscrieri.Controls.Add(this.tipInscriereLabel, 2, 0);
+            this.tableLayoutPanelInscrieri.Location = new System.Drawing.Point(218, 199);
+            this.tableLayoutPanelInscrieri.Name = "tableLayoutPanelInscrieri";
+            this.tableLayoutPanelInscrieri.RowCount = 1;
+            this.tableLayoutPanelInscrieri.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelInscrieri.Size = new System.Drawing.Size(645, 75);
+            this.tableLayoutPanelInscrieri.TabIndex = 76;
+            this.tableLayoutPanelInscrieri.Visible = false;
             // 
             // CustomControl0
             // 
@@ -1393,29 +1437,29 @@ public class CustomGroupBox : GroupBox
             this.Controls.Add(this.raportContentLabel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel6);
-            this.Controls.Add(this.tableLayoutPanel3);
+            this.Controls.Add(this.tableLayoutPanelSarcini);
             this.Controls.Add(this.tableLayoutPanelConstructii);
             this.Controls.Add(this.tableLayoutPanelParcele);
             this.Controls.Add(this.backgroundImageLogo);
-            this.Controls.Add(this.tableLayoutPanel5);
-            this.Controls.Add(this.tableLayoutPanel4);
+            this.Controls.Add(this.tableLayoutPanelProprietari);
+            this.Controls.Add(this.tableLayoutPanelInscrieri);
             this.Name = "CustomControl0";
             this.Size = new System.Drawing.Size(865, 600);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanelSarcini.ResumeLayout(false);
+            this.tableLayoutPanelSarcini.PerformLayout();
             this.tableLayoutPanelConstructii.ResumeLayout(false);
             this.tableLayoutPanelConstructii.PerformLayout();
             this.tableLayoutPanelParcele.ResumeLayout(false);
             this.tableLayoutPanelParcele.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImageLogo)).EndInit();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanelProprietari.ResumeLayout(false);
+            this.tableLayoutPanelProprietari.PerformLayout();
+            this.tableLayoutPanelInscrieri.ResumeLayout(false);
+            this.tableLayoutPanelInscrieri.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1458,6 +1502,7 @@ public class CustomGroupBox : GroupBox
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Label sectorLabel6;
         private System.Windows.Forms.Label ieLabel3;
+        private System.Windows.Forms.Label ieLabel4;
         private System.Windows.Forms.Label destinatieConstructieLabel;
         private System.Windows.Forms.Label areGeometrieLabel;
         private System.Windows.Forms.Label nrCadLabel;
@@ -1466,7 +1511,7 @@ public class CustomGroupBox : GroupBox
         private System.Windows.Forms.Label nrTarlaLabel;
         private System.Windows.Forms.Label nrTitluLabel;
         private System.Windows.Forms.Label diferentaSuprafeteLabel;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelSarcini;
         private System.Windows.Forms.Label suprafataActeLabel;
         private System.Windows.Forms.Label noteConstructiiLabel;
         private System.Windows.Forms.Label nrEtajeLabel;
@@ -1480,16 +1525,18 @@ public class CustomGroupBox : GroupBox
         private System.Windows.Forms.Label nrTopoLabel;
         private System.Windows.Forms.Label categorieFolosintaLabel;
         private System.Windows.Forms.Label suprafataActeLabel3;
+        private System.Windows.Forms.Label suprafataParcelaLabel;
         private System.Windows.Forms.Label noteImobilLabel;
         private System.Windows.Forms.Label imprejmuitLabel;
         private System.Windows.Forms.Label tipTerenLabel;
         private System.Windows.Forms.PictureBox backgroundImageLogo;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelProprietari;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelInscrieri;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label noteProprietarLabel1;
         private System.Windows.Forms.Label noteParcelaLabel2;
         private System.Windows.Forms.Label proprietarLabel;
+        private System.Windows.Forms.Label proprietarLabel2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button caleFisiereCgxmlBtn;
         private System.Windows.Forms.Button button9;
