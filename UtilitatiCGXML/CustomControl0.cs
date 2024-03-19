@@ -24,6 +24,7 @@ using NetTopologySuite.IO.ShapeFile;
 using NetTopologySuite.Features;
 using DaveChambers.FolderBrowserDialogEx;
 using nc;
+using System.Windows.Controls.Ribbon.Primitives;
 
 
 namespace UtilitatiCGXML
@@ -40,6 +41,7 @@ namespace UtilitatiCGXML
             raportProprietariBtn.Enabled = state;
             button6.Enabled = state;
         }
+        
         private List<string> AllFileListz = new List<string>();
         private List<string> MustFileListz = new List<string>();
         private List<string> RandomListz = new List<string>();
@@ -1830,7 +1832,10 @@ namespace UtilitatiCGXML
                 }
                 else
                 {
-                    // .cgxml files found, proceed with your logic
+                    // .cgxml files found
+                    this.caleFisiereCgxmlBtn.Image = Image.FromFile("C:\\Users\\USER\\Documents\\scripts\\cgxml-toolkit\\UtilitatiCGXML\\Resources\\folder-check.png"); // Ensure the path is correct
+                    this.caleFisiereCgxmlBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                    this.caleFisiereCgxmlBtn.ImageAlign = ContentAlignment.MiddleRight;
                     tEnabled(true);
                     CostumFolderBrowserDialogPath = selectedPath;
                 }

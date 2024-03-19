@@ -1496,6 +1496,7 @@ public class CustomGroupBox : GroupBox
             this.tableLayoutPanelProprietari.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanelProprietari.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanelProprietari.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelProprietari.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanelProprietari.Controls.Add(this.idLabel2, 0, 0);
             this.tableLayoutPanelProprietari.Controls.Add(this.sectorLabel3, 1, 0);
             this.tableLayoutPanelProprietari.Controls.Add(this.ieLabel2, 2, 0);
@@ -1507,8 +1508,8 @@ public class CustomGroupBox : GroupBox
             this.tableLayoutPanelProprietari.Location = new System.Drawing.Point(218, 125);
             this.tableLayoutPanelProprietari.Name = "tableLayoutPanelProprietari";
             this.tableLayoutPanelProprietari.RowCount = 2;
-            this.tableLayoutPanelProprietari.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanelProprietari.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanelProprietari.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelProprietari.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelProprietari.Size = new System.Drawing.Size(645, 225);
             this.tableLayoutPanelProprietari.TabIndex = 77;
             this.tableLayoutPanelProprietari.Visible = false;
