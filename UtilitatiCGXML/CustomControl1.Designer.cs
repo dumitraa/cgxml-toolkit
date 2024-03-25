@@ -127,6 +127,7 @@ public class CustomGroupBox : GroupBox
             this.button5 = new System.Windows.Forms.Button();
             this.cgToShpBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.compareCgxml = new System.Windows.Forms.Button();
             this.copyArchiveCgBtn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.seVaCreaLabel = new System.Windows.Forms.Label();
@@ -155,6 +156,7 @@ public class CustomGroupBox : GroupBox
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5); 
             this.panel1.Controls.Add(this.label1); 
+            this.panel1.Controls.Add(this.compareCgxml); // Comparare CGXML
             this.panel1.Controls.Add(this.copyArchiveCgBtn); // Copiere arhivare CGXML
             this.panel1.Controls.Add(this.button4); 
             this.panel1.Location = new System.Drawing.Point(0, 1);
@@ -162,6 +164,27 @@ public class CustomGroupBox : GroupBox
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 480);
             this.panel1.TabIndex = 15;
+            // 
+            // compare cgxml files
+            // 
+            this.compareCgxml.BackColor = System.Drawing.Color.FromArgb(0, 130, 237); // Material Design Blue
+            this.compareCgxml.FlatAppearance.BorderSize = 0;
+            this.compareCgxml.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.compareCgxml.Font = new System.Drawing.Font("Segoe UI", 9.75F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.compareCgxml.ForeColor = System.Drawing.Color.White;
+            this.compareCgxml.Location = new System.Drawing.Point(0, 70);
+            this.compareCgxml.Margin = new System.Windows.Forms.Padding(0);
+            this.compareCgxml.Name = "combinePdfs";
+            this.compareCgxml.Size = new System.Drawing.Size(220, 51);
+            this.compareCgxml.TabIndex = 0;
+            this.compareCgxml.Text = " Compară date CGXML";
+            this.compareCgxml.UseVisualStyleBackColor = false;
+            this.compareCgxml.Click += new System.EventHandler(this.compareCgxml_Click);
+            this.compareCgxml.MouseHover += new System.EventHandler(this.compareCgxml_MouseHover);
+
+            ToolTip pdftToolTip = new ToolTip();
+            pdftToolTip.SetToolTip(this.compareCgxml, "Unește mai multe fișiere PDF într-un singur document.");
+            // 
             //
             // cgToShpBtn and constrCheckbox groupbox
             //
@@ -404,6 +427,7 @@ public class CustomGroupBox : GroupBox
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button compareCgxml;
         private System.Windows.Forms.Button cgToShpBtn;
         private System.Windows.Forms.CheckBox imobileCheckbox;
         private System.Windows.Forms.CheckBox constrCheckbox;
