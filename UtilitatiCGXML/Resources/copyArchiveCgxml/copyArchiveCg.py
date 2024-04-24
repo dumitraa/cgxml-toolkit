@@ -159,9 +159,6 @@ class App(QWidget):
             self.progress_bar.setValue(progress)
                 
         input_str = list(set(self.cadastre_numbers_entry.text().split()))  # Remove duplicates
-        if not self.is_valid_name(self.zip_file_entry.text()):
-            QMessageBox.warning(self, 'Nume invalid', 'Numele arhivei conține caractere invalide.\nVă rugăm să corectați numele și încercați din nou.')
-            return
         
         source_folder = QFileDialog.getExistingDirectory(self, 'Alegeți folder-ul sursă')
         if not source_folder:

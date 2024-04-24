@@ -25,6 +25,7 @@ using NetTopologySuite.Features;
 using DaveChambers.FolderBrowserDialogEx;
 using nc;
 using System.Windows.Controls.Ribbon.Primitives;
+using NPOI.SS.Formula.Functions;
 
 
 namespace UtilitatiCGXML
@@ -459,6 +460,8 @@ namespace UtilitatiCGXML
             headerRow.CreateCell(18).SetCellValue("Note Imobil");
             headerRow.CreateCell(19).SetCellValue("Note Parcela");
             headerRow.CreateCell(20).SetCellValue("Note Proprietar");
+            headerRow.CreateCell(21).SetCellValue("Adresa Imobil");  
+            headerRow.CreateCell(22).SetCellValue("Nr Imobil"); 
             //(Optional) freeze the header row so it is not scrolled
             sheet.CreateFreezePane(0, 1, 0, 1);
 
@@ -497,7 +500,14 @@ namespace UtilitatiCGXML
                 bool b = AllFileListz.Any(s => files[i].FullName.Contains(s));
                 bool c = MustFileListz.Any(files[i].FullName.Contains);
 
+                DataSet dsUAT = new DataSet();
+                DataSet dsLocality = new DataSet();
+                DataSet dsStreetType = new DataSet();
 
+                dsUAT.ReadXml(string.Concat(Application.StartupPath.ToString(), "\\ProgramData\\Admin.xml"));
+                dsLocality.ReadXml(string.Concat(Application.StartupPath.ToString(), "\\ProgramData\\Locality.xml"));
+                dsStreetType.ReadXml(string.Concat(Application.StartupPath.ToString(), "\\ProgramData\\Dictionary.xml"));
+                
                 //actions
                 if (checkBox1.Checked == true)
                 {
@@ -508,6 +518,69 @@ namespace UtilitatiCGXML
                         sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? "S" + lr.CADSECTOR : string.Empty;
                         ie = lr.E2IDENTIFIER;
                         measarea = lr.MEASUREDAREA.ToString();
+                        string streetnr = "";
+
+                        DataTable item = fisier.Tables["ADDRESS"];
+
+                        int addressid = lr.ADDRESSID;
+                        DataRow[] drAddress = fisier.Tables["ADDRESS"].Select(string.Concat("ADDRESSID=", addressid.ToString()));
+                        if (!string.IsNullOrEmpty(drAddress[0][1].ToString()))
+                        {
+                            try
+                            {
+                                DataRow[] drUAT = dsUAT.Tables[0].Select(string.Concat("ADMINISTRATIVEUNITID='", drAddress[0][1], "'"));
+                                adresa = string.Concat("UAT ", drUAT[0][2]);
+                                if (drAddress[0][3].ToString().ToLower() == "true")
+                                {
+                                    DataRow[] drLocality = dsLocality.Tables[0].Select(string.Concat("LOCALITYID='", drAddress[0][2], "'"));
+                                    adresa = string.Concat(new object[] { adresa, ", Loc. ", drLocality[0][2], ", " });
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("DISTRICTTYPE") && !string.IsNullOrEmpty(drAddress[0][4].ToString()))
+                                    {
+                                        DataRow[] drDict = dsStreetType.Tables[0].Select(string.Concat("DICTIONARYITEMCODE='", drAddress[0]["DISTRICTTYPE"], "' AND DICTIONARYCODE='DISTRICT'"));
+                                        adresa = string.Concat(new object[] { adresa, drDict[0][3], " ", drAddress[0][5] });
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("STREETTYPE") && !string.IsNullOrEmpty(drAddress[0][6].ToString()))
+                                    {
+                                        DataRow[] drDict = dsStreetType.Tables[0].Select(string.Concat("DICTIONARYITEMCODE='", drAddress[0]["STREETTYPE"], "' AND DICTIONARYCODE='ST'"));
+                                        adresa = string.Concat(new object[] { adresa, ", ", drDict[0][3], " ", drAddress[0][7] });
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("POSTALNUMBER") && !string.IsNullOrEmpty(drAddress[0][8].ToString()))
+                                    {
+                                        adresa = string.Concat(adresa, ", Nr. ", drAddress[0][8]);
+                                        streetnr = drAddress[0][8].ToString();
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("BLOCK") && !string.IsNullOrEmpty(drAddress[0][9].ToString()))
+                                    {
+                                        adresa = string.Concat(adresa, ", Bloc ", drAddress[0][9]);
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("ENTRY") && !string.IsNullOrEmpty(drAddress[0][10].ToString()))
+                                    {
+                                        adresa = string.Concat(adresa, ", Sc. ", drAddress[0][10]);
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("FLOOR") && !string.IsNullOrEmpty(drAddress[0][11].ToString()))
+                                    {
+                                        adresa = string.Concat(adresa, ", Et. ", drAddress[0][11]);
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("APNO") && !string.IsNullOrEmpty(drAddress[0][12].ToString()))
+                                    {
+                                        adresa = string.Concat(adresa, ", Ap. ", drAddress[0][12]);
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("ZIPCODE") && !string.IsNullOrEmpty(drAddress[0][13].ToString()))
+                                    {
+                                        adresa = string.Concat(adresa, ", Cod postal ", drAddress[0][13]);
+                                    }
+                                }
+                            }
+                            catch (Exception)
+                            {
+                                MessageBox.Show(string.Concat(cadgenno, " cu probleme"));
+                            }
+                        }
+                        else
+                        {
+                            adresa = "Nespecificata";
+                        }
+
                         if (lr.PARCELLEGALAREA == 9898989)
                         {
                             parcellegalarea = "Necompletat";
@@ -562,6 +635,8 @@ namespace UtilitatiCGXML
                                 row.CreateCell(18).SetCellValue(note);
                                 row.CreateCell(19).SetCellValue(notes);
                                 row.CreateCell(20).SetCellValue(pnotes);
+                                row.CreateCell(21).SetCellValue(adresa);
+                                row.CreateCell(22).SetCellValue(streetnr);
 
                                 rowIndex++;
                             }
@@ -577,6 +652,69 @@ namespace UtilitatiCGXML
                         sector = !string.IsNullOrEmpty(lr.CADSECTOR) ? "S" + lr.CADSECTOR : string.Empty;
                         ie = lr.E2IDENTIFIER;
                         measarea = lr.MEASUREDAREA.ToString();
+                        string streetnr = "";
+
+                        DataTable item = fisier.Tables["ADDRESS"];
+
+                        int addressid = lr.ADDRESSID;
+                        DataRow[] drAddress = fisier.Tables["ADDRESS"].Select(string.Concat("ADDRESSID=", addressid.ToString()));
+                        if (!string.IsNullOrEmpty(drAddress[0][1].ToString()))
+                        {
+                            try
+                            {
+                                DataRow[] drUAT = dsUAT.Tables[0].Select(string.Concat("ADMINISTRATIVEUNITID='", drAddress[0][1], "'"));
+                                adresa = string.Concat("UAT ", drUAT[0][2]);
+                                if (drAddress[0][3].ToString().ToLower() == "true")
+                                {
+                                    DataRow[] drLocality = dsLocality.Tables[0].Select(string.Concat("LOCALITYID='", drAddress[0][2], "'"));
+                                    adresa = string.Concat(new object[] { adresa, ", Loc. ", drLocality[0][2], ", " });
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("DISTRICTTYPE") && !string.IsNullOrEmpty(drAddress[0][4].ToString()))
+                                    {
+                                        DataRow[] drDict = dsStreetType.Tables[0].Select(string.Concat("DICTIONARYITEMCODE='", drAddress[0]["DISTRICTTYPE"], "' AND DICTIONARYCODE='DISTRICT'"));
+                                        adresa = string.Concat(new object[] { adresa, drDict[0][3], " ", drAddress[0][5] });
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("STREETTYPE") && !string.IsNullOrEmpty(drAddress[0][6].ToString()))
+                                    {
+                                        DataRow[] drDict = dsStreetType.Tables[0].Select(string.Concat("DICTIONARYITEMCODE='", drAddress[0]["STREETTYPE"], "' AND DICTIONARYCODE='ST'"));
+                                        adresa = string.Concat(new object[] { adresa, ", ", drDict[0][3], " ", drAddress[0][7] });
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("POSTALNUMBER") && !string.IsNullOrEmpty(drAddress[0][8].ToString()))
+                                    {
+                                        adresa = string.Concat(adresa, ", Nr. ", drAddress[0][8]);
+                                        streetnr = drAddress[0][8].ToString();
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("BLOCK") && !string.IsNullOrEmpty(drAddress[0][9].ToString()))
+                                    {
+                                        adresa = string.Concat(adresa, ", Bloc ", drAddress[0][9]);
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("ENTRY") && !string.IsNullOrEmpty(drAddress[0][10].ToString()))
+                                    {
+                                        adresa = string.Concat(adresa, ", Sc. ", drAddress[0][10]);
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("FLOOR") && !string.IsNullOrEmpty(drAddress[0][11].ToString()))
+                                    {
+                                        adresa = string.Concat(adresa, ", Et. ", drAddress[0][11]);
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("APNO") && !string.IsNullOrEmpty(drAddress[0][12].ToString()))
+                                    {
+                                        adresa = string.Concat(adresa, ", Ap. ", drAddress[0][12]);
+                                    }
+                                    if (fisier.Tables["ADDRESS"].Columns.Contains("ZIPCODE") && !string.IsNullOrEmpty(drAddress[0][13].ToString()))
+                                    {
+                                        adresa = string.Concat(adresa, ", Cod postal ", drAddress[0][13]);
+                                    }
+                                }
+                            }
+                            catch (Exception)
+                            {
+                                MessageBox.Show(string.Concat(cadgenno, " cu probleme"));
+                            }
+                        }
+                        else
+                        {
+                            adresa = "Nespecificata";
+                        }
+
                         if (lr.PARCELLEGALAREA == 9898989)
                         {
                             parcellegalarea = "Necompletat";
@@ -641,6 +779,8 @@ namespace UtilitatiCGXML
                             row.CreateCell(18).SetCellValue(note);
                             row.CreateCell(19).SetCellValue(notes);
                             row.CreateCell(20).SetCellValue(pnotes);
+                            row.CreateCell(21).SetCellValue(adresa);
+                            row.CreateCell(22).SetCellValue(streetnr);
                             rowIndex++;
                         }
                     }
@@ -985,12 +1125,13 @@ namespace UtilitatiCGXML
                 //Populate Raport
                 //actions
 
+                bool hasSarcini = false;
                 foreach (CGXML.RegistrationRow lb in fisier.Registration)
                 {
-                    bool hasSarcini = false;
                     if (lb.LBPARTNO == 3) {
                         hasSarcini = true;
                     }
+                }
                         foreach (CGXML.LandRow lr in fisier.Land)
                         {
                             cadgenno = lr.CADGENNO;
@@ -1005,10 +1146,9 @@ namespace UtilitatiCGXML
                             row.CreateCell(3).SetCellValue(hasSarcini ? "DA" : "NU");
 
                             rowIndex++;
-
+                            break;
                         }
                 }
-            }
             //Write the stream data of workbook to the root directory
             DateTime now = DateTime.Now;
             string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
