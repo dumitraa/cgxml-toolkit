@@ -6,9 +6,11 @@ import os
 import shutil
 import zipfile
 
+EXTENSION = '.cgxml'
+
 def replace_spaces(input_str):
     numbers = input_str.strip().split()
-    cgxml_numbers = [num + ".cgxml" for num in numbers if num]
+    cgxml_numbers = [num + EXTENSION for num in numbers if num]
     return " ".join(cgxml_numbers)
 
 class App(QWidget):
@@ -89,7 +91,7 @@ class App(QWidget):
             }
         """)
         
-        self.setWindowTitle('Copiere și Arhivare CGXML')
+        self.setWindowTitle('Copiere și Arhivare Fisiere')
         self.setWindowIcon(QIcon('C:/Users/USER/Documents/scripts/cgxml-toolkit/UtilitatiCGXML/Neural.ico'))  # Set an icon 
         
         layout = QVBoxLayout()
@@ -141,7 +143,7 @@ class App(QWidget):
                     shutil.copy2(source_path, dest_path)
                     progress_callback(source_path)  # Update progress
                 else:
-                    not_found_files.append(file_name.replace('.cgxml', ''))
+                    not_found_files.append(file_name.replace(EXTENSION, ''))
             return not_found_files
 
         def zip_files(source_folder, dest_file, file_names, progress_callback):
@@ -171,7 +173,7 @@ class App(QWidget):
             return
         
         if input_str and source_folder and dest_folder:
-            file_names = [f"{num}.cgxml" for num in input_str]  # Construct file names based on input
+            file_names = [f"{num}{EXTENSION}" for num in input_str]  # Construct file names based on input
             total_size = calculate_total_size([os.path.join(source_folder, f) for f in file_names])
             copied_size = 0
 
@@ -179,7 +181,7 @@ class App(QWidget):
         not_found_files = copy_files(source_folder, dest_folder, file_names, update_progress)
 
         # Zip files
-        zip_file_name = self.zip_file_entry.text().strip() or "cgxml"
+        zip_file_name = self.zip_file_entry.text().strip() or EXTENSION[1:]  # Use extension as default name
         zip_file_path = os.path.join(dest_folder, f"{zip_file_name}.zip")
         zip_files(dest_folder, zip_file_path, file_names, update_progress)
 

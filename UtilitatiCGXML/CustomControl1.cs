@@ -203,6 +203,7 @@ namespace UtilitatiCGXML
             string areaCG = "";
             string actAreaCG = "";
             string fullName = "";
+            string adresa = "";
 
             if (imobileCheckbox.Checked || constrCheckbox.Checked)
             {
@@ -240,6 +241,7 @@ namespace UtilitatiCGXML
                 //initial vars
                 string futureFieldName = "ID";
                 string futureFieldSector = "Sector";
+                string futureAddress = "Adresa";
                 string futureFieldIE = "IE";
                 string futurePerson = "Proprietari";
                 string futureFieldAreaCG = "Sup Mas";
@@ -312,11 +314,11 @@ namespace UtilitatiCGXML
                                 Coordinate[] buildingCoords = buildingCoordList.ToArray();
                                 var buildingPolygon = geoFactory.CreatePolygon(buildingCoords);
                                 foreach (CGXML.ParcelRow pr in fisier.Parcel)
-                                    {
-                                        uniqueTipTerenB.Add(pr.INTRAVILAN ? "Intravilan" : "Extravilan");
+                                {
+                                    uniqueTipTerenB.Add(pr.INTRAVILAN ? "Intravilan" : "Extravilan");
 
-                                    }
-                                    string aggregatedTipTeren = string.Join("; ", uniqueTipTerenB);
+                                }
+                                string aggregatedTipTeren = string.Join("; ", uniqueTipTerenB);
 
                                 // Create attributes table for building
                                 var buildingAttributes = new AttributesTable();
@@ -402,304 +404,375 @@ namespace UtilitatiCGXML
                             areaCG = lr.MEASUREDAREA.ToString();
                             actAreaCG = lr.PARCELLEGALAREA.ToString();
 
-                            foreach (CGXML.ParcelRow pr in fisier.Parcel)
+
+                            DataSet dsUAT = new DataSet();
+                            DataSet dsLocality = new DataSet();
+                            DataSet dsStreetType = new DataSet();
+
+                            dsUAT.ReadXml(string.Concat(Application.StartupPath.ToString(), "\\ProgramData\\Admin.xml"));
+                            dsLocality.ReadXml(string.Concat(Application.StartupPath.ToString(), "\\ProgramData\\Locality.xml"));
+                            dsStreetType.ReadXml(string.Concat(Application.StartupPath.ToString(), "\\ProgramData\\Dictionary.xml"));
+
+                            int addressid = lr.ADDRESSID;
+                            DataRow[] drAddress = fisier.Tables["ADDRESS"].Select(string.Concat("ADDRESSID=", addressid.ToString()));
+                            if (drAddress.Length > 0 && drAddress[0].ItemArray.Length > 1 && !(drAddress[0][1] is DBNull))
                             {
-                                uniqueTarla.Add(pr.LANDPLOTNO);
-                                uniqueParcela.Add(pr.PARCELNO);
-                                uniqueCategFol.Add(pr.USECATEGORY);
-                                uniqueNrTitlu.Add(pr.TITLENO.ToString());
-                                uniqueTipTeren.Add(pr.INTRAVILAN ? "Intravilan" : "Extravilan");
-
+                                if (!string.IsNullOrEmpty(drAddress[0][1].ToString()))
+                                {
+                                    try
+                                    {
+                                        DataRow[] drUAT = dsUAT.Tables[0].Select(string.Concat("ADMINISTRATIVEUNITID='", drAddress[0][1], "'"));
+                                        adresa = string.Concat("UAT ", drUAT[0][2]);
+                                        if (drAddress[0][3].ToString().ToLower() == "true")
+                                        {
+                                            DataRow[] drLocality = dsLocality.Tables[0].Select(string.Concat("LOCALITYID='", drAddress[0][2], "'"));
+                                            adresa = string.Concat(new object[] { adresa, ", Loc. ", drLocality[0][2], ", " });
+                                            if (fisier.Tables["ADDRESS"].Columns.Contains("DISTRICTTYPE") && !string.IsNullOrEmpty(drAddress[0][4].ToString()))
+                                            {
+                                                DataRow[] drDict = dsStreetType.Tables[0].Select(string.Concat("DICTIONARYITEMCODE='", drAddress[0]["DISTRICTTYPE"], "' AND DICTIONARYCODE='DISTRICT'"));
+                                                adresa = string.Concat(new object[] { adresa, drDict[0][3], " ", drAddress[0][5] });
+                                            }
+                                            if (fisier.Tables["ADDRESS"].Columns.Contains("STREETTYPE") && !string.IsNullOrEmpty(drAddress[0][6].ToString()))
+                                            {
+                                                DataRow[] drDict = dsStreetType.Tables[0].Select(string.Concat("DICTIONARYITEMCODE='", drAddress[0]["STREETTYPE"], "' AND DICTIONARYCODE='ST'"));
+                                                adresa = string.Concat(new object[] { adresa, ", ", drDict[0][3], " ", drAddress[0][7] });
+                                            }
+                                            if (fisier.Tables["ADDRESS"].Columns.Contains("POSTALNUMBER") && !string.IsNullOrEmpty(drAddress[0][8].ToString()))
+                                            {
+                                                adresa = string.Concat(adresa, ", Nr. ", drAddress[0][8]);
+                                            }
+                                            if (fisier.Tables["ADDRESS"].Columns.Contains("BLOCK") && !string.IsNullOrEmpty(drAddress[0][9].ToString()))
+                                            {
+                                                adresa = string.Concat(adresa, ", Bloc ", drAddress[0][9]);
+                                            }
+                                            if (fisier.Tables["ADDRESS"].Columns.Contains("ENTRY") && !string.IsNullOrEmpty(drAddress[0][10].ToString()))
+                                            {
+                                                adresa = string.Concat(adresa, ", Sc. ", drAddress[0][10]);
+                                            }
+                                            if (fisier.Tables["ADDRESS"].Columns.Contains("FLOOR") && !string.IsNullOrEmpty(drAddress[0][11].ToString()))
+                                            {
+                                                adresa = string.Concat(adresa, ", Et. ", drAddress[0][11]);
+                                            }
+                                            if (fisier.Tables["ADDRESS"].Columns.Contains("APNO") && !string.IsNullOrEmpty(drAddress[0][12].ToString()))
+                                            {
+                                                adresa = string.Concat(adresa, ", Ap. ", drAddress[0][12]);
+                                            }
+                                            if (fisier.Tables["ADDRESS"].Columns.Contains("ZIPCODE") && !string.IsNullOrEmpty(drAddress[0][13].ToString()))
+                                            {
+                                                adresa = string.Concat(adresa, ", Cod postal ", drAddress[0][13]);
+                                            }
+                                        }
+                                    }
+                                    catch (Exception)
+                                    {
+                                        MessageBox.Show(string.Concat("cu probleme"));
+                                    }
+                                }
                             }
-                            string aggregatedTarla = string.Join("; ", uniqueTarla);
-                            string aggregatedParcela = string.Join("; ", uniqueParcela);
-                            string aggregatedCategFol = string.Join("; ", uniqueCategFol);
-                            string aggregatedNrTitlu = string.Join("; ", uniqueNrTitlu);
-                            string aggregatedTipTeren = string.Join("; ", uniqueTipTeren);
-                            string aggregatedOwners = string.Join("; ", uniquePerson);
+                                else
+                                {
+                                    adresa = "Nespecificata";
+                                }
 
-                            t.Add(futureFieldName, id);
-                            t.Add(futureFieldSector, sectorVal);
-                            t.Add(futureFieldIE, ie);
-                            t.Add(futureFieldTipTeren, uniqueTipTeren.Count > 0 ? aggregatedTipTeren : null);
-                            t.Add(futureFieldTarla, uniqueTarla.Count > 0 ? aggregatedTarla : null);
-                            t.Add(futureFieldParcela, uniqueParcela.Count > 0 ? aggregatedParcela : null);
-                            t.Add(futureFieldCategFol, uniqueCategFol.Count > 0 ? aggregatedCategFol : null);
-                            t.Add(futureFieldImprej, imprej);
-                            t.Add(futureFieldAreaCG, areaCG);
-                            t.Add(futureFieldLegalAreaCG, actAreaCG);
-                            t.Add(futurePerson, uniquePerson.Count > 0 ? aggregatedOwners : null);
-                            t.Add(futureFieldNrTitlu, uniqueNrTitlu.Count > 0 ? aggregatedNrTitlu : null);
-                            t.Add(futureFieldNoteImobil, noteImobil);
+                                foreach (CGXML.ParcelRow pr in fisier.Parcel)
+                                {
+                                    uniqueTarla.Add(pr.LANDPLOTNO);
+                                    uniqueParcela.Add(pr.PARCELNO);
+                                    uniqueCategFol.Add(pr.USECATEGORY);
+                                    uniqueNrTitlu.Add(pr.TITLENO.ToString());
+                                    uniqueTipTeren.Add(pr.INTRAVILAN ? "Intravilan" : "Extravilan");
 
-                            //Geometry 
-                            myCoord = myCoord.Where(c => c != null).ToArray();
-                            gr[intr] = geomFactory.CreatePolygon(myCoord);
-                            futuresList.Add(new Feature(gr[intr], t));
-                            intr++;
+                                }
+                                string aggregatedTarla = string.Join("; ", uniqueTarla);
+                                string aggregatedParcela = string.Join("; ", uniqueParcela);
+                                string aggregatedCategFol = string.Join("; ", uniqueCategFol);
+                                string aggregatedNrTitlu = string.Join("; ", uniqueNrTitlu);
+                                string aggregatedTipTeren = string.Join("; ", uniqueTipTeren);
+                                string aggregatedOwners = string.Join("; ", uniquePerson);
+
+                                t.Add(futureFieldName, id);
+                                t.Add(futureFieldSector, sectorVal);
+                                t.Add(futureAddress, adresa);
+                                t.Add(futureFieldIE, ie);
+                                t.Add(futureFieldTipTeren, uniqueTipTeren.Count > 0 ? aggregatedTipTeren : null);
+                                t.Add(futureFieldTarla, uniqueTarla.Count > 0 ? aggregatedTarla : null);
+                                t.Add(futureFieldParcela, uniqueParcela.Count > 0 ? aggregatedParcela : null);
+                                t.Add(futureFieldCategFol, uniqueCategFol.Count > 0 ? aggregatedCategFol : null);
+                                t.Add(futureFieldImprej, imprej);
+                                t.Add(futureFieldAreaCG, areaCG);
+                                t.Add(futureFieldLegalAreaCG, actAreaCG);
+                                t.Add(futurePerson, uniquePerson.Count > 0 ? aggregatedOwners : null);
+                                t.Add(futureFieldNrTitlu, uniqueNrTitlu.Count > 0 ? aggregatedNrTitlu : null);
+                                t.Add(futureFieldNoteImobil, noteImobil);
+
+                                //Geometry 
+                                myCoord = myCoord.Where(c => c != null).ToArray();
+                                gr[intr] = geomFactory.CreatePolygon(myCoord);
+                                futuresList.Add(new Feature(gr[intr], t));
+                                intr++;
+                            }
                         }
                     }
-                }
-                //Feature list
-                string sector = sectorVal == "Fara Sector" ? "" : sectorVal + " ";
-                IList<Feature> features = futuresList.OfType<Feature>().ToList();
-                DateTime now = DateTime.Now;
-                string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
+                    //Feature list
+                    string sector = sectorVal == "Fara Sector" ? "" : sectorVal + " ";
+                    IList<Feature> features = futuresList.OfType<Feature>().ToList();
+                    DateTime now = DateTime.Now;
+                    string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
 
-                // Creating a shapefile for non-building features
-                if (features.Any())
-                {
-                    string shapefile = string.Concat(CostumFolderBrowserDialogPath, "\\", "Imobile ", sector, formattedDate);
-                    ShapefileDataWriter writer = new ShapefileDataWriter(shapefile) { Header = ShapefileDataWriter.GetHeader(features[0], features.Count) };
-                    writer.Write(features);
-                }
-
-                // Creating a shapefile for building features
-                if (buildingFeaturesList.Any()) // Check if there are any building features to write
-                {
-                    string buildingShapefile = string.Concat(CostumFolderBrowserDialogPath, "\\", "Constructii ", sector, formattedDate);
-                    ShapefileDataWriter buildingWriter = new ShapefileDataWriter(buildingShapefile)
+                    // Creating a shapefile for non-building features
+                    if (features.Any())
                     {
-                        Header = ShapefileDataWriter.GetHeader(buildingFeaturesList[0], buildingFeaturesList.Count)
-                    };
-                    buildingWriter.Write(buildingFeaturesList);
-                }
+                        string shapefile = string.Concat(CostumFolderBrowserDialogPath, "\\", "Imobile ", sector, formattedDate);
+                        ShapefileDataWriter writer = new ShapefileDataWriter(shapefile) { Header = ShapefileDataWriter.GetHeader(features[0], features.Count) };
+                        writer.Write(features);
+                    }
+
+                    // Creating a shapefile for building features
+                    if (buildingFeaturesList.Any()) // Check if there are any building features to write
+                    {
+                        string buildingShapefile = string.Concat(CostumFolderBrowserDialogPath, "\\", "Constructii ", sector, formattedDate);
+                        ShapefileDataWriter buildingWriter = new ShapefileDataWriter(buildingShapefile)
+                        {
+                            Header = ShapefileDataWriter.GetHeader(buildingFeaturesList[0], buildingFeaturesList.Count)
+                        };
+                        buildingWriter.Write(buildingFeaturesList);
+                    }
 
 
-                System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
-                this.Cursor = Cursors.Default;
-            }
-            else
-            {
-                MessageBox.Show("Selecteaza tipul de date pe care vrei sa il exporti");
-                return;
-            }
-        }
-
-
-        private void cgToShpBtn_MouseHover(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            string raportname = "Validare Dosare-Fisiere";
-            //Create new Excel Workbook
-            HSSFWorkbook hssfworkbook = new HSSFWorkbook();
-
-            //Create new Excel Sheet
-            var sheet = hssfworkbook.CreateSheet(raportname);
-
-            ////create a entry of DocumentSummaryInformation
-            DocumentSummaryInformation dsi = PropertySetFactory.CreateDocumentSummaryInformation();
-            dsi.Company = "OCPI MH";
-            hssfworkbook.DocumentSummaryInformation = dsi;
-
-            ////create a entry of SummaryInformation
-            SummaryInformation si = PropertySetFactory.CreateSummaryInformation();
-            si.Subject = "Export data from xml to xls using NPOI";
-            hssfworkbook.SummaryInformation = si;
-
-
-            //Create a header row
-            string UAT = "Padina";
-            string Sector_Letter = "S";
-            string Sector_NR = "34";
-            var headerRow = sheet.CreateRow(1);
-            sheet.CreateRow(0).CreateCell(0).SetCellValue("UAT " + UAT);
-            sheet.CreateRow(0).CreateCell(1).SetCellValue(string.Concat(Sector_Letter + Sector_NR));
-            headerRow.CreateCell(0).SetCellValue("Dosar");
-            headerRow.CreateCell(1).SetCellValue("Rezultat");
-
-
-            //(Optional) freeze the header row so it is not scrolled
-            //sheet.CreateFreezePane(0, 1, 0, 1);
-
-
-
-            //Auto Filter
-            //sheet.SetAutoFilter(new CellRangeAddress(0, 0, 0, 8));
-
-
-            DataSet dsUAT = new DataSet();
-            DataSet dsLocality = new DataSet();
-            DataSet dsStreetType = new DataSet();
-            dsUAT.ReadXml(string.Concat(Application.StartupPath.ToString(), "\\ProgramData\\Admin.xml"));
-            dsLocality.ReadXml(string.Concat(Application.StartupPath.ToString(), "\\ProgramData\\Locality.xml"));
-            dsStreetType.ReadXml(string.Concat(Application.StartupPath.ToString(), "\\ProgramData\\Dictionary.xml"));
-            //
-
-            FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
-            string Titlu = "Alege Dosarul cu CGXML-uri";
-            CostumFolderBrowserDialog.Title = Titlu;
-            CostumFolderBrowserDialog.StartPosition = FormStartPosition.CenterParent;
-
-            DialogResult dr = CostumFolderBrowserDialog.ShowDialog(this);
-            if (dr == DialogResult.OK)
-            {
-                //var
-                string end1 = "_DATE_teren";
-                string end2 = "Memoriu_tehnic";
-                string end3 = "_Registru";
-                string end4 = "_Opis";
-                string end5 = "_Planuri_Cadastrale";
-                string end6 = "shp";
-                string end7 = "DXF";
-
-                // //rootfolder
-                // bool rootfolder;
-                // if(Directory.Exists(CostumFolderBrowserDialog.SelectedPath))
-                // { rootfolder = true; }
-                // else { rootfolder = false; }
-                // //cgxml
-                // bool cgxmlfolder;
-                // if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath))
-                // { cgxmlfolder = true; }
-                // else { cgxmlfolder = false; }
-                // //sector cgxml
-                // bool sectorcgxml;
-                // if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath))
-                // { sectorcgxml = true; }
-                // else { sectorcgxml = false; }
-                //Date Teren
-                bool DateTerenFolder;
-                if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end1))
-                { DateTerenFolder = true; }
-                else { DateTerenFolder = false; }
-                //Memoriu
-                bool MemoriuTehnicFolder;
-                if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end1 + "\\" + end2))
-                { MemoriuTehnicFolder = true; }
-                else { MemoriuTehnicFolder = false; }
-                //Opis
-                bool OpisFolder;
-                if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end4))
-                { OpisFolder = true; }
-                else { OpisFolder = false; }
-                //Sector Opis
-                // bool OpisSector;
-                // if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end4 + "\\" + Sector_Letter+Sector_NR))
-                // { OpisSector = true; }
-                // else { OpisSector = false; }
-                //Planuri Cadastrale
-                bool PlanCadFolder;
-                if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end5))
-                { PlanCadFolder = true; }
-                else { PlanCadFolder = false; }
-                //Shp Plan
-                bool SHPFolder;
-                if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end5 + "\\" + end6))
-                { SHPFolder = true; }
-                else { SHPFolder = false; }
-                //PDF
-                //Dxf Plan
-                bool DXFFolder;
-                if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end5 + "\\" + end7))
-                { DXFFolder = true; }
-                else { DXFFolder = false; }
-                //PDF
-                // bool PDFFOLDER;
-                // if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath))
-                // { PDFFOLDER = true; }
-                // else { PDFFOLDER = false; }
-                //Reg
-                bool RegistruFolder;
-                if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end3))
-                { RegistruFolder = true; }
-                else { RegistruFolder = false; }
-                //Reg sector
-                bool RegistruSectorFolder;
-                if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end3 + "\\" + Sector_Letter + Sector_NR))
-                { RegistruSectorFolder = true; }
-                else { RegistruSectorFolder = false; }
-                string str1 = string.Concat(CostumFolderBrowserDialog.SelectedPath + "\\" + end3 + "\\" + Sector_Letter + Sector_NR);
-                string str2 = string.Concat(UAT + end3);
-                string str3 = string.Concat(Sector_Letter + Sector_NR);
-                string str4 = string.Concat(UAT + end4);
-                string test = UAT + end1;
-
-                sheet.CreateRow(2).CreateCell(0).SetCellValue(str1);
-                sheet.CreateRow(2).CreateCell(1).SetCellValue(DateTerenFolder);
-                sheet.CreateRow(3).CreateCell(0).SetCellValue(end2);
-                sheet.CreateRow(3).CreateCell(1).SetCellValue(MemoriuTehnicFolder);
-                sheet.CreateRow(4).CreateCell(0).SetCellValue(str2);
-                sheet.CreateRow(4).CreateCell(1).SetCellValue(RegistruFolder);
-                sheet.CreateRow(5).CreateCell(0).SetCellValue(str3);
-                sheet.CreateRow(5).CreateCell(1).SetCellValue(RegistruSectorFolder);
-                sheet.CreateRow(6).CreateCell(0).SetCellValue(str4);
-                sheet.CreateRow(6).CreateCell(1).SetCellValue(OpisFolder);
-                sheet.CreateRow(7).CreateCell(0).SetCellValue(UAT + end5);
-                sheet.CreateRow(7).CreateCell(1).SetCellValue(PlanCadFolder);
-                sheet.CreateRow(8).CreateCell(0).SetCellValue(end6);
-                sheet.CreateRow(8).CreateCell(1).SetCellValue(SHPFolder);
-                sheet.CreateRow(9).CreateCell(0).SetCellValue(end7);
-                sheet.CreateRow(9).CreateCell(1).SetCellValue(DXFFolder);
-
-                //Write the stream data of workbook to the root directory
-                DateTime now = DateTime.Now;
-                string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
-                FileStream file = new FileStream(Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}_{formattedDate}.xls"), FileMode.Create);
-                hssfworkbook.Write(file);
-                file.Close();
-                //MessageBox
-                DoneMsgBox msg = new DoneMsgBox();
-                msg.ShowDialog();
-
-                string filePath = Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}_{formattedDate}.xls");
-
-                if (msg.DialogResult == DialogResult.No)
-                {
-                    // Open folder
                     System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
+                    this.Cursor = Cursors.Default;
                 }
-                else if (msg.DialogResult == DialogResult.Yes)
+            else
                 {
-                    // Open file
-                    System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
+                    MessageBox.Show("Selecteaza tipul de date pe care vrei sa il exporti");
+                    return;
                 }
-
             }
-        }
-
-        private void button4_MouseHover(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_MouseHover(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_MouseHover(object sender, EventArgs e)
-        {
-
-        }
 
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            eVisible(false);
-            if (backgroundImageLogo.Visible == false)
+            private void cgToShpBtn_MouseHover(object sender, EventArgs e)
             {
-                backgroundImageLogo.Visible = true;
+
             }
-        }
+
+            private void button4_Click(object sender, EventArgs e)
+            {
+                string raportname = "Validare Dosare-Fisiere";
+                //Create new Excel Workbook
+                HSSFWorkbook hssfworkbook = new HSSFWorkbook();
+
+                //Create new Excel Sheet
+                var sheet = hssfworkbook.CreateSheet(raportname);
+
+                ////create a entry of DocumentSummaryInformation
+                DocumentSummaryInformation dsi = PropertySetFactory.CreateDocumentSummaryInformation();
+                dsi.Company = "OCPI MH";
+                hssfworkbook.DocumentSummaryInformation = dsi;
+
+                ////create a entry of SummaryInformation
+                SummaryInformation si = PropertySetFactory.CreateSummaryInformation();
+                si.Subject = "Export data from xml to xls using NPOI";
+                hssfworkbook.SummaryInformation = si;
+
+
+                //Create a header row
+                string UAT = "Padina";
+                string Sector_Letter = "S";
+                string Sector_NR = "34";
+                var headerRow = sheet.CreateRow(1);
+                sheet.CreateRow(0).CreateCell(0).SetCellValue("UAT " + UAT);
+                sheet.CreateRow(0).CreateCell(1).SetCellValue(string.Concat(Sector_Letter + Sector_NR));
+                headerRow.CreateCell(0).SetCellValue("Dosar");
+                headerRow.CreateCell(1).SetCellValue("Rezultat");
+
+
+                //(Optional) freeze the header row so it is not scrolled
+                //sheet.CreateFreezePane(0, 1, 0, 1);
+
+
+
+                //Auto Filter
+                //sheet.SetAutoFilter(new CellRangeAddress(0, 0, 0, 8));
+
+
+                DataSet dsUAT = new DataSet();
+                DataSet dsLocality = new DataSet();
+                DataSet dsStreetType = new DataSet();
+                dsUAT.ReadXml(string.Concat(Application.StartupPath.ToString(), "\\ProgramData\\Admin.xml"));
+                dsLocality.ReadXml(string.Concat(Application.StartupPath.ToString(), "\\ProgramData\\Locality.xml"));
+                dsStreetType.ReadXml(string.Concat(Application.StartupPath.ToString(), "\\ProgramData\\Dictionary.xml"));
+                //
+
+                FolderBrowserDialogEx CostumFolderBrowserDialog = new FolderBrowserDialogEx();
+                string Titlu = "Alege Dosarul cu CGXML-uri";
+                CostumFolderBrowserDialog.Title = Titlu;
+                CostumFolderBrowserDialog.StartPosition = FormStartPosition.CenterParent;
+
+                DialogResult dr = CostumFolderBrowserDialog.ShowDialog(this);
+                if (dr == DialogResult.OK)
+                {
+                    //var
+                    string end1 = "_DATE_teren";
+                    string end2 = "Memoriu_tehnic";
+                    string end3 = "_Registru";
+                    string end4 = "_Opis";
+                    string end5 = "_Planuri_Cadastrale";
+                    string end6 = "shp";
+                    string end7 = "DXF";
+
+                    // //rootfolder
+                    // bool rootfolder;
+                    // if(Directory.Exists(CostumFolderBrowserDialog.SelectedPath))
+                    // { rootfolder = true; }
+                    // else { rootfolder = false; }
+                    // //cgxml
+                    // bool cgxmlfolder;
+                    // if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath))
+                    // { cgxmlfolder = true; }
+                    // else { cgxmlfolder = false; }
+                    // //sector cgxml
+                    // bool sectorcgxml;
+                    // if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath))
+                    // { sectorcgxml = true; }
+                    // else { sectorcgxml = false; }
+                    //Date Teren
+                    bool DateTerenFolder;
+                    if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end1))
+                    { DateTerenFolder = true; }
+                    else { DateTerenFolder = false; }
+                    //Memoriu
+                    bool MemoriuTehnicFolder;
+                    if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end1 + "\\" + end2))
+                    { MemoriuTehnicFolder = true; }
+                    else { MemoriuTehnicFolder = false; }
+                    //Opis
+                    bool OpisFolder;
+                    if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end4))
+                    { OpisFolder = true; }
+                    else { OpisFolder = false; }
+                    //Sector Opis
+                    // bool OpisSector;
+                    // if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end4 + "\\" + Sector_Letter+Sector_NR))
+                    // { OpisSector = true; }
+                    // else { OpisSector = false; }
+                    //Planuri Cadastrale
+                    bool PlanCadFolder;
+                    if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end5))
+                    { PlanCadFolder = true; }
+                    else { PlanCadFolder = false; }
+                    //Shp Plan
+                    bool SHPFolder;
+                    if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end5 + "\\" + end6))
+                    { SHPFolder = true; }
+                    else { SHPFolder = false; }
+                    //PDF
+                    //Dxf Plan
+                    bool DXFFolder;
+                    if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end5 + "\\" + end7))
+                    { DXFFolder = true; }
+                    else { DXFFolder = false; }
+                    //PDF
+                    // bool PDFFOLDER;
+                    // if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath))
+                    // { PDFFOLDER = true; }
+                    // else { PDFFOLDER = false; }
+                    //Reg
+                    bool RegistruFolder;
+                    if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end3))
+                    { RegistruFolder = true; }
+                    else { RegistruFolder = false; }
+                    //Reg sector
+                    bool RegistruSectorFolder;
+                    if (Directory.Exists(CostumFolderBrowserDialog.SelectedPath + "\\" + end3 + "\\" + Sector_Letter + Sector_NR))
+                    { RegistruSectorFolder = true; }
+                    else { RegistruSectorFolder = false; }
+                    string str1 = string.Concat(CostumFolderBrowserDialog.SelectedPath + "\\" + end3 + "\\" + Sector_Letter + Sector_NR);
+                    string str2 = string.Concat(UAT + end3);
+                    string str3 = string.Concat(Sector_Letter + Sector_NR);
+                    string str4 = string.Concat(UAT + end4);
+                    string test = UAT + end1;
+
+                    sheet.CreateRow(2).CreateCell(0).SetCellValue(str1);
+                    sheet.CreateRow(2).CreateCell(1).SetCellValue(DateTerenFolder);
+                    sheet.CreateRow(3).CreateCell(0).SetCellValue(end2);
+                    sheet.CreateRow(3).CreateCell(1).SetCellValue(MemoriuTehnicFolder);
+                    sheet.CreateRow(4).CreateCell(0).SetCellValue(str2);
+                    sheet.CreateRow(4).CreateCell(1).SetCellValue(RegistruFolder);
+                    sheet.CreateRow(5).CreateCell(0).SetCellValue(str3);
+                    sheet.CreateRow(5).CreateCell(1).SetCellValue(RegistruSectorFolder);
+                    sheet.CreateRow(6).CreateCell(0).SetCellValue(str4);
+                    sheet.CreateRow(6).CreateCell(1).SetCellValue(OpisFolder);
+                    sheet.CreateRow(7).CreateCell(0).SetCellValue(UAT + end5);
+                    sheet.CreateRow(7).CreateCell(1).SetCellValue(PlanCadFolder);
+                    sheet.CreateRow(8).CreateCell(0).SetCellValue(end6);
+                    sheet.CreateRow(8).CreateCell(1).SetCellValue(SHPFolder);
+                    sheet.CreateRow(9).CreateCell(0).SetCellValue(end7);
+                    sheet.CreateRow(9).CreateCell(1).SetCellValue(DXFFolder);
+
+                    //Write the stream data of workbook to the root directory
+                    DateTime now = DateTime.Now;
+                    string formattedDate = now.ToString("yyyy-MM-dd_HH-mm-ss");
+                    FileStream file = new FileStream(Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}_{formattedDate}.xls"), FileMode.Create);
+                    hssfworkbook.Write(file);
+                    file.Close();
+                    //MessageBox
+                    DoneMsgBox msg = new DoneMsgBox();
+                    msg.ShowDialog();
+
+                    string filePath = Path.Combine(CostumFolderBrowserDialogPath, $"{raportname}_{formattedDate}.xls");
+
+                    if (msg.DialogResult == DialogResult.No)
+                    {
+                        // Open folder
+                        System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
+                    }
+                    else if (msg.DialogResult == DialogResult.Yes)
+                    {
+                        // Open file
+                        System.Diagnostics.Process.Start("explorer.exe", $"\"{filePath}\"");
+                    }
+
+                }
+            }
+
+            private void button4_MouseHover(object sender, EventArgs e)
+            {
+
+            }
+
+            private void button5_Click(object sender, EventArgs e)
+            {
+
+            }
+
+            private void button5_MouseHover(object sender, EventArgs e)
+            {
+
+            }
+
+            private void button6_Click(object sender, EventArgs e)
+            {
+
+            }
+
+            private void button6_MouseHover(object sender, EventArgs e)
+            {
+
+            }
+
+
+            private void label1_Click(object sender, EventArgs e)
+            {
+                eVisible(false);
+                if (backgroundImageLogo.Visible == false)
+                {
+                    backgroundImageLogo.Visible = true;
+                }
+            }
         #endregion
 
 
-        //
+            //
 
         public class FileNameFixer
         {
@@ -792,7 +865,7 @@ namespace UtilitatiCGXML
                 }
             }
         }
-        
+
 
         private void imobileCheckbox_Click(object sender, EventArgs e)
         {
