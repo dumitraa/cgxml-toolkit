@@ -242,6 +242,7 @@ namespace UtilitatiCGXML
                 string futureFieldName = "ID";
                 string futureFieldSector = "Sector";
                 string futureAddress = "Adresa";
+                string futureNrPotal = "Nr Postal";
                 string futureFieldIE = "IE";
                 string futurePerson = "Proprietari";
                 string futureFieldAreaCG = "Sup Mas";
@@ -403,6 +404,7 @@ namespace UtilitatiCGXML
                             id = lr.CADGENNO;
                             areaCG = lr.MEASUREDAREA.ToString();
                             actAreaCG = lr.PARCELLEGALAREA.ToString();
+                            string nrpostal = "";
 
 
                             DataSet dsUAT = new DataSet();
@@ -425,6 +427,7 @@ namespace UtilitatiCGXML
                                         adresa = string.Concat("UAT ", drUAT[0][2]);
                                         if (drAddress[0][3].ToString().ToLower() == "true")
                                         {
+                                            nrpostal = drAddress[0][8].ToString();
                                             DataRow[] drLocality = dsLocality.Tables[0].Select(string.Concat("LOCALITYID='", drAddress[0][2], "'"));
                                             adresa = string.Concat(new object[] { adresa, ", Loc. ", drLocality[0][2], ", " });
                                             if (fisier.Tables["ADDRESS"].Columns.Contains("DISTRICTTYPE") && !string.IsNullOrEmpty(drAddress[0][4].ToString()))
@@ -493,6 +496,7 @@ namespace UtilitatiCGXML
                                 t.Add(futureFieldName, id);
                                 t.Add(futureFieldSector, sectorVal);
                                 t.Add(futureAddress, adresa);
+                                t.Add(futureNrPotal, nrpostal);
                                 t.Add(futureFieldIE, ie);
                                 t.Add(futureFieldTipTeren, uniqueTipTeren.Count > 0 ? aggregatedTipTeren : null);
                                 t.Add(futureFieldTarla, uniqueTarla.Count > 0 ? aggregatedTarla : null);

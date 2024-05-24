@@ -532,6 +532,8 @@ namespace UtilitatiCGXML
                                 adresa = string.Concat("UAT ", drUAT[0][2]);
                                 if (drAddress[0][3].ToString().ToLower() == "true")
                                 {
+
+
                                     DataRow[] drLocality = dsLocality.Tables[0].Select(string.Concat("LOCALITYID='", drAddress[0][2], "'"));
                                     adresa = string.Concat(new object[] { adresa, ", Loc. ", drLocality[0][2], ", " });
                                     if (fisier.Tables["ADDRESS"].Columns.Contains("DISTRICTTYPE") && !string.IsNullOrEmpty(drAddress[0][4].ToString()))
