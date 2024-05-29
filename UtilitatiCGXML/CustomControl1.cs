@@ -194,16 +194,7 @@ namespace UtilitatiCGXML
         public string CostumFolderBrowserDialogPath = "";
         private void cgToShpBtn_Click(object sender, EventArgs e) // CGXML -> SHP BTN
         {
-            string sectorVal = "";
-            string ie = "";
-            string imprej = "";
-            string noteImobil = "";
-            string id = "";
-            string person = "";
-            string areaCG = "";
-            string actAreaCG = "";
-            string fullName = "";
-            string adresa = "";
+            
 
             if (imobileCheckbox.Checked || constrCheckbox.Checked)
             {
@@ -234,6 +225,26 @@ namespace UtilitatiCGXML
                 }
 
                 this.Cursor = Cursors.WaitCursor;
+                Task.Run(() => RenameThisLater());
+                }
+                
+            else
+                {
+                    MessageBox.Show("Selecteaza tipul de date pe care vrei sa il exporti");
+                    return;
+                }
+            }
+            private  Task RenameThisLater(){
+                string sectorVal = "";
+                string ie = "";
+                string imprej = "";
+                string noteImobil = "";
+                string id = "";
+                string person = "";
+                string areaCG = "";
+                string actAreaCG = "";
+                string fullName = "";
+                string adresa = "";
                 string[] filez = Directory.GetFiles(CostumFolderBrowserDialogPath.ToString(), "*.cgxml", SearchOption.TopDirectoryOnly);
                 NumericComparer ns = new NumericComparer();
                 System.Array.Sort(filez, ns);
@@ -268,6 +279,7 @@ namespace UtilitatiCGXML
                 for (int i = 0; i < (int)files.Length; i++)
                 {
                     FileInfo fo = files[i];
+                    Console.WriteLine($"Processing file {fo.FullName} ({i + 1}/{nrCGXML})");
                     CGXML fisier = new CGXML();
                     try
                     {
@@ -545,14 +557,8 @@ namespace UtilitatiCGXML
 
                     System.Diagnostics.Process.Start("explorer.exe", CostumFolderBrowserDialogPath);
                     this.Cursor = Cursors.Default;
-                }
-            else
-                {
-                    MessageBox.Show("Selecteaza tipul de date pe care vrei sa il exporti");
-                    return;
-                }
+                    return Task.CompletedTask;
             }
-
 
             private void cgToShpBtn_MouseHover(object sender, EventArgs e)
             {
